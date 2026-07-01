@@ -17,7 +17,7 @@ set -euo pipefail
 
 # ----- 路径与常量 -----
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-CATEGORIES=(个股 赛道 ETF 组合 宏观 其他)
+CATEGORIES=(日报 个股 赛道 ETF 组合 宏观 其他)
 
 # ----- 参数校验 -----
 if [ $# -lt 2 ]; then

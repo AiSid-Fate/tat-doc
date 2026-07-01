@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 REPORTS_DIR = ROOT / "reports"
 OUTPUT = ROOT / "index.html"
 
-CATEGORY_WHITELIST = ["个股", "赛道", "ETF", "组合", "宏观", "其他"]
+CATEGORY_WHITELIST = ["日报", "个股", "赛道", "ETF", "组合", "宏观", "其他"]
 
 META_RE = re.compile(
     r'<meta\s+name=["\']([^"\']+)["\']\s+content=["\']([^"\']*)["\']\s*/?>',
@@ -254,6 +254,7 @@ h1{{font-size:clamp(26px,4.4vw,40px);margin:20px 0 12px;letter-spacing:-.5px;
 .card[hidden]{{display:none}}
 .c-head{{display:flex;justify-content:space-between;align-items:center}}
 .pill{{display:inline-block;padding:3px 10px;border-radius:6px;font-size:11.5px;font-weight:700;font-family:var(--mono)}}
+.p-日报{{background:#3a1c1f;color:var(--up);border:1px solid #5a2426}}
 .p-个股{{background:var(--accent-soft);color:var(--accent)}}
 .p-赛道{{background:#3a2e12;color:var(--warn)}}
 .p-ETF{{background:#10302a;color:var(--down)}}
