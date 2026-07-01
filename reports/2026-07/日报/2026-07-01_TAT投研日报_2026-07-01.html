@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="report-title" content="TAT投研日报 2026-07-01">
+<meta name="report-date" content="2026-07-01">
+<meta name="report-category" content="日报">
+<meta name="report-tags" content="持仓分析,操作复盘,组合诊断,日报">
+<meta name="report-summary" content="AI算力β不降反升至87.4%,沪电单仓35.1%触警戒;明日重点减科创芯片1600股+沪电100股,滨化7/7决策日。">
+<title>TAT 投研日报 · 2026-07-01</title>
+<style>
+:root{
+  --bg:#f7f5f0;            /* 报纸底色 米白 */
+  --paper:#ffffff;
+  --ink:#1a1a1a;
+  --ink2:#333333;
+  --ink3:#5c5c5c;
+  --muted:#8a8a8a;
+  --rule:#d9d5cc;          /* 分隔线灰 */
+  --rule2:#e8e4dc;
+  --up:#c22c2c;            /* 涨/危险 深红 */
+  --up-soft:#f6e5e5;
+  --down:#0f7a3e;          /* 跌/看空 深绿 */
+  --down-soft:#e2f0e8;
+  --warn:#a65d00;          /* 警示 琥珀 */
+  --warn-soft:#f6e8d3;
+  --accent:#1a3d6b;        /* 深藏青 强调色 */
+  --accent-soft:#e6ecf3;
+  --serif:"Noto Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:"SF Mono","JetBrains Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  background-image:
+    linear-gradient(180deg, transparent, transparent 27px, rgba(0,0,0,0.02) 28px, transparent 29px);
+  background-size:100% 28px;
+}
+.num{font-variant-numeric:tabular-nums;font-family:var(--mono);letter-spacing:-.2px}
+.paper{max-width:1080px;margin:0 auto;background:var(--paper);padding:36px 44px;
+  box-shadow:0 1px 3px rgba(0,0,0,.06), 0 20px 40px rgba(0,0,0,.05);
+  border-top:6px solid var(--ink)}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);line-height:1.3;font-weight:700}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* 报头 */
+.masthead{border-bottom:3px double var(--ink);padding-bottom:14px;margin-bottom:22px}
+.masthead .top{display:flex;justify-content:space-between;align-items:baseline;font-size:11.5px;color:var(--ink3);text-transform:uppercase;letter-spacing:.12em}
+.masthead .top b{color:var(--ink);font-family:var(--mono)}
+.masthead .name{font-family:var(--serif);font-size:44px;font-weight:900;letter-spacing:-.5px;margin:6px 0 8px}
+.masthead .name em{font-style:normal;color:var(--up)}
+.masthead .sub{font-size:13px;color:var(--ink3);font-family:var(--serif)}
+.masthead .sub b{color:var(--ink)}
+
+/* 头条 */
+.headline{padding:20px 0 26px;border-bottom:1px solid var(--rule)}
+.headline .kicker{font-size:11.5px;font-weight:700;color:var(--up);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.headline h1{font-size:32px;line-height:1.25;font-weight:800;letter-spacing:-.3px}
+.headline h1 em{font-style:normal;color:var(--up);border-bottom:2px solid var(--up);padding-bottom:1px}
+.headline .lede{margin-top:14px;font-size:16px;color:var(--ink2);line-height:1.75;font-family:var(--serif)}
+
+/* 摘要 KPI 卡（今日速览） */
+.dash{display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border:1px solid var(--rule);border-radius:2px;overflow:hidden;margin:24px 0}
+.dash .cell{padding:16px 18px;border-right:1px solid var(--rule);background:var(--paper)}
+.dash .cell:last-child{border-right:none}
+.dash .k{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);font-weight:700;margin-bottom:6px}
+.dash .v{font-size:24px;font-weight:700;font-family:var(--mono);color:var(--ink);line-height:1.1}
+.dash .v.up{color:var(--up)}
+.dash .v.down{color:var(--down)}
+.dash .v.warn{color:var(--warn)}
+.dash .s{font-size:11.5px;color:var(--ink3);margin-top:3px}
+
+/* 章节标题（Section head） */
+.sect{margin-top:34px}
+.sect-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:14px}
+.sect-head h2{font-size:20px;font-weight:800}
+.sect-head .meta{font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.1em;font-family:var(--mono)}
+
+/* 分栏 */
+.cols{display:grid;grid-template-columns:2fr 1fr;gap:32px;margin-top:6px}
+.cols .side{border-left:1px solid var(--rule);padding-left:22px}
+
+/* 表格 */
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+table th{text-align:left;padding:10px 12px;border-bottom:2px solid var(--ink);background:transparent;
+  font-weight:700;color:var(--ink);font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+table th.r{text-align:right}
+table td{padding:10px 12px;border-bottom:1px solid var(--rule);color:var(--ink2);vertical-align:top}
+table td.r{text-align:right;font-family:var(--mono);white-space:nowrap}
+table tr:last-child td{border-bottom:none}
+table tr:hover td{background:#faf8f2}
+.pos{color:var(--up);font-weight:700}
+.neg{color:var(--down);font-weight:700}
+.amber{color:var(--warn);font-weight:700}
+.tag{display:inline-block;padding:2px 8px;font-size:11px;font-weight:700;border-radius:2px;font-family:var(--mono);letter-spacing:.02em;text-transform:uppercase}
+.tag-bad{background:var(--up-soft);color:var(--up)}
+.tag-warn{background:var(--warn-soft);color:var(--warn)}
+.tag-ok{background:var(--down-soft);color:var(--down)}
+.tag-neutral{background:var(--accent-soft);color:var(--accent)}
+
+/* 红旗提示栏 */
+.flag{background:var(--up-soft);border-left:4px solid var(--up);padding:14px 18px;margin:10px 0;border-radius:1px}
+.flag .fh{font-size:11px;font-weight:800;color:var(--up);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.flag p{font-size:13.5px;color:var(--ink);line-height:1.7}
+.flag p b{color:var(--up)}
+
+/* 明日清单 */
+.checklist{background:#fbf9f4;border:1px solid var(--rule);padding:16px 18px;border-radius:2px;margin-top:8px}
+.checklist h4{font-size:14px;margin-bottom:10px;font-weight:800;font-family:var(--sans)}
+.checklist ol{padding-left:0;list-style:none;counter-reset:step}
+.checklist li{padding:10px 0 10px 34px;position:relative;border-bottom:1px dashed var(--rule2);font-size:13.5px;line-height:1.65;color:var(--ink2)}
+.checklist li:last-child{border-bottom:none}
+.checklist li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:10px;
+  width:24px;height:24px;background:var(--ink);color:var(--paper);border-radius:50%;
+  display:grid;place-items:center;font-family:var(--mono);font-size:12px;font-weight:700}
+.checklist li b{color:var(--ink);font-family:var(--mono)}
+
+/* 验证清单三档卡片 */
+.verify{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+.v-card{border:1px solid var(--rule);padding:14px 16px;border-radius:2px;background:var(--paper)}
+.v-card.a{border-top:3px solid var(--down)}
+.v-card.b{border-top:3px solid var(--warn)}
+.v-card.c{border-top:3px solid var(--up)}
+.v-card h4{font-size:13px;font-family:var(--sans);font-weight:800;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.v-card h4 .lb{font-family:var(--mono);width:22px;height:22px;border-radius:2px;display:grid;place-items:center;font-size:12px;color:#fff}
+.v-card.a h4 .lb{background:var(--down)}
+.v-card.b h4 .lb{background:var(--warn)}
+.v-card.c h4 .lb{background:var(--up)}
+.v-card p{font-size:12px;color:var(--ink3);line-height:1.6;margin-bottom:6px}
+.v-card p b{color:var(--ink);font-family:var(--mono)}
+.v-card .act{margin-top:8px;padding-top:8px;border-top:1px dashed var(--rule);font-size:12px;color:var(--ink)}
+.v-card .act b{font-family:var(--mono);font-weight:700}
+
+/* 侧栏卡 */
+.side-card{margin-bottom:20px}
+.side-card h3{font-size:14px;font-family:var(--sans);font-weight:800;
+  text-transform:uppercase;letter-spacing:.08em;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:5px;margin-bottom:10px}
+.side-card p{font-size:13px;color:var(--ink2);line-height:1.65}
+.side-card p+p{margin-top:8px}
+.mini-tab{width:100%;font-size:12.5px;border-collapse:collapse}
+.mini-tab td{padding:6px 0;border-bottom:1px dotted var(--rule);color:var(--ink2)}
+.mini-tab td.r{text-align:right;font-family:var(--mono);color:var(--ink);font-weight:600}
+.mini-tab tr:last-child td{border-bottom:none}
+
+/* 引用块 */
+.pull{margin:18px 0;padding:14px 22px;border-left:4px solid var(--ink);background:#f9f7f1;
+  font-family:var(--serif);font-size:15px;line-height:1.75;color:var(--ink)}
+.pull b{color:var(--up)}
+
+/* 页脚 */
+footer{margin-top:34px;padding-top:16px;border-top:3px double var(--ink);
+  font-size:11.5px;color:var(--ink3);text-align:center;line-height:1.7}
+footer .disc{background:#faf8f2;border:1px solid var(--rule);padding:11px 16px;
+  margin-bottom:12px;text-align:left;font-size:12px;color:var(--ink2)}
+footer .disc b{color:var(--up)}
+footer .meta{font-family:var(--serif);color:var(--ink3)}
+
+@media (max-width:820px){
+  .paper{padding:24px 20px}
+  .masthead .name{font-size:32px}
+  .headline h1{font-size:24px}
+  .dash{grid-template-columns:repeat(2,1fr)}
+  .dash .cell:nth-child(2){border-right:none}
+  .cols{grid-template-columns:1fr;gap:20px}
+  .cols .side{border-left:none;border-top:1px solid var(--rule);padding-left:0;padding-top:16px}
+  .verify{grid-template-columns:1fr}
+  table{font-size:12.5px}
+  table th,table td{padding:8px 8px}
+}
+@media print{
+  body{background:#fff;background-image:none}
+  .paper{box-shadow:none;padding:0}
+}
+</style>
+</head>
+<body>
+<article class="paper">
+
+  <!-- 报头 -->
+  <header class="masthead">
+    <div class="top">
+      <span>TAT 投研团队 · Daily Briefing</span>
+      <span><b>VOL. 001</b> · 收盘后发布</span>
+    </div>
+    <div class="name">TAT 投研<em>日报</em></div>
+    <div class="sub"><b>2026 年 7 月 1 日 星期三</b> · 收盘后 · 组合诊断 · 操作复盘 · 明日应对</div>
+  </header>
+
+  <!-- 头条 -->
+  <section class="headline">
+    <div class="kicker">头条 · 组合危险等级升级</div>
+    <h1>AI 算力 β 不降反升至 <em>87.4%</em>，沪电单仓 35.1% 触警戒</h1>
+    <p class="lede">
+      再平衡执行完毕，方向反了。88% 到 87.4% 是浮盈稀释出来的，不是真降。前三大合计 <b>90.9%</b> 比上一版更集中。
+      通信 ETF 破位后被逆向加仓 6100 股，是本轮最严重的一笔错误。
+      明日 T+1 优先启动三笔止损性减仓，滨化 7/7 决策日一到就要动。
+    </p>
+  </section>
+
+  <!-- 今日速览 -->
+  <section class="dash" aria-label="今日速览">
+    <div class="cell"><div class="k">组合市值</div><div class="v num">12.4 万</div><div class="s">上期 9.11 万，新增含加钱</div></div>
+    <div class="cell"><div class="k">当日浮盈</div><div class="v num up">+1,280</div><div class="s">主要来自沪电与科创芯片</div></div>
+    <div class="cell"><div class="k">AI 算力 β</div><div class="v num up">87.4%</div><div class="s">目标 48-52%，几乎原地不动</div></div>
+    <div class="cell"><div class="k">最大单仓</div><div class="v num up">35.1%</div><div class="s">沪电股份，超警戒线 20%</div></div>
+  </section>
+
+  <!-- 分栏主内容 -->
+  <div class="cols">
+
+    <!-- 左栏 主稿 -->
+    <div class="main">
+
+      <!-- 今日操作复盘 -->
+      <section class="sect">
+        <div class="sect-head">
+          <h2>今日操作复盘</h2>
+          <span class="meta">7 笔操作</span>
+        </div>
+        <table aria-label="今日操作复盘">
+          <thead>
+            <tr>
+              <th>操作</th>
+              <th>方向</th>
+              <th class="r">规模</th>
+              <th>评价</th>
+              <th>问题点</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>通信 ETF 加 6,100 股 @ 1.735</td>
+              <td><span class="tag tag-bad">反向</span></td>
+              <td class="r">~1.06 万</td>
+              <td class="pos">最严重错误</td>
+              <td>破 MA20 后加仓，方案原本要求减 55%</td>
+            </tr>
+            <tr>
+              <td>沪电 加 300 股 @ 143 均</td>
+              <td><span class="tag tag-warn">追高</span></td>
+              <td class="r">~4.29 万</td>
+              <td class="amber">加剧集中</td>
+              <td>PE 69x 顶部，单仓推至 35.1%</td>
+            </tr>
+            <tr>
+              <td>科创芯片 0 变动</td>
+              <td><span class="tag tag-bad">未执行</span></td>
+              <td class="r">--</td>
+              <td class="pos">最大浮盈未兑现</td>
+              <td>40% 仓位没减，浮盈 +32.7% 挂账</td>
+            </tr>
+            <tr>
+              <td>滨化 加 1,400 股 @ 7.084</td>
+              <td><span class="tag tag-warn">追涨</span></td>
+              <td class="r">~0.99 万</td>
+              <td class="amber">仓位可控</td>
+              <td>主升浪中段，Kronos 中期 -35%</td>
+            </tr>
+            <tr>
+              <td>国电南瑞未建仓</td>
+              <td><span class="tag tag-bad">未执行</span></td>
+              <td class="r">--</td>
+              <td class="pos">降 β 主锚缺席</td>
+              <td>方案要求 12-13%，实际 0%</td>
+            </tr>
+            <tr>
+              <td>汇川技术未建仓</td>
+              <td><span class="tag tag-bad">未执行</span></td>
+              <td class="r">--</td>
+              <td class="pos">α 替代缺席</td>
+              <td>方案要求 7-8%，实际 0%</td>
+            </tr>
+            <tr>
+              <td>上能电气未建仓</td>
+              <td><span class="tag tag-bad">未执行</span></td>
+              <td class="r">--</td>
+              <td class="pos">弹性试探缺席</td>
+              <td>方案要求 3-4%，实际 0%</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 持仓状态 -->
+      <section class="sect">
+        <div class="sect-head">
+          <h2>持仓状态</h2>
+          <span class="meta">7 只标的 · 合计 12.4 万</span>
+        </div>
+        <table aria-label="持仓状态">
+          <thead>
+            <tr>
+              <th>标的</th>
+              <th>类别</th>
+              <th class="r">市值</th>
+              <th class="r">占比</th>
+              <th class="r">浮盈率</th>
+              <th>风险提示</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>沪电股份</b> 002463</td>
+              <td>AI PCB</td>
+              <td class="r">4.35 万</td>
+              <td class="r pos">35.1%</td>
+              <td class="r pos">+0.63%</td>
+              <td>单仓触警戒，浮盈已薄</td>
+            </tr>
+            <tr>
+              <td><b>通信 ETF</b> 515880</td>
+              <td>AI 算力</td>
+              <td class="r">3.11 万</td>
+              <td class="r pos">25.1%</td>
+              <td class="r neg">-3.48%</td>
+              <td>破 MA20，被逆向加仓</td>
+            </tr>
+            <tr>
+              <td><b>科创芯片</b> 588200</td>
+              <td>AI 算力</td>
+              <td class="r">3.80 万</td>
+              <td class="r pos">30.7%</td>
+              <td class="r pos">+32.7%</td>
+              <td>浮盈最大未兑现</td>
+            </tr>
+            <tr>
+              <td><b>滨化股份</b> 601678</td>
+              <td>化工</td>
+              <td class="r">0.98 万</td>
+              <td class="r amber">7.9%</td>
+              <td class="r pos">+4.2%</td>
+              <td>H 股招股 7/7 到期，Kronos -35%</td>
+            </tr>
+            <tr>
+              <td><b>黄金 ETF</b> 518880</td>
+              <td>对冲</td>
+              <td class="r">0.09 万</td>
+              <td class="r">0.7%</td>
+              <td class="r">+0.1%</td>
+              <td>仓位过小，未起对冲作用</td>
+            </tr>
+            <tr>
+              <td>其他 2 只小仓</td>
+              <td>--</td>
+              <td class="r">0.07 万</td>
+              <td class="r">0.5%</td>
+              <td class="r">--</td>
+              <td>可忽略</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 关键提示 -->
+      <section class="sect">
+        <div class="sect-head">
+          <h2>关键提示</h2>
+          <span class="meta">Red Flag · 3 项</span>
+        </div>
+
+        <div class="flag">
+          <div class="fh">RED FLAG 01 · 通信 ETF 逆向加仓</div>
+          <p>方案要求破位止损 <b>减 55%</b>，实际反手加了 6100 股 @1.735。当前 1.718 已亏 <b>-3.48%</b>。这一步把方案里最紧迫的止损做成了最大的加仓错误。<b>明日应立即卖出这部分加仓</b>。</p>
+        </div>
+
+        <div class="flag">
+          <div class="fh">RED FLAG 02 · 沪电追高 + 集中度</div>
+          <p>PE 69x 顶部继续加 300 股，单仓推至 <b>35.1%</b>，远超 20% 警戒线。若跌到 MA20 的 136.7，浮盈由 +0.63% 翻成 <b>-4.4%</b>，再跌到 120 就是 -16%，单只对组合冲击 <b>-5.6%</b>。</p>
+        </div>
+
+        <div class="flag">
+          <div class="fh">RED FLAG 03 · 滨化 Kronos 中期 DOWN</div>
+          <p>短期靠 H 股招股窗口 6/30 到 7/7 驱动，但 Kronos 30 日 DOWN <b>-35%</b>，区间 [4.32, 4.72]。基本面空 + Kronos 中期负是硬约束。<b>7/7 到期后主动切换，不做侥幸</b>。</p>
+        </div>
+
+        <div class="pull">
+          「这不是执行了再平衡，而是把 ETF 的分散换成了个股的集中赌注。<b>88% 到 87.4% 的表面下降，是浮盈稀释出来的稀释效应，不是真降 β</b>。」
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 右栏 侧稿 -->
+    <aside class="side">
+
+      <!-- 明日应对清单 -->
+      <div class="side-card">
+        <h3>明日 T+1 应对清单</h3>
+        <div class="checklist" aria-label="7月2日操作清单">
+          <ol>
+            <li><b>通信 ETF 减第 1 批 -5,500 股</b> @ 1.72 附近，先把逆向加仓的 6,100 股撤出大半。约兑现 0.95 万。</li>
+            <li><b>沪电减第 1 批 -100 股</b> @ 145 附近，把 35.1% 降到 27% 左右，缓解集中度。约兑现 1.45 万。</li>
+            <li><b>滨化减第 1 批 -700 股</b> @ 6.95 到 7.15 区间市价，7/7 决策日前先出一半。约兑现 0.49 万。</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- 关键点位 -->
+      <div class="side-card">
+        <h3>明日盯盘点位</h3>
+        <table class="mini-tab">
+          <tbody>
+            <tr><td>沪电 MA20 支撑</td><td class="r">136.7</td></tr>
+            <tr><td>沪电 MA60 生命线</td><td class="r">128</td></tr>
+            <tr><td>通信 ETF MA20</td><td class="r">1.71</td></tr>
+            <tr><td>通信 ETF MA60</td><td class="r">1.47</td></tr>
+            <tr><td>滨化 MA5</td><td class="r">6.56</td></tr>
+            <tr><td>科创芯片减仓价</td><td class="r">4.75 - 4.85</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 组合目标偏离 -->
+      <div class="side-card">
+        <h3>组合目标偏离</h3>
+        <table class="mini-tab">
+          <tbody>
+            <tr><td>AI 算力 β</td><td class="r pos">87.4% / 目标 50%</td></tr>
+            <tr><td>沪电单仓</td><td class="r pos">35.1% / 目标 18%</td></tr>
+            <tr><td>前 3 大合计</td><td class="r pos">90.9% / 目标 55%</td></tr>
+            <tr><td>降 β 新腿</td><td class="r neg">0% / 目标 23%</td></tr>
+            <tr><td>黄金 ETF</td><td class="r amber">0.7% / 目标 7%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 关键日期 -->
+      <div class="side-card">
+        <h3>本周关键日期</h3>
+        <table class="mini-tab">
+          <tbody>
+            <tr><td>7/2 周三</td><td class="r">T+1 首波减仓</td></tr>
+            <tr><td>7/3 周四</td><td class="r">启动降 β 新腿</td></tr>
+            <tr><td>7/5 周六</td><td class="r">复盘窗口</td></tr>
+            <tr><td>7/7 周一</td><td class="r pos">滨化 决策日</td></tr>
+            <tr><td>8 月中报</td><td class="r">三档硬验证</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- 底部行情速览 · 三档验证 -->
+  <section class="sect">
+    <div class="sect-head">
+      <h2>8 月中报三档验证清单</h2>
+      <span class="meta">硬约束 · 灰色地带按 C 档</span>
+    </div>
+    <div class="verify">
+      <div class="v-card a">
+        <h4><span class="lb">A</span>加满档 双击启动</h4>
+        <p>沪电扣非 <b>≥ +80%</b> · PE 降到 <b>≤ 50x</b></p>
+        <p>科创芯片指数扣非 <b>+30%</b> 以上</p>
+        <div class="act">动作：<b>补足降 β 新腿至 23%</b></div>
+      </div>
+      <div class="v-card b">
+        <h4><span class="lb">B</span>观察档 维持</h4>
+        <p>沪电扣非 <b>+40% 到 +80%</b></p>
+        <p>科创芯片 <b>+15% 到 +30%</b></p>
+        <div class="act">动作：<b>不加不减，等下季度</b></div>
+      </div>
+      <div class="v-card c">
+        <h4><span class="lb">C</span>止损档 陷阱坐实</h4>
+        <p>沪电扣非 <b>&lt; +40%</b> · PE 仍 <b>&gt; 60x</b></p>
+        <p>通信 ETF 破 <b>MA60</b> 1.47</p>
+        <div class="act">动作：<b>清 60%，1 月内无改善清空</b></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="disc">
+      <b>免责声明：</b>本日报为 TAT 投研团队内部研究推演，仅供研究参考，<b>不构成投资建议</b>。市场有风险，决策需谨慎。数据取自 2026-07-01 收盘后，明日盘中执行以实际盘面为准。所有百分比与点位需在实际交易日结合行情确认。
+    </div>
+    <div class="meta">TAT 投研团队制作 · 由 <a href="https://aisid-fate.github.io/tat-doc/">tat-doc</a> 自动发布 · 每日收盘后更新</div>
+  </footer>
+
+</article>
+</body>
+</html>
