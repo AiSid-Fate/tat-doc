@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAT 投研报告库 · tat-doc</title>
+<style>
+:root{
+  --bg:#0a0e14; --bg2:#0d1117; --surface:#11161f; --surface2:#161c28;
+  --border:#1f2733; --border2:#2a3543;
+  --text:#e6edf3; --text2:#aebacb; --text3:#7d8aa0;
+  --up:#ff4d4f; --down:#16c784; --warn:#f5a623;
+  --accent:#4c8dff; --accent-soft:#16243f; --gold:#caa23a; --gold-soft:#2e2410;
+  --radius:14px; --shadow-1:0 1px 2px rgba(0,0,0,.4); --shadow-2:0 6px 20px rgba(0,0,0,.45);
+  --mono:"SF Mono","JetBrains Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(900px 500px at 80% -10%,rgba(76,141,255,.07),transparent 60%);
+  background-attachment:fixed}
+.num{font-variant-numeric:tabular-nums;font-family:var(--mono);letter-spacing:-.2px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 18px}
+a{color:var(--accent);text-decoration:none}
+a:hover{opacity:.85}
+
+header{padding:44px 0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold);background:var(--gold-soft);
+  border:1px solid #5a4718;padding:6px 13px;border-radius:999px;font-weight:600}
+.eyebrow svg{width:14px;height:14px}
+h1{font-size:clamp(26px,4.4vw,40px);margin:20px 0 12px;letter-spacing:-.5px;
+  background:linear-gradient(180deg,#fff,#aebacb);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(15px,2vw,17px);color:var(--text2);max-width:800px;line-height:1.7}
+.repo-link{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--text2);
+  background:var(--surface);border:1px solid var(--border);padding:7px 13px;border-radius:999px;margin-top:18px}
+.repo-link svg{width:14px;height:14px;color:var(--text3)}
+
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow-1)}
+.kpi .k{font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;display:flex;align-items:center;gap:6px}
+.kpi .k svg{width:13px;height:13px}
+.kpi .v{font-size:24px;font-weight:700;font-family:var(--mono);margin-top:6px}
+.kpi .s{font-size:11.5px;color:var(--text3);margin-top:2px}
+.kpi .v.accent{color:var(--accent)} .kpi .v.gold{color:var(--gold)} .kpi .v.warn{color:var(--warn)}
+
+.toolbar{margin:32px 0 22px;background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow-1);
+  display:flex;flex-wrap:wrap;gap:10px;align-items:center;position:sticky;top:0;z-index:10;
+  backdrop-filter:blur(8px)}
+.toolbar .lbl{font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;
+  display:flex;align-items:center;gap:6px;margin-right:2px}
+.toolbar .lbl svg{width:14px;height:14px}
+.chip{background:var(--bg2);border:1px solid var(--border);color:var(--text2);padding:7px 13px;
+  border-radius:999px;font-size:13px;font-weight:600;font-family:inherit;cursor:pointer;
+  display:inline-flex;align-items:center;gap:7px;transition:background .18s,color .18s,border-color .18s}
+.chip svg{width:14px;height:14px}
+.chip:hover{background:var(--surface2);color:var(--text)}
+.chip.active{background:var(--accent-soft);color:var(--accent);border-color:#21345a}
+.chip .num{color:var(--text3);font-size:12px;font-weight:400}
+.chip.active .num{color:var(--accent)}
+.search{margin-left:auto;background:var(--bg2);border:1px solid var(--border);border-radius:999px;
+  padding:6px 14px;color:var(--text);font-size:13px;font-family:inherit;min-width:180px;flex:1;max-width:280px}
+.search:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;padding-bottom:40px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:20px;box-shadow:var(--shadow-1);display:flex;flex-direction:column;gap:10px;transition:border-color .18s,transform .18s}
+.card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.card[hidden]{display:none}
+.c-head{display:flex;justify-content:space-between;align-items:center}
+.pill{display:inline-block;padding:3px 10px;border-radius:6px;font-size:11.5px;font-weight:700;font-family:var(--mono)}
+.p-个股{background:var(--accent-soft);color:var(--accent)}
+.p-赛道{background:#3a2e12;color:var(--warn)}
+.p-ETF{background:#10302a;color:var(--down)}
+.p-组合{background:var(--gold-soft);color:var(--gold);border:1px solid #5a4718}
+.p-宏观{background:#3a1c1f;color:var(--up)}
+.p-其他{background:var(--surface2);color:var(--text3)}
+.c-date{font-size:12px;color:var(--text3)}
+.c-title{font-size:16px;font-weight:700;line-height:1.4}
+.c-title a{color:var(--text)}
+.c-title a:hover{color:var(--accent)}
+.c-sum{font-size:13px;color:var(--text2);line-height:1.6;flex:1}
+.c-tags{display:flex;flex-wrap:wrap;gap:5px}
+.tg{font-size:11px;padding:2px 8px;border-radius:5px;background:var(--bg2);color:var(--text3);border:1px solid var(--border);font-family:var(--mono)}
+.c-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent);margin-top:2px}
+.c-link svg{width:14px;height:14px}
+.empty{grid-column:1/-1;padding:40px;text-align:center;color:var(--text3);
+  background:var(--surface);border:1px dashed var(--border);border-radius:var(--radius)}
+
+footer{border-top:1px solid var(--border);padding:22px 0 40px;color:var(--text3);font-size:12.5px;text-align:center}
+footer .disc{background:var(--surface);border:1px solid var(--border);border-radius:10px;
+  padding:12px 16px;margin-bottom:14px;color:var(--text2);font-size:13px;line-height:1.6}
+footer .disc b{color:var(--warn)}
+
+@media (max-width:640px){
+  .kpis{grid-template-columns:1fr}
+  .toolbar{position:static}
+  .search{margin-left:0;max-width:none;width:100%}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> TAT 投研团队 · 报告归档中心</span>
+    <h1>TAT 投研报告库</h1>
+    <p class="lead">团队公开的投研报告归档，按月份和类别自动整理。每次 push 触发 GitHub Actions 重建索引并部署到 Pages。</p>
+    <a class="repo-link" href="https://github.com/AiSid-Fate/tat-doc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h11a4 4 0 014 4v12H8a4 4 0 01-4-4z"/><path d="M8 2v14M12 8h4"/></svg> <b>AiSid-Fate/tat-doc</b></a>
+    <div class="kpis">
+      <div class="kpi"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a2 2 0 012-2h12v18H6a2 2 0 01-2-2z"/><path d="M8 7h6M8 11h6"/></svg> 报告总数</div><div class="v accent">9</div><div class="s">已归档 HTML 数量</div></div>
+      <div class="kpi"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 最近更新</div><div class="v gold">2026-07-01</div><div class="s">最新一份的日期</div></div>
+      <div class="kpi"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg> 分类数</div><div class="v warn">4</div><div class="s">当前活跃的分类数</div></div>
+    </div>
+  </header>
+
+  <div class="toolbar" role="toolbar" aria-label="分类筛选">
+    <span class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12l-8 8-9-9V3h8z"/><circle cx="7" cy="7" r="1.5"/></svg> 筛选</span>
+        <button class="chip active" data-filter="all" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg> 全部 <span class="num">9</span>
+        </button>
+        <button class="chip" data-filter="个股" type="button">个股 <span class="num">4</span></button>
+        <button class="chip" data-filter="赛道" type="button">赛道 <span class="num">2</span></button>
+        <button class="chip" data-filter="ETF" type="button">ETF <span class="num">1</span></button>
+        <button class="chip" data-filter="组合" type="button">组合 <span class="num">2</span></button>
+    <input class="search" type="search" placeholder="按标题或标签搜索" aria-label="搜索报告">
+  </div>
+
+  <main class="grid" id="grid">
+      <article class="card" data-category="赛道" data-date="2026-07-01">
+        <div class="c-head">
+          <span class="pill p-赛道">赛道</span>
+          <span class="c-date num">2026-07-01</span>
+        </div>
+        <h3 class="c-title"><a href="reports/2026-07/%E8%B5%9B%E9%81%93/2026-07-01_%E5%8A%9F%E7%8E%87%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%BD%9C%E5%8A%9B%E8%B5%9B%E9%81%93%E7%A0%94%E5%88%A4.html">功率半导体潜力赛道研判 · 2026-07-01</a></h3>
+        <p class="c-sum">本体过热，真潜力在上下游。三重共振 Top3：国电南瑞、上能电气、汇川技术。</p>
+        <div class="c-tags"><span class="tg">功率半导体</span><span class="tg">国电南瑞</span><span class="tg">上能电气</span><span class="tg">汇川技术</span><span class="tg">Kronos</span></div>
+        <a class="c-link" href="reports/2026-07/%E8%B5%9B%E9%81%93/2026-07-01_%E5%8A%9F%E7%8E%87%E5%8D%8A%E5%AF%BC%E4%BD%93%E6%BD%9C%E5%8A%9B%E8%B5%9B%E9%81%93%E7%A0%94%E5%88%A4.html">
+          阅读全文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+      <article class="card" data-category="组合" data-date="2026-07-01">
+        <div class="c-head">
+          <span class="pill p-组合">组合</span>
+          <span class="c-date num">2026-07-01</span>
+        </div>
+        <h3 class="c-title"><a href="reports/2026-07/%E7%BB%84%E5%90%88/2026-07-01_%E4%B8%89%E8%82%A1%E5%88%87%E6%8D%A2%E4%BA%94%E5%B1%82%E5%86%B3%E7%AD%96%E9%93%BE_%E6%B1%87%E6%80%BB.html">三股切换五层决策链 · 汇总操作手册 · 2026-07-01</a></h3>
+        <p class="c-sum">三股 22-24% 仓位替代 AI 算力 β。AI 敞口 88% 降到 48-52%，最大回撤 -30% 腰斩 -12%。</p>
+        <div class="c-tags"><span class="tg">国电南瑞</span><span class="tg">汇川技术</span><span class="tg">上能电气</span><span class="tg">组合切换</span><span class="tg">五层决策</span></div>
+        <a class="c-link" href="reports/2026-07/%E7%BB%84%E5%90%88/2026-07-01_%E4%B8%89%E8%82%A1%E5%88%87%E6%8D%A2%E4%BA%94%E5%B1%82%E5%86%B3%E7%AD%96%E9%93%BE_%E6%B1%87%E6%80%BB.html">
+          阅读全文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+      <article class="card" data-category="组合" data-date="2026-06-30">
+        <div class="c-head">
+          <span class="pill p-组合">组合</span>
+          <span class="c-date num">2026-06-30</span>
+        </div>
+        <h3 class="c-title"><a href="reports/2026-06/%E7%BB%84%E5%90%88/2026-06-30_%E4%B8%89%E8%82%A1%E5%88%87%E6%8D%A2_%E7%9C%8B%E8%B7%8C%E6%B1%87%E6%8A%A5%E6%B1%87%E6%80%BB.html">看跌研究员汇总 · 国电南瑞 / 上能电气 / 汇川技术</a></h3>
+        <p class="c-sum">三股切换看跌方论证汇总。剪刀差、估值陷阱、Optimus 未落地等风险点。</p>
+        <div class="c-tags"><span class="tg">三股切换</span><span class="tg">看跌</span><span class="tg">多空辩论</span></div>
+        <a class="c-link" href="reports/2026-06/%E7%BB%84%E5%90%88/2026-06-30_%E4%B8%89%E8%82%A1%E5%88%87%E6%8D%A2_%E7%9C%8B%E8%B7%8C%E6%B1%87%E6%8A%A5%E6%B1%87%E6%80%BB.html">
+          阅读全文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+      <article class="card" data-category="个股" data-date="2026-06-30">
+        <div class="c-head">
+          <span class="pill p-个股">个股</span>
+          <span class="c-date num">2026-06-30</span>
+        </div>
+        <h3 class="c-title"><a href="reports/2026-06/%E4%B8%AA%E8%82%A1/2026-06-30_%E4%B8%89%E8%82%A1%E5%9F%BA%E6%9C%AC%E9%9D%A2%E6%B7%B1%E5%8C%96_%E6%B1%87%E6%80%BB.html">三股基本面深化研判 · 汇总(2026-06-26)</a></h3>
+        <p class="c-sum">三股基本面深化分析汇总。估值分位、Q1 财报、ROE、订单端全景。</p>
+        <div class="c-tags"><span class="tg">国电南瑞</span><span class="tg">汇川技术</span><span class="tg">上能电气</span><span class="tg">基本面</span></div>
+        <a class="c-link" href="reports/2026-06/%E4%B8%AA%E8%82%A1/2026-06-30_%E4%B8%89%E8%82%A1%E5%9F%BA%E6%9C%AC%E9%9D%A2%E6%B7%B1%E5%8C%96_%E6%B1%87%E6%80%BB.html">
+          阅读全文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+      <article class="card" data-category="个股" data-date="2026-06-29">
+        <div class="c-head">
+          <span class="pill p-个股">个股</span>
+          <span class="c-date num">2026-06-29</span>
+        </div>
+        <h3 class="c-title"><a href="reports/2026-06/%E4%B8%AA%E8%82%A1/2026-06-29_%E5%9B%BD%E7%94%B5%E5%8D%97%E7%91%9E_%E7%9C%8B%E8%B7%8C%E6%B1%87%E6%8A%A5.html">看跌研究员汇报 · 国电南瑞 600406</a></h3>
+        <p class="c-sum">国电南瑞看跌方论证。Q1 扣非仅 +5.4%，α 弹性一般，戴维斯双击难启动。</p>
+        <div class="c-tags"><span class="tg">国电南瑞</span><span class="tg">600406</span><span class="tg">看跌</span></div>
+        <a class="c-link" href="reports/2026-06/%E4%B8%AA%E8%82%A1/2026-06-29_%E5%9B%BD%E7%94%B5%E5%8D%97%E7%91%9E_%E7%9C%8B%E8%B7%8C%E6%B1%87%E6%8A%A5.html">
+          阅读全文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+      <article class="card" data-category="ETF" data-date="2026-06-26">
+        <div class="c-head">
+          <span class="pill p-ETF">ETF</span>
+          <span class="c-date num">2026-06-26</span>
+        </div>
+        <h3 class="c-title"><a href="reports/2026-06/ETF/2026-06-26_%E9%80%9A%E4%BF%A1ETF%E5%85%89%E6%A8%A1%E5%9D%97%E7%A0%94%E5%88%A4.html">通信ETF（光模块）还能否有大行情 · 2026-06-26</a></h3>
+        <p class="c-sum">中期逻辑未破，估值驱动的普涨大行情已结束。现价 1.798 是高位，等回踩 MA20。</p>
+        <div class="c-tags"><span class="tg">通信ETF</span><span class="tg">515880</span><span class="tg">光模块</span><span class="tg">中际旭创</span><span class="tg">新易盛</span></div>
+        <a class="c-link" href="reports/2026-06/ETF/2026-06-26_%E9%80%9A%E4%BF%A1ETF%E5%85%89%E6%A8%A1%E5%9D%97%E7%A0%94%E5%88%A4.html">
+          阅读全文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+      <article class="card" data-category="个股" data-date="2026-06-25">
+        <div class="c-head">
+          <span class="pill p-个股">个股</span>
+          <span class="c-date num">2026-06-25</span>
+        </div>
+        <h3 class="c-title"><a href="reports/2026-06/%E4%B8%AA%E8%82%A1/2026-06-25_%E8%83%9C%E5%AE%8F%E6%B2%AA%E7%94%B5_%E7%9C%8B%E8%B7%8C%E6%B1%87%E6%8A%A5.html">看跌研究员汇报 · 胜宏科技 / 沪电股份</a></h3>
+        <p class="c-sum">胜宏沪电看跌方论证。估值分位 99% 顶部，融资拥挤，业绩降档风险。</p>
+        <div class="c-tags"><span class="tg">胜宏科技</span><span class="tg">沪电股份</span><span class="tg">看跌</span></div>
+        <a class="c-link" href="reports/2026-06/%E4%B8%AA%E8%82%A1/2026-06-25_%E8%83%9C%E5%AE%8F%E6%B2%AA%E7%94%B5_%E7%9C%8B%E8%B7%8C%E6%B1%87%E6%8A%A5.html">
+          阅读全文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+      <article class="card" data-category="个股" data-date="2026-06-25">
+        <div class="c-head">
+          <span class="pill p-个股">个股</span>
+          <span class="c-date num">2026-06-25</span>
+        </div>
+        <h3 class="c-title"><a href="reports/2026-06/%E4%B8%AA%E8%82%A1/2026-06-25_PCB%E4%B8%89%E8%82%A1%E6%8A%95%E7%A0%94%E6%B1%87%E6%8A%A5.html">PCB/AI算力链三股投研汇报 · 2026-06-25</a></h3>
+        <p class="c-sum">PCB 三股综合排序沪电&gt;胜宏&gt;鹏鼎。均处 AI 算力 β 估值顶部，无安全边际。</p>
+        <div class="c-tags"><span class="tg">胜宏科技</span><span class="tg">沪电股份</span><span class="tg">鹏鼎控股</span><span class="tg">PCB</span><span class="tg">AI算力</span></div>
+        <a class="c-link" href="reports/2026-06/%E4%B8%AA%E8%82%A1/2026-06-25_PCB%E4%B8%89%E8%82%A1%E6%8A%95%E7%A0%94%E6%B1%87%E6%8A%A5.html">
+          阅读全文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+      <article class="card" data-category="赛道" data-date="2026-06-25">
+        <div class="c-head">
+          <span class="pill p-赛道">赛道</span>
+          <span class="c-date num">2026-06-25</span>
+        </div>
+        <h3 class="c-title"><a href="reports/2026-06/%E8%B5%9B%E9%81%93/2026-06-25_A%E8%82%A1AI%E7%AE%97%E5%8A%9B%E8%B5%9B%E9%81%93%E7%A0%94%E5%88%A4.html">A股 AI算力赛道全产业链研判 · 2026-06-25</a></h3>
+        <p class="c-sum">全链基本面真景气估值已透支。18/25 龙头分位 90%+。真机会在服务器 ODM、IDC、铜连接。</p>
+        <div class="c-tags"><span class="tg">AI算力</span><span class="tg">光模块</span><span class="tg">PCB</span><span class="tg">服务器</span><span class="tg">IDC</span></div>
+        <a class="c-link" href="reports/2026-06/%E8%B5%9B%E9%81%93/2026-06-25_A%E8%82%A1AI%E7%AE%97%E5%8A%9B%E8%B5%9B%E9%81%93%E7%A0%94%E5%88%A4.html">
+          阅读全文 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+  </main>
+
+  <footer>
+    <div class="disc"><b>免责声明：</b>本站为 TAT 投研团队内部研究推演，仅供研究参考，<b>不构成投资建议</b>。市场有风险，决策需谨慎。</div>
+    <div>索引由 <code>scripts/build_index.py</code> 自动生成。构建时间 2026-07-01 11:44</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const chips = document.querySelectorAll('.chip');
+  const cards = document.querySelectorAll('.card');
+  const search = document.querySelector('.search');
+  let cat = 'all', q = '';
+  function apply(){
+    const kw = q.trim().toLowerCase();
+    cards.forEach(c => {
+      const okCat = (cat === 'all' || c.dataset.category === cat);
+      const okQ = !kw || c.textContent.toLowerCase().includes(kw);
+      c.hidden = !(okCat && okQ);
+    });
+  }
+  chips.forEach(ch => ch.addEventListener('click', () => {
+    chips.forEach(x => x.classList.remove('active'));
+    ch.classList.add('active');
+    cat = ch.dataset.filter;
+    apply();
+  }));
+  search.addEventListener('input', e => { q = e.target.value; apply(); });
+})();
+</script>
+</body>
+</html>

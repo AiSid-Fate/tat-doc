@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="report-title" content="看跌研究员汇报 · 胜宏科技 / 沪电股份">
+<meta name="report-date" content="2026-06-25">
+<meta name="report-category" content="个股">
+<meta name="report-tags" content="胜宏科技,沪电股份,看跌">
+<meta name="report-summary" content="胜宏沪电看跌方论证。估值分位 99% 顶部，融资拥挤，业绩降档风险。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>看跌研究员汇报 · 胜宏科技 / 沪电股份</title>
+<style>
+  :root{
+    --bg:#0a0e17; --bg-soft:#111726; --surface:#161d2e; --surface-2:#1c2438;
+    --border:#28324a; --text:#e8edf7; --text-dim:#9aa6bf; --text-mute:#6b7794;
+    --danger:#ff4d5e; --danger-soft:#2a1620; --warn:#ffb020; --warn-soft:#2a2412;
+    --bull:#2ec28a; --accent:#5b8cff;
+    --mono:"SF Mono",ui-monospace,"Roboto Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:radial-gradient(1200px 600px at 50% -200px,#16203a 0%,var(--bg) 60%);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.6; padding:32px 20px 64px; min-height:100dvh;
+  }
+  .wrap{max-width:1080px;margin:0 auto}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+  /* header */
+  header{text-align:center;margin-bottom:36px}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:var(--danger-soft);
+    color:var(--danger);border:1px solid #5a2230;border-radius:999px;
+    padding:6px 16px;font-size:13px;font-weight:600;letter-spacing:.3px;margin-bottom:16px}
+  .badge svg{width:14px;height:14px}
+  h1{font-size:30px;font-weight:700;letter-spacing:-.5px;margin-bottom:8px}
+  .sub{color:var(--text-dim);font-size:15px;max-width:680px;margin:0 auto}
+  .meta{color:var(--text-mute);font-size:12px;margin-top:12px;font-family:var(--mono)}
+
+  /* stock card */
+  .stock{background:var(--surface);border:1px solid var(--border);border-radius:18px;
+    padding:28px;margin-bottom:28px;box-shadow:0 8px 32px rgba(0,0,0,.35)}
+  .stock-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;
+    padding-bottom:18px;margin-bottom:22px;border-bottom:1px solid var(--border)}
+  .stock-name{font-size:22px;font-weight:700}
+  .stock-code{color:var(--text-mute);font-size:14px;font-family:var(--mono)}
+  .price-tag{margin-left:auto;text-align:right}
+  .price-tag .lbl{font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:1px}
+  .price-tag .val{font-size:24px;font-weight:700;font-family:var(--mono);color:#fff}
+
+  /* metric grid */
+  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+  .metric{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:14px}
+  .metric .k{font-size:11px;color:var(--text-mute);margin-bottom:6px;letter-spacing:.3px}
+  .metric .v{font-size:20px;font-weight:700;font-family:var(--mono)}
+  .metric .v.danger{color:var(--danger)}
+  .metric .v.warn{color:var(--warn)}
+  .metric .note{font-size:11px;color:var(--text-dim);margin-top:4px}
+
+  /* section title */
+  .sec-title{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;
+    color:var(--text);margin:22px 0 12px;letter-spacing:.3px}
+  .sec-title .dot{width:7px;height:7px;border-radius:2px;background:var(--danger)}
+  .sec-title.bull .dot{background:var(--bull)}
+  .sec-title.warn .dot{background:var(--warn)}
+
+  /* bear list */
+  .bear-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .bear-list li{background:var(--danger-soft);border:1px solid #44202c;border-left:3px solid var(--danger);
+    border-radius:8px;padding:12px 14px;font-size:14px;color:var(--text)}
+  .bear-list li b{color:#ffd9de}
+  .hl{color:var(--danger);font-weight:700;font-family:var(--mono)}
+
+  /* bull teardown */
+  .teardown{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+  .teardown .claim{font-size:13px;color:var(--bull);font-weight:600;margin-bottom:8px;
+    display:flex;align-items:flex-start;gap:8px}
+  .teardown .claim::before{content:"看涨";font-size:10px;background:rgba(46,194,138,.15);
+    color:var(--bull);padding:2px 7px;border-radius:5px;flex-shrink:0;font-weight:700;margin-top:1px}
+  .teardown .rebut{font-size:14px;color:var(--text);display:flex;align-items:flex-start;gap:8px}
+  .teardown .rebut::before{content:"反驳";font-size:10px;background:var(--danger-soft);
+    color:var(--danger);border:1px solid #5a2230;padding:2px 7px;border-radius:5px;flex-shrink:0;font-weight:700;margin-top:2px}
+
+  /* downside table */
+  .downside{margin-top:14px;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+  .downside table{width:100%;border-collapse:collapse;font-size:13px}
+  .downside th{background:var(--surface-2);color:var(--text-dim);text-align:left;
+    padding:10px 14px;font-weight:600;font-size:12px;letter-spacing:.3px}
+  .downside td{padding:10px 14px;border-top:1px solid var(--border)}
+  .downside td:last-child,.downside th:last-child{text-align:right;font-family:var(--mono);font-weight:700}
+  .downside .pct{color:var(--danger)}
+  .trigger{margin-top:12px;font-size:13px;color:var(--text-dim);background:var(--warn-soft);
+    border:1px solid #4a3d18;border-radius:8px;padding:11px 14px}
+  .trigger b{color:var(--warn)}
+
+  /* conclusion */
+  .conclusion{background:linear-gradient(135deg,#1a1322,#161d2e);border:1px solid #44202c;
+    border-radius:18px;padding:28px}
+  .conclusion h2{font-size:18px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .conclusion p{color:var(--text-dim);font-size:14px;margin-bottom:10px}
+  .conclusion .verdict{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px}
+  .verdict .v-item{flex:1;min-width:200px;background:var(--surface);border:1px solid var(--border);
+    border-radius:12px;padding:16px}
+  .verdict .v-item .n{font-size:13px;color:var(--text-dim);margin-bottom:6px}
+  .verdict .v-item .r{font-size:20px;font-weight:700;font-family:var(--mono);color:var(--danger)}
+
+  footer{text-align:center;color:var(--text-mute);font-size:12px;margin-top:32px;line-height:1.8}
+  .disclaimer{max-width:760px;margin:0 auto}
+
+  @media(max-width:720px){
+    .metrics{grid-template-columns:repeat(2,1fr)}
+    h1{font-size:24px}
+    .price-tag{margin-left:0;text-align:left;width:100%;margin-top:8px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l6 6 4-4 8 8M21 17v-4M21 17h-4"/></svg>
+      看跌研究员 · 风险论证报告
+    </div>
+    <h1>AI-PCB 双雄风险拆解</h1>
+    <p class="sub">胜宏科技 与 沪电股份 —— 极端估值 · 杠杆拥挤 · 主力派发 · 叙事未兑现。立场鲜明，论据全部基于数据。</p>
+    <p class="meta">数据基准日 2026-06-23 · 仅供投研内部辩论 · 非投资建议</p>
+  </header>
+
+  <!-- ============ 胜宏科技 ============ -->
+  <section class="stock">
+    <div class="stock-head">
+      <span class="stock-name">胜宏科技</span>
+      <span class="stock-code">300476.SZ</span>
+      <div class="price-tag">
+        <div class="lbl">现价</div>
+        <div class="val">¥350.16</div>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <div class="metric"><div class="k">PB（三股最贵）</div><div class="v danger num">19.8x</div><div class="note">估值最透支</div></div>
+      <div class="metric"><div class="k">融资余额占流通市值</div><div class="v danger num">7.35%</div><div class="note">一年90%分位 · 极端拥挤</div></div>
+      <div class="metric"><div class="k">6/23 单日跌幅</div><div class="v danger num">-7.44%</div><div class="note">主力高位派发</div></div>
+      <div class="metric"><div class="k">现价较内在价值溢价</div><div class="v warn num">+56%</div><div class="note">内在价值 150–225元</div></div>
+    </div>
+
+    <div class="sec-title"><span class="dot"></span>看跌核心论据</div>
+    <ul class="bear-list">
+      <li><b>估值最贵 + 溢价透支：</b>PB <span class="hl">19.8x</span> 为三股之首，现价 350 较内在价值（150–225元）溢价约 <span class="hl">56%</span>；即便回到价值上沿 225 元，下行 <span class="hl">-36%</span>。</li>
+      <li><b>杠杆资金极端拥挤：</b>融资余额 <span class="hl">234亿</span>，占流通市值 <span class="hl">7.35%</span>（一年90%分位）。一旦回调即触发融资盘连环强平。</li>
+      <li><b>主力派发 + 技术转空：</b>6/5 主力抛售 <span class="hl">38亿</span>，6/23 暴跌 <span class="hl">-7.44%</span>；MACD+KDJ 双死叉、RSI 跌破 50，从 402 高点回落，板块内调整最深。</li>
+      <li><b>增速急速降温：</b>2026Q1 扣非增速从 2025 年 <span class="hl">+277%</span> 骤降至 <span class="hl">+36.1%</span>——高基数效应消退，高增长不可持续。</li>
+    </ul>
+
+    <div class="sec-title bull"><span class="dot"></span>拆解看涨叙事</div>
+    <div class="teardown">
+      <div class="claim">英伟达链 AI 纯度最高 · ROE 35.6% · PEG 相对友好（高盛895元目标价）</div>
+      <div class="rebut">高增长正在熄火（+277%→+36.1%），ROE 35.6% 难维持，市场却已按巅峰增速给到 19.8x PB。所谓 <b>高盛 895 元目标价为已证伪传闻</b>——以此为锚等于建立在虚假信息上。AI 纯度高 = 波动大，情绪退潮时回撤也最猛。</div>
+    </div>
+
+    <div class="sec-title warn"><span class="dot"></span>风险事件与下行空间</div>
+    <div class="downside">
+      <table>
+        <thead><tr><th>目标位</th><th>对应逻辑</th><th>较现价空间</th></tr></thead>
+        <tbody>
+          <tr><td class="num">225 元</td><td>内在价值上沿</td><td class="pct">-36%</td></tr>
+          <tr><td class="num">150 元</td><td>内在价值中枢</td><td class="pct">-57%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="trigger"><b>触发事件：</b>中报扣非增速进一步降温确认见顶 · 融资盘去杠杆 · AI 板块情绪退潮。</div>
+  </section>
+
+  <!-- ============ 沪电股份 ============ -->
+  <section class="stock">
+    <div class="stock-head">
+      <span class="stock-name">沪电股份</span>
+      <span class="stock-code">002463.SZ</span>
+      <div class="price-tag">
+        <div class="lbl">现价</div>
+        <div class="val">¥154.99</div>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <div class="metric"><div class="k">PE / PB / PS 分位</div><div class="v danger num">99.9%</div><div class="note">绝对顶部 · 三股最透支</div></div>
+      <div class="metric"><div class="k">6/23 主力净流出</div><div class="v danger num">18.86亿</div><div class="note">大举出逃</div></div>
+      <div class="metric"><div class="k">KDJ J值</div><div class="v danger num">90</div><div class="note">严重超买待回踩</div></div>
+      <div class="metric"><div class="k">现价较内在价值溢价</div><div class="v warn num">+94%</div><div class="note">内在价值 60–80元</div></div>
+    </div>
+
+    <div class="sec-title"><span class="dot"></span>看跌核心论据</div>
+    <ul class="bear-list">
+      <li><b>估值绝对顶部（三股最透支）：</b>PE/PB/PS 均处 <span class="hl">99.9%</span> 历史分位——五年来从未如此贵。现价 155 较内在价值（60–80元）溢价约 <span class="hl">94%</span>。</li>
+      <li><b>主力大举出逃：</b>6/23 主力净流出 <span class="hl">18.86亿</span>，融资余额 <span class="hl">65亿</span>（90%分位），杠杆与派发共振。</li>
+      <li><b>技术过热待回踩：</b>KDJ J值高达 <span class="hl">90</span>，严重超买；放量长阳后极易回踩。</li>
+      <li><b>核心叙事未证实：</b>海外 AI 订单为<span class="hl">未证实传闻</span>，看涨逻辑建立在尚未兑现的预期之上。</li>
+    </ul>
+
+    <div class="sec-title bull"><span class="dot"></span>拆解看涨叙事</div>
+    <div class="teardown">
+      <div class="claim">Q1 唯一加速 +62.9% · 800G 市占 45% · H股上市</div>
+      <div class="rebut">单季加速能否延续存疑，<b>99.9% 分位估值已对最乐观假设充分定价</b>；800G 市占与海外订单尚未在持续报表中验证；H股上市本质是融资行为，短期反摊薄 EPS。一旦加速兑现不及预期，<b>94% 溢价毫无支撑</b>。</div>
+    </div>
+
+    <div class="sec-title warn"><span class="dot"></span>风险事件与下行空间</div>
+    <div class="downside">
+      <table>
+        <thead><tr><th>目标位</th><th>对应逻辑</th><th>较现价空间</th></tr></thead>
+        <tbody>
+          <tr><td class="num">80 元</td><td>内在价值上沿</td><td class="pct">-48%</td></tr>
+          <tr><td class="num">60 元</td><td>内在价值中枢</td><td class="pct">-61%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="trigger"><b>触发事件：</b>海外 AI 订单证伪或 Q2 加速放缓 · 主力持续流出 + 融资去杠杆 · 技术高位回踩。</div>
+  </section>
+
+  <!-- ============ 结论 ============ -->
+  <section class="conclusion">
+    <h2><span style="color:var(--danger)">▼</span> 看跌结论</h2>
+    <p>两股共性：<b style="color:var(--text)">极端估值 + 杠杆拥挤 + 主力派发 + 叙事未兑现</b>。胜宏增速已熄火（+277%→+36.1%），沪电估值站上 99.9% 绝对顶部；风险收益比均严重不对称。看涨方的高增长与加速叙事，要么正在降温、要么尚未在持续报表中兑现，而极端估值已对最乐观假设充分定价。</p>
+    <div class="verdict">
+      <div class="v-item"><div class="n">胜宏科技 下行空间</div><div class="r">-36% ~ -57%</div></div>
+      <div class="v-item"><div class="n">沪电股份 下行空间</div><div class="r">-48% ~ -61%</div></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="disclaimer">
+      TAT投研团队 · 看跌研究员论证 · 数据基准日 2026-06-23<br>
+      本报告为投研辩论中的空头视角，论据基于三维分析师报告。市场有风险，内容不构成任何投资建议。
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

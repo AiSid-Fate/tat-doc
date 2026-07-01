@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="report-title" content="三股基本面深化研判 · 汇总(2026-06-26)">
+<meta name="report-date" content="2026-06-30">
+<meta name="report-category" content="个股">
+<meta name="report-tags" content="国电南瑞,汇川技术,上能电气,基本面">
+<meta name="report-summary" content="三股基本面深化分析汇总。估值分位、Q1 财报、ROE、订单端全景。">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三股基本面深化研判 · 汇总(2026-06-26)</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f5f7fa;
+  color: #1a2332;
+  line-height: 1.65;
+  font-size: 15px;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  color: #fff;
+  padding: 28px 32px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(30,58,138,0.15);
+}
+header h1 { font-size: 26px; margin-bottom: 6px; font-weight: 600; }
+header .meta { font-size: 13px; opacity: 0.85; }
+header .meta span { margin-right: 16px; }
+
+.tab-nav {
+  display: flex;
+  gap: 8px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-bottom: 16px;
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+}
+.tab-btn {
+  flex: 1;
+  padding: 14px 18px;
+  border: none;
+  background: #f1f5f9;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #475569;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.tab-btn:hover { background: #e2e8f0; }
+.tab-btn.active {
+  background: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+}
+.tab-btn .code { font-size: 12px; opacity: 0.75; font-weight: 400; }
+.tab-btn.active .code { opacity: 1; }
+
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fade 0.3s; }
+@keyframes fade { from { opacity: 0; transform: translateY(8px);} to { opacity: 1; transform: translateY(0);}}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.card h2 {
+  font-size: 20px;
+  color: #1e3a8a;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e7ff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card h2::before { content: ""; width: 4px; height: 20px; background: #2563eb; border-radius: 2px; }
+.card h3 { font-size: 16px; color: #1e3a8a; margin: 16px 0 8px; }
+.card p { margin: 8px 0; color: #334155; }
+.card ul, .card ol { margin: 8px 0 8px 24px; color: #334155; }
+.card li { margin: 4px 0; }
+
+.hero-verdict {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-left: 4px solid #0ea5e9;
+  padding: 18px 22px;
+  border-radius: 8px;
+  margin: 12px 0 18px;
+  font-size: 15px;
+}
+.hero-verdict strong { color: #0c4a6e; font-size: 16px; }
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin: 14px 0;
+}
+.stat {
+  background: #f8fafc;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+.stat .label { font-size: 12px; color: #64748b; margin-bottom: 4px; }
+.stat .value { font-size: 18px; font-weight: 600; color: #1e293b; }
+.stat.good .value { color: #059669; }
+.stat.bad .value { color: #dc2626; }
+.stat.neutral .value { color: #2563eb; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 13.5px;
+}
+th {
+  background: #f1f5f9;
+  padding: 10px 12px;
+  text-align: left;
+  color: #1e3a8a;
+  font-weight: 600;
+  border-bottom: 2px solid #cbd5e1;
+}
+td {
+  padding: 9px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+}
+tbody tr:hover { background: #f8fafc; }
+.good { color: #059669; font-weight: 500; }
+.bad { color: #dc2626; font-weight: 500; }
+.warn { color: #d97706; font-weight: 500; }
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 4px;
+}
+.tag.blue { background: #dbeafe; color: #1e40af; }
+.tag.green { background: #d1fae5; color: #065f46; }
+.tag.red { background: #fee2e2; color: #991b1b; }
+.tag.yellow { background: #fef3c7; color: #92400e; }
+
+.range-bar {
+  background: linear-gradient(90deg, #fef3c7 0%, #d1fae5 50%, #dbeafe 100%);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  border: 1px solid #e2e8f0;
+}
+.range-bar b { color: #1e3a8a; font-size: 16px; }
+
+footer {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+  padding: 20px 0;
+}
+@media (max-width: 640px) {
+  .container { padding: 12px; }
+  header { padding: 20px; }
+  header h1 { font-size: 20px; }
+  .card { padding: 18px; }
+  .tab-btn { padding: 10px 8px; font-size: 13px; }
+  table { font-size: 12px; }
+  th, td { padding: 6px 8px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>📊 三股基本面深化研判 · 汇总</h1>
+  <div class="meta">
+    <span>📅 报告日期:2026-06-26</span>
+    <span>👤 分析师:TAT基本面分析师</span>
+    <span>🔍 数据源:AKShare + 公司公告 + 券商研报</span>
+  </div>
+</header>
+
+<div class="tab-nav">
+  <button class="tab-btn active" onclick="showTab('nari')">
+    <span>⚡ 国电南瑞</span><span class="code">600406 · 稳增长白马</span>
+  </button>
+  <button class="tab-btn" onclick="showTab('sneg')">
+    <span>🔋 上能电气</span><span class="code">300827 · 储能反转成长</span>
+  </button>
+  <button class="tab-btn" onclick="showTab('inovance')">
+    <span>🤖 汇川技术</span><span class="code">300124 · 机器人+工控</span>
+  </button>
+</div>
+
+<!-- ================ 国电南瑞 ================ -->
+<div class="tab-content active" id="nari">
+
+<div class="card">
+  <h2>核心结论</h2>
+  <div class="hero-verdict">
+    <strong>✅ 能撑得起中期(6-12月)持有。</strong> A股罕见的"稳增长白马 × 极端低估值 × 强产业趋势 × 高股息"四合一组合。
+    "十五五"4万亿电网投资是明确3-5年β,PE分位0.5%/PB分位0.3%极端低位提供估值向上空间。
+    <strong>中期胜率高、下行风险有限,是与AI算力最合理的负相关对冲之一。</strong>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="label">现价</div><div class="value">22.45元</div></div>
+    <div class="stat neutral"><div class="label">总市值</div><div class="value">1835亿</div></div>
+    <div class="stat good"><div class="label">ROE 2025</div><div class="value">16.3%</div></div>
+    <div class="stat"><div class="label">PE-TTM</div><div class="value">22.1x</div></div>
+    <div class="stat good"><div class="label">PE 5Y分位</div><div class="value">0.5%</div></div>
+    <div class="stat good"><div class="label">PB 5Y分位</div><div class="value">0.3%</div></div>
+    <div class="stat"><div class="label">股息率</div><div class="value">2.77%</div></div>
+    <div class="stat neutral"><div class="label">Q1扣非YoY</div><div class="value">+5.4%</div></div>
+  </div>
+
+  <div class="range-bar">
+    <span>📍 内在价值:</span>
+    <span>保守 <b>25-28元</b> · 中性 <b>27-32元</b> · 乐观 <b>35-38元</b></span>
+    <span class="good">上行 15%-40%</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>公司质地:电力二次设备绝对龙头</h2>
+  <p><strong>核心业务与市占率(2025年报):</strong></p>
+  <table>
+    <thead><tr><th>业务板块</th><th>市占率</th><th>行业地位</th></tr></thead>
+    <tbody>
+      <tr><td>柔性直流换流阀</td><td class="good">≈50%</td><td>接近垄断,单GW价值量4.7亿(常直的4.7倍)</td></tr>
+      <tr><td>直流控制保护</td><td class="good">>75%</td><td>近乎垄断,关键安全设备</td></tr>
+      <tr><td>电网调度自动化(EMS)</td><td class="good">≈45.6%</td><td>行业第一,电网"大脑"</td></tr>
+      <tr><td>继电保护</td><td class="good">龙头</td><td>与南瑞继保合计占国网招标绝大部分</td></tr>
+    </tbody>
+  </table>
+  <p><strong>护城河:</strong> 国网体系深度绑定 + 20年技术积累 + 安全稳定运行不可替代 + 三大细分同时行业第一</p>
+  <p><strong>客户多元化进展:</strong> 国网系统外订单占比>50%,2025H1海外订单+200%(智利/尼加拉瓜市场突破)</p>
+</div>
+
+<div class="card">
+  <h2>长期财务(2020-2025)—— 教科书级稳定白马</h2>
+  <table>
+    <thead><tr><th>年度</th><th>营收(亿)</th><th>营收YoY</th><th>扣非YoY</th><th>ROE</th><th>毛利率</th></tr></thead>
+    <tbody>
+      <tr><td>2020</td><td>385.0</td><td>+18.8%</td><td>+11.8%</td><td>15.1%</td><td>26.8%</td></tr>
+      <tr><td>2021</td><td>424.1</td><td>+10.2%</td><td>+19.3%</td><td>15.7%</td><td>26.9%</td></tr>
+      <tr><td>2022</td><td>468.3</td><td>+10.4%</td><td>+13.8%</td><td>16.1%</td><td>27.0%</td></tr>
+      <tr><td>2023</td><td>516.6</td><td>+10.1%</td><td>+10.4%</td><td>16.1%</td><td>26.8%</td></tr>
+      <tr><td>2024</td><td>578.3</td><td>+11.2%</td><td>+6.3%</td><td>15.9%</td><td>26.7%</td></tr>
+      <tr><td><strong>2025</strong></td><td class="good"><strong>662.3</strong></td><td class="good"><strong>+14.5%</strong>(6年最高)</td><td>+8.0%</td><td class="good"><strong>16.3%</strong></td><td>25.8%</td></tr>
+    </tbody>
+  </table>
+  <p>5年营收CAGR <span class="good">+11.5%</span>、扣非CAGR <span class="good">+11.5%</span>、ROE稳定15-16%、<strong>无一年负增长</strong>。教科书级"稳增长白马"。</p>
+  <p class="warn">⚠️ Q1增速边际减速:2024Q1+24.3% → 2026Q1+7.5%,属"招标节奏偏晚+高基数"暂时性放缓,非趋势性恶化。</p>
+</div>
+
+<div class="card">
+  <h2>成长驱动:"十五五"电网4万亿投资(2026-2030)</h2>
+  <p>据国家电网规划及券商公开研报:</p>
+  <ul>
+    <li>十五五电网投资总规模 <strong>4万亿(vs 十四五 2.86万亿, +40%)</strong></li>
+    <li>柔直渗透率:<strong>当前~15% → 十五五末~40%</strong>(3年翻2.7倍)</li>
+    <li>年均柔直设备订单约150-200亿, 南瑞市占率50% → <strong>每年新增柔直75-100亿(=当前营收11-15%增量)</strong></li>
+  </ul>
+  <h3>3年增速预测(自建基准模型)</h3>
+  <table>
+    <thead><tr><th>年度</th><th>营收增速</th><th>扣非增速</th><th>逻辑</th></tr></thead>
+    <tbody>
+      <tr><td>2026E</td><td>+10-15% (基准+12%)</td><td>+8-13% (基准+10%)</td><td>"十五五"启动年,Q1略慢</td></tr>
+      <tr><td>2027E</td><td>+13-18% (基准+15%)</td><td>+12-17% (基准+14%)</td><td>柔直订单集中确认高峰</td></tr>
+      <tr><td>2028E</td><td>+12-16% (基准+14%)</td><td>+11-15% (基准+13%)</td><td>柔直渗透率过半+配网数字化</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>估值锚定:三维测算</h2>
+  <table>
+    <thead><tr><th>方法</th><th>假设</th><th>目标价</th></tr></thead>
+    <tbody>
+      <tr><td>PE估值(保守)</td><td>2026E EPS 1.09 × 25x</td><td>27.3元</td></tr>
+      <tr><td><strong>PE估值(中性)</strong></td><td>2026E EPS 1.09 × 30x</td><td class="good"><strong>32.7元</strong></td></tr>
+      <tr><td>PE估值(乐观)</td><td>2026E EPS 1.09 × 35x</td><td>38.2元</td></tr>
+      <tr><td>PB估值</td><td>PB 4.5x × 每股净资产6.51</td><td>29.3元</td></tr>
+      <tr><td>股息率倒推</td><td>股息率3.0% × 每股分红0.622</td><td>20.7元(保守下沿)</td></tr>
+    </tbody>
+  </table>
+  <p><strong>为何PE分位0.5%?</strong> 央企估值折价 + "电网慢β"标签 + 2025扣非放缓叠加,三重偏见系统性低估。但"十五五"投资拐点+柔直价值量4.7倍切换+海外+200%三大新事实矛盾此偏见。</p>
+</div>
+
+<div class="card">
+  <h2>风险点</h2>
+  <table>
+    <thead><tr><th>风险</th><th>概率</th><th>影响</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>电网投资不及预期</td><td class="warn">中</td><td class="bad">高</td><td>4万亿为规划口径,实际执行可能延后</td></tr>
+      <tr><td>Q1增速边际减速持续</td><td class="warn">中</td><td class="warn">中</td><td>若中报仍个位数,估值修复延后</td></tr>
+      <tr><td>央企估值折价难打破</td><td class="warn">中</td><td class="warn">中</td><td>市场偏好切换需时间</td></tr>
+      <tr><td>大市值弹性有限</td><td class="bad">高</td><td class="good">低</td><td>1835亿,估值修复速度慢</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+
+<!-- ================ 上能电气 ================ -->
+<div class="tab-content" id="sneg">
+
+<div class="card">
+  <h2>核心结论</h2>
+  <div class="hero-verdict">
+    <strong>✅ 能,但属高弹性成长股属性。</strong> 储能PCS+光伏逆变器双主业龙头,身处"行业价格战出清+海外大储放量"双重反转窗口。Q1营收+28.9%(4年最快)已释放景气信号。
+    <strong>PB分位1.3%</strong>是近5年绝对底部(几乎从未这么便宜过),ROE 19.7%高质量成长,估值/业绩剪刀差极大。<strong>中期胜率高,但需接受高弹性=高波动的定价特征。</strong>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="label">现价</div><div class="value">28.41元</div></div>
+    <div class="stat neutral"><div class="label">总市值</div><div class="value">171亿</div></div>
+    <div class="stat good"><div class="label">ROE 2025</div><div class="value">19.7%</div></div>
+    <div class="stat"><div class="label">PE-TTM</div><div class="value">36.3x</div></div>
+    <div class="stat good"><div class="label">PE 5Y分位</div><div class="value">21.9%</div></div>
+    <div class="stat good"><div class="label">PB 5Y分位</div><div class="value">1.3%</div></div>
+    <div class="stat good"><div class="label">Q1营收YoY</div><div class="value">+28.9%</div></div>
+    <div class="stat neutral"><div class="label">Q1扣非YoY</div><div class="value">+3.2%</div></div>
+  </div>
+
+  <div class="range-bar">
+    <span>📍 内在价值:</span>
+    <span>保守 <b>30-35元</b> · 中性 <b>35-45元</b> · 乐观 <b>45-55元</b></span>
+    <span class="good">上行 23%-76%</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>公司质地:储能PCS国产二线龙头</h2>
+  <p><strong>业务结构(2025年报):</strong></p>
+  <ul>
+    <li><strong>储能变流器(PCS)及储能系统</strong> —— 大储PCS+集成系统,海外为主战场</li>
+    <li><strong>光伏逆变器</strong> —— 全功率段覆盖,2024海外销售占比31%,毛利率31.4%</li>
+    <li><strong>电能质量治理+电站开发</strong> —— 配套业务</li>
+  </ul>
+  <p><strong>护城河:</strong></p>
+  <ul>
+    <li>1500V PCS技术+大储集中式PCS国内头部三强(阳光/科华/上能)</li>
+    <li>海外渠道:2021年南非储能逆变器市占率第一,中东/北美/欧洲快速拓展</li>
+    <li>央企集采准入 + 国网体系合作</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>财务基本面:爆发力+波动性</h2>
+  <table>
+    <thead><tr><th>年度</th><th>营收(亿)</th><th>营收YoY</th><th>扣非YoY</th><th>毛利率</th><th>ROE</th></tr></thead>
+    <tbody>
+      <tr><td>2020</td><td>10.0</td><td>+8.8%</td><td>-23.2%</td><td>25.7%</td><td>11.3%</td></tr>
+      <tr><td>2021</td><td>10.9</td><td>+8.8%</td><td>-14.8%</td><td>24.6%</td><td>6.8%</td></tr>
+      <tr><td>2022</td><td>23.4</td><td class="good">+114%</td><td>+44.5%</td><td>17.3%</td><td>8.6%</td></tr>
+      <tr><td>2023</td><td>49.3</td><td class="good">+111%</td><td class="good">+295%</td><td>19.2%</td><td>20.3%</td></tr>
+      <tr><td>2024</td><td>47.7</td><td class="bad">-3.2%</td><td>+49.6%</td><td>22.9%</td><td>21.5%</td></tr>
+      <tr><td><strong>2025</strong></td><td class="good"><strong>56.3</strong></td><td class="good"><strong>+18.0%</strong></td><td>+8.7%</td><td class="good">23.6%</td><td class="good"><strong>19.7%</strong></td></tr>
+    </tbody>
+  </table>
+  <p><strong>Q1景气反转信号(正向):</strong></p>
+  <ul>
+    <li>营收+28.9%,除2023极端反弹外4年最快</li>
+    <li>毛利率23.6%稳定,价格战最坏时期已过</li>
+    <li>资产负债率大幅下降:2022年77.7% → 2025年62.1%(下降15pt)</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>成长驱动:全球储能出海 + 价格战出清</h2>
+  <p><strong>宏观β:</strong></p>
+  <ul>
+    <li>2025全球储能装机同比+40%,2026-2028 CAGR预计35%+</li>
+    <li>美国大储2026新增预计30GWh+(ITC税收抵免延续)</li>
+    <li>中东/北非2026-2028年新增储能100GWh+(沙特/UAE大规模光储)</li>
+    <li>欧洲户储反弹在即(德意西2026-2027年复苏)</li>
+  </ul>
+  <h3>3年增速预测</h3>
+  <table>
+    <thead><tr><th>年度</th><th>营收增速</th><th>扣非增速</th><th>逻辑</th></tr></thead>
+    <tbody>
+      <tr><td>2026E</td><td class="good">+30-40% (基准+35%)</td><td class="good">+30-50% (基准+40%)</td><td>海外大储订单集中释放</td></tr>
+      <tr><td>2027E</td><td>+25-35% (基准+30%)</td><td>+25-40% (基准+30%)</td><td>全球储能高景气延续</td></tr>
+      <tr><td>2028E</td><td>+15-25% (基准+20%)</td><td>+20-30% (基准+25%)</td><td>基数抬高稳态增长</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>估值锚定</h2>
+  <table>
+    <thead><tr><th>方法</th><th>假设</th><th>目标价</th></tr></thead>
+    <tbody>
+      <tr><td>PE估值(保守)</td><td>2026E EPS 1.01 × 30x</td><td>30.3元</td></tr>
+      <tr><td><strong>PE估值(中性)</strong></td><td>2026E EPS 1.01 × 40x</td><td class="good"><strong>40.4元</strong></td></tr>
+      <tr><td>PE估值(乐观)</td><td>2026E EPS 1.01 × 50x</td><td>50.5元</td></tr>
+      <tr><td>PEG=1</td><td>3年CAGR+32% → PE 32x</td><td>32.3元</td></tr>
+      <tr><td>PB估值</td><td>PB 6-8x × 每股净资产6.3</td><td>37.8-50.4元</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>风险点</h2>
+  <table>
+    <thead><tr><th>风险</th><th>概率</th><th>影响</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>储能价格战再起</td><td class="warn">中</td><td class="bad">高</td><td>若国内新增产能释放,可能再压毛利</td></tr>
+      <tr><td>海外汇率/关税</td><td class="warn">中</td><td class="warn">中</td><td>美国关税/中东结算周期长</td></tr>
+      <tr><td>大储装机不及预期</td><td class="warn">中</td><td class="bad">高</td><td>ITC政策/欧洲加息可能影响</td></tr>
+      <tr><td>Q1扣非仅+3.2%持续</td><td class="warn">中</td><td class="warn">中</td><td>需中报确认加速</td></tr>
+      <tr><td>小市值(171亿)波动大</td><td class="bad">高</td><td class="warn">中</td><td>弹性大但下行也快</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+
+<!-- ================ 汇川技术 ================ -->
+<div class="tab-content" id="inovance">
+
+<div class="card">
+  <h2>核心结论</h2>
+  <div class="hero-verdict">
+    <strong>✅ 能,是"机器人+工控+新能车+与AI算力低相关"独家四合一大龙头。</strong> A股工业自动化绝对龙头,通用自动化稳增+新能车电驱全球第三+机器人伺服放量在即。
+    <strong>PB分位仅4.5%</strong>是近5年绝对低位,ROE 16.3%高质量。Q1扣非-15%是新能车业务波动导致的短期扰动,通用自动化+机器人两大主力主线未受影响。<strong>中期胜率高、催化剂多、是降β组合"α替代"最强候选。</strong>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="label">现价</div><div class="value">69.05元</div></div>
+    <div class="stat neutral"><div class="label">总市值</div><div class="value">1796亿</div></div>
+    <div class="stat good"><div class="label">ROE 2025</div><div class="value">16.3%</div></div>
+    <div class="stat"><div class="label">PE-TTM</div><div class="value">37.9x</div></div>
+    <div class="stat"><div class="label">PE 5Y分位</div><div class="value">40.6%</div></div>
+    <div class="stat good"><div class="label">PB 5Y分位</div><div class="value">4.5%</div></div>
+    <div class="stat"><div class="label">Q1营收YoY</div><div class="value">+13.0%</div></div>
+    <div class="stat bad"><div class="label">Q1扣非YoY</div><div class="value">-15.3%</div></div>
+  </div>
+
+  <div class="range-bar">
+    <span>📍 内在价值:</span>
+    <span>保守 <b>75-85元</b> · 中性 <b>85-105元</b> · 乐观 <b>95-120元</b></span>
+    <span class="good">上行 23%-74%</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>公司质地:工业自动化绝对龙头 + 机器人独角兽</h2>
+  <p><strong>四大业务板块(2025年报):</strong></p>
+  <table>
+    <thead><tr><th>业务</th><th>2025收入</th><th>毛利率</th><th>关键地位</th></tr></thead>
+    <tbody>
+      <tr><td><strong>通用自动化</strong>(变频+伺服+PLC+HMI+机器人)</td><td class="good">~200亿+</td><td class="good">40%+</td><td>国内平台龙头,对标西门子/ABB</td></tr>
+      <tr><td><strong>新能源汽车电驱</strong>(电控/电机/OBC/DC-DC)</td><td>~130亿</td><td>18-22%</td><td class="good">全球第三大、中国第一大乘用车动力系统第三方供应商(装机量全球第二)</td></tr>
+      <tr><td><strong>智慧电梯</strong></td><td>~60亿</td><td>~30%</td><td>市占率第一,稳定现金流</td></tr>
+      <tr><td><strong>轨道交通</strong></td><td>小</td><td>~30%</td><td>牵引变流器</td></tr>
+    </tbody>
+  </table>
+  <p><strong>护城河:</strong> 平台化能力(全线自动化解决方案) + 通用自动化毛利40%+(品牌/技术/规模三重优势) + 新能车电驱全球第三 + 机器人伺服已切入国内外供应链</p>
+</div>
+
+<div class="card">
+  <h2>财务基本面:爆发式成长龙头</h2>
+  <table>
+    <thead><tr><th>年度</th><th>营收(亿)</th><th>营收YoY</th><th>扣非YoY</th><th>毛利率</th><th>ROE</th></tr></thead>
+    <tbody>
+      <tr><td>2020</td><td>115.1</td><td class="good">+55.8%</td><td class="good">+136%</td><td>39.0%</td><td>21.7%</td></tr>
+      <tr><td>2021</td><td>179.4</td><td class="good">+55.9%</td><td class="good">+52.6%</td><td>35.8%</td><td class="good">27.4%</td></tr>
+      <tr><td>2022</td><td>230.1</td><td>+28.2%</td><td>+16.1%</td><td>35.0%</td><td>24.3%</td></tr>
+      <tr><td>2023</td><td>304.2</td><td>+32.2%</td><td>+20.1%</td><td>33.6%</td><td>21.7%</td></tr>
+      <tr><td>2024</td><td>370.4</td><td>+21.8%</td><td class="bad">-0.9%</td><td>28.7%</td><td>16.5%</td></tr>
+      <tr><td><strong>2025</strong></td><td class="good"><strong>451.1</strong></td><td class="good">+21.8%</td><td class="good"><strong>+22.7%</strong>(已反弹)</td><td>29.0%</td><td class="good"><strong>16.3%</strong></td></tr>
+    </tbody>
+  </table>
+  <p>5年营收CAGR <span class="good">+31.4%</span>、扣非CAGR <span class="good">+21.0%</span>。<strong>2025扣非+22.7%已完成反转</strong>,证明业务结构调整成功。</p>
+  <p class="warn">⚠️ <strong>Q1扣非-15.3%是本轮基本面最大担忧点</strong>,主因新能车业务价格战+去库存+客户结构调整(理想Q1销量放缓)。<strong>是新能车业务的行业性波动,非公司竞争力问题</strong>——通用自动化+机器人未受同等冲击。</p>
+</div>
+
+<div class="card">
+  <h2>成长驱动:三大独家α</h2>
+  <table>
+    <thead><tr><th>驱动</th><th>逻辑</th><th>3年增速</th></tr></thead>
+    <tbody>
+      <tr><td><strong>通用自动化(基本盘)</strong></td><td>2025收入200亿+,毛利40%+,制造业库存周期见底</td><td class="good">+15-20%/年</td></tr>
+      <tr><td><strong>新能源车电驱(压力+复苏)</strong></td><td>全球第三大动力系统第三方供应商,2026H2格局改善</td><td>2026短期承压,2027-2028恢复+15-25%</td></tr>
+      <tr><td><strong>机器人伺服(爆发前夕)</strong></td><td>已切入国内外人形机器人供应链,2026为规模化元年,单机价值3-5万元</td><td class="good">2026年5-10亿→2028年30-50亿</td></tr>
+    </tbody>
+  </table>
+  <h3>3年增速预测</h3>
+  <table>
+    <thead><tr><th>年度</th><th>营收增速</th><th>扣非增速</th><th>逻辑</th></tr></thead>
+    <tbody>
+      <tr><td>2026E</td><td>+15-22% (基准+18%)</td><td>+10-20% (基准+15%)</td><td>新能车Q1拖累,通用自动化+机器人对冲</td></tr>
+      <tr><td>2027E</td><td>+18-25% (基准+22%)</td><td>+20-30% (基准+25%)</td><td>机器人显著贡献,新能车恢复</td></tr>
+      <tr><td>2028E</td><td>+18-25% (基准+22%)</td><td class="good">+22-32% (基准+27%)</td><td>机器人放量+工控周期上行叠加</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>估值锚定:分部估值(SOTP)最合适</h2>
+  <table>
+    <thead><tr><th>方法</th><th>假设</th><th>目标价</th></tr></thead>
+    <tbody>
+      <tr><td>PE估值(保守)</td><td>2026E EPS 2.19 × 35x</td><td>76.7元</td></tr>
+      <tr><td><strong>PE估值(中性)</strong></td><td>2026E EPS 2.19 × 40x</td><td class="good"><strong>87.6元</strong></td></tr>
+      <tr><td>PE估值(乐观)</td><td>2026E EPS 2.19 × 50x</td><td>109.5元</td></tr>
+      <tr><td>SOTP保守</td><td>通用30x+新能车25x+机器人PS10x</td><td>54-62元</td></tr>
+      <tr><td>SOTP乐观(加机器人期权)</td><td>机器人估值提升</td><td>76-85元</td></tr>
+      <tr><td>PB估值</td><td>PB 5-6x × 每股净资产14</td><td>70-84元</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>风险点</h2>
+  <table>
+    <thead><tr><th>风险</th><th>概率</th><th>影响</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>新能车业务持续承压</td><td class="warn">中</td><td class="bad">高</td><td>价格战/客户调整可能延续到2026H1</td></tr>
+      <tr><td>工控周期性下行</td><td class="good">低</td><td class="bad">高</td><td>制造业弱复苏若失速</td></tr>
+      <tr><td>机器人商业化延后</td><td class="warn">中</td><td class="warn">中</td><td>若人形机器人量产延后到2027+</td></tr>
+      <tr><td>Q1扣非-15.3%持续</td><td class="warn">中</td><td class="warn">中</td><td>需中报确认新能车触底</td></tr>
+      <tr><td>大市值(1796亿)弹性有限</td><td class="bad">高</td><td class="good">低</td><td>估值修复速度慢</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+
+<!-- ================ 三股横向对比总表(始终显示) ================ -->
+<div class="card">
+  <h2>🎯 三股横向对比总表</h2>
+  <table>
+    <thead><tr><th>指标</th><th>国电南瑞</th><th>上能电气</th><th>汇川技术</th></tr></thead>
+    <tbody>
+      <tr><td>市值</td><td>1835亿</td><td>171亿</td><td>1796亿</td></tr>
+      <tr><td>属性</td><td><span class="tag blue">稳增长白马</span></td><td><span class="tag yellow">高弹性成长</span></td><td><span class="tag green">机器人+工控α</span></td></tr>
+      <tr><td>PE / 分位</td><td class="good">22.1 / 0.5%</td><td>36.3 / 21.9%</td><td>37.9 / 40.6%</td></tr>
+      <tr><td>PB分位</td><td class="good">0.3%</td><td class="good">1.3%</td><td class="good">4.5%</td></tr>
+      <tr><td>ROE 2025</td><td>16.3%</td><td class="good">19.7%</td><td>16.3%</td></tr>
+      <tr><td>Q1营收YoY</td><td>+7.5%</td><td class="good">+28.9%</td><td>+13.0%</td></tr>
+      <tr><td>Q1扣非YoY</td><td>+5.4%</td><td>+3.2%</td><td class="bad">-15.3%</td></tr>
+      <tr><td>股息率</td><td class="good">2.77%</td><td>0.33%</td><td>0.66%</td></tr>
+      <tr><td>3年扣非CAGR预测</td><td>+12.3%</td><td class="good">+32%</td><td class="good">+22%</td></tr>
+      <tr><td><strong>内在价值(中性)</strong></td><td class="good">27-32元</td><td class="good">35-45元</td><td class="good">85-105元</td></tr>
+      <tr><td><strong>12月综合回报预期</strong></td><td>15-40%</td><td class="good">23-76%</td><td>23-74%</td></tr>
+      <tr><td>核心β</td><td>"十五五"电网4万亿</td><td>全球储能出海</td><td>机器人+工控周期</td></tr>
+      <tr><td>与AI算力相关性</td><td class="good">近零</td><td class="good">低</td><td class="good">低</td></tr>
+    </tbody>
+  </table>
+
+  <h3>组合层面的策略含义</h3>
+  <ul>
+    <li><strong>国电南瑞</strong> = 稳健防御主锚,提供最低下行风险 + 高股息 + 极端低估值</li>
+    <li><strong>上能电气</strong> = 高弹性进攻,提供最高β向上空间(储能出海反转)</li>
+    <li><strong>汇川技术</strong> = α替代最强候选,提供机器人+工控独家逻辑,是最能延续α属性的替代</li>
+    <li><strong>三股搭配</strong> = "稳(南瑞) + 冲(上能) + α(汇川)",与AI算力β形成有效对冲</li>
+  </ul>
+</div>
+
+<footer>
+  📄 完整md报告:<br>
+  国电南瑞_基本面深化.md · 上能电气_基本面深化.md · 汇川技术_基本面深化.md<br>
+  © TAT基本面分析师 2026-06-26 · 本报告仅基本面研判,不含技术面与交易建议
+</footer>
+
+</div>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.closest('.tab-btn').classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+</body>
+</html>

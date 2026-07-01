@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="report-title" content="A股 AI算力赛道全产业链研判 · 2026-06-25">
+<meta name="report-date" content="2026-06-25">
+<meta name="report-category" content="赛道">
+<meta name="report-tags" content="AI算力,光模块,PCB,服务器,IDC">
+<meta name="report-summary" content="全链基本面真景气估值已透支。18/25 龙头分位 90%+。真机会在服务器 ODM、IDC、铜连接。">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A股 AI算力赛道全产业链研判 · 2026-06-25</title>
+<style>
+:root{
+  --bg:#0a0e14; --bg2:#0d1117; --surface:#11161f; --surface2:#161c28;
+  --border:#1f2733; --border2:#2a3543;
+  --text:#e6edf3; --text2:#aebacb; --text3:#7d8aa0;
+  --up:#ff4d4f; --up-soft:#3a1c1f;
+  --down:#16c784; --down-soft:#10302a;
+  --warn:#f5a623; --warn-soft:#3a2e12;
+  --accent:#4c8dff; --accent-soft:#16243f;
+  --radius:14px; --radius-sm:9px;
+  --shadow-1:0 1px 2px rgba(0,0,0,.4);
+  --shadow-2:0 6px 20px rgba(0,0,0,.45);
+  --mono:"SF Mono","JetBrains Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--text); font-family:var(--sans);
+  font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(900px 500px at 80% -10%,rgba(76,141,255,.07),transparent 60%);
+  background-attachment:fixed;
+}
+.num{font-variant-numeric:tabular-nums;font-family:var(--mono);letter-spacing:-.2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+section{padding:46px 0;border-top:1px solid var(--border)}
+section:first-of-type{border-top:none}
+h1,h2,h3{line-height:1.25;font-weight:700}
+a{color:var(--accent);text-decoration:none}
+
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.sec-head .ic{flex:0 0 30px;width:30px;height:30px;color:var(--accent)}
+.sec-head h2{font-size:21px}
+.sec-sub{color:var(--text3);font-size:13.5px;margin:2px 0 26px 42px;max-width:760px}
+
+/* cover */
+.cover{padding:54px 0 40px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);background:var(--accent-soft);
+  border:1px solid #21345a;padding:6px 13px;border-radius:999px;font-weight:600}
+.eyebrow svg{width:14px;height:14px}
+.cover h1{font-size:clamp(28px,5vw,46px);margin:22px 0 14px;letter-spacing:-.5px;
+  background:linear-gradient(180deg,#fff,#aebacb);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cover .lead{font-size:clamp(15px,2.2vw,18px);color:var(--text2);max-width:800px}
+.cover .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--text2);
+  background:var(--surface);border:1px solid var(--border);padding:7px 13px;border-radius:999px}
+.chip svg{width:14px;height:14px;color:var(--text3)}
+.chip b{color:var(--text);font-weight:600}
+
+.verdict{margin-top:30px;background:linear-gradient(135deg,var(--surface),var(--surface2));
+  border:1px solid var(--border2);border-left:4px solid var(--warn);border-radius:var(--radius);
+  padding:22px 24px;box-shadow:var(--shadow-2)}
+.verdict .vt{display:flex;align-items:center;gap:9px;font-size:13px;letter-spacing:.05em;
+  color:var(--warn);font-weight:700;text-transform:uppercase;margin-bottom:10px}
+.verdict .vt svg{width:17px;height:17px}
+.verdict p{font-size:15.5px;color:var(--text);line-height:1.75}
+
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-1)}
+.kpi .v{font-size:26px;font-weight:700;font-family:var(--mono)}
+.kpi .k{font-size:12.5px;color:var(--text3);margin-top:6px;line-height:1.4}
+.kpi .v.up{color:var(--up)} .kpi .v.warn{color:var(--warn)} .kpi .v.accent{color:var(--accent)} .kpi .v.down{color:var(--down)}
+
+/* chain map */
+.chain{display:flex;flex-direction:column;gap:16px}
+.tier{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-1)}
+.tier-h{display:flex;align-items:center;gap:10px;padding:13px 18px;background:var(--surface2);border-bottom:1px solid var(--border2)}
+.tier-h svg{width:18px;height:18px;color:var(--accent)}
+.tier-h .t{font-weight:700;font-size:15px}
+.tier-h .s{font-size:12px;color:var(--text3);margin-left:auto}
+.links{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1px;background:var(--border)}
+.lk{background:var(--surface);padding:14px 16px}
+.lk .ln{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+.lk .nm{font-weight:600;font-size:14px}
+.lk .stars{font-family:var(--mono);font-size:12px;letter-spacing:1px;white-space:nowrap}
+.lk .rep{font-size:12px;color:var(--text3);line-height:1.5}
+.s5{color:var(--up)} .s4{color:var(--warn)} .s3{color:var(--text3)}
+
+/* opportunity tiers */
+.opp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.opp{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow-1)}
+.opp.t1{border-top:3px solid var(--up)} .opp.t2{border-top:3px solid var(--accent)}
+.opp .oh{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.opp .oh svg{width:18px;height:18px}
+.opp.t1 .oh svg{color:var(--up)} .opp.t2 .oh svg{color:var(--accent)}
+.opp .oh h3{font-size:16px}
+.opp .osub{font-size:12px;color:var(--text3);margin-bottom:16px}
+.stock{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:13px 15px;margin-bottom:10px}
+.stock:last-child{margin-bottom:0}
+.stock .sn{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:7px}
+.stock .sn .n{font-weight:700;font-size:14px}
+.stock .sn .c{font-size:11.5px;color:var(--text3);font-family:var(--mono)}
+.stock .sn .seg{font-size:11px;color:var(--accent);background:var(--accent-soft);padding:2px 8px;border-radius:6px;margin-left:auto}
+.metrics{display:flex;flex-wrap:wrap;gap:7px}
+.m{font-size:11.5px;padding:3px 9px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);color:var(--text2);font-family:var(--mono)}
+.m b{color:var(--text);font-weight:700}
+.m.good{border-color:#1a5046;color:var(--down)} .m.good b{color:var(--down)}
+.m.hot{border-color:#5a2426;color:var(--up)} .m.hot b{color:var(--up)}
+.m.cheap{border-color:#23456f;color:var(--accent)} .m.cheap b{color:var(--accent)}
+
+/* charts */
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.chart-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-1)}
+.chart-card.full{grid-column:1/-1}
+.chart-card h3{font-size:16.5px;margin-bottom:4px}
+.chart-card .ch-sub{font-size:12.5px;color:var(--text3);margin-bottom:20px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;font-size:12px;color:var(--text2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
+.bar-row{display:grid;grid-template-columns:118px 1fr 56px;align-items:center;gap:10px;margin:13px 0}
+.bar-row .lbl{font-size:13px;color:var(--text2);font-weight:500}
+.bar-track{background:var(--bg2);border-radius:6px;height:30px;position:relative;overflow:hidden;border:1px solid var(--border)}
+.bar-fill{height:100%;border-radius:5px;display:flex;align-items:center;justify-content:flex-end;
+  padding-right:9px;font-size:11.5px;font-weight:700;color:#fff;font-family:var(--mono);min-width:34px}
+.bar-row .val{text-align:right;font-size:13px;font-weight:700;font-family:var(--mono)}
+.star-row{display:grid;grid-template-columns:130px 1fr;align-items:center;gap:12px;margin:11px 0}
+.star-row .lbl{font-size:13.5px;color:var(--text2);font-weight:500}
+.star-row .stars{font-family:var(--mono);font-size:18px;letter-spacing:3px}
+
+/* percentile ruler */
+.ruler{position:relative;margin:26px 0 10px;padding:0 4px}
+.ruler-track{position:relative;height:14px;border-radius:8px;
+  background:linear-gradient(90deg,#23456f 0%,#16c784 22%,#f5a623 70%,#ff4d4f 100%);}
+.ruler-scale{display:flex;justify-content:space-between;margin-top:7px;font-size:11px;color:var(--text3);font-family:var(--mono)}
+.ruler-mark{position:absolute;top:-9px;transform:translateX(-50%);text-align:center}
+.ruler-mark .dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--bg);margin:0 auto;box-shadow:0 1px 4px rgba(0,0,0,.6)}
+.ruler-mark .ml{font-size:10.5px;color:var(--text2);margin-top:5px;white-space:nowrap;font-weight:600}
+.ruler-mark .mv{font-size:10px;color:var(--text3);font-family:var(--mono)}
+.ruler-zone{display:flex;margin-top:48px;border-radius:8px;overflow:hidden;border:1px solid var(--border)}
+.ruler-zone div{padding:7px 4px;text-align:center;font-size:11px;font-weight:600;color:#fff}
+
+/* scatter quadrant */
+.scatter-wrap{position:relative;width:100%}
+.scatter-wrap svg{width:100%;height:auto;display:block}
+.q-note{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.q-note div{font-size:12px;color:var(--text2);padding:9px 12px;border-radius:8px;border:1px solid var(--border);background:var(--bg2)}
+.q-note b{font-weight:700}
+.q-good b{color:var(--down)} .q-bad b{color:var(--up)} .q-mid b{color:var(--warn)} .q-watch b{color:var(--accent)}
+
+/* distribution */
+.dist-row{display:grid;grid-template-columns:88px 1fr;align-items:center;gap:14px;margin:14px 0}
+.dist-row .lbl{font-size:13.5px;color:var(--text2);font-weight:600}
+.dist-bar{display:flex;height:34px;border-radius:8px;overflow:hidden;border:1px solid var(--border)}
+.dist-seg{display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;font-family:var(--mono)}
+
+/* avoid list */
+.avoid-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.avoid{background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--down);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-1)}
+.avoid .ah{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px;margin-bottom:14px}
+.avoid .ah svg{width:17px;height:17px;color:var(--down)}
+.avoid .row{padding:10px 0;border-bottom:1px solid var(--border)}
+.avoid .row:last-child{border-bottom:none;padding-bottom:0}
+.avoid .row .n{font-weight:600;font-size:13.5px;display:flex;align-items:baseline;gap:7px}
+.avoid .row .n .c{font-size:11px;color:var(--text3);font-family:var(--mono)}
+.avoid .row .d{font-size:12px;color:var(--text3);margin-top:4px;line-height:1.5}
+.avoid .row .d b{color:var(--down);font-family:var(--mono)}
+
+/* insight */
+.insight{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--border2);
+  border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-2);margin-bottom:18px;border-left:4px solid var(--accent)}
+.insight .ih{display:flex;align-items:center;gap:9px;color:var(--accent);font-weight:700;font-size:13px;
+  text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}
+.insight .ih svg{width:17px;height:17px}
+.insight p{font-size:15px;color:var(--text);line-height:1.8}
+.watch{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.wcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+.wcard h3{font-size:14px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.wcard h3 svg{width:16px;height:16px;color:var(--accent)}
+.wcard ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.wcard li{font-size:13px;color:var(--text2);padding-left:18px;position:relative;line-height:1.55}
+.wcard li::before{content:"";position:absolute;left:2px;top:8px;width:6px;height:6px;border-radius:2px;background:var(--accent)}
+.wcard li b{color:var(--text);font-family:var(--mono);font-weight:700}
+
+.tnote{color:var(--text3);font-size:12px;margin-top:12px;display:flex;gap:7px;align-items:flex-start}
+.tnote svg{width:14px;height:14px;flex:0 0 14px;margin-top:2px}
+
+footer{border-top:1px solid var(--border);padding:30px 0 50px;color:var(--text3);font-size:12.5px;text-align:center}
+footer .disc{background:var(--surface);border:1px solid var(--border);border-radius:10px;
+  padding:14px 18px;margin-bottom:16px;color:var(--text2);font-size:13px;line-height:1.6}
+footer .disc b{color:var(--warn)}
+
+@media (max-width:820px){
+  .kpi-row{grid-template-columns:1fr 1fr}
+  .opp-grid,.chart-grid,.avoid-grid,.watch,.q-note{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  section{padding:36px 0}
+  .bar-row{grid-template-columns:92px 1fr 46px}
+  .star-row{grid-template-columns:104px 1fr}
+  .dist-row{grid-template-columns:64px 1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============ COVER ============ -->
+<section class="cover">
+  <span class="eyebrow">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v6"/><path d="M15 7h6"/></svg>
+    TAT投研团队 · 赛道全产业链研判
+  </span>
+  <h1>A股 AI算力赛道全产业链研判</h1>
+  <p class="lead">覆盖上游算力芯片到下游 IDC 的 12 个环节、25 只龙头。结论很直接：基本面是真景气，但估值已经集体打到历史高位。能赚的是 α，要躲的是 β。</p>
+
+  <div class="meta">
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>报告日期 <b>2026-06-25</b></span>
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>覆盖 <b>12 环节 / 25 龙头</b></span>
+    <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 8v4l3 2"/></svg>口径 <b>2025年报 + 2026Q1</b></span>
+  </div>
+
+  <div class="verdict">
+    <div class="vt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.3L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.3a2 2 0 00-3.4 0z"/></svg>核心定调</div>
+    <p>25 只龙头里，有 <b style="color:var(--warn)">18 只 PE 或 PB 分位已经超过 90%</b>。整条链被行业 β 定价定满了，安全边际很薄。光模块、AI-PCB、算力芯片是最拥挤的地方，也是估值最危险的地方。真正还有空间的标的，反而落在被市场冷落的服务器 ODM、IDC 和铜连接上。能赚业绩的钱（α），别去赚情绪的钱（β）。</p>
+  </div>
+
+  <div class="kpi-row">
+    <div class="kpi"><div class="v warn">18/25</div><div class="k">龙头 PE 或 PB 分位超过 90%。整链估值在顶部。</div></div>
+    <div class="kpi"><div class="v down">37.6x</div><div class="k">工业富联 PE。9000 亿体量仍 +48%，Q1 扣非 +109%。</div></div>
+    <div class="kpi"><div class="v accent">26.4x</div><div class="k">润泽科技 PE（分位 25.7%）。全链最低，ROE 41.8%。</div></div>
+    <div class="kpi"><div class="v accent">23.8x</div><div class="k">沃尔核材 PE。全链最低，铜连接 α 待 Q1 验证。</div></div>
+  </div>
+</section>
+
+<!-- ============ CHAIN PANORAMA ============ -->
+<section id="chain">
+  <div class="sec-head">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="12" r="3"/><path d="M9 6h6a3 3 0 013 3M9 18h6a3 3 0 003-3"/></svg>
+    <h2>产业链全景</h2>
+  </div>
+  <p class="sec-sub">上游到下游各环节的景气星级（星越多越景气）和代表 A股龙头。</p>
+
+  <div class="chain">
+    <div class="tier">
+      <div class="tier-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg><span class="t">上游：芯片 / 材料 / 互联</span><span class="s">驱动：国产替代，量价齐升</span></div>
+      <div class="links">
+        <div class="lk"><div class="ln"><span class="nm">算力芯片</span><span class="stars s5">★★★★★</span></div><div class="rep">寒武纪688256，海光信息688041</div></div>
+        <div class="lk"><div class="ln"><span class="nm">先进封装/HBM</span><span class="stars s4">★★★★☆</span></div><div class="rep">通富微电002156，长电科技600584</div></div>
+        <div class="lk"><div class="ln"><span class="nm">PCB（AI板）</span><span class="stars s5">★★★★★</span></div><div class="rep">胜宏300476，沪电002463，鹏鼎002938</div></div>
+        <div class="lk"><div class="ln"><span class="nm">CCL 覆铜板</span><span class="stars s5">★★★★★</span></div><div class="rep">生益科技600183</div></div>
+        <div class="lk"><div class="ln"><span class="nm">高速铜连接</span><span class="stars s4">★★★★☆</span></div><div class="rep">沃尔核材002130</div></div>
+        <div class="lk"><div class="ln"><span class="nm">光模块/光芯片</span><span class="stars s5">★★★★★</span></div><div class="rep">中际旭创300308，新易盛300502，天孚300394</div></div>
+      </div>
+    </div>
+    <div class="tier">
+      <div class="tier-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span class="t">中游：整机 / 网络 / 散热 / 电源</span><span class="s">驱动：云厂 Capex 扩张</span></div>
+      <div class="links">
+        <div class="lk"><div class="ln"><span class="nm">AI 服务器 ODM</span><span class="stars s5">★★★★★</span></div><div class="rep">工业富联601138，浪潮信息000977</div></div>
+        <div class="lk"><div class="ln"><span class="nm">交换机/网络</span><span class="stars s4">★★★★☆</span></div><div class="rep">紫光股份000938，锐捷网络301165</div></div>
+        <div class="lk"><div class="ln"><span class="nm">液冷</span><span class="stars s4">★★★★☆</span></div><div class="rep">英维克002837</div></div>
+        <div class="lk"><div class="ln"><span class="nm">服务器电源</span><span class="stars s3">★★★☆☆</span></div><div class="rep">麦格米特002851</div></div>
+        <div class="lk"><div class="ln"><span class="nm">存储</span><span class="stars s4">★★★★☆</span></div><div class="rep">兆易创新603986</div></div>
+      </div>
+    </div>
+    <div class="tier">
+      <div class="tier-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v6H4zM4 14h16v6H4z"/><path d="M8 7h.01M8 17h.01"/></svg><span class="t">下游：IDC / 云厂</span><span class="s">驱动：算力租赁，上架率提升</span></div>
+      <div class="links">
+        <div class="lk"><div class="ln"><span class="nm">IDC 数据中心</span><span class="stars s4">★★★★☆</span></div><div class="rep">润泽科技300442，奥飞数据300738，数据港603881</div></div>
+        <div class="lk"><div class="ln"><span class="nm">云厂 Capex</span><span class="stars s4">★★★★☆</span></div><div class="rep">承接算力需求，向全链传导</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPPORTUNITY TIERS ============ -->
+<section id="opp">
+  <div class="sec-head">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+    <h2>核心机会点</h2>
+  </div>
+  <p class="sec-sub">按业绩兑现程度和估值安全边际分两档。第一档业绩已兑现且估值不极端，第二档估值低但 α 还要等数据。</p>
+
+  <div class="opp-grid">
+    <div class="opp t1">
+      <div class="oh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg><h3>第一档：业绩兑现，估值不极端</h3></div>
+      <div class="osub">财报已经验证增长，估值在全链里不算极端，确定性优先</div>
+
+      <div class="stock">
+        <div class="sn"><span class="n">工业富联</span><span class="c">601138</span><span class="seg">AI服务器ODM</span></div>
+        <div class="metrics"><span class="m good">营收 <b>+48%</b></span><span class="m good">Q1扣非 <b>+109%</b></span><span class="m">ROE <b>21.7%</b></span><span class="m cheap">PE <b>37.6x</b></span></div>
+        <div class="rep" style="font-size:11.5px;color:var(--text3);margin-top:8px">9000 亿营收还能加速增长，PE 在板块里属于低位。</div>
+      </div>
+      <div class="stock">
+        <div class="sn"><span class="n">浪潮信息</span><span class="c">000977</span><span class="seg">AI服务器ODM</span></div>
+        <div class="metrics"><span class="m good">营收 <b>+43.3%</b></span><span class="m good">Q1扣非 <b>+38.2%</b></span><span class="m cheap">PE <b>39.4x</b></span></div>
+        <div class="rep" style="font-size:11.5px;color:var(--text3);margin-top:8px">毛利率 4.9% 偏薄是硬伤，但估值同样便宜。</div>
+      </div>
+      <div class="stock">
+        <div class="sn"><span class="n">光模块三家</span><span class="c">300308/502/394</span><span class="seg">光模块</span></div>
+        <div class="metrics"><span class="m good">ROE <b>40 至 73%</b></span><span class="m good">扣非翻倍</span><span class="m hot">PB分位 <b>99.9%</b></span></div>
+        <div class="rep" style="font-size:11.5px;color:var(--text3);margin-top:8px">中际旭创、新易盛、天孚通信。ROE 全链最高，业绩最扎实，缺点是 PB 分位顶到 99.9%，质地好但价格贵。</div>
+      </div>
+      <div class="stock">
+        <div class="sn"><span class="n">生益科技</span><span class="c">600183</span><span class="seg">CCL覆铜板</span></div>
+        <div class="metrics"><span class="m good">扣非 <b>+89.5%</b></span><span class="m good">Q1扣非 <b>+93.5%</b></span><span class="m">ROE <b>21.3%</b></span></div>
+        <div class="rep" style="font-size:11.5px;color:var(--text3);margin-top:8px">高速料涨价加放量，PCB 上游里最直接的受益者。</div>
+      </div>
+    </div>
+
+    <div class="opp t2">
+      <div class="oh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M19 9l-5 5-4-4-3 3"/></svg><h3>第二档：估值洼地，α 待验证</h3></div>
+      <div class="osub">估值分位在全链里最低，基本面有支撑，等业绩确认后可能补涨</div>
+
+      <div class="stock">
+        <div class="sn"><span class="n">润泽科技</span><span class="c">300442</span><span class="seg">IDC数据中心</span></div>
+        <div class="metrics"><span class="m cheap">PE <b>26.4x</b></span><span class="m cheap">分位 <b>25.7%</b></span><span class="m good">ROE <b>41.8%</b></span></div>
+        <div class="rep" style="font-size:11.5px;color:var(--text3);margin-top:8px">PE 分位全链最低，ROE 41.8% 又高，是基本面和估值最平衡的一只。</div>
+      </div>
+      <div class="stock">
+        <div class="sn"><span class="n">沃尔核材</span><span class="c">002130</span><span class="seg">高速铜连接</span></div>
+        <div class="metrics"><span class="m cheap">PE <b>23.8x</b></span><span class="m cheap">分位 <b>63.6%</b></span><span class="m">ROE <b>19.0%</b></span></div>
+        <div class="rep" style="font-size:11.5px;color:var(--text3);margin-top:8px">PE 全链最低，技术面也是唯一超跌的。224G 铜缆国产替代是题材，Q1 扣非 -8.2% 要盯着。</div>
+      </div>
+      <div class="stock">
+        <div class="sn"><span class="n">兆易创新</span><span class="c">603986</span><span class="seg">存储/HBM</span></div>
+        <div class="metrics"><span class="m good">Q1扣非 <b>+530%</b></span><span class="m">ROE <b>9.3%</b></span><span class="m hot">PE <b>189x</b></span></div>
+        <div class="rep" style="font-size:11.5px;color:var(--text3);margin-top:8px">存储周期反转弹性最大，拐点清楚，但 189x 的 PE 已经提前反映了不少。</div>
+      </div>
+      <div class="stock">
+        <div class="sn"><span class="n">英维克</span><span class="c">002837</span><span class="seg">液冷</span></div>
+        <div class="metrics"><span class="m hot">Q1扣非 <b>-87.1%</b></span><span class="m hot">PE <b>229x</b></span></div>
+        <div class="rep" style="font-size:11.5px;color:var(--text3);margin-top:8px">液冷景气不假，但 Q1 业绩暴雷加估值 229x，只能当高风险观察，不能买。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHARTS ============ -->
+<section id="charts">
+  <div class="sec-head">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="7"/><rect x="12" y="6" width="3" height="11"/><rect x="17" y="13" width="3" height="4"/></svg>
+    <h2>数据可视化</h2>
+  </div>
+  <p class="sec-sub">六组图表：景气星级、PE 对比、Q1 增速、估值分位标尺、α/β 象限散点、上中下游景气分布。颜色按 A股惯例（红涨绿跌），每条都带数字标签。</p>
+
+  <div class="chart-grid">
+
+    <!-- Chart 1: 景气星级 -->
+    <div class="chart-card full">
+      <h3>各环节景气星级</h3>
+      <p class="ch-sub">五星代表量价齐升、订单饱满；三星代表景气一般。</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 36px">
+        <div class="star-row"><span class="lbl">算力芯片</span><span class="stars s5">★★★★★</span></div>
+        <div class="star-row"><span class="lbl">PCB（AI板）</span><span class="stars s5">★★★★★</span></div>
+        <div class="star-row"><span class="lbl">CCL覆铜板</span><span class="stars s5">★★★★★</span></div>
+        <div class="star-row"><span class="lbl">光模块</span><span class="stars s5">★★★★★</span></div>
+        <div class="star-row"><span class="lbl">AI服务器ODM</span><span class="stars s5">★★★★★</span></div>
+        <div class="star-row"><span class="lbl">先进封装/HBM</span><span class="stars s4">★★★★<span class="s3">☆</span></span></div>
+        <div class="star-row"><span class="lbl">高速铜连接</span><span class="stars s4">★★★★<span class="s3">☆</span></span></div>
+        <div class="star-row"><span class="lbl">交换机/网络</span><span class="stars s4">★★★★<span class="s3">☆</span></span></div>
+        <div class="star-row"><span class="lbl">液冷</span><span class="stars s4">★★★★<span class="s3">☆</span></span></div>
+        <div class="star-row"><span class="lbl">存储</span><span class="stars s4">★★★★<span class="s3">☆</span></span></div>
+        <div class="star-row"><span class="lbl">IDC数据中心</span><span class="stars s4">★★★★<span class="s3">☆</span></span></div>
+        <div class="star-row"><span class="lbl">服务器电源</span><span class="stars s3">★★★<span class="s3">☆☆</span></span></div>
+      </div>
+      <div class="legend"><span><i style="background:#ff4d4f"></i>五星 最景气</span><span><i style="background:#f5a623"></i>四星 高景气</span><span><i style="background:#7d8aa0"></i>三星 一般</span></div>
+    </div>
+
+    <!-- Chart 2: PE 对比 -->
+    <div class="chart-card">
+      <h3>核心龙头 PE-TTM</h3>
+      <p class="ch-sub">PE 越低性价比越优。蓝色是估值洼地，红色是极端高估。</p>
+      <div class="bar-row"><span class="lbl">沃尔核材</span><div class="bar-track"><div class="bar-fill" style="width:7%;background:linear-gradient(90deg,#23456f,#4c8dff);min-width:46px">23.8x</div></div><span class="val" style="color:var(--accent)">23.8</span></div>
+      <div class="bar-row"><span class="lbl">润泽科技</span><div class="bar-track"><div class="bar-fill" style="width:7.7%;background:linear-gradient(90deg,#23456f,#4c8dff);min-width:46px">26.4x</div></div><span class="val" style="color:var(--accent)">26.4</span></div>
+      <div class="bar-row"><span class="lbl">工业富联</span><div class="bar-track"><div class="bar-fill" style="width:11%;background:linear-gradient(90deg,#23456f,#4c8dff);min-width:46px">37.6x</div></div><span class="val" style="color:var(--accent)">37.6</span></div>
+      <div class="bar-row"><span class="lbl">浪潮信息</span><div class="bar-track"><div class="bar-fill" style="width:11.5%;background:linear-gradient(90deg,#23456f,#4c8dff);min-width:46px">39.4x</div></div><span class="val" style="color:var(--accent)">39.4</span></div>
+      <div class="bar-row"><span class="lbl">中际旭创</span><div class="bar-track"><div class="bar-fill" style="width:28.8%;background:linear-gradient(90deg,#7a5512,#f5a623)">98.7x</div></div><span class="val amber">98.7</span></div>
+      <div class="bar-row"><span class="lbl">海光信息</span><div class="bar-track"><div class="bar-fill" style="width:89.6%;background:linear-gradient(90deg,#7a1f22,#ff4d4f)">307x</div></div><span class="val" style="color:var(--up)">307</span></div>
+      <div class="bar-row"><span class="lbl">寒武纪</span><div class="bar-track"><div class="bar-fill" style="width:100%;background:linear-gradient(90deg,#7a1f22,#ff4d4f)">348x</div></div><span class="val" style="color:var(--up)">348</span></div>
+      <div class="legend"><span><i style="background:#4c8dff"></i>估值洼地</span><span><i style="background:#f5a623"></i>偏高</span><span><i style="background:#ff4d4f"></i>极端透支 分位99.9%</span></div>
+    </div>
+
+    <!-- Chart 3: Q1 增速 -->
+    <div class="chart-card">
+      <h3>核心龙头 2026Q1 扣非增速</h3>
+      <p class="ch-sub">增速高代表 α 在兑现。绿色是负增长，业绩暴雷。</p>
+      <div class="bar-row"><span class="lbl">兆易创新</span><div class="bar-track"><div class="bar-fill" style="width:100%;background:linear-gradient(90deg,#7a1f22,#ff4d4f)">+530%</div></div><span class="val" style="color:var(--up)">+530</span></div>
+      <div class="bar-row"><span class="lbl">中际旭创</span><div class="bar-track"><div class="bar-fill" style="width:50%;background:linear-gradient(90deg,#7a1f22,#ff4d4f)">+265%</div></div><span class="val" style="color:var(--up)">+265</span></div>
+      <div class="bar-row"><span class="lbl">寒武纪</span><div class="bar-track"><div class="bar-fill" style="width:45%;background:linear-gradient(90deg,#7a1f22,#ff4d4f)">+239%</div></div><span class="val" style="color:var(--up)">+239</span></div>
+      <div class="bar-row"><span class="lbl">工业富联</span><div class="bar-track"><div class="bar-fill" style="width:20.6%;background:linear-gradient(90deg,#7a1f22,#ff4d4f)">+109%</div></div><span class="val" style="color:var(--up)">+109</span></div>
+      <div class="bar-row"><span class="lbl">沪电股份</span><div class="bar-track"><div class="bar-fill" style="width:10.6%;background:linear-gradient(90deg,#7a5512,#f5a623)">+56%</div></div><span class="val amber">+56</span></div>
+      <div class="bar-row"><span class="lbl">润泽科技</span><div class="bar-track"><div class="bar-fill" style="width:6.8%;background:linear-gradient(90deg,#7a5512,#f5a623)">+35.9%</div></div><span class="val amber">+36</span></div>
+      <div class="bar-row"><span class="lbl">英维克</span><div class="bar-track"><div class="bar-fill" style="width:16.4%;background:linear-gradient(90deg,#0f5a4d,#16c784)">-87.1%</div></div><span class="val" style="color:var(--down)">-87</span></div>
+      <div class="legend"><span><i style="background:#ff4d4f"></i>高增长 α强</span><span><i style="background:#f5a623"></i>中速</span><span><i style="background:#16c784"></i>负增长 暴雷</span></div>
+    </div>
+
+    <!-- Chart 4: 估值分位标尺 -->
+    <div class="chart-card full">
+      <h3>核心龙头 PE 估值分位标尺</h3>
+      <p class="ch-sub">一条 0 到 100% 的标尺，直接看谁在洼地、谁在顶部。越靠右越贵。</p>
+      <div class="ruler">
+        <div class="ruler-mark" style="left:25.7%"><div class="dot" style="background:#16c784"></div><div class="ml">润泽科技</div><div class="mv">25.7%</div></div>
+        <div class="ruler-mark" style="left:63.6%"><div class="dot" style="background:#4c8dff"></div><div class="ml">沃尔核材</div><div class="mv">63.6%</div></div>
+        <div class="ruler-mark" style="left:88.5%"><div class="dot" style="background:#f5a623"></div><div class="ml">浪潮信息</div><div class="mv">88.5%</div></div>
+        <div class="ruler-mark" style="left:96.4%"><div class="dot" style="background:#ff4d4f"></div><div class="ml" style="margin-left:6px">新易盛</div><div class="mv" style="margin-left:6px">96.4%</div></div>
+        <div class="ruler-track"></div>
+        <div class="ruler-scale"><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div>
+        <div class="ruler-zone">
+          <div style="flex:0 0 30%;background:#16543f">洼地 0 至 30%</div>
+          <div style="flex:0 0 30%;background:#23456f">温和 30 至 60%</div>
+          <div style="flex:0 0 30%;background:#7a5512">偏高 60 至 90%</div>
+          <div style="flex:0 0 10%;background:#7a1f22">极端 90%+</div>
+        </div>
+      </div>
+      <div class="tnote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span>分位为东方财富日频近 5 年「低于当前值」占比。25 只龙头里有 18 只落在 90% 以上的极端区，润泽科技是少数留在洼地的标的。</span></div>
+    </div>
+
+    <!-- Chart 5: α/β 象限散点 -->
+    <div class="chart-card full">
+      <h3>α 与 β 象限散点图</h3>
+      <p class="ch-sub">横轴是 PE-TTM（越右越贵），纵轴是 2026Q1 扣非增速（越上越快）。左上是低估值高增长，右下是高估值低增长的危险区。</p>
+      <div class="scatter-wrap">
+        <svg viewBox="0 0 640 400" role="img" aria-label="估值与增速象限散点图">
+          <!-- quadrant backgrounds -->
+          <rect x="60" y="30" width="94" height="254" fill="#10302a" opacity="0.5"/>
+          <rect x="60" y="284" width="94" height="76" fill="#16243f" opacity="0.6"/>
+          <rect x="154" y="30" width="456" height="254" fill="#3a2e12" opacity="0.4"/>
+          <rect x="154" y="284" width="456" height="76" fill="#3a1c1f" opacity="0.5"/>
+          <!-- frame -->
+          <rect x="60" y="30" width="550" height="330" fill="none" stroke="#2a3543" stroke-width="1"/>
+          <!-- dividers -->
+          <line x1="154" y1="30" x2="154" y2="360" stroke="#4c8dff" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"/>
+          <line x1="60" y1="284" x2="610" y2="284" stroke="#f5a623" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+          <!-- axis labels -->
+          <text x="335" y="392" fill="#7d8aa0" font-size="12" text-anchor="middle" font-family="monospace">PE-TTM（倍）越右越贵　分界线 60x</text>
+          <text x="20" y="200" fill="#7d8aa0" font-size="12" text-anchor="middle" font-family="monospace" transform="rotate(-90 20 200)">Q1扣非增速 越上越快</text>
+          <text x="64" y="24" fill="#16c784" font-size="11" font-family="monospace">低估值 高增长（理想）</text>
+          <text x="606" y="24" fill="#f5a623" font-size="11" text-anchor="end" font-family="monospace">高估值 高增长（贵）</text>
+          <text x="64" y="354" fill="#4c8dff" font-size="11" font-family="monospace">低估值 低增长（洼地）</text>
+          <text x="606" y="354" fill="#ff4d4f" font-size="11" text-anchor="end" font-family="monospace">高估值 低/负增长（危险）</text>
+          <!-- y ticks -->
+          <text x="54" y="44" fill="#7d8aa0" font-size="10" text-anchor="end" font-family="monospace">+550</text>
+          <text x="54" y="180" fill="#7d8aa0" font-size="10" text-anchor="end" font-family="monospace">+280</text>
+          <text x="54" y="288" fill="#7d8aa0" font-size="10" text-anchor="end" font-family="monospace">+50</text>
+          <text x="54" y="362" fill="#7d8aa0" font-size="10" text-anchor="end" font-family="monospace">-100</text>
+          <!-- points -->
+          <!-- 工业富联 理想 -->
+          <circle cx="119" cy="254" r="7" fill="#16c784"/><text x="119" y="244" fill="#e6edf3" font-size="11" text-anchor="middle">工业富联</text>
+          <!-- 沃尔核材 洼地 -->
+          <circle cx="97" cy="313" r="7" fill="#4c8dff"/><text x="97" y="332" fill="#e6edf3" font-size="11" text-anchor="middle">沃尔核材</text>
+          <!-- 润泽科技 洼地 -->
+          <circle cx="101" cy="291" r="7" fill="#4c8dff"/><text x="118" y="284" fill="#e6edf3" font-size="11" text-anchor="start">润泽科技</text>
+          <!-- 浪潮信息 洼地 -->
+          <circle cx="122" cy="291" r="6" fill="#4c8dff" opacity="0.85"/><text x="122" y="306" fill="#aebacb" font-size="10.5" text-anchor="middle">浪潮</text>
+          <!-- 中际旭创 贵 -->
+          <circle cx="215" cy="175" r="7" fill="#f5a623"/><text x="215" y="165" fill="#e6edf3" font-size="11" text-anchor="middle">中际旭创</text>
+          <!-- 兆易创新 贵 -->
+          <circle cx="357" cy="40" r="7" fill="#f5a623"/><text x="357" y="58" fill="#e6edf3" font-size="11" text-anchor="middle">兆易创新</text>
+          <!-- 寒武纪 贵 -->
+          <circle cx="607" cy="188" r="7" fill="#f5a623"/><text x="607" y="178" fill="#e6edf3" font-size="11" text-anchor="end">寒武纪</text>
+          <!-- 海光信息 危险 -->
+          <circle cx="542" cy="291" r="7" fill="#ff4d4f"/><text x="542" y="281" fill="#e6edf3" font-size="11" text-anchor="middle">海光信息</text>
+          <!-- 英维克 危险 -->
+          <circle cx="420" cy="353" r="7" fill="#ff4d4f"/><text x="420" y="343" fill="#e6edf3" font-size="11" text-anchor="middle">英维克</text>
+        </svg>
+      </div>
+      <div class="q-note">
+        <div class="q-good"><b>理想区</b>：工业富联，PE 37.6x 加 Q1 增速 +109%，便宜又快。</div>
+        <div class="q-watch"><b>洼地区</b>：润泽、沃尔、浪潮，估值低，增速待 Q1 进一步确认。</div>
+        <div class="q-mid"><b>贵价区</b>：中际旭创、兆易、寒武纪，增长强但估值已经透支。</div>
+        <div class="q-bad"><b>危险区</b>：海光、英维克，估值极高且增速差，回避。</div>
+      </div>
+    </div>
+
+    <!-- Chart 6: 上中下游景气分布 -->
+    <div class="chart-card full">
+      <h3>上中下游景气分布</h3>
+      <p class="ch-sub">每段宽度代表该层级中各景气星级环节的占比。上游五星环节最多，景气最集中。</p>
+      <div class="dist-row">
+        <span class="lbl">上游</span>
+        <div class="dist-bar">
+          <div class="dist-seg" style="flex:0 0 67%;background:linear-gradient(90deg,#7a1f22,#ff4d4f)">五星 4 个</div>
+          <div class="dist-seg" style="flex:0 0 33%;background:linear-gradient(90deg,#7a5512,#f5a623)">四星 2 个</div>
+        </div>
+      </div>
+      <div class="dist-row">
+        <span class="lbl">中游</span>
+        <div class="dist-bar">
+          <div class="dist-seg" style="flex:0 0 20%;background:linear-gradient(90deg,#7a1f22,#ff4d4f)">五星 1</div>
+          <div class="dist-seg" style="flex:0 0 60%;background:linear-gradient(90deg,#7a5512,#f5a623)">四星 3 个</div>
+          <div class="dist-seg" style="flex:0 0 20%;background:#3a4150">三星 1</div>
+        </div>
+      </div>
+      <div class="dist-row">
+        <span class="lbl">下游</span>
+        <div class="dist-bar">
+          <div class="dist-seg" style="flex:0 0 100%;background:linear-gradient(90deg,#7a5512,#f5a623)">四星 2 个（IDC、云厂）</div>
+        </div>
+      </div>
+      <div class="legend"><span><i style="background:#ff4d4f"></i>五星 最景气</span><span><i style="background:#f5a623"></i>四星 高景气</span><span><i style="background:#3a4150"></i>三星 一般</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ AVOID LIST ============ -->
+<section id="avoid">
+  <div class="sec-head">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>
+    <h2>规避清单</h2>
+  </div>
+  <p class="sec-sub">三类标的现价不参与：估值最透支、基本面恶化、国产替代链波动大。</p>
+
+  <div class="avoid-grid">
+    <div class="avoid">
+      <div class="ah"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>估值最透支</div>
+      <div class="row"><div class="n">海光信息<span class="c">688041</span></div><div class="d">PE 307x，<b>PE 和 PB 分位都是 99.9%</b>。任何不及预期都会触发估值杀。</div></div>
+      <div class="row"><div class="n">英维克<span class="c">002837</span></div><div class="d">PE <b>229x</b>，Q1 扣非 <b>-87.1%</b>。景气是真的，业绩和估值背离也是真的。</div></div>
+      <div class="row"><div class="n">鹏鼎控股<span class="c">002938</span></div><div class="d">成长最弱，Q1 扣非 <b>-31.9%</b>，却还有 71.3x PE。性价比全链最差。</div></div>
+    </div>
+
+    <div class="avoid">
+      <div class="ah"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>基本面恶化</div>
+      <div class="row"><div class="n">麦格米特<span class="c">002851</span></div><div class="d">2025 扣非 <b>-93%</b>，Q1 <b>-56.2%</b>，PE 653x。基本面已经崩了。</div></div>
+      <div class="row"><div class="n">光环新网<span class="c">300383</span></div><div class="d">扣非 <b>-331%</b> 转亏，营收 -1.4%。挂着概念，业绩没兑现。</div></div>
+      <div class="row"><div class="n">长电科技<span class="c">600584</span></div><div class="d">2025 扣非 <b>-11.5%</b>，分位却到 99.9%。又弱又贵。</div></div>
+    </div>
+
+    <div class="avoid">
+      <div class="ah"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.3 3.3L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.3a2 2 0 00-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>国产替代链高波动</div>
+      <div class="row"><div class="n">寒武纪<span class="c">688256</span></div><div class="d">刚扭亏，Q1 扣非 <b>+239%</b> 是低基数撑出来的。PE 348x，PB 分位 97.6%，弹性大风险也大。</div></div>
+      <div class="row"><div class="n">海光信息<span class="c">688041</span></div><div class="d">ROE 只有 <b>11.9%</b>，估值却拉到极端。自主可控逻辑硬，但兑现度一般。</div></div>
+      <div class="row"><div class="n">数据港<span class="c">603881</span></div><div class="d">营收 +0.02% 基本停滞，PE 还有 162x。IDC 里掉队的一只。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSIGHT + WATCHLIST + RISK ============ -->
+<section id="insight">
+  <div class="sec-head">
+    <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 22h4M12 2a7 7 0 00-4 12.7c.6.5 1 1.3 1 2.1h6c0-.8.4-1.6 1-2.1A7 7 0 0012 2z"/></svg>
+    <h2>洞见、观察清单与风险</h2>
+  </div>
+  <p class="sec-sub">赛道正在从情绪抱团转向看业绩龙头加低位轮动。</p>
+
+  <div class="insight">
+    <div class="ih"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 00-4 12.7c.6.5 1 1.3 1 2.1h6c0-.8.4-1.6 1-2.1A7 7 0 0012 2z"/><path d="M9 18h6"/></svg>核心洞见</div>
+    <p>最拥挤的环节就是最危险的环节。光模块、AI-PCB、算力芯片的资金抱团，把估值分位普遍推到 95% 以上，这时候赚的是 β 的钱，没有安全垫。真正还有空间的，是市场没怎么看的几个地方：工业富联 9000 亿体量还能 +48%，PE 只有 37.6x；润泽科技 ROE 41.8%，分位才 25.7%；沃尔核材 23.8x 是全链最低。市场的钱正在从抱团板块流向这些业绩扎实、位置又低的标的。</p>
+  </div>
+
+  <div class="watch">
+    <div class="wcard">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>重点观察清单</h3>
+      <ul>
+        <li><b>工业富联601138</b>　体量大、估值低、增速还在加速，确定性最高，回调就跟踪</li>
+        <li><b>润泽科技300442</b>　估值洼地加高 ROE，IDC 里的稀缺标的</li>
+        <li><b>沃尔核材002130</b>　PE 全链最低，技术面超跌，等 Q1 业绩验证 α</li>
+        <li><b>生益科技600183</b>　CCL 量价齐升，PCB 上游最直接的受益者</li>
+        <li><b>兆易创新603986</b>　存储周期反转拐点清楚，等估值消化一下</li>
+      </ul>
+    </div>
+    <div class="wcard">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.3 3.3L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.3a2 2 0 00-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>风险提示</h3>
+      <ul>
+        <li><b>同源风险</b>　全链由同一条 AI 叙事驱动，估值同处顶部，回调时会一起跌</li>
+        <li><b>没有安全垫</b>　18 只龙头分位超 90%，业绩一旦不及预期就杀估值</li>
+        <li><b>α 兑现参差</b>　寒武纪、海光这类国产替代链，题材弹性不等于业绩</li>
+        <li><b>Q1 已分化</b>　英维克、麦格米特、光环新网都暴雷了，景气不等于个股安全</li>
+        <li><b>抱团反转</b>　资金一撤，高分位标的回撤幅度最大</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tnote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span>分位为东方财富日频近 5 年「低于当前值」占比，增速为同比，数据截至 2025 年报和 2026Q1。颜色说明：红代表高增长或看好，绿代表负增长或看空，琥珀代表警示，蓝代表估值洼地，每处都附文字标签。</span></div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="disc">
+    <b>免责声明：</b>本汇报是 TAT 投研团队基于公开信息做的研究推演，仅供内部参考，<b>不构成投资建议</b>。市场有风险，决策需谨慎，执行以个人风险承受能力为准。数据截至 2026-06-25，估值分位和景气判断会随行情与财报变化，需要动态更新。
+  </div>
+  <div>TAT 投研团队 · A股 AI算力赛道全产业链研判 · 2026-06-25 · 基本面、估值、技术面三维扫描</div>
+</footer>
+
+</div><!-- /wrap -->
+</body>
+</html>

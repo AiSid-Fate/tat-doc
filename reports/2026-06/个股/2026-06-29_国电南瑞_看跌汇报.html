@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="report-title" content="看跌研究员汇报 · 国电南瑞 600406">
+<meta name="report-date" content="2026-06-29">
+<meta name="report-category" content="个股">
+<meta name="report-tags" content="国电南瑞,600406,看跌">
+<meta name="report-summary" content="国电南瑞看跌方论证。Q1 扣非仅 +5.4%，α 弹性一般，戴维斯双击难启动。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>看跌研究员汇报 · 国电南瑞 600406</title>
+<style>
+  :root{
+    --bg:#0a0e17; --bg-soft:#111726; --surface:#161d2e; --surface-2:#1c2438;
+    --border:#28324a; --text:#e8edf7; --text-dim:#9aa6bf; --text-mute:#6b7794;
+    --danger:#ff4d5e; --danger-soft:#2a1620; --warn:#ffb020; --warn-soft:#2a2412;
+    --bull:#2ec28a; --accent:#5b8cff;
+    --mono:"SF Mono",ui-monospace,"Roboto Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:radial-gradient(1200px 600px at 50% -200px,#16203a 0%,var(--bg) 60%);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.6; padding:32px 20px 64px; min-height:100dvh;
+  }
+  .wrap{max-width:1080px;margin:0 auto}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+  header{text-align:center;margin-bottom:32px}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:var(--danger-soft);
+    color:var(--danger);border:1px solid #5a2230;border-radius:999px;
+    padding:6px 16px;font-size:13px;font-weight:600;letter-spacing:.3px;margin-bottom:16px}
+  .badge svg{width:14px;height:14px}
+  h1{font-size:30px;font-weight:700;letter-spacing:-.5px;margin-bottom:8px}
+  .sub{color:var(--text-dim);font-size:15px;max-width:720px;margin:0 auto}
+  .meta{color:var(--text-mute);font-size:12px;margin-top:12px;font-family:var(--mono)}
+
+  /* switch call-out */
+  .switch{background:linear-gradient(135deg,#22181f,#1a1626);border:1px solid #5a2230;
+    border-radius:16px;padding:20px 24px;margin-bottom:26px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .switch .icn{width:44px;height:44px;border-radius:12px;background:var(--danger-soft);
+    display:flex;align-items:center;justify-content:center;color:var(--danger);flex-shrink:0}
+  .switch .icn svg{width:22px;height:22px}
+  .switch .txt{flex:1;min-width:260px}
+  .switch .q{font-size:11px;color:var(--text-mute);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+  .switch .a{font-size:16px;font-weight:700}
+  .switch .verdict{background:var(--danger);color:#fff;font-weight:700;padding:8px 16px;
+    border-radius:8px;font-size:14px;letter-spacing:.5px;white-space:nowrap}
+
+  /* stock header */
+  .stock{background:var(--surface);border:1px solid var(--border);border-radius:18px;
+    padding:28px;margin-bottom:26px;box-shadow:0 8px 32px rgba(0,0,0,.35)}
+  .stock-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;
+    padding-bottom:18px;margin-bottom:22px;border-bottom:1px solid var(--border)}
+  .stock-name{font-size:22px;font-weight:700}
+  .stock-code{color:var(--text-mute);font-size:14px;font-family:var(--mono)}
+  .tag{background:var(--surface-2);color:var(--text-dim);font-size:11px;
+    padding:3px 8px;border-radius:5px;border:1px solid var(--border)}
+  .price-tag{margin-left:auto;text-align:right}
+  .price-tag .lbl{font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:1px}
+  .price-tag .val{font-size:24px;font-weight:700;font-family:var(--mono);color:#fff}
+
+  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+  .metric{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:14px}
+  .metric .k{font-size:11px;color:var(--text-mute);margin-bottom:6px;letter-spacing:.3px}
+  .metric .v{font-size:20px;font-weight:700;font-family:var(--mono)}
+  .metric .v.danger{color:var(--danger)}
+  .metric .v.warn{color:var(--warn)}
+  .metric .note{font-size:11px;color:var(--text-dim);margin-top:4px}
+
+  .sec-title{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;
+    color:var(--text);margin:22px 0 12px;letter-spacing:.3px}
+  .sec-title .dot{width:7px;height:7px;border-radius:2px;background:var(--danger)}
+  .sec-title.bull .dot{background:var(--bull)}
+  .sec-title.warn .dot{background:var(--warn)}
+
+  .bear-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .bear-list li{background:var(--danger-soft);border:1px solid #44202c;border-left:3px solid var(--danger);
+    border-radius:8px;padding:12px 14px;font-size:14px;color:var(--text)}
+  .bear-list li b{color:#ffd9de}
+  .hl{color:var(--danger);font-weight:700;font-family:var(--mono)}
+
+  /* teardown 3-column style: one per bull claim */
+  .teardown{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;
+    padding:14px 16px;margin-bottom:10px}
+  .teardown .claim{font-size:13px;color:var(--bull);font-weight:600;margin-bottom:8px;
+    display:flex;align-items:flex-start;gap:8px}
+  .teardown .claim::before{content:"看涨";font-size:10px;background:rgba(46,194,138,.15);
+    color:var(--bull);padding:2px 7px;border-radius:5px;flex-shrink:0;font-weight:700;margin-top:1px}
+  .teardown .rebut{font-size:14px;color:var(--text);display:flex;align-items:flex-start;gap:8px}
+  .teardown .rebut::before{content:"反驳";font-size:10px;background:var(--danger-soft);
+    color:var(--danger);border:1px solid #5a2230;padding:2px 7px;border-radius:5px;flex-shrink:0;font-weight:700;margin-top:2px}
+
+  /* growth deceleration chart */
+  .growth{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;
+    padding:16px;margin:14px 0}
+  .growth .title{font-size:12px;color:var(--text-mute);margin-bottom:12px;letter-spacing:.5px;text-transform:uppercase}
+  .bars{display:flex;align-items:flex-end;justify-content:space-around;height:120px;gap:12px;padding:0 8px}
+  .bar-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px}
+  .bar{width:100%;max-width:56px;border-radius:6px 6px 0 0;position:relative;
+    background:linear-gradient(180deg,var(--danger) 0%,#8a2432 100%)}
+  .bar.mid{background:linear-gradient(180deg,var(--warn) 0%,#8a6a20 100%)}
+  .bar.low{background:linear-gradient(180deg,#5b8cff 0%,#2c4680 100%)}
+  .bar .lbl{position:absolute;top:-22px;left:50%;transform:translateX(-50%);
+    font-family:var(--mono);font-weight:700;font-size:13px;white-space:nowrap;color:#fff}
+  .bar-item .period{font-size:11px;color:var(--text-dim);text-align:center;line-height:1.3}
+  .growth .caption{font-size:12px;color:var(--text-mute);margin-top:12px;text-align:center;font-style:italic}
+
+  .downside{margin-top:14px;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+  .downside table{width:100%;border-collapse:collapse;font-size:13px}
+  .downside th{background:var(--surface-2);color:var(--text-dim);text-align:left;
+    padding:10px 14px;font-weight:600;font-size:12px;letter-spacing:.3px}
+  .downside td{padding:10px 14px;border-top:1px solid var(--border)}
+  .downside td:last-child,.downside th:last-child{text-align:right;font-family:var(--mono);font-weight:700}
+  .downside .pct{color:var(--danger)}
+  .trigger{margin-top:12px;font-size:13px;color:var(--text-dim);background:var(--warn-soft);
+    border:1px solid #4a3d18;border-radius:8px;padding:11px 14px}
+  .trigger b{color:var(--warn)}
+
+  .conclusion{background:linear-gradient(135deg,#1a1322,#161d2e);border:1px solid #44202c;
+    border-radius:18px;padding:28px}
+  .conclusion h2{font-size:18px;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  .conclusion p{color:var(--text-dim);font-size:14px;margin-bottom:10px}
+  .conclusion b{color:var(--text)}
+  .verdict-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+  .v-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px}
+  .v-card .n{font-size:12px;color:var(--text-dim);margin-bottom:6px}
+  .v-card .r{font-size:18px;font-weight:700;font-family:var(--mono);color:var(--danger)}
+  .v-card.mid .r{color:var(--warn)}
+
+  footer{text-align:center;color:var(--text-mute);font-size:12px;margin-top:32px;line-height:1.8}
+
+  @media(max-width:720px){
+    .metrics{grid-template-columns:repeat(2,1fr)}
+    .verdict-grid{grid-template-columns:1fr}
+    h1{font-size:24px}
+    .price-tag{margin-left:0;text-align:left;width:100%;margin-top:8px}
+    .switch .verdict{width:100%;text-align:center}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l6 6 4-4 8 8M21 17v-4M21 17h-4"/></svg>
+      看跌研究员 · 风险论证报告
+    </div>
+    <h1>从AI算力切到国电南瑞？</h1>
+    <p class="sub">用户核心问题:从热锅跳到冷灶,还是踩上"低估值陷阱"?我们用数据回答——低β不等于低风险,便宜不等于安全。</p>
+    <p class="meta">数据基准日 2026-06-30 · 仅供投研内部辩论 · 非投资建议</p>
+  </header>
+
+  <!-- Switch verdict banner -->
+  <div class="switch">
+    <div class="icn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l10-10M17 17H7V7"/></svg>
+    </div>
+    <div class="txt">
+      <div class="q">切换判断</div>
+      <div class="a">"低β防御"≠这次切换真正需要的东西 · 大概率兑现"低估值陷阱"</div>
+    </div>
+    <div class="verdict">不建议切换</div>
+  </div>
+
+  <!-- ============ 国电南瑞 ============ -->
+  <section class="stock">
+    <div class="stock-head">
+      <span class="stock-name">国电南瑞</span>
+      <span class="stock-code">600406.SH</span>
+      <span class="tag">央企 · 电网自动化</span>
+      <div class="price-tag">
+        <div class="lbl">现价</div>
+        <div class="val">¥22.45</div>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <div class="metric"><div class="k">2026Q1 营收增速</div><div class="v danger num">+7.5%</div><div class="note">从24年+24.3%骤降</div></div>
+      <div class="metric"><div class="k">近2月表现</div><div class="v danger num">-14.1%</div><div class="note">明显跑输电网板块</div></div>
+      <div class="metric"><div class="k">融资余额 / 流通市值</div><div class="v warn num">1.66%</div><div class="note">近一年90%分位高位</div></div>
+      <div class="metric"><div class="k">扣非5年CAGR</div><div class="v warn num">+11.5%</div><div class="note">远低于AI算力+100%</div></div>
+    </div>
+
+    <!-- growth deceleration visual -->
+    <div class="growth">
+      <div class="title">营收增速三段式减速 · 引擎正在熄火</div>
+      <div class="bars">
+        <div class="bar-item">
+          <div class="bar" style="height:96px"><span class="lbl">+24.3%</span></div>
+          <div class="period">2024全年</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar mid" style="height:58px"><span class="lbl">+14.5%</span></div>
+          <div class="period">2025全年</div>
+        </div>
+        <div class="bar-item">
+          <div class="bar low" style="height:30px"><span class="lbl">+7.5%</span></div>
+          <div class="period">2026Q1</div>
+        </div>
+      </div>
+      <div class="caption">增速从24%腰斩再腰斩到个位数——不是暂时波动,是趋势性减速</div>
+    </div>
+
+    <div class="sec-title"><span class="dot"></span>看跌核心论据</div>
+    <ul class="bear-list">
+      <li><b>成长熄火,估值锚失守：</b>2026Q1营收增速 <span class="hl">+7.5%</span>,较2024年 <span class="hl">+24.3%</span> 腰斩再腰斩。扣非5年CAGR仅 <span class="hl">+11.5%</span>,ROE <span class="hl">16%</span> 属"优秀制造业"而非高回报成长股。用增长股逻辑买这只票,基本面已不支撑。</li>
+      <li><b>融资盘拥挤高位,散户接盘信号：</b>融资余额 <span class="hl">30.35亿</span>,占流通市值 <span class="hl">1.66%</span>,处近一年 <span class="hl">90%分位</span> 历史高位。所谓"低β防御",实际上杠杆资金已高度拥挤,遇到风吹草动一样踩踏。</li>
+      <li><b>板块共识主升 vs 个股滞涨的背离：</b>近2月 <span class="hl">-14.1%</span> 跑输电网板块,主力偏流出,券商推荐力度弱于AI算力龙头。**这不是"未被发现的价值",是市场先行给出的分歧信号**——同一赛道其他标的在涨,唯独南瑞在跌。</li>
+      <li><b>大市值弹性天然差 + 央企估值折价：</b>1835亿市值,弹性远低于中盘AI股。PE分位 <span class="hl">0.5%</span> 极端低≠低估,可能反映的是**央企折价 + "电网慢β"标签**长期偏见——低估值不修复,持有就是死钱。</li>
+      <li><b>催化时间点太远,机会成本高：</b>"十五五"4万亿是2026-2030年周期,订单到收入有 <span class="hl">1-2年时滞</span>。切进来是拿现在的确定性下跌换2027年可能的兑现,时点错配。</li>
+    </ul>
+
+    <div class="sec-title bull"><span class="dot"></span>拆解看涨方三大叙事</div>
+
+    <div class="teardown">
+      <div class="claim">订单+35%高于收入,未来收入必然反弹</div>
+      <div class="rebut">电力设备行业订单转收入有 <b>1-2年时滞</b>,期间存在项目延期、结算滞后、成本上升等风险。历史上电网设备类公司多次出现"订单增而收入不增/收入增而利润不增"——招标价被压低、原材料涨价吞噬毛利。<b>Q1 +7.5% 的实际数据比"+35% 订单"的口号更能说明当下真实兑现节奏</b>。</div>
+    </div>
+
+    <div class="teardown">
+      <div class="claim">PE分位 0.5% 极端低估,安全边际充足</div>
+      <div class="rebut">这是典型"<b>低估值陷阱</b>":央企估值折价、成长熄火、行业标签固化,PE低是市场共识,不是错杀。近2月 -14.1% 跑输板块正是市场用脚投票——如果真是错杀,资金早已介入。<b>低估值必须靠"增速拐点 + 分红提升 + 治理改善"三选一去修复,当前三者皆无</b>。</div>
+    </div>
+
+    <div class="teardown">
+      <div class="claim">内在价值 29 元,现价 22.45 有 29% 上行空间</div>
+      <div class="rebut">29元估值锚建立在"增速回升 + 十五五兑现"双重乐观假设上。若 <b>2026Q2 继续 &lt;10% 增速</b>,DCF模型的g值(永续增长率)将下修,估值锚可能下移至 <b>20-22元区间</b>——现价反而是估值上沿。看涨方给上限,我给下限:<b>18-20元才是残酷情境下的合理位置</b>。</div>
+    </div>
+
+    <div class="sec-title warn"><span class="dot"></span>风险事件与下行空间(用户切进来后半年最坏情境)</div>
+    <div class="downside">
+      <table>
+        <thead><tr><th>目标位</th><th>触发情境</th><th>较现价空间</th></tr></thead>
+        <tbody>
+          <tr><td class="num">20.5 元</td><td>技术回踩前低 + 融资盘部分去杠杆</td><td class="pct">-8.7%</td></tr>
+          <tr><td class="num">18.5 元</td><td>中报增速 &lt;10% 确认减速趋势 + 估值锚下移</td><td class="pct">-17.6%</td></tr>
+          <tr><td class="num">16 元</td><td>央企折价延续 + 融资盘踩踏 + 政策节奏低于预期</td><td class="pct">-28.7%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="trigger"><b>最可能引爆下杀的3个事件:</b>① 中报营收增速 &lt;10%,坐实趋势性减速;② 融资余额从90%分位向历史均值回归,触发踩踏;③ 十五五政策节奏低于预期或订单转收入证伪。</div>
+  </section>
+
+  <!-- ============ 结论 ============ -->
+  <section class="conclusion">
+    <h2><span style="color:var(--danger)">▼</span> 回答用户核心问题</h2>
+    <p><b>问:AI算力切到国电南瑞,是不是"从热锅跳到冷灶"?</b></p>
+    <p style="padding-left:12px;border-left:2px solid var(--danger)">答:<b>是,而且大概率踩上"低估值陷阱"</b>。你想要的"低β防御"这只票给不了——融资拥挤度已到90%分位,近2月已跑输板块14.1%,基本面增速从+24.3%三段式熄火到+7.5%。你在用"央企+低PE"的心理安全感,交换"确定性减速+央企折价延续"的实际风险。</p>
+    <p><b>问:"低β防御"是不是这次切换真正需要的?</b></p>
+    <p style="padding-left:12px;border-left:2px solid var(--warn)">答:<b>如果你判断AI算力有回调风险,正确动作是"降低整体仓位或换稳健现金流品种(高股息+分红率提升的公用/银行)",而不是切到同样处于滞涨+融资拥挤的电网设备票</b>。国电南瑞在心理上是"防御",在数据上是"另一种拥挤"——你只是把风险换了个名字。</p>
+
+    <div class="verdict-grid">
+      <div class="v-card"><div class="n">现实下行(高概率)</div><div class="r">-8.7% → 20.5元</div></div>
+      <div class="v-card mid"><div class="n">中报减速证实(中概率)</div><div class="r">-17.6% → 18.5元</div></div>
+      <div class="v-card"><div class="n">最坏情境(低概率)</div><div class="r">-28.7% → 16元</div></div>
+    </div>
+    <p style="margin-top:18px;color:var(--text-dim);font-size:13px">
+      <b style="color:var(--text)">底线结论:</b>不建议切换。若确实要降β,优先考虑真正意义上的高股息防御票(股息率&gt;4%、分红比例提升、经营现金流稳定),而不是"低PE+熄火成长+央企折价+融资拥挤"四重叠加的南瑞。
+    </p>
+  </section>
+
+  <footer>
+    <div style="max-width:760px;margin:0 auto">
+      TAT投研团队 · 看跌研究员论证 · 数据基准日 2026-06-30<br>
+      本报告为投研辩论中的空头视角,论据基于三维分析师报告。市场有风险,内容不构成任何投资建议。
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
