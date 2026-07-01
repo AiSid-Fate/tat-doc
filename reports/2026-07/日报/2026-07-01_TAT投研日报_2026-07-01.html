@@ -11,21 +11,21 @@
 <title>TAT 投研日报 · 2026-07-01</title>
 <style>
 :root{
-  --bg:#f7f5f0;            /* 报纸底色 米白 */
+  --bg:#f7f5f0;
   --paper:#ffffff;
   --ink:#1a1a1a;
   --ink2:#333333;
   --ink3:#5c5c5c;
   --muted:#8a8a8a;
-  --rule:#d9d5cc;          /* 分隔线灰 */
+  --rule:#d9d5cc;
   --rule2:#e8e4dc;
-  --up:#c22c2c;            /* 涨/危险 深红 */
+  --up:#c22c2c;
   --up-soft:#f6e5e5;
-  --down:#0f7a3e;          /* 跌/看空 深绿 */
+  --down:#0f7a3e;
   --down-soft:#e2f0e8;
-  --warn:#a65d00;          /* 警示 琥珀 */
+  --warn:#a65d00;
   --warn-soft:#f6e8d3;
-  --accent:#1a3d6b;        /* 深藏青 强调色 */
+  --accent:#1a3d6b;
   --accent-soft:#e6ecf3;
   --serif:"Noto Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
@@ -52,7 +52,6 @@ h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);line-height:1.3;font-weigh
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 
-/* 报头 */
 .masthead{border-bottom:3px double var(--ink);padding-bottom:14px;margin-bottom:22px}
 .masthead .top{display:flex;justify-content:space-between;align-items:baseline;font-size:11.5px;color:var(--ink3);text-transform:uppercase;letter-spacing:.12em}
 .masthead .top b{color:var(--ink);font-family:var(--mono)}
@@ -61,14 +60,12 @@ a:hover{text-decoration:underline}
 .masthead .sub{font-size:13px;color:var(--ink3);font-family:var(--serif)}
 .masthead .sub b{color:var(--ink)}
 
-/* 头条 */
 .headline{padding:20px 0 26px;border-bottom:1px solid var(--rule)}
 .headline .kicker{font-size:11.5px;font-weight:700;color:var(--up);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
 .headline h1{font-size:32px;line-height:1.25;font-weight:800;letter-spacing:-.3px}
 .headline h1 em{font-style:normal;color:var(--up);border-bottom:2px solid var(--up);padding-bottom:1px}
 .headline .lede{margin-top:14px;font-size:16px;color:var(--ink2);line-height:1.75;font-family:var(--serif)}
 
-/* 摘要 KPI 卡（今日速览） */
 .dash{display:grid;grid-template-columns:repeat(4,1fr);gap:0;
   border:1px solid var(--rule);border-radius:2px;overflow:hidden;margin:24px 0}
 .dash .cell{padding:16px 18px;border-right:1px solid var(--rule);background:var(--paper)}
@@ -80,17 +77,15 @@ a:hover{text-decoration:underline}
 .dash .v.warn{color:var(--warn)}
 .dash .s{font-size:11.5px;color:var(--ink3);margin-top:3px}
 
-/* 章节标题（Section head） */
 .sect{margin-top:34px}
 .sect-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:14px}
 .sect-head h2{font-size:20px;font-weight:800}
 .sect-head .meta{font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.1em;font-family:var(--mono)}
 
-/* 分栏 */
 .cols{display:grid;grid-template-columns:2fr 1fr;gap:32px;margin-top:6px}
+.cols > *{min-width:0}   /* 允许 grid item 收缩到内容以下, 让内部 table-wrap 横滚生效 */
 .cols .side{border-left:1px solid var(--rule);padding-left:22px}
 
-/* 表格 */
 table{width:100%;border-collapse:collapse;font-size:13.5px}
 table th{text-align:left;padding:10px 12px;border-bottom:2px solid var(--ink);background:transparent;
   font-weight:700;color:var(--ink);font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
@@ -108,13 +103,11 @@ table tr:hover td{background:#faf8f2}
 .tag-ok{background:var(--down-soft);color:var(--down)}
 .tag-neutral{background:var(--accent-soft);color:var(--accent)}
 
-/* 红旗提示栏 */
 .flag{background:var(--up-soft);border-left:4px solid var(--up);padding:14px 18px;margin:10px 0;border-radius:1px}
 .flag .fh{font-size:11px;font-weight:800;color:var(--up);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
 .flag p{font-size:13.5px;color:var(--ink);line-height:1.7}
 .flag p b{color:var(--up)}
 
-/* 明日清单 */
 .checklist{background:#fbf9f4;border:1px solid var(--rule);padding:16px 18px;border-radius:2px;margin-top:8px}
 .checklist h4{font-size:14px;margin-bottom:10px;font-weight:800;font-family:var(--sans)}
 .checklist ol{padding-left:0;list-style:none;counter-reset:step}
@@ -125,7 +118,6 @@ table tr:hover td{background:#faf8f2}
   display:grid;place-items:center;font-family:var(--mono);font-size:12px;font-weight:700}
 .checklist li b{color:var(--ink);font-family:var(--mono)}
 
-/* 验证清单三档卡片 */
 .verify{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
 .v-card{border:1px solid var(--rule);padding:14px 16px;border-radius:2px;background:var(--paper)}
 .v-card.a{border-top:3px solid var(--down)}
@@ -141,7 +133,6 @@ table tr:hover td{background:#faf8f2}
 .v-card .act{margin-top:8px;padding-top:8px;border-top:1px dashed var(--rule);font-size:12px;color:var(--ink)}
 .v-card .act b{font-family:var(--mono);font-weight:700}
 
-/* 侧栏卡 */
 .side-card{margin-bottom:20px}
 .side-card h3{font-size:14px;font-family:var(--sans);font-weight:800;
   text-transform:uppercase;letter-spacing:.08em;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:5px;margin-bottom:10px}
@@ -152,12 +143,10 @@ table tr:hover td{background:#faf8f2}
 .mini-tab td.r{text-align:right;font-family:var(--mono);color:var(--ink);font-weight:600}
 .mini-tab tr:last-child td{border-bottom:none}
 
-/* 引用块 */
 .pull{margin:18px 0;padding:14px 22px;border-left:4px solid var(--ink);background:#f9f7f1;
   font-family:var(--serif);font-size:15px;line-height:1.75;color:var(--ink)}
 .pull b{color:var(--up)}
 
-/* 页脚 */
 footer{margin-top:34px;padding-top:16px;border-top:3px double var(--ink);
   font-size:11.5px;color:var(--ink3);text-align:center;line-height:1.7}
 footer .disc{background:#faf8f2;border:1px solid var(--rule);padding:11px 16px;
@@ -165,6 +154,7 @@ footer .disc{background:#faf8f2;border:1px solid var(--rule);padding:11px 16px;
 footer .disc b{color:var(--up)}
 footer .meta{font-family:var(--serif);color:var(--ink3)}
 
+/* 平板 & 中屏 */
 @media (max-width:820px){
   .paper{padding:24px 20px}
   .masthead .name{font-size:32px}
@@ -177,6 +167,78 @@ footer .meta{font-family:var(--serif);color:var(--ink3)}
   table{font-size:12.5px}
   table th,table td{padding:8px 8px}
 }
+
+/* 手机 (iPhone SE 375, iPhone 14 390, iPhone 14 Pro Max 428) */
+@media (max-width:480px){
+  body{font-size:14.5px;line-height:1.65}
+  .paper{padding:20px 16px;border-top-width:5px}
+
+  /* 报头缩小但保留三重线 */
+  .masthead{padding-bottom:12px;margin-bottom:18px}
+  .masthead .top{font-size:10.5px;letter-spacing:.08em;flex-wrap:wrap;gap:4px}
+  .masthead .name{font-size:26px;margin:8px 0 6px;letter-spacing:-.3px}
+  .masthead .sub{font-size:12px;line-height:1.5}
+
+  /* 头条 */
+  .headline{padding:14px 0 20px}
+  .headline .kicker{font-size:10.5px;letter-spacing:.08em}
+  .headline h1{font-size:21px;line-height:1.3;letter-spacing:-.2px}
+  .headline .lede{font-size:14.5px;line-height:1.7;margin-top:12px}
+
+  /* KPI 4 卡改单列堆叠 */
+  .dash{grid-template-columns:1fr;margin:18px 0}
+  .dash .cell{border-right:none;border-bottom:1px solid var(--rule);padding:14px 16px}
+  .dash .cell:last-child{border-bottom:none}
+  .dash .v{font-size:22px}
+  .dash .k{font-size:10.5px;letter-spacing:.08em}
+
+  /* 章节 */
+  .sect{margin-top:26px}
+  .sect-head h2{font-size:17px}
+  .sect-head .meta{font-size:10px;letter-spacing:.06em}
+
+  /* 分栏在手机上顺序: main 先, side 后 (grid 自然顺序) */
+  .cols{gap:18px}
+  .cols .side{padding-top:14px;margin-top:4px}
+
+  /* 表格手机: 让表格能自然缩到容器宽, 只有内容真放不下时才横滚 */
+  .table-wrap{max-width:100%;overflow-x:auto}
+  .table-wrap table{min-width:460px}    /* 保底 460 让 6 列还能读, 超过 375 会横滚 */
+  table{font-size:11.5px}
+  table th,table td{padding:7px 8px;word-break:break-word}
+  table th{font-size:10px;letter-spacing:.03em}
+
+  /* Red Flag */
+  .flag{padding:12px 14px}
+  .flag .fh{font-size:10.5px;letter-spacing:.08em}
+  .flag p{font-size:13px;line-height:1.65}
+
+  /* 引用块 */
+  .pull{padding:12px 16px;font-size:14px;line-height:1.7;margin:14px 0}
+
+  /* 明日清单 */
+  .checklist{padding:14px 14px}
+  .checklist h4{font-size:13px}
+  .checklist li{padding:9px 0 9px 30px;font-size:13px;line-height:1.6}
+  .checklist li::before{width:20px;height:20px;font-size:11px;top:9px}
+
+  /* 侧栏卡 */
+  .side-card{margin-bottom:16px}
+  .side-card h3{font-size:12.5px;letter-spacing:.06em}
+  .mini-tab{font-size:12px}
+  .mini-tab td{padding:5px 0}
+
+  /* 验证卡 3 档也改单列 */
+  .verify{grid-template-columns:1fr;gap:10px}
+  .v-card{padding:12px 14px}
+  .v-card h4{font-size:12.5px}
+  .v-card p{font-size:11.5px}
+
+  /* 页脚 */
+  footer{font-size:11px;margin-top:26px;padding-top:14px}
+  footer .disc{padding:10px 12px;font-size:11.5px;line-height:1.65}
+}
+
 @media print{
   body{background:#fff;background-image:none}
   .paper{box-shadow:none;padding:0}
@@ -227,7 +289,8 @@ footer .meta{font-family:var(--serif);color:var(--ink3)}
           <h2>今日操作复盘</h2>
           <span class="meta">7 笔操作</span>
         </div>
-        <table aria-label="今日操作复盘">
+        <div class="table-wrap">
+<table aria-label="今日操作复盘">
           <thead>
             <tr>
               <th>操作</th>
@@ -289,6 +352,7 @@ footer .meta{font-family:var(--serif);color:var(--ink3)}
             </tr>
           </tbody>
         </table>
+</div>
       </section>
 
       <!-- 持仓状态 -->
@@ -297,7 +361,8 @@ footer .meta{font-family:var(--serif);color:var(--ink3)}
           <h2>持仓状态</h2>
           <span class="meta">7 只标的 · 合计 12.4 万</span>
         </div>
-        <table aria-label="持仓状态">
+        <div class="table-wrap">
+<table aria-label="持仓状态">
           <thead>
             <tr>
               <th>标的</th>
@@ -359,6 +424,7 @@ footer .meta{font-family:var(--serif);color:var(--ink3)}
             </tr>
           </tbody>
         </table>
+</div>
       </section>
 
       <!-- 关键提示 -->
