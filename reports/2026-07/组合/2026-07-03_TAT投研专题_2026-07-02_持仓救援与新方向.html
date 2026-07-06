@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="report-title" content="TAT投研专题 2026-07-02 持仓救援与新方向">
+<meta name="report-date" content="2026-07-03">
+<meta name="report-category" content="组合">
+<meta name="report-tags" content="持仓救援,滨化,亨通光电,四大赛道,β降配">
+<meta name="report-summary" content="本月亏损1.08万,82%来自逆向加仓和追高;现在需要减仓救组合,不是找新加仓标的。">
+<title>TAT 投研专题 · 持仓救援与新方向 · 2026-07-02</title>
+<style>
+:root{
+  --bg:#f7f5f0; --paper:#ffffff;
+  --ink:#1a1a1a; --ink2:#333333; --ink3:#5c5c5c; --muted:#8a8a8a;
+  --rule:#d9d5cc; --rule2:#e8e4dc;
+  --up:#c22c2c; --up-soft:#f6e5e5;
+  --down:#0f7a3e; --down-soft:#e2f0e8;
+  --warn:#a65d00; --warn-soft:#f6e8d3;
+  --accent:#1a3d6b; --accent-soft:#e6ecf3;
+  --serif:"Noto Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:"SF Mono","JetBrains Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(180deg, transparent, transparent 27px, rgba(0,0,0,0.02) 28px, transparent 29px);
+  background-size:100% 28px}
+.num{font-variant-numeric:tabular-nums;font-family:var(--mono);letter-spacing:-.2px}
+.paper{max-width:1080px;margin:0 auto;background:var(--paper);padding:36px 44px;
+  box-shadow:0 1px 3px rgba(0,0,0,.06), 0 20px 40px rgba(0,0,0,.05);
+  border-top:6px solid var(--ink);word-wrap:break-word;overflow-wrap:break-word}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);line-height:1.3;font-weight:700}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* 报头 */
+.masthead{border-bottom:3px double var(--ink);padding-bottom:14px;margin-bottom:22px}
+.masthead .top{display:flex;justify-content:space-between;align-items:baseline;font-size:11.5px;color:var(--ink3);text-transform:uppercase;letter-spacing:.12em}
+.masthead .top b{color:var(--ink);font-family:var(--mono)}
+.masthead .name{font-family:var(--serif);font-size:40px;font-weight:900;letter-spacing:-.5px;margin:6px 0 8px}
+.masthead .name em{font-style:normal;color:var(--up)}
+.masthead .sub{font-size:13px;color:var(--ink3);font-family:var(--serif)}
+.masthead .sub b{color:var(--ink)}
+
+/* 目录 */
+.toc{background:#faf8f2;border:1px solid var(--rule);padding:16px 20px;margin:22px 0 26px;border-radius:2px}
+.toc h4{font-family:var(--sans);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px}
+.toc ol{list-style:none;padding-left:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 22px;counter-reset:tocitem}
+.toc li{font-size:13.5px;padding-left:26px;position:relative;color:var(--ink2)}
+.toc li::before{counter-increment:tocitem;content:counter(tocitem);position:absolute;left:0;top:1px;
+  width:19px;height:19px;background:var(--ink);color:var(--paper);border-radius:2px;
+  display:grid;place-items:center;font-family:var(--mono);font-size:11px;font-weight:700}
+.toc a{color:var(--ink)}
+
+/* 头条 */
+.headline{padding:6px 0 26px;border-bottom:1px solid var(--rule)}
+.headline .kicker{font-size:11.5px;font-weight:700;color:var(--up);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.headline h1{font-size:32px;line-height:1.25;font-weight:800;letter-spacing:-.3px}
+.headline h1 em{font-style:normal;color:var(--up);border-bottom:2px solid var(--up);padding-bottom:1px}
+.headline .lede{margin-top:14px;font-size:16px;color:var(--ink2);line-height:1.75;font-family:var(--serif)}
+
+/* KPI dash */
+.dash{display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border:1px solid var(--rule);border-radius:2px;overflow:hidden;margin:24px 0}
+.dash .cell{padding:16px 18px;border-right:1px solid var(--rule);background:var(--paper)}
+.dash .cell:last-child{border-right:none}
+.dash .k{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);font-weight:700;margin-bottom:6px}
+.dash .v{font-size:24px;font-weight:700;font-family:var(--mono);color:var(--ink);line-height:1.1}
+.dash .v.up{color:var(--up)}
+.dash .v.down{color:var(--down)}
+.dash .v.warn{color:var(--warn)}
+.dash .s{font-size:11.5px;color:var(--ink3);margin-top:3px}
+
+/* 章节 */
+.chap{margin-top:44px;padding-top:6px}
+.chap-num{display:inline-block;font-family:var(--mono);font-size:11px;color:var(--up);font-weight:800;
+  letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;background:var(--up-soft);border-radius:2px}
+.chap h2{font-size:24px;font-weight:800;margin-top:6px;letter-spacing:-.2px;border-bottom:2px solid var(--ink);padding-bottom:8px}
+.chap .lead{font-size:14.5px;color:var(--ink3);margin-top:10px;line-height:1.7;font-family:var(--serif)}
+
+/* sub sect */
+.sub{margin-top:22px}
+.sub h3{font-size:17px;margin-bottom:10px;padding-left:8px;border-left:3px solid var(--ink);font-weight:800}
+
+/* 分栏 */
+.cols{display:grid;grid-template-columns:2fr 1fr;gap:32px;margin-top:6px}
+.cols > *{min-width:0}
+.cols .side{border-left:1px solid var(--rule);padding-left:22px}
+
+/* 表格 */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;scrollbar-width:thin}
+.table-wrap table{min-width:100%;width:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+table th{text-align:left;padding:10px 12px;border-bottom:2px solid var(--ink);background:transparent;
+  font-weight:700;color:var(--ink);font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+table th.r{text-align:right}
+table td{padding:10px 12px;border-bottom:1px solid var(--rule);color:var(--ink2);vertical-align:top}
+table td.r{text-align:right;font-family:var(--mono);white-space:nowrap}
+table tr:last-child td{border-bottom:none}
+table tr:hover td{background:#faf8f2}
+.pos{color:var(--up);font-weight:700}
+.neg{color:var(--down);font-weight:700}
+.amber{color:var(--warn);font-weight:700}
+.tag{display:inline-block;padding:2px 8px;font-size:11px;font-weight:700;border-radius:2px;font-family:var(--mono);letter-spacing:.02em;text-transform:uppercase}
+.tag-bad{background:var(--up-soft);color:var(--up)}
+.tag-warn{background:var(--warn-soft);color:var(--warn)}
+.tag-ok{background:var(--down-soft);color:var(--down)}
+.tag-neutral{background:var(--accent-soft);color:var(--accent)}
+
+/* Red Flag */
+.flag{background:var(--up-soft);border-left:4px solid var(--up);padding:14px 18px;margin:10px 0;border-radius:1px}
+.flag .fh{font-size:11px;font-weight:800;color:var(--up);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.flag p{font-size:13.5px;color:var(--ink);line-height:1.7}
+.flag p b{color:var(--up)}
+
+.good-box{background:var(--down-soft);border-left:4px solid var(--down);padding:14px 18px;margin:10px 0;border-radius:1px}
+.good-box .fh{font-size:11px;font-weight:800;color:var(--down);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.good-box p{font-size:13.5px;color:var(--ink);line-height:1.7}
+.good-box p b{color:var(--down)}
+
+/* checklist */
+.checklist{background:#fbf9f4;border:1px solid var(--rule);padding:16px 18px;border-radius:2px;margin-top:8px}
+.checklist h4{font-size:14px;margin-bottom:10px;font-weight:800;font-family:var(--sans)}
+.checklist ol{padding-left:0;list-style:none;counter-reset:step}
+.checklist li{padding:10px 0 10px 34px;position:relative;border-bottom:1px dashed var(--rule2);font-size:13.5px;line-height:1.65;color:var(--ink2)}
+.checklist li:last-child{border-bottom:none}
+.checklist li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:10px;
+  width:24px;height:24px;background:var(--ink);color:var(--paper);border-radius:50%;
+  display:grid;place-items:center;font-family:var(--mono);font-size:12px;font-weight:700}
+.checklist li b{color:var(--ink);font-family:var(--mono)}
+
+/* 三档卡 */
+.verify{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+.v-card{border:1px solid var(--rule);padding:14px 16px;border-radius:2px;background:var(--paper)}
+.v-card.a{border-top:3px solid var(--down)}
+.v-card.b{border-top:3px solid var(--warn)}
+.v-card.c{border-top:3px solid var(--up)}
+.v-card h4{font-size:13px;font-family:var(--sans);font-weight:800;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.v-card h4 .lb{font-family:var(--mono);width:22px;height:22px;border-radius:2px;display:grid;place-items:center;font-size:12px;color:#fff}
+.v-card.a h4 .lb{background:var(--down)}
+.v-card.b h4 .lb{background:var(--warn)}
+.v-card.c h4 .lb{background:var(--up)}
+.v-card p{font-size:12px;color:var(--ink3);line-height:1.6;margin-bottom:6px}
+.v-card p b{color:var(--ink);font-family:var(--mono)}
+.v-card .act{margin-top:8px;padding-top:8px;border-top:1px dashed var(--rule);font-size:12px;color:var(--ink)}
+.v-card .act b{font-family:var(--mono);font-weight:700}
+
+/* 铁律卡 */
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+.rule{background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--up);padding:13px 16px;border-radius:2px}
+.rule .rh{display:flex;align-items:baseline;gap:9px;margin-bottom:6px}
+.rule .rh .n{background:var(--up);color:#fff;font-family:var(--mono);font-size:11px;padding:2px 7px;border-radius:2px;font-weight:800}
+.rule .rh h4{font-size:13.5px;font-family:var(--sans);font-weight:800}
+.rule p{font-size:12.5px;color:var(--ink3);line-height:1.6}
+.rule p b{color:var(--ink);font-family:var(--mono);font-weight:700}
+
+/* 侧栏 */
+.side-card{margin-bottom:20px}
+.side-card h3{font-size:14px;font-family:var(--sans);font-weight:800;
+  text-transform:uppercase;letter-spacing:.08em;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:5px;margin-bottom:10px}
+.side-card p{font-size:13px;color:var(--ink2);line-height:1.65}
+.mini-tab{width:100%;font-size:12.5px;border-collapse:collapse}
+.mini-tab td{padding:6px 0;border-bottom:1px dotted var(--rule);color:var(--ink2)}
+.mini-tab td.r{text-align:right;font-family:var(--mono);color:var(--ink);font-weight:600}
+.mini-tab tr:last-child td{border-bottom:none}
+
+/* 引用块 */
+.pull{margin:20px 0;padding:16px 24px;border-left:4px solid var(--ink);background:#f9f7f1;
+  font-family:var(--serif);font-size:16px;line-height:1.8;color:var(--ink)}
+.pull b{color:var(--up)}
+.pull .who{display:block;font-size:12px;color:var(--ink3);margin-top:8px;font-family:var(--sans);text-transform:uppercase;letter-spacing:.08em;font-style:normal}
+
+/* 简单柱状图 */
+.bars{display:flex;flex-direction:column;gap:8px;margin:12px 0}
+.bar-row{display:grid;grid-template-columns:96px 1fr 64px;align-items:center;gap:10px}
+.bar-row .lbl{font-size:12.5px;color:var(--ink2);font-weight:600}
+.bar-track{background:#f0ede4;border-radius:2px;height:22px;position:relative;overflow:hidden;border:1px solid var(--rule)}
+.bar-fill{height:100%;display:flex;align-items:center;justify-content:flex-end;
+  padding-right:8px;font-size:11px;font-weight:700;color:#fff;font-family:var(--mono);min-width:28px}
+.bar-row .val{text-align:right;font-size:12.5px;font-weight:700;font-family:var(--mono);color:var(--ink)}
+
+/* 页脚 */
+footer{margin-top:40px;padding-top:16px;border-top:3px double var(--ink);
+  font-size:11.5px;color:var(--ink3);text-align:center;line-height:1.7}
+footer .disc{background:#faf8f2;border:1px solid var(--rule);padding:12px 16px;
+  margin-bottom:12px;text-align:left;font-size:12px;color:var(--ink2)}
+footer .disc b{color:var(--up)}
+footer .meta{font-family:var(--serif);color:var(--ink3)}
+
+@media (max-width:820px){
+  .paper{padding:24px 20px}
+  .masthead .name{font-size:32px}
+  .headline h1{font-size:24px}
+  .chap h2{font-size:20px}
+  .dash{grid-template-columns:repeat(2,1fr)}
+  .dash .cell:nth-child(2){border-right:none}
+  .cols{grid-template-columns:1fr;gap:20px}
+  .cols .side{border-left:none;border-top:1px solid var(--rule);padding-left:0;padding-top:16px}
+  .verify,.rules{grid-template-columns:1fr}
+  .toc ol{grid-template-columns:1fr}
+  table{font-size:12.5px}
+  table th,table td{padding:8px 8px}
+}
+@media (max-width:480px){
+  body{font-size:14.5px;line-height:1.65}
+  .paper{padding:20px 16px;border-top-width:5px}
+  .masthead{padding-bottom:12px;margin-bottom:18px}
+  .masthead .top{font-size:10.5px;letter-spacing:.08em;flex-wrap:wrap;gap:4px}
+  .masthead .name{font-size:26px;margin:8px 0 6px}
+  .masthead .sub{font-size:12px;line-height:1.5}
+  .headline{padding:6px 0 20px}
+  .headline .kicker{font-size:10.5px}
+  .headline h1{font-size:21px;line-height:1.3}
+  .headline .lede{font-size:14.5px;margin-top:12px}
+  .dash{grid-template-columns:1fr;margin:18px 0}
+  .dash .cell{border-right:none;border-bottom:1px solid var(--rule);padding:14px 16px}
+  .dash .cell:last-child{border-bottom:none}
+  .dash .v{font-size:22px}
+  .chap{margin-top:32px}
+  .chap h2{font-size:18px}
+  .sub h3{font-size:15px}
+  .cols,.cols > *,.chap,.sub{min-width:0}
+  .cols{gap:18px}
+  .cols .side{padding-top:14px}
+  .table-wrap{width:100%;overflow-x:auto;max-width:calc(100vw - 32px)}
+  .table-wrap table{min-width:460px}
+  table{font-size:11.5px}
+  table th,table td{padding:7px 8px;word-break:break-word}
+  table th{font-size:10px;letter-spacing:.03em}
+  .flag,.good-box{padding:12px 14px}
+  .flag .fh,.good-box .fh{font-size:10.5px}
+  .flag p,.good-box p{font-size:13px}
+  .pull{padding:12px 16px;font-size:14px;line-height:1.7;margin:14px 0}
+  .checklist{padding:14px 14px}
+  .checklist li{padding:9px 0 9px 30px;font-size:13px;line-height:1.6}
+  .checklist li::before{width:20px;height:20px;font-size:11px;top:9px}
+  .side-card h3{font-size:12.5px}
+  .mini-tab{font-size:12px}
+  .verify,.rules{grid-template-columns:1fr;gap:10px}
+  .v-card{padding:12px 14px}
+  .v-card h4{font-size:12.5px}
+  .v-card p{font-size:11.5px}
+  .rule{padding:11px 13px}
+  .rule .rh h4{font-size:13px}
+  .rule p{font-size:12px}
+  .bar-row{grid-template-columns:76px 1fr 54px}
+  footer{font-size:11px;margin-top:26px;padding-top:14px}
+  footer .disc{padding:10px 12px;font-size:11.5px}
+}
+@media print{
+  body{background:#fff;background-image:none}
+  .paper{box-shadow:none;padding:0}
+}
+</style>
+</head>
+<body>
+<article class="paper">
+
+  <!-- 报头 -->
+  <header class="masthead">
+    <div class="top">
+      <span>TAT 投研团队 · Special Report</span>
+      <span><b>VOL. 001</b> · 深度专题</span>
+    </div>
+    <div class="name">TAT 投研<em>专题</em></div>
+    <div class="sub"><b>2026 年 7 月 2 日 至 7 月 3 日</b> · 持仓救援 · 加仓方向 · 滨化专题 · 亨通专题 · 铁律 8-13</div>
+  </header>
+
+  <!-- 头条 -->
+  <section class="headline">
+    <div class="kicker">头条 · 本轮的核心问题不是"加什么", 而是"减什么"</div>
+    <h1>本月亏损 <em>-1.08 万</em>, 82% 来自逆向加仓和追高</h1>
+    <p class="lede">
+      再平衡的三个动作都执行反了。通信 ETF 该减却反手加 6100 股, 沪电顶部继续加 300 股, 滨化涨停日追进 1400 股。结果 AI 算力 β 敞口 88% 到 85.8%, 几乎没降。现在的问题不是"下一只买什么", 而是"哪几只必须减"。加仓有优选方向 (半导体设备 &gt; AI PCB 胜宏 &gt; 亨通低位), 但优先级排在减仓之后。
+    </p>
+  </section>
+
+  <!-- 目录 -->
+  <nav class="toc">
+    <h4>目录 · 六大章节</h4>
+    <ol>
+      <li><a href="#ch1">本月亏损归因</a></li>
+      <li><a href="#ch2">加仓方向研判 (四大赛道)</a></li>
+      <li><a href="#ch3">滨化专题 (基本面 + 情绪 + 技术 Kronos)</a></li>
+      <li><a href="#ch4">亨通光电专题 (三段式建仓)</a></li>
+      <li><a href="#ch5">组合最终执行清单 (T+1 到 T+3)</a></li>
+      <li><a href="#ch6">心理直言 + 三个救命规则</a></li>
+    </ol>
+  </nav>
+
+  <!-- KPI 速览 -->
+  <section class="dash" aria-label="核心数据速览">
+    <div class="cell"><div class="k">本月浮亏</div><div class="v num up">-10,802</div><div class="s">82% 来自 3 笔错误</div></div>
+    <div class="cell"><div class="k">AI 算力 β</div><div class="v num up">85.8%</div><div class="s">目标 55%, 需再降 30pct</div></div>
+    <div class="cell"><div class="k">加仓首选</div><div class="v num warn">半导体设备</div><div class="s">恢复力第一</div></div>
+    <div class="cell"><div class="k">亨通建议</div><div class="v num down">82-85 试探</div><div class="s">现价 89.42 不追</div></div>
+  </section>
+
+  <!-- ============ 章节 1 · 本月亏损归因 ============ -->
+  <section class="chap" id="ch1">
+    <span class="chap-num">Chapter 01</span>
+    <h2>本月亏损归因: 82% 来自"逆向加仓 + 追高"两笔硬错</h2>
+    <p class="lead">-1.08 万里,只有 -1978 元 (18%) 是市场系统性回调不可控,剩下 82% 是你自己"再平衡方向搞反了"造成的。</p>
+
+    <div class="sub">
+      <h3>亏损来源 (按品种拆分)</h3>
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>品种</th>
+            <th>操作</th>
+            <th class="r">浮亏</th>
+            <th class="r">占比</th>
+            <th>归因</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>通信 ETF</b> 515880</td>
+            <td>破 MA20 后反手加 6100 股</td>
+            <td class="r pos">-5,432</td>
+            <td class="r pos">50%</td>
+            <td>方案要求减 55%, 实际反向加仓, 最严重错误</td>
+          </tr>
+          <tr>
+            <td><b>沪电股份</b> 002463</td>
+            <td>PE 69x 顶部加 300 股</td>
+            <td class="r pos">-2,458</td>
+            <td class="r pos">23%</td>
+            <td>追高, 单仓推至 35.1% 触警戒</td>
+          </tr>
+          <tr>
+            <td><b>滨化股份</b> 601678</td>
+            <td>涨停日追进 1400 股</td>
+            <td class="r amber">-934</td>
+            <td class="r amber">9%</td>
+            <td>主升浪追进, Kronos 中期 DOWN -35%</td>
+          </tr>
+          <tr>
+            <td>其他 (科创芯片 / 黄金 ETF 等)</td>
+            <td>市场波动</td>
+            <td class="r neg">-1,978</td>
+            <td class="r neg">18%</td>
+            <td>不可控回调</td>
+          </tr>
+          <tr>
+            <td><b>合计</b></td>
+            <td>--</td>
+            <td class="r pos">-10,802</td>
+            <td class="r pos">100%</td>
+            <td>82% 是可避免的执行错误</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3>三个心理错误</h3>
+      <div class="bars">
+        <div class="bar-row"><span class="lbl">锚定效应</span><div class="bar-track"><div class="bar-fill" style="width:75%;background:linear-gradient(90deg,#a02222,#c22c2c)">看着便宜就补</div></div><span class="val pos">通信 ETF</span></div>
+        <div class="bar-row"><span class="lbl">FOMO 追高</span><div class="bar-track"><div class="bar-fill" style="width:65%;background:linear-gradient(90deg,#a02222,#c22c2c)">怕错过</div></div><span class="val pos">沪电</span></div>
+        <div class="bar-row"><span class="lbl">涨停心跳</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:linear-gradient(90deg,#a65d00,#d97706)">情绪拉升</div></div><span class="val amber">滨化</span></div>
+      </div>
+      <p style="font-size:13.5px;color:var(--ink2);margin-top:10px;line-height:1.7">
+        三笔错误都指向同一个模式: <b>忽略研究团队方案 + 相信"这次不一样"</b>。铁律 11 到 13 的诞生就是针对这三类心理陷阱的物理阻断。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 章节 2 · 加仓方向研判 ============ -->
+  <section class="chap" id="ch2">
+    <span class="chap-num">Chapter 02</span>
+    <h2>加仓方向研判: 四大赛道恢复力排序</h2>
+    <p class="lead">如果一定要加仓, 顺序是: 半导体设备 &gt; AI PCB (仅胜宏) &gt; 光模块 &gt;&gt;&gt; 算力芯片。前提是先把该减的减完。</p>
+
+    <div class="sub">
+      <h3>四大赛道基本面对比</h3>
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>赛道</th>
+            <th>标的</th>
+            <th class="r">Q1 扣非</th>
+            <th class="r">ROE</th>
+            <th class="r">PE-TTM</th>
+            <th class="r">PB 分位</th>
+            <th>推荐度</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>半导体设备</b></td>
+            <td>科创芯片 ETF / 芯片 ETF</td>
+            <td class="r pos">高增</td>
+            <td class="r">--</td>
+            <td class="r">--</td>
+            <td class="r cheap">中位</td>
+            <td class="pos">首选 加仓</td>
+          </tr>
+          <tr>
+            <td><b>AI PCB</b></td>
+            <td>胜宏科技 300476</td>
+            <td class="r pos">+36%</td>
+            <td class="r pos">35.6%</td>
+            <td class="r amber">73.5x</td>
+            <td class="r amber">96.7%</td>
+            <td class="amber">仅胜宏可考虑</td>
+          </tr>
+          <tr>
+            <td><b>光模块</b></td>
+            <td>中际旭创 300308</td>
+            <td class="r pos">+265%</td>
+            <td class="r pos">43.8%</td>
+            <td class="r pos">98.7x</td>
+            <td class="r pos">99.8%</td>
+            <td class="pos">估值顶 不加</td>
+          </tr>
+          <tr>
+            <td><b>算力芯片</b></td>
+            <td>寒武纪 688256</td>
+            <td class="r pos">+239%</td>
+            <td class="r">27.0%</td>
+            <td class="r pos">348x</td>
+            <td class="r pos">97.6%</td>
+            <td class="pos">最慢 回避</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3>推荐 / 不推荐 三条明线</h3>
+      <div class="good-box">
+        <div class="fh">推荐 01 · 半导体设备</div>
+        <p><b>首选</b>: 芯片 ETF 512760 或半导体设备 ETF 561980 (用户已有 40% 科创芯片, 增量效果差, 换设备权重更高的品种更优)。恢复力在四大赛道排第一, 国产替代逻辑持续。</p>
+      </div>
+      <div class="good-box">
+        <div class="fh">推荐 02 · AI PCB 仅胜宏</div>
+        <p>胜宏是 <b>AI 服务器 PCB 唯一 α 兑现且 PB 分位未到顶</b> 的一只。沪电已在你持仓, PE 69x 顶部不适合加, 只能等回踩。鹏鼎与生益不推荐。</p>
+      </div>
+      <div class="good-box">
+        <div class="fh">推荐 03 · 亨通光电 (光通信综合, 非纯 AI 光模块)</div>
+        <p>属性是海底光缆 + 光纤光缆 + 光模块业务多元化, <b>非纯 AI 弹性</b>。现价 89.42 不追, 三段式建仓详见 <a href="#ch4">章节 4</a>。</p>
+      </div>
+      <div class="flag">
+        <div class="fh">RED FLAG · 明确不加的两类</div>
+        <p><b>算力芯片龙头 (寒武纪 / 海光信息)</b>: PE 分位 99%+, ROE 低, 估值杀伤最大, 反弹最慢。 <b>光模块三剑客 (中际旭创 / 新易盛 / 天孚)</b>: α 最强但 PB 分位 99.9% 绝对顶部, 消化估值需时间, 现价追进就是接盘。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 章节 3 · 滨化专题 ============ -->
+  <section class="chap" id="ch3">
+    <span class="chap-num">Chapter 03</span>
+    <h2>滨化专题: 基本面弱 + 情绪拉升 + 技术分歧</h2>
+    <p class="lead">今日涨停不是基本面拐点, 是 H 股招股 + 涨价预期 + 概念催化的情绪拉升。同类里真正的 α 反转标的是多氟多, 不是滨化。</p>
+
+    <div class="sub">
+      <h3>三大颠覆性发现</h3>
+      <div class="flag">
+        <div class="fh">发现 01 · Q1 扣非只是"低基数技术性反弹"</div>
+        <p>滨化 Q1 扣非 <b>1.19 亿</b>, 看似不错, 但同类多氟多 Q1 扣非 <b>3.80 亿 · YoY +1724%</b>, 毛利率从 13% 修复到 27.6%, <b>那才是真正的化工新材料业绩爆发</b>。滨化的低基数反弹不构成拐点确认。</p>
+      </div>
+      <div class="flag">
+        <div class="fh">发现 02 · 同类目排名, 滨化第 5</div>
+        <p>基本面 + 估值 + 催化三合一排序: <b>多氟多 &gt; 万华化学 &gt; 华鲁恒升 &gt; 君正集团 &gt; 滨化 &gt; 其余亏损股</b>。10 只同类里滨化只排第 5, 前 4 家都更优。</p>
+      </div>
+      <div class="flag">
+        <div class="fh">发现 03 · 涨停后 PE 更贵, 加仓无理由</div>
+        <p>涨停后估值继续膨胀, 无基本面变化支撑。趁涨停止盈是合理的, 加仓是不合理的。加仓合理性: <b>无</b>。同类替代品多氟多在基本面 / 估值 / 催化三个维度全部更优。</p>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3>技术面 + Kronos 分歧</h3>
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>维度</th>
+            <th>滨化 601678</th>
+            <th>多氟多 002407</th>
+            <th>结论</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>今日走势</td><td class="pos">涨停 +10%</td><td>-1.2% 冷启动</td><td>滨化情绪高, 多氟多冷静</td></tr>
+          <tr><td>技术形态</td><td class="amber">加速板顶部特征</td><td class="cheap">MA20 支撑站稳</td><td>多氟多形态健康</td></tr>
+          <tr><td>Kronos 30 日</td><td class="pos">DOWN -35%</td><td class="cheap">UP +8.7%</td><td>模型判断相反</td></tr>
+          <tr><td>Q1 扣非 YoY</td><td>低基数反弹</td><td class="pos">+1,724%</td><td>多氟多是真反转</td></tr>
+          <tr><td>操作建议</td><td class="pos">趁涨停止盈</td><td class="pos">可观察建仓</td><td>切换成多氟多</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="pull">
+        「涨停不是拐点确认, 加速板才是最后的礼物。<b>五点全输给多氟多的情况下, 现在加仓滨化就是把机会成本从 +1724% 换成 +5%</b>。」
+        <span class="who">研究团队 · 滨化基本面对比章节</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 章节 4 · 亨通光电专题 ============ -->
+  <section class="chap" id="ch4">
+    <span class="chap-num">Chapter 04</span>
+    <h2>亨通光电专题: 现价不追, 三段式建仓</h2>
+    <p class="lead">6/25 见顶后 7 天累计 -27.15% 快速回调, 现价 89.42 处 "顶部反转初期急速下杀" 形态。Kronos 触发 2 条护栏 WARNING, 数值不可采信但严重度印证判断。</p>
+
+    <div class="sub">
+      <h3>技术面警报</h3>
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>指标</th>
+            <th class="r">当前值</th>
+            <th>信号</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>MA250 乖离</td><td class="r pos">+129%</td><td class="pos">极端超买</td></tr>
+          <tr><td>MACD 死叉柱</td><td class="r pos">-7.34</td><td class="pos">加速下跌</td></tr>
+          <tr><td>KDJ J 值</td><td class="r">-20.5</td><td class="amber">极端超卖</td></tr>
+          <tr><td>RSI6</td><td class="r">3.6</td><td class="amber">极端超卖</td></tr>
+          <tr><td>下方最近密集带</td><td class="r cheap">75-80</td><td>距现价 -11%</td></tr>
+          <tr><td>核心密集带</td><td class="r cheap">45-70</td><td>距现价 -22% 到 -50%</td></tr>
+          <tr><td>Kronos 首日跳空</td><td class="r pos">-10.29%</td><td class="pos">护栏 WARNING</td></tr>
+          <tr><td>Kronos 次日波动</td><td class="r pos">-18.13%</td><td class="pos">护栏 WARNING</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="font-size:13.5px;color:var(--ink2);margin-top:12px;line-height:1.7">
+        <b>关键判断</b>: 89.42 若不能守住, 下方进入"半真空区"。快速下探 75-80 是大概率路径, 极端至 65-70 也可能。所以三段式建仓不是"择时艺术", 是"承认基本面 + 尊重技术面 + 敬畏 Kronos 护栏"三重约束的产物。
+      </p>
+    </div>
+
+    <div class="sub">
+      <h3>三段式建仓表 (总目标 12-15%)</h3>
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>批次</th>
+            <th class="r">建仓价</th>
+            <th class="r">目标仓位</th>
+            <th>触发条件</th>
+            <th class="r">股数</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>第 1 批 · 试探</b></td>
+            <td class="r cheap">82-85</td>
+            <td class="r cheap">3-4% (~0.35 万)</td>
+            <td>无条件执行 (承认基本面)</td>
+            <td class="r">约 400 股</td>
+          </tr>
+          <tr>
+            <td><b>第 2 批 · 回踩加仓</b></td>
+            <td class="r amber">76-80</td>
+            <td class="r amber">7-8% (~0.80 万)</td>
+            <td>回踩至前低支撑或 20 日均线附近</td>
+            <td class="r">再加 500 股</td>
+          </tr>
+          <tr>
+            <td><b>第 3 批 · 见底满仓</b></td>
+            <td class="r pos">70-75</td>
+            <td class="r pos">12-15% (~1.30 万)</td>
+            <td>三大信号: MACD 底背离 + 周线站稳 MA20 + 成交量温和放大 3 日</td>
+            <td class="r">再加 600 股</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3>止损 · 止盈</h3>
+      <div class="verify">
+        <div class="v-card a">
+          <h4><span class="lb">A</span>止损位</h4>
+          <p><b>跌破 65</b> 全清</p>
+          <p><b>跌破 55</b> 硬止损</p>
+          <div class="act">动作: <b>无条件清仓</b></div>
+        </div>
+        <div class="v-card b">
+          <h4><span class="lb">B</span>回踩支撑</h4>
+          <p><b>MA60 (81)</b> 反抽</p>
+          <p><b>MA20</b> 反抽</p>
+          <div class="act">动作: <b>触及即减半</b></div>
+        </div>
+        <div class="v-card c">
+          <h4><span class="lb">C</span>止盈阶梯</h4>
+          <p><b>110</b> 减 30%</p>
+          <p><b>125</b> 减 40%</p>
+          <div class="act">动作: <b>回到 87.42 前 分批出货</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 章节 5 · 组合最终执行清单 ============ -->
+  <section class="chap" id="ch5">
+    <span class="chap-num">Chapter 05</span>
+    <h2>组合最终执行清单: T+1 到 T+3 具体动作</h2>
+    <p class="lead">先减后加, 一日只做一类操作, 铁律 8 到 13 六条硬约束不允许突破。</p>
+
+    <div class="sub">
+      <h3>目标配置 (现在 vs 目标)</h3>
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>品种</th>
+            <th class="r">当前仓位</th>
+            <th class="r">目标仓位</th>
+            <th>动作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>沪电股份 002463</td><td class="r pos">35.1%</td><td class="r cheap">18%</td><td><span class="tag tag-warn">分批减</span></td></tr>
+          <tr><td>科创芯片 588200</td><td class="r pos">30.7%</td><td class="r cheap">15%</td><td><span class="tag tag-warn">锁利减半</span></td></tr>
+          <tr><td>通信 ETF 515880</td><td class="r pos">25.1%</td><td class="r cheap">11%</td><td><span class="tag tag-bad">继续减</span></td></tr>
+          <tr><td>滨化股份 601678</td><td class="r amber">7.9%</td><td class="r cheap">3-4%</td><td><span class="tag tag-warn">7/7 决策日出</span></td></tr>
+          <tr><td colspan="4" style="text-align:center;background:#faf8f2;color:var(--ink);font-weight:700;padding:8px">↓ 新增降 β 腿 ↓</td></tr>
+          <tr><td>亨通光电 600487</td><td class="r">0%</td><td class="r cheap">12-15% 三段</td><td><span class="tag tag-ok">三段式建</span></td></tr>
+          <tr><td>半导体设备 ETF</td><td class="r">0%</td><td class="r cheap">5-8%</td><td><span class="tag tag-ok">首选加</span></td></tr>
+          <tr><td>黄金 ETF 518880</td><td class="r amber">0.7%</td><td class="r cheap">5-7%</td><td><span class="tag tag-ok">补足对冲</span></td></tr>
+          <tr><td>现金/货基</td><td class="r">~5%</td><td class="r cheap">10-15%</td><td><span class="tag tag-ok">留仓</span></td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="cols">
+      <div class="main">
+        <div class="sub">
+          <h3>T+1 到 T+3 时序</h3>
+          <div class="checklist">
+            <ol>
+              <li><b>T+1 (7/3 周四)</b> · <b>通信 ETF 减 5,500 股</b> @ 1.72 附近, 撤走 6/30 的逆向加仓大半。约兑现 <b>0.95 万</b>。</li>
+              <li><b>T+1 (7/3 周四)</b> · <b>沪电减 100 股</b> @ 145 附近, 集中度从 35.1% 降到 27%。约兑现 <b>1.45 万</b>。</li>
+              <li><b>T+2 (7/4 周五)</b> · <b>科创芯片强制减半</b> ~1200 股 @ 4.75-4.85, 锁 +32% 浮盈, 降 β。</li>
+              <li><b>T+2 (7/4 周五)</b> · <b>亨通光电第 1 批 400 股</b> @ 82-85 试探建仓 (若价位到达)。</li>
+              <li><b>T+3 (7/7 周一) 滨化决策日</b> · 若 H 股招股情绪未熄火, 分批出货 700 股; 若已回落, 直接清 60%。</li>
+              <li><b>T+3 之后</b> · 亨通若回踩到 76-80, 触发第 2 批 加至 7-8% 仓位。</li>
+              <li><b>本周结束前</b> · 黄金 ETF 补至 5-7%, 半导体设备 ETF 建首仓 3-5%。</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <aside class="side">
+        <div class="side-card">
+          <h3>本周关键日期</h3>
+          <table class="mini-tab">
+            <tbody>
+              <tr><td>7/3 周四</td><td class="r">T+1 减仓日</td></tr>
+              <tr><td>7/4 周五</td><td class="r">科创减半 + 亨通建首</td></tr>
+              <tr><td>7/7 周一</td><td class="r pos">滨化 H 股招股到期</td></tr>
+              <tr><td>7/8 周二</td><td class="r">观察亨通回踩</td></tr>
+              <tr><td>8 月</td><td class="r">中报三档硬验证</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="side-card">
+          <h3>盯盘点位</h3>
+          <table class="mini-tab">
+            <tbody>
+              <tr><td>亨通 MA60</td><td class="r">81.32</td></tr>
+              <tr><td>亨通 首建区</td><td class="r cheap">82-85</td></tr>
+              <tr><td>亨通 加仓区</td><td class="r amber">76-80</td></tr>
+              <tr><td>亨通 见底区</td><td class="r pos">70-75</td></tr>
+              <tr><td>亨通 硬止损</td><td class="r pos">55</td></tr>
+              <tr><td>通信 ETF MA60</td><td class="r pos">1.47</td></tr>
+              <tr><td>沪电 MA20</td><td class="r">136.7</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
+    </div>
+
+    <div class="sub">
+      <h3>组合层铁律 8 到 13 (硬约束, 不商量)</h3>
+      <div class="rules">
+        <div class="rule"><div class="rh"><span class="n">08</span><h4>个股单只上限 20%</h4></div><p>沪电现 35.1% 已破线, T+1 起分批减到 <b>18%</b>。以后新加任何个股, 加满不超 20%。</p></div>
+        <div class="rule"><div class="rh"><span class="n">09</span>AI 算力 β 合计上限 55%</div><p>目前 85.8%, 差 30pct。<b>先减后加</b>, AI 敞口没降到 55% 前不加任何算力链新腿。</p></div>
+        <div class="rule"><div class="rh"><span class="n">10</span>方案里的"减仓"不允许被反向执行</div><p>研究团队方案要求减 55%, <b>只有减 55% 或减更多</b>两个选项, 反向加仓属于操作事故。</p></div>
+        <div class="rule"><div class="rh"><span class="n">11</span>通信 ETF 再加仓即触发全清止损</div><p>已错一次不许再错。<b>下次再加即全清</b>, 无理由。</p></div>
+        <div class="rule"><div class="rh"><span class="n">12</span>单一品种成本上涨 &gt; 3% 即停止加仓</div><p>沪电 6/30 均价 143 加 300 股, 成本涨了 4%, 触发上限。此后加仓即使方案要求也停。</p></div>
+        <div class="rule"><div class="rh"><span class="n">13</span>浮盈 &gt; 15% 品种, 必须减一半兑现</div><p>科创芯片浮盈 +32.7% 早该减, 却挂账不动。以后 <b>浮盈过 15% 机械减半</b>, 不给"再等等"的机会。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 章节 6 · 心理直言 + 三个救命规则 ============ -->
+  <section class="chap" id="ch6">
+    <span class="chap-num">Chapter 06</span>
+    <h2>心理直言 + 三个救命规则</h2>
+    <p class="lead">组合经理不打太极。上个月说不能反向执行减仓指令, 你还是反向执行了。这次再违反, 组合就真的救不回来了。</p>
+
+    <div class="pull">
+      「上个月说不能反向执行减仓指令, 你还是反向执行了。这个月的 <b>-1.08 万</b> 亏损, 是市场收你的 "不听纪律" 学费。这次再违反, 组合就真的救不回来了。」
+      <span class="who">组合经理 · 直言</span>
+    </div>
+
+    <div class="sub">
+      <h3>三个救命规则 (贴在电脑前)</h3>
+      <div class="rules">
+        <div class="rule"><div class="rh"><span class="n">否 1</span><h4>不加已经在持仓的 AI 算力链</h4></div><p>沪电 / 通信 ETF / 科创芯片是本月亏损的三大来源, <b>这三只永不再加</b>, 无论方案怎么说, 无论盘面怎么诱惑。</p></div>
+        <div class="rule"><div class="rh"><span class="n">否 2</span><h4>不追涨停 / 破位后加仓</h4></div><p>滨化涨停日追 + 通信破位加仓, 是本月最贵的两笔教训。<b>涨停不追, 破位不补</b>, 两条都写死。</p></div>
+        <div class="rule"><div class="rh"><span class="n">否 3</span><h4>不越铁律 8-13</h4></div><p>六条硬约束不允许"这次特殊"。 <b>只要触发, 无理由执行</b>。 铁律的存在就是替代你在情绪化时刻的判断。</p></div>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3>核心建议</h3>
+      <div class="good-box">
+        <div class="fh">动作 · 打印本文档贴电脑前</div>
+        <p>尤其是<b>章节 5 的铁律 8-13</b> 和 <b>章节 6 的三个否规则</b>。 交易前先看一遍, 触发对应规则就机械执行, 不给"再等等 / 这次不一样"的心理空间。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 底部关键日期 -->
+  <section class="chap" id="dates">
+    <span class="chap-num">Appendix</span>
+    <h2>底部关键日期 · 8 月中报三档验证</h2>
+    <div class="verify">
+      <div class="v-card a">
+        <h4><span class="lb">A</span>加满档 双击启动</h4>
+        <p>沪电扣非 <b>≥ +80%</b> · PE 降到 <b>≤ 50x</b></p>
+        <p>科创芯片扣非 <b>+30%</b> 以上</p>
+        <div class="act">动作: <b>补足降 β 新腿</b></div>
+      </div>
+      <div class="v-card b">
+        <h4><span class="lb">B</span>观察档 维持</h4>
+        <p>沪电扣非 <b>+40% 到 +80%</b></p>
+        <p>科创芯片 <b>+15% 到 +30%</b></p>
+        <div class="act">动作: <b>不加不减, 等下季度</b></div>
+      </div>
+      <div class="v-card c">
+        <h4><span class="lb">C</span>止损档 陷阱坐实</h4>
+        <p>沪电扣非 <b>&lt; +40%</b> · PE 仍 <b>&gt; 60x</b></p>
+        <p>通信 ETF 破 <b>MA60</b> 1.47</p>
+        <div class="act">动作: <b>清 60%, 1 月内无改善清空</b></div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--ink3);margin-top:14px;line-height:1.7">
+      其他观察: <b>滨化 7/7 H 股招股窗口关闭</b> 后情绪退潮观察; <b>日韩科技板块传导</b> (SK Hynix / Advantest) 影响国内算力链情绪; 亨通 <b>三大信号 (MACD 底背离 + 周线站稳 MA20 + 成交量温和放大 3 日)</b> 是第 3 批加仓的硬触发。
+    </p>
+  </section>
+
+  <footer>
+    <div class="disc">
+      <b>免责声明:</b> 本专题为 TAT 投研团队内部研究推演, 仅供研究参考, <b>不构成投资建议</b>。市场有风险, 决策需谨慎。数据取自 2026-07-02 至 2026-07-03, 交易执行以实际盘面为准。所有百分比与点位需在实际交易日结合行情确认。数据源双兜底 (AKShare + 手动回填) 已修复。
+    </div>
+    <div class="meta">TAT 投研团队制作 · 由 <a href="https://aisid-fate.github.io/tat-doc/">tat-doc</a> 自动发布 · 深度专题按需产出</div>
+  </footer>
+
+</article>
+</body>
+</html>
