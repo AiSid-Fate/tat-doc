@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="report-title" content="TAT投研专题 2026-07-06 半导体广义链双情境">
+<meta name="report-date" content="2026-07-06">
+<meta name="report-category" content="组合">
+<meta name="report-tags" content="半导体,主板,广义链,双情境,加仓">
+<meta name="report-summary" content="半导体广义链双情境加仓清单:情境A无购买限制覆盖科创α富矿,情境B仅主板首推韦尔+通富+紫光三重共振。">
+<title>TAT 投研专题 · 半导体广义链双情境 · 2026-07-06</title>
+<style>
+:root{
+  --bg:#f7f5f0; --paper:#ffffff;
+  --ink:#1a1a1a; --ink2:#333333; --ink3:#5c5c5c; --muted:#8a8a8a;
+  --rule:#d9d5cc; --rule2:#e8e4dc;
+  --up:#c22c2c; --up-soft:#f6e5e5;
+  --down:#0f7a3e; --down-soft:#e2f0e8;
+  --warn:#a65d00; --warn-soft:#f6e8d3;
+  --accent:#1a3d6b; --accent-soft:#e6ecf3;
+  --scenA:#1a3d6b; --scenA-soft:#e6ecf3;   /* 情境A 蓝 */
+  --scenB:#7a1e1e; --scenB-soft:#f6e8e5;   /* 情境B 深红 */
+  --serif:"Noto Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:"SF Mono","JetBrains Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(180deg, transparent, transparent 27px, rgba(0,0,0,0.02) 28px, transparent 29px);
+  background-size:100% 28px}
+.num{font-variant-numeric:tabular-nums;font-family:var(--mono);letter-spacing:-.2px}
+.paper{max-width:1080px;margin:0 auto;background:var(--paper);padding:36px 44px;
+  box-shadow:0 1px 3px rgba(0,0,0,.06), 0 20px 40px rgba(0,0,0,.05);
+  border-top:6px solid var(--ink);word-wrap:break-word;overflow-wrap:break-word}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);line-height:1.3;font-weight:700}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.masthead{border-bottom:3px double var(--ink);padding-bottom:14px;margin-bottom:22px}
+.masthead .top{display:flex;justify-content:space-between;align-items:baseline;font-size:11.5px;color:var(--ink3);text-transform:uppercase;letter-spacing:.12em}
+.masthead .top b{color:var(--ink);font-family:var(--mono)}
+.masthead .name{font-family:var(--serif);font-size:40px;font-weight:900;letter-spacing:-.5px;margin:6px 0 8px}
+.masthead .name em{font-style:normal;color:var(--up)}
+.masthead .sub{font-size:13px;color:var(--ink3);font-family:var(--serif)}
+.masthead .sub b{color:var(--ink)}
+
+.headline{padding:6px 0 26px;border-bottom:1px solid var(--rule)}
+.headline .kicker{font-size:11.5px;font-weight:700;color:var(--up);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.headline h1{font-size:32px;line-height:1.25;font-weight:800;letter-spacing:-.3px}
+.headline h1 em{font-style:normal;color:var(--up);border-bottom:2px solid var(--up);padding-bottom:1px}
+.headline .lede{margin-top:14px;font-size:16px;color:var(--ink2);line-height:1.75;font-family:var(--serif)}
+
+/* 情境标签 */
+.sc-badge{display:inline-block;padding:3px 10px;font-size:11px;font-weight:800;font-family:var(--mono);
+  letter-spacing:.06em;text-transform:uppercase;border-radius:2px}
+.sc-A{background:var(--scenA-soft);color:var(--scenA);border:1px solid #b8c8dd}
+.sc-B{background:var(--scenB-soft);color:var(--scenB);border:1px solid #dcbcb5}
+.sc-both{background:#e8dfc2;color:#6b520a;border:1px solid #c7b78a}
+
+/* KPI dash */
+.dash{display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border:1px solid var(--rule);border-radius:2px;overflow:hidden;margin:24px 0}
+.dash .cell{padding:16px 18px;border-right:1px solid var(--rule);background:var(--paper)}
+.dash .cell:last-child{border-right:none}
+.dash .k{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);font-weight:700;margin-bottom:6px}
+.dash .v{font-size:24px;font-weight:700;font-family:var(--mono);color:var(--ink);line-height:1.1}
+.dash .v.A{color:var(--scenA)} .dash .v.B{color:var(--scenB)} .dash .v.warn{color:var(--warn)} .dash .v.up{color:var(--up)}
+.dash .s{font-size:11.5px;color:var(--ink3);margin-top:3px}
+
+/* 目录 */
+.toc{background:#faf8f2;border:1px solid var(--rule);padding:16px 20px;margin:22px 0 26px;border-radius:2px}
+.toc h4{font-family:var(--sans);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px}
+.toc ol{list-style:none;padding-left:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 22px;counter-reset:tocitem}
+.toc li{font-size:13.5px;padding-left:26px;position:relative;color:var(--ink2)}
+.toc li::before{counter-increment:tocitem;content:counter(tocitem);position:absolute;left:0;top:1px;
+  width:19px;height:19px;background:var(--ink);color:var(--paper);border-radius:2px;
+  display:grid;place-items:center;font-family:var(--mono);font-size:11px;font-weight:700}
+.toc a{color:var(--ink)}
+
+/* 章节 */
+.chap{margin-top:40px;padding-top:6px}
+.chap-num{display:inline-block;font-family:var(--mono);font-size:11px;color:var(--up);font-weight:800;
+  letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;background:var(--up-soft);border-radius:2px}
+.chap-num.A{color:var(--scenA);background:var(--scenA-soft)}
+.chap-num.B{color:var(--scenB);background:var(--scenB-soft)}
+.chap h2{font-size:24px;font-weight:800;margin-top:6px;letter-spacing:-.2px;border-bottom:2px solid var(--ink);padding-bottom:8px}
+.chap.A h2{border-bottom-color:var(--scenA)}
+.chap.B h2{border-bottom-color:var(--scenB)}
+.chap .lead{font-size:14.5px;color:var(--ink3);margin-top:10px;line-height:1.7;font-family:var(--serif)}
+
+.sub{margin-top:22px}
+.sub h3{font-size:17px;margin-bottom:10px;padding-left:8px;border-left:3px solid var(--ink);font-weight:800}
+
+/* 表格 */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;scrollbar-width:thin}
+.table-wrap table{min-width:100%;width:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+table th{text-align:left;padding:10px 12px;border-bottom:2px solid var(--ink);background:transparent;
+  font-weight:700;color:var(--ink);font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+table th.r{text-align:right}
+table td{padding:10px 12px;border-bottom:1px solid var(--rule);color:var(--ink2);vertical-align:top}
+table td.r{text-align:right;font-family:var(--mono);white-space:nowrap}
+table tr:last-child td{border-bottom:none}
+table tr:hover td{background:#faf8f2}
+.pos{color:var(--up);font-weight:700}
+.neg{color:var(--down);font-weight:700}
+.amber{color:var(--warn);font-weight:700}
+.cheap{color:var(--accent);font-weight:700}
+.tag{display:inline-block;padding:2px 8px;font-size:11px;font-weight:700;border-radius:2px;font-family:var(--mono);letter-spacing:.02em;text-transform:uppercase}
+.tag-bad{background:var(--up-soft);color:var(--up)}
+.tag-warn{background:var(--warn-soft);color:var(--warn)}
+.tag-ok{background:var(--down-soft);color:var(--down)}
+.tag-neutral{background:var(--accent-soft);color:var(--accent)}
+.stars{font-family:var(--mono);color:var(--warn);white-space:nowrap;font-size:12px;letter-spacing:1px}
+
+/* Red Flag & Good box */
+.flag{background:var(--up-soft);border-left:4px solid var(--up);padding:14px 18px;margin:10px 0;border-radius:1px}
+.flag .fh{font-size:11px;font-weight:800;color:var(--up);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.flag p{font-size:13.5px;color:var(--ink);line-height:1.7}
+.flag p b{color:var(--up)}
+.good-box{background:var(--down-soft);border-left:4px solid var(--down);padding:14px 18px;margin:10px 0;border-radius:1px}
+.good-box .fh{font-size:11px;font-weight:800;color:var(--down);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.good-box p{font-size:13.5px;color:var(--ink);line-height:1.7}
+.good-box p b{color:var(--down)}
+
+/* checklist */
+.checklist{background:#fbf9f4;border:1px solid var(--rule);padding:16px 18px;border-radius:2px;margin-top:8px}
+.checklist ol{padding-left:0;list-style:none;counter-reset:step}
+.checklist li{padding:10px 0 10px 34px;position:relative;border-bottom:1px dashed var(--rule2);font-size:13.5px;line-height:1.65;color:var(--ink2)}
+.checklist li:last-child{border-bottom:none}
+.checklist li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:10px;
+  width:24px;height:24px;background:var(--ink);color:var(--paper);border-radius:50%;
+  display:grid;place-items:center;font-family:var(--mono);font-size:12px;font-weight:700}
+.checklist li b{color:var(--ink);font-family:var(--mono)}
+
+/* 三档卡 */
+.verify{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+.v-card{border:1px solid var(--rule);padding:14px 16px;border-radius:2px;background:var(--paper)}
+.v-card.gold{border-top:3px solid var(--warn)}
+.v-card h4{font-size:13.5px;font-family:var(--sans);font-weight:800;margin-bottom:8px}
+.v-card .code{font-size:11px;color:var(--ink3);font-family:var(--mono);margin-bottom:6px}
+.v-card p{font-size:12.5px;color:var(--ink3);line-height:1.6;margin-bottom:6px}
+.v-card p b{color:var(--ink);font-family:var(--mono)}
+
+/* 引用块 */
+.pull{margin:20px 0;padding:16px 24px;border-left:4px solid var(--ink);background:#f9f7f1;
+  font-family:var(--serif);font-size:16px;line-height:1.8;color:var(--ink)}
+.pull b{color:var(--up)}
+.pull .who{display:block;font-size:12px;color:var(--ink3);margin-top:8px;font-family:var(--sans);text-transform:uppercase;letter-spacing:.08em}
+
+/* 产业链全景 */
+.chain{display:flex;flex-direction:column;gap:14px;margin-top:6px}
+.tier{border:1px solid var(--rule);border-radius:2px;overflow:hidden;background:var(--paper)}
+.tier-h{padding:10px 14px;background:#faf8f2;border-bottom:1px solid var(--rule);
+  display:flex;align-items:center;justify-content:space-between;gap:10px}
+.tier-h .t{font-weight:800;font-size:14px;font-family:var(--sans)}
+.tier-h .desc{font-size:12px;color:var(--ink3)}
+.tier-body{padding:12px 14px;display:flex;flex-wrap:wrap;gap:6px}
+.chip-stock{display:inline-flex;align-items:center;gap:4px;font-size:12px;padding:3px 9px;border-radius:12px;
+  border:1px solid var(--rule);background:#fff;color:var(--ink2);font-family:var(--mono)}
+.chip-stock.main{border-color:#b8c8dd;background:var(--scenA-soft);color:var(--scenA)}
+.chip-stock.star{border-color:#dcbcb5;background:var(--scenB-soft);color:var(--scenB)}
+.chip-stock.gem{border-color:#e2ce9d;background:#f6ebd3;color:#7a5d0e}
+.chip-stock b{font-weight:800;font-family:inherit}
+
+/* 6 大催化 */
+.cats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+.cat{background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--warn);padding:12px 14px;border-radius:2px}
+.cat .ch{display:flex;align-items:baseline;gap:8px;margin-bottom:5px}
+.cat .ch .n{font-family:var(--mono);color:var(--warn);font-weight:800;font-size:12px}
+.cat .ch h4{font-size:13.5px;font-family:var(--sans);font-weight:800}
+.cat p{font-size:12.5px;color:var(--ink3);line-height:1.6}
+.cat p b{color:var(--ink);font-family:var(--mono);font-weight:700}
+
+/* 页脚 */
+footer{margin-top:40px;padding-top:16px;border-top:3px double var(--ink);
+  font-size:11.5px;color:var(--ink3);text-align:center;line-height:1.7}
+footer .disc{background:#faf8f2;border:1px solid var(--rule);padding:12px 16px;
+  margin-bottom:12px;text-align:left;font-size:12px;color:var(--ink2)}
+footer .disc b{color:var(--up)}
+footer .meta{font-family:var(--serif);color:var(--ink3)}
+
+@media (max-width:820px){
+  .paper{padding:24px 20px}
+  .masthead .name{font-size:30px}
+  .headline h1{font-size:24px}
+  .chap h2{font-size:20px}
+  .dash{grid-template-columns:repeat(2,1fr)}
+  .dash .cell:nth-child(2){border-right:none}
+  .cats{grid-template-columns:1fr}
+  .verify{grid-template-columns:1fr}
+  .toc ol{grid-template-columns:1fr}
+  table{font-size:12.5px}
+  table th,table td{padding:8px 8px}
+}
+@media (max-width:480px){
+  body{font-size:14.5px;line-height:1.65}
+  .paper{padding:20px 16px;border-top-width:5px}
+  .masthead{padding-bottom:12px;margin-bottom:18px}
+  .masthead .top{font-size:10.5px;flex-wrap:wrap;gap:4px}
+  .masthead .name{font-size:26px;margin:8px 0 6px}
+  .masthead .sub{font-size:12px}
+  .headline{padding:6px 0 20px}
+  .headline h1{font-size:21px;line-height:1.3}
+  .headline .lede{font-size:14.5px;margin-top:12px}
+  .dash{grid-template-columns:1fr;margin:18px 0}
+  .dash .cell{border-right:none;border-bottom:1px solid var(--rule);padding:14px 16px}
+  .dash .cell:last-child{border-bottom:none}
+  .dash .v{font-size:22px}
+  .chap{margin-top:30px}
+  .chap h2{font-size:18px}
+  .sub h3{font-size:15px}
+  .chap,.sub,.tier{min-width:0}
+  .table-wrap{width:100%;overflow-x:auto;max-width:calc(100vw - 32px)}
+  .table-wrap table{min-width:520px}
+  table{font-size:11.5px}
+  table th,table td{padding:7px 8px;word-break:break-word}
+  table th{font-size:10px;letter-spacing:.03em}
+  .flag,.good-box,.cat{padding:11px 13px}
+  .flag .fh,.good-box .fh,.cat .ch h4{font-size:12.5px}
+  .flag p,.good-box p,.cat p{font-size:12.5px}
+  .pull{padding:12px 16px;font-size:14px;line-height:1.7}
+  .checklist{padding:14px}
+  .checklist li{padding:9px 0 9px 30px;font-size:13px}
+  .checklist li::before{width:20px;height:20px;font-size:11px;top:9px}
+  footer{font-size:11px;margin-top:24px}
+  footer .disc{padding:10px 12px;font-size:11.5px}
+}
+@media print{
+  body{background:#fff;background-image:none}
+  .paper{box-shadow:none;padding:0}
+}
+</style>
+</head>
+<body>
+<article class="paper">
+
+  <!-- 报头 -->
+  <header class="masthead">
+    <div class="top">
+      <span>TAT 投研团队 · Special Report</span>
+      <span><b>VOL. 002</b> · 双情境专题</span>
+    </div>
+    <div class="name">半导体广义链 <em>双情境</em> 加仓清单</div>
+    <div class="sub"><b>2026 年 7 月 6 日</b> · <span class="sc-badge sc-A">情境 A</span> 无购买限制 · <span class="sc-badge sc-B">情境 B</span> 仅主板可买</div>
+  </header>
+
+  <!-- 头条 -->
+  <section class="headline">
+    <div class="kicker">头条 · 权限决定选股范围, 不决定投资纪律</div>
+    <h1>情境 A 覆盖<em>科创板 α 富矿</em>, 情境 B 在主板范围内 α 稀缺但有共振</h1>
+    <p class="lede">
+      情境 A 半导体设备 (华海清科 Q1+157%) 和 AI 芯片 (寒武纪) 弹性显著更强, 但估值分位普遍 95%+ 需择时。 情境 B 在主板可买范围内, α 集中在少数标的, 首推 <b>韦尔 + 通富 + 紫光</b> 三重共振。 若用户符合科创板开通条件 (50 万金融资产 + 2 年经验), 优先开权限释放富矿, 否则按情境 B 分层建仓。
+    </p>
+  </section>
+
+  <!-- KPI 4 卡 -->
+  <section class="dash" aria-label="核心数据速览">
+    <div class="cell"><div class="k">主板可选标的</div><div class="v num B">10 只</div><div class="s">Top 10 覆盖 6 子板块</div></div>
+    <div class="cell"><div class="k">无限制标的</div><div class="v num A">18 只</div><div class="s">含科创 8 只 + 创业 2 只</div></div>
+    <div class="cell"><div class="k">双情境共振</div><div class="v num warn">韦尔+通富+紫光</div><div class="s">主板可买 α 三剑客</div></div>
+    <div class="cell"><div class="k">最强催化窗口</div><div class="v num up">8 月中报</div><div class="s">存储/CIS/封测预告集中</div></div>
+  </section>
+
+  <!-- 目录 -->
+  <nav class="toc">
+    <h4>目录 · 八大章节</h4>
+    <ol>
+      <li><a href="#ch1">产业链全景 (主板 / 科创 / 创业色标)</a></li>
+      <li><a href="#ch2">现阶段 6 大核心催化剂</a></li>
+      <li><a href="#ch3">情境 A · 无购买限制 Top 10</a></li>
+      <li><a href="#ch4">情境 B · 仅主板 Top 10</a></li>
+      <li><a href="#ch5">双情境对比表 (机会成本)</a></li>
+      <li><a href="#ch6">双情境共振首推 3 只</a></li>
+      <li><a href="#ch7">回避清单</a></li>
+      <li><a href="#ch8">用户下一步操作方向</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============ 章节 1 · 产业链全景 ============ -->
+  <section class="chap" id="ch1">
+    <span class="chap-num">Chapter 01</span>
+    <h2>产业链全景 · 上中下游全覆盖</h2>
+    <p class="lead">
+      每个环节标注龙头股, 色标区分交易所: <span class="chip-stock main">深主板</span> 蓝色 · <span class="chip-stock star">科创</span> 红色 · <span class="chip-stock gem">创业</span> 金色。
+    </p>
+    <div class="chain">
+      <div class="tier">
+        <div class="tier-h"><span class="t">上游 · 设备 · 材料</span><span class="desc">国产替代第二波, 半导体设备是本轮 α 最强</span></div>
+        <div class="tier-body">
+          <span class="chip-stock main">北方华创 002371</span>
+          <span class="chip-stock star">华海清科 688120</span>
+          <span class="chip-stock star">拓荆科技 688072</span>
+          <span class="chip-stock star">中微公司 688012</span>
+          <span class="chip-stock star">盛美上海 688082</span>
+          <span class="chip-stock main">雅克科技 002409</span>
+          <span class="chip-stock gem">上海新阳 300236</span>
+          <span class="chip-stock gem">江丰电子 300666</span>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-h"><span class="t">中游 · 制造 · 封测</span><span class="desc">AMD MI400 + CoWoS 双重驱动</span></div>
+        <div class="tier-body">
+          <span class="chip-stock main">通富微电 002156</span>
+          <span class="chip-stock main">长电科技 600584</span>
+          <span class="chip-stock main">华天科技 002185</span>
+          <span class="chip-stock star">中芯国际 688981</span>
+          <span class="chip-stock star">澜起科技 688008</span>
+          <span class="chip-stock star">佰维存储 688258</span>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-h"><span class="t">下游 · 设计 · IDM · 存储</span><span class="desc">存储超级周期 + CIS Optimus 链</span></div>
+        <div class="tier-body">
+          <span class="chip-stock main">韦尔股份 603501</span>
+          <span class="chip-stock main">紫光国微 002049</span>
+          <span class="chip-stock main">汇顶科技 603160</span>
+          <span class="chip-stock main">兆易创新 603986</span>
+          <span class="chip-stock main">多氟多 002407</span>
+          <span class="chip-stock main">士兰微 600460</span>
+          <span class="chip-stock star">寒武纪 688256</span>
+          <span class="chip-stock star">海光信息 688041</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 章节 2 · 6 大催化剂 ============ -->
+  <section class="chap" id="ch2">
+    <span class="chap-num">Chapter 02</span>
+    <h2>现阶段 6 大核心催化剂</h2>
+    <p class="lead">存储 + CIS + 封测三大主线在 <b>8 月中报预告窗口</b> 集中兑现, 是 7-8 月最强催化剂集中期。</p>
+    <div class="cats">
+      <div class="cat">
+        <div class="ch"><span class="n">01</span><h4>存储超级周期</h4></div>
+        <p>DRAM/NAND 涨价延续, <b>三星/SK 海力士产能优先供 AI</b>, 消费级供给紧张。兆易创新 Q1 扣非 <b>+530%</b>, 佰维存储 Q1 <b>+237%</b>。中报是核心兑现窗口。</p>
+      </div>
+      <div class="cat">
+        <div class="ch"><span class="n">02</span><h4>AMD MI400 + CoWoS</h4></div>
+        <p>台积电 CoWoS 2026 产能扩 150%, <b>AMD 获 10.5 万片 (11% 全球份额)</b>, 8 万片给 MI355/MI400 系列。通富微电是 AMD 关键封测伙伴, 二段行情空间未走完。</p>
+      </div>
+      <div class="cat">
+        <div class="ch"><span class="n">03</span><h4>国产替代第二波</h4></div>
+        <p>成熟制程 + 设备材料。 <b>北方华创 / 华海清科 / 拓荆</b> 是设备三剑客。 拓荆 Q1 扣非 <b>+157%</b> α 最强, 华海清科多年利润 CAGR 60%+ / 扣非 CAGR 130%+。</p>
+      </div>
+      <div class="cat">
+        <div class="ch"><span class="n">04</span><h4>8 月中报预告窗口</h4></div>
+        <p>时点性最强的催化。 兆易 / 韦尔 / 通富 / 紫光 / 汇顶 / 长电都在 7-8 月披露预告。 <b>7 月 15 日起进入密集期</b>, 兑现程度决定二段行情空间。</p>
+      </div>
+      <div class="cat">
+        <div class="ch"><span class="n">05</span><h4>Optimus 机器人 CIS 链</h4></div>
+        <p>特斯拉 Optimus V3 2026Q1 亮相, 2026 年底量产 5 万台。 <b>韦尔股份</b> 是全球 CIS 龙头之一, 若拿下 Optimus 供应链主力位, PB 分位仅 3.1% 有强逆势。</p>
+      </div>
+      <div class="cat">
+        <div class="ch"><span class="n">06</span><h4>AIDC HVDC 电源架构</h4></div>
+        <p>800V HVDC 数据中心电源替代传统 415V, 硅碳化功率器件放量。 <b>士兰微</b> 是 IDM 布局最全, 但周期底部, 观察 Q2 弹性。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 章节 3 · 情境 A 无购买限制 Top 10 ============ -->
+  <section class="chap A" id="ch3">
+    <span class="chap-num A">Chapter 03 · <span class="sc-badge sc-A">情境 A</span> 无购买限制</span>
+    <h2>Top 10 覆盖科创板 α 富矿</h2>
+    <p class="lead">拓荆 Q1 扣非 <b>+157%</b>、 华海清科多年利润 CAGR 60%+, 是本轮 α 最强的两只, 但估值分位普遍 95%+ 需择时。</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>排名</th>
+            <th>标的 · 代码</th>
+            <th>所在板</th>
+            <th>子板块</th>
+            <th class="r">Q1 亮点</th>
+            <th>推荐度</th>
+            <th>核心逻辑</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td><b>华海清科</b> 688120</td><td>科创</td><td>设备 (CMP)</td><td class="r pos">利润 CAGR 60%+</td><td><span class="stars">★★★★★</span></td><td>CMP 减薄设备国产垄断, α 最强</td></tr>
+          <tr><td>2</td><td><b>拓荆科技</b> 688072</td><td>科创</td><td>设备 (薄膜)</td><td class="r pos">扣非 +157%</td><td><span class="stars">★★★★★</span></td><td>薄膜设备 α 最强, PB 分位 99.7% 需回踩</td></tr>
+          <tr><td>3</td><td><b>紫光国微</b> 002049</td><td>深主板</td><td>特种 IC</td><td class="r pos">扣非 +170.8%</td><td><span class="stars">★★★★★</span></td><td>PE 分位 46% 唯一"估值合理+高 α"</td></tr>
+          <tr><td>4</td><td><b>韦尔股份</b> 603501</td><td>沪主板</td><td>CIS</td><td class="r amber">Q1 承压</td><td><span class="stars">★★★★★</span></td><td>PB 分位 3.1% 全场最极端低, Optimus 概率</td></tr>
+          <tr><td>5</td><td><b>中微公司</b> 688012</td><td>科创</td><td>设备 (刻蚀)</td><td class="r">中高增</td><td><span class="stars">★★★★</span></td><td>刻蚀 + HBM 设备, 国产替代 β</td></tr>
+          <tr><td>6</td><td><b>盛美上海</b> 688082</td><td>科创</td><td>设备 (清洗)</td><td class="r">中高增</td><td><span class="stars">★★★★</span></td><td>清洗 + 镀铜, 平台化路径</td></tr>
+          <tr><td>7</td><td><b>北方华创</b> 002371</td><td>深主板</td><td>设备 (平台)</td><td class="r pos">Q1 +3.6%</td><td><span class="stars">★★★★</span></td><td>主板唯一设备龙头, 长期必配</td></tr>
+          <tr><td>8</td><td><b>通富微电</b> 002156</td><td>深主板</td><td>封测 (AMD)</td><td class="r pos">扣非 +64.8%</td><td><span class="stars">★★★★</span></td><td>AMD MI400 独家封测</td></tr>
+          <tr><td>9</td><td><b>汇顶科技</b> 603160</td><td>沪主板</td><td>设计 (触控)</td><td class="r amber">Q1 承压</td><td><span class="stars">★★★★</span></td><td>PE 分位 12.6% + PB 分位 6.5% 双低</td></tr>
+          <tr><td>10</td><td><b>兆易创新</b> 603986</td><td>沪主板</td><td>存储+MCU</td><td class="r pos">扣非 +530%</td><td><span class="stars">★★★★</span></td><td>存储反转最猛, PB 99.2% 需回踩</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="flag">
+      <div class="fh">情境 A 择时提醒</div>
+      <p>科创设备三剑客 (华海清科 / 拓荆 / 中微) 估值分位 <b>95%+</b> 顶部, 现价追进就是接盘。 <b>需等回调 15-20% 或财报大超预期</b> 再介入, 不宜现价重仓。 寒武纪 / 海光信息 估值极端 (PE 348x / 307x), 归入回避清单。</p>
+    </div>
+  </section>
+
+  <!-- ============ 章节 4 · 情境 B 仅主板 Top 10 ============ -->
+  <section class="chap B" id="ch4">
+    <span class="chap-num B">Chapter 04 · <span class="sc-badge sc-B">情境 B</span> 仅主板可买</span>
+    <h2>Top 10 严格主板范围内</h2>
+    <p class="lead">α 集中在少数标的: <b>紫光国微 (PE 分位 46%)</b> 和 <b>韦尔股份 (PB 分位 3.1%)</b> 是核心。 分子板块展示, 便于组合分散。</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>排名</th>
+            <th>标的 · 代码</th>
+            <th>子板块</th>
+            <th class="r">Q1 扣非</th>
+            <th class="r">PE 分位</th>
+            <th class="r">PB 分位</th>
+            <th>推荐度</th>
+            <th>操作建议</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td><td><b>紫光国微</b> 002049</td><td>特种 IC</td>
+            <td class="r pos">+170.8%</td><td class="r cheap">46.0%</td><td class="r cheap">42.2%</td>
+            <td><span class="stars">★★★★★</span></td>
+            <td class="pos">现价可分批建仓</td>
+          </tr>
+          <tr>
+            <td>2</td><td><b>韦尔股份</b> 603501</td><td>CIS 图像</td>
+            <td class="r neg">-27.4%</td><td class="r cheap">22.1%</td><td class="r cheap">3.1%</td>
+            <td><span class="stars">★★★★★</span></td>
+            <td class="pos">回调至 90 元下方是理想买点</td>
+          </tr>
+          <tr>
+            <td>3</td><td><b>汇顶科技</b> 603160</td><td>指纹/触控</td>
+            <td class="r neg">-25.1%</td><td class="r cheap">12.6%</td><td class="r cheap">6.5%</td>
+            <td><span class="stars">★★★★</span></td>
+            <td>现价可试探建仓</td>
+          </tr>
+          <tr>
+            <td>4</td><td><b>通富微电</b> 002156</td><td>封测 (AMD)</td>
+            <td class="r pos">+64.8%</td><td class="r amber">75.1%</td><td class="r">98.4%</td>
+            <td><span class="stars">★★★★</span></td>
+            <td>现价合理, 回调至 60 元下方是理想加仓位</td>
+          </tr>
+          <tr>
+            <td>5</td><td><b>北方华创</b> 002371</td><td>设备</td>
+            <td class="r pos">+3.6%</td><td class="r amber">76.1%</td><td class="r">89.5%</td>
+            <td><span class="stars">★★★★</span></td>
+            <td>长期必配, 小仓位试探</td>
+          </tr>
+          <tr>
+            <td>6</td><td><b>兆易创新</b> 603986</td><td>存储+MCU</td>
+            <td class="r pos">+530%</td><td class="r">87.0%</td><td class="r pos">99.2%</td>
+            <td><span class="stars">★★★★</span></td>
+            <td class="amber">回调至 550-580 元再考虑</td>
+          </tr>
+          <tr>
+            <td>7</td><td><b>多氟多</b> 002407</td><td>电子级 HF</td>
+            <td class="r pos">+1724%!</td><td class="r amber">80.2%</td><td class="r amber">85.6%</td>
+            <td><span class="stars">★★★★</span></td>
+            <td class="amber">短期不追高, 回调至 40 以下</td>
+          </tr>
+          <tr>
+            <td>8</td><td><b>华天科技</b> 002185</td><td>封测</td>
+            <td class="r pos">+114%</td><td class="r amber">84.1%</td><td class="r amber">91.0%</td>
+            <td><span class="stars">★★★☆</span></td>
+            <td>封测反转黑马, 可小仓试探</td>
+          </tr>
+          <tr>
+            <td>9</td><td><b>雅克科技</b> 002409</td><td>材料 (前驱体)</td>
+            <td class="r neg">-3.81%</td><td class="r amber">93.6%</td><td class="r pos">99.4%</td>
+            <td><span class="stars">★★★</span></td>
+            <td class="amber">估值贵 + Q1 弱, 观察</td>
+          </tr>
+          <tr>
+            <td>10</td><td><b>士兰微</b> 600460</td><td>功率 IDM</td>
+            <td class="r pos">+8.8%</td><td class="r amber">72.6%</td><td class="r">64.3%</td>
+            <td><span class="stars">★★★</span></td>
+            <td class="amber">功率周期底部, ROE 低</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="good-box">
+      <div class="fh">情境 B 优先执行顺序</div>
+      <p>先建 <b>紫光国微 + 韦尔股份 + 汇顶科技</b> 三只估值合理组合, 目标仓位各 5-7%, 合计 15-21%。 再看回调机会加通富微电和北方华创。 兆易创新 / 多氟多 / 华天科技 现价过热, <b>等回调再动</b>。</p>
+    </div>
+  </section>
+
+  <!-- ============ 章节 5 · 双情境对比表 ============ -->
+  <section class="chap" id="ch5">
+    <span class="chap-num">Chapter 05</span>
+    <h2>双情境对比表 · 权限差异带来的机会成本</h2>
+    <p class="lead">同一子板块下, 若开通科创权限首选 vs 只能主板次选, 一目了然 α 差距。</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>子板块</th>
+            <th><span class="sc-badge sc-A">A</span> 若开科创首选</th>
+            <th><span class="sc-badge sc-B">B</span> 只能主板</th>
+            <th>机会成本</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>半导体设备</b></td>
+            <td class="cheap"><b>华海清科 688120</b> (利润 CAGR 60%+)</td>
+            <td>北方华创 002371 (Q1+3.6%)</td>
+            <td class="pos">A 弹性显著更强</td>
+          </tr>
+          <tr>
+            <td><b>薄膜设备</b></td>
+            <td class="cheap"><b>拓荆科技 688072</b> (Q1+157%)</td>
+            <td>无对标主板龙头</td>
+            <td class="pos">B 完全缺席</td>
+          </tr>
+          <tr>
+            <td><b>AI 芯片设计</b></td>
+            <td class="cheap"><b>寒武纪 688256 / 海光 688041</b></td>
+            <td>紫光国微 002049 (特种IC替代)</td>
+            <td class="pos">A 弹性大但估值极端</td>
+          </tr>
+          <tr>
+            <td><b>存储</b></td>
+            <td class="cheap"><b>佰维存储 688258</b> (Q1+237%)</td>
+            <td>兆易创新 603986 (Q1+530%)</td>
+            <td class="amber">B 兆易更强, 但 PB 分位 99%</td>
+          </tr>
+          <tr>
+            <td><b>CIS 图像</b></td>
+            <td>韦尔股份 603501 (在主板)</td>
+            <td class="cheap"><b>韦尔股份 603501</b></td>
+            <td class="cheap">无差异, B 完全覆盖</td>
+          </tr>
+          <tr>
+            <td><b>封测 (AMD)</b></td>
+            <td>通富微电 002156 (在主板)</td>
+            <td class="cheap"><b>通富微电 002156</b></td>
+            <td class="cheap">无差异, B 完全覆盖</td>
+          </tr>
+          <tr>
+            <td><b>指纹触控</b></td>
+            <td>汇顶科技 603160 (在主板)</td>
+            <td class="cheap"><b>汇顶科技 603160</b></td>
+            <td class="cheap">无差异, B 完全覆盖</td>
+          </tr>
+          <tr>
+            <td><b>特种 IC 军工</b></td>
+            <td>紫光国微 002049 (在主板)</td>
+            <td class="cheap"><b>紫光国微 002049</b></td>
+            <td class="cheap">无差异, B 完全覆盖</td>
+          </tr>
+          <tr>
+            <td><b>功率 IDM</b></td>
+            <td>士兰微 600460 (在主板)</td>
+            <td>士兰微 600460</td>
+            <td>无差异</td>
+          </tr>
+          <tr>
+            <td><b>刻蚀 / 清洗设备</b></td>
+            <td class="cheap"><b>中微 688012 / 盛美 688082</b></td>
+            <td>无主板对标</td>
+            <td class="pos">B 缺席这两个细分</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pull">
+      「B 情境的核心短板是 <b>半导体设备的科创四剑客 (华海清科 / 拓荆 / 中微 / 盛美)</b> 无法覆盖。 主板只能靠北方华创一只承担设备暴露, 但业绩弹性弱于科创四剑客。」
+      <span class="who">研究团队 · 情境对比结论</span>
+    </div>
+  </section>
+
+  <!-- ============ 章节 6 · 双情境共振首推 ============ -->
+  <section class="chap" id="ch6">
+    <span class="chap-num">Chapter 06</span>
+    <h2>双情境都能买 · 共振首推 3 只</h2>
+    <p class="lead">这三只在情境 A 和 B 排名都在 Top 5, 主板可直接买, α 与估值双达标。</p>
+    <div class="verify">
+      <div class="v-card gold">
+        <h4>韦尔股份 <span class="sc-badge sc-both">共振</span></h4>
+        <div class="code">603501 · 沪主板</div>
+        <p><b>PB 分位 3.1%</b> 全场最极端低</p>
+        <p>ROE 15.4%, CIS 全球龙头</p>
+        <p>Optimus 供应链概率</p>
+        <p style="border-top:1px dashed var(--rule);padding-top:8px;margin-top:8px;color:var(--ink)"><b>操作:</b> 回调 90 元以下分批建仓, 目标 <b>7-8%</b> 仓位</p>
+      </div>
+      <div class="v-card gold">
+        <h4>通富微电 <span class="sc-badge sc-both">共振</span></h4>
+        <div class="code">002156 · 深主板</div>
+        <p><b>AMD MI400 独家封测</b></p>
+        <p>Q1 扣非 +64.8%, 封测中 PE 分位最低 (75.1%)</p>
+        <p>CoWoS 2026 产能扩 150% 直接受益</p>
+        <p style="border-top:1px dashed var(--rule);padding-top:8px;margin-top:8px;color:var(--ink)"><b>操作:</b> 现价合理, 回调 60 元下方加仓, 目标 <b>5-7%</b></p>
+      </div>
+      <div class="v-card gold">
+        <h4>紫光国微 <span class="sc-badge sc-both">共振</span></h4>
+        <div class="code">002049 · 深主板</div>
+        <p><b>PE 分位 46% + PB 分位 42.2%</b></p>
+        <p>Q1 扣非 +170.8%, 毛利 55.6%</p>
+        <p>军工特种 IC + 存储 + 安全芯片</p>
+        <p style="border-top:1px dashed var(--rule);padding-top:8px;margin-top:8px;color:var(--ink)"><b>操作:</b> 现价可分批建仓, 目标 <b>7-8%</b> 仓位</p>
+      </div>
+    </div>
+    <div class="good-box">
+      <div class="fh">三重共振组合 · 主板即可</div>
+      <p>三只合计目标仓位 <b>19-23%</b>, 单只不超 8% (符合铁律 08 个股上限 20%)。 <b>紫光国微是主板半导体唯一"估值合理+高 α"标的, 应优先建仓。</b> 韦尔股份等回调至 90 下方是理想买点。 通富微电现价合理, 有回踩窗口更好。</p>
+    </div>
+  </section>
+
+  <!-- ============ 章节 7 · 回避清单 ============ -->
+  <section class="chap" id="ch7">
+    <span class="chap-num">Chapter 07</span>
+    <h2>回避清单 · 情境 A 情境 B 均适用</h2>
+    <div class="flag">
+      <div class="fh">RED FLAG 01 · 利好出尽</div>
+      <p><b>江波龙 301308</b>: 存储涨价预期已充分反映, PB 分位 99%+, 二段行情已消化。 观察 Q2 是否有超预期兑现再判断。</p>
+    </div>
+    <div class="flag">
+      <div class="fh">RED FLAG 02 · 短期抱团 / 已涨透</div>
+      <p><b>兆易创新 603986</b>: Q1 扣非 +530% 但 PB 分位 <b>99.2%</b>, 短期抱团。 <b>士兰微 600460</b>: 已涨 121%, 消化期。 <b>寒武纪 / 海光信息</b>: PE 分位 99%+ 极端估值。</p>
+    </div>
+    <div class="flag">
+      <div class="fh">RED FLAG 03 · 基本面差 / 估值贵</div>
+      <p><b>长电科技 600584</b>: 2025 扣非 -11.5%, PE/PB 分位均 99.4%, 又弱又贵。 <b>至纯科技 / 万业企业</b>: 基本面持续弱, 无 α。</p>
+    </div>
+  </section>
+
+  <!-- ============ 章节 8 · 用户下一步 ============ -->
+  <section class="chap" id="ch8">
+    <span class="chap-num">Chapter 08</span>
+    <h2>用户下一步操作方向</h2>
+    <div class="checklist">
+      <ol>
+        <li><b>优先: 开通科创板权限</b> (50 万金融资产 + 2 年 A 股经验), 释放情境 A 富矿。 直接联系券商 App 内申请, 通常 T+2 生效。</li>
+        <li><b>若不开通</b>: 按情境 B Top 10 分层建仓。 首推 <b>韦尔 + 通富 + 紫光</b> 三重共振组合, 合计目标 19-23% 仓位。</li>
+        <li><b>关键时点 1</b>: 7 月 15 日起 <b>中报预告密集期</b>。 兆易 / 韦尔 / 通富 / 紫光 / 汇顶预告数据决定二段行情空间。</li>
+        <li><b>关键时点 2</b>: 8 月中报正式披露。 A档 (超预期加仓) / B档 (观察) / C档 (陷阱清仓) 硬约束按之前方案执行。</li>
+        <li><b>关键时点 3</b>: 存储超级周期 Q3-Q4 兑现程度, 决定兆易 / 佰维 / 长电是否值得回调加仓。</li>
+        <li><b>持续观察</b>: Optimus 供应链公告 (韦尔) + AMD MI400 出货节奏 (通富) + 拓荆华海清科 Q2 财报是否延续 +100% 以上增速。</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>
+    <div class="disc">
+      <b>免责声明:</b> 本专题为 TAT 投研团队内部研究推演, 仅供研究参考, <b>不构成投资建议</b>。市场有风险, 决策需谨慎。数据取自 2026-07-06 收盘前, 交易执行以实际盘面为准。所有百分比与点位需在实际交易日结合行情确认。数据源双兜底 (AKShare + 手动回填) 已修复。
+    </div>
+    <div class="meta">TAT 投研团队制作 · 由 <a href="https://aisid-fate.github.io/tat-doc/">tat-doc</a> 自动发布 · 深度专题按需产出</div>
+  </footer>
+
+</article>
+</body>
+</html>
