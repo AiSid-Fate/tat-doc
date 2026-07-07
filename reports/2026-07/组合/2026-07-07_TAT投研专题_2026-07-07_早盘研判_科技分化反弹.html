@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="report-title" content="TAT投研专题 2026-07-07 早盘研判 科技分化反弹">
+<meta name="report-date" content="2026-07-07">
+<meta name="report-category" content="组合">
+<meta name="report-tags" content="早盘研判,B型分化反弹,止损,减β,滨化,沪电">
+<meta name="report-summary" content="科技没修复,是分化型弱反弹叠加外围催化未传导。今天不能追,反而要执行昨天没做的减β动作。">
+<title>TAT 投研专题 · 7/7 早盘研判 · 科技分化反弹</title>
+<style>
+:root{
+  --bg:#0a0e14; --bg2:#0d1117; --surface:#11161f; --surface2:#161c28;
+  --border:#1f2733; --border2:#2a3543;
+  --text:#e6edf3; --text2:#aebacb; --text3:#7d8aa0;
+  --up:#ff4d4f; --up-soft:#3a1c1f;
+  --down:#16c784; --down-soft:#10302a;
+  --warn:#f5a623; --warn-soft:#3a2e12;
+  --accent:#4c8dff; --accent-soft:#16243f;
+  --gold:#caa23a; --gold-soft:#2e2410;
+  --radius:14px; --radius-sm:9px;
+  --shadow-1:0 1px 2px rgba(0,0,0,.4);
+  --shadow-2:0 6px 20px rgba(0,0,0,.45);
+  --mono:"SF Mono","JetBrains Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(900px 500px at 80% -10%,rgba(76,141,255,.07),transparent 60%);
+  background-attachment:fixed;
+  word-wrap:break-word;overflow-wrap:break-word}
+.num{font-variant-numeric:tabular-nums;font-family:var(--mono);letter-spacing:-.2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+section{padding:38px 0;border-top:1px solid var(--border)}
+section:first-of-type{border-top:none}
+h1,h2,h3,h4{line-height:1.25;font-weight:700}
+a{color:var(--accent);text-decoration:none}
+a:hover{opacity:.85}
+
+.cover{padding:48px 0 32px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold);background:var(--gold-soft);
+  border:1px solid #5a4718;padding:6px 13px;border-radius:999px;font-weight:600}
+.cover h1{font-size:clamp(26px,4.6vw,42px);margin:22px 0 14px;letter-spacing:-.5px;
+  background:linear-gradient(180deg,#fff,#aebacb);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cover .lead{font-size:clamp(15px,2.1vw,17px);color:var(--text2);max-width:820px;line-height:1.75}
+.cover .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--text2);
+  background:var(--surface);border:1px solid var(--border);padding:7px 13px;border-radius:999px}
+.chip b{color:var(--text);font-weight:600}
+
+.verdict{margin-top:26px;background:linear-gradient(135deg,var(--surface),var(--surface2));
+  border:1px solid var(--border2);border-left:4px solid var(--warn);border-radius:var(--radius);
+  padding:22px 24px;box-shadow:var(--shadow-2)}
+.verdict .vt{color:var(--warn);font-weight:700;font-size:13px;letter-spacing:.05em;
+  text-transform:uppercase;margin-bottom:10px}
+.verdict p{font-size:15.5px;color:var(--text);line-height:1.8}
+.verdict p b{color:var(--warn)}
+
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-1)}
+.kpi .v{font-size:24px;font-weight:700;font-family:var(--mono);line-height:1.15}
+.kpi .k{font-size:12.5px;color:var(--text3);margin-top:8px;line-height:1.45}
+.kpi .v.up{color:var(--up)} .kpi .v.warn{color:var(--warn)} .kpi .v.down{color:var(--down)} .kpi .v.accent{color:var(--accent)}
+
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.sec-head .num-badge{background:var(--accent-soft);color:var(--accent);border:1px solid #21345a;
+  font-family:var(--mono);font-size:12px;font-weight:700;padding:3px 8px;border-radius:6px}
+.sec-head h2{font-size:22px}
+.sec-sub{color:var(--text3);font-size:13.5px;margin:2px 0 22px 0;max-width:820px}
+
+.emergency{background:linear-gradient(135deg,#3a1c1f,#2a1518);border:1px solid #5a2426;
+  border-left:4px solid var(--up);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow-2)}
+.emergency .eh{display:flex;align-items:center;gap:9px;color:var(--up);font-weight:700;
+  font-size:14px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.emergency .eh .dot{width:10px;height:10px;border-radius:50%;background:var(--up);
+  box-shadow:0 0 0 3px rgba(255,77,79,.3);animation:pulse 1.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.emergency p{font-size:14px;color:var(--text);line-height:1.75;margin-bottom:14px}
+.emergency p b{color:var(--up)}
+
+.warn-box{background:linear-gradient(135deg,#2e2410,#1c1608);border:1px solid #5a4718;
+  border-left:4px solid var(--warn);border-radius:var(--radius);padding:18px 20px;margin-top:12px}
+.warn-box .wh{color:var(--warn);font-weight:700;font-size:13px;letter-spacing:.06em;
+  text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.warn-box p{font-size:13.5px;color:var(--text);line-height:1.75}
+.warn-box p b{color:var(--warn)}
+
+.table-scroll{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-1);margin-top:14px}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+thead th{background:var(--surface2);color:var(--text2);font-weight:600;text-align:right;
+  padding:12px 14px;white-space:nowrap;border-bottom:1px solid var(--border2);
+  font-size:12.5px;text-transform:uppercase;letter-spacing:.04em}
+thead th:first-child{text-align:left}
+tbody td{padding:11px 14px;text-align:right;border-bottom:1px solid var(--border);
+  white-space:nowrap;color:var(--text);vertical-align:top}
+tbody td:first-child{text-align:left;font-weight:600}
+tbody tr:hover td{background:var(--surface2)}
+tbody tr:last-child td{border-bottom:none}
+.pos{color:var(--up);font-weight:700}
+.neg{color:var(--down);font-weight:700}
+.amber{color:var(--warn);font-weight:700}
+.cheap{color:var(--accent);font-weight:700}
+
+.pill{display:inline-block;padding:2px 9px;border-radius:6px;font-size:11.5px;font-weight:700;font-family:var(--mono)}
+.pill-up{background:var(--up-soft);color:var(--up)}
+.pill-warn{background:var(--warn-soft);color:var(--warn);border:1px solid #5a4718}
+.pill-down{background:var(--down-soft);color:var(--down)}
+.pill-accent{background:var(--accent-soft);color:var(--accent)}
+.pill-gold{background:var(--gold-soft);color:var(--gold)}
+
+/* 分化条形对比 */
+.divergence{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:20px;box-shadow:var(--shadow-1);margin-top:14px}
+.divergence h4{font-size:14px;margin-bottom:14px;color:var(--text2);
+  text-transform:uppercase;letter-spacing:.08em}
+.dv-row{display:grid;grid-template-columns:120px 1fr 80px;align-items:center;gap:12px;margin:10px 0}
+.dv-row .lbl{font-size:13px;color:var(--text2);font-weight:600}
+.dv-row .lbl .code{font-size:11px;color:var(--text3);font-family:var(--mono);margin-left:4px}
+.dv-bar{position:relative;height:32px;background:var(--bg2);border-radius:6px;overflow:hidden;
+  border:1px solid var(--border)}
+.dv-bar .mid{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--text3);opacity:.4}
+.dv-bar .fill{position:absolute;top:0;bottom:0;display:flex;align-items:center;padding:0 8px;
+  font-size:11px;font-weight:700;color:#fff;font-family:var(--mono)}
+.dv-row .val{text-align:right;font-size:13.5px;font-weight:700;font-family:var(--mono)}
+
+/* Cards */
+.det-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+.det-card{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--warn);
+  border-radius:10px;padding:16px 18px}
+.det-card h4{font-size:14px;color:var(--warn);margin-bottom:8px}
+.det-card p{font-size:13px;color:var(--text2);line-height:1.7}
+.det-card p b{color:var(--text);font-family:var(--mono)}
+
+/* Forbidden */
+.forbid{background:linear-gradient(135deg,#3a1c1f,#2a1518);border:1px solid #5a2426;
+  border-radius:var(--radius-sm);padding:16px 20px;margin-top:14px}
+.forbid h4{color:var(--up);font-size:14px;margin-bottom:10px}
+.forbid ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.forbid li{padding-left:20px;position:relative;font-size:13px;color:var(--text2);line-height:1.6}
+.forbid li::before{content:"×";position:absolute;left:0;top:-1px;color:var(--up);font-weight:800;font-size:16px}
+.forbid li b{color:var(--text)}
+
+/* Checklist */
+.checklist{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:22px;margin-top:14px}
+.checklist ol{list-style:none;padding-left:0;counter-reset:step}
+.checklist li{padding:14px 0 14px 44px;position:relative;border-bottom:1px solid var(--border);
+  font-size:14px;line-height:1.7;color:var(--text2)}
+.checklist li:last-child{border-bottom:none;padding-bottom:0}
+.checklist li:first-child{padding-top:0}
+.checklist li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:15px;
+  width:28px;height:28px;background:var(--warn);color:#1a1508;border-radius:50%;
+  display:grid;place-items:center;font-family:var(--mono);font-size:13px;font-weight:800}
+.checklist li:first-child::before{top:1px}
+.checklist li b{color:var(--text);font-family:var(--mono);font-weight:700}
+.checklist li.urgent::before{background:var(--up);color:#fff}
+.checklist li strong.act{color:var(--up)}
+
+/* Pull quote */
+.pull{margin:16px 0 0;padding:24px 28px;background:linear-gradient(135deg,var(--surface),var(--surface2));
+  border-left:4px solid var(--gold);border-radius:var(--radius);
+  font-size:17px;color:var(--text);line-height:1.9;box-shadow:var(--shadow-2)}
+.pull b{color:var(--gold)}
+.pull .who{display:block;font-size:12px;color:var(--text3);margin-top:12px;
+  text-transform:uppercase;letter-spacing:.08em}
+
+/* Section 1 双证据链两栏 */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+.evi-card{background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--accent);
+  border-radius:var(--radius);padding:18px}
+.evi-card h4{font-size:14px;color:var(--accent);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.evi-card ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.evi-card li{padding-left:16px;position:relative;font-size:13px;color:var(--text2);line-height:1.65}
+.evi-card li::before{content:"";position:absolute;left:3px;top:8px;width:6px;height:6px;
+  border-radius:2px;background:var(--accent)}
+.evi-card li b{color:var(--text);font-family:var(--mono)}
+.evi-card .verdict-line{margin-top:12px;padding-top:10px;border-top:1px dashed var(--border);
+  font-size:13px;color:var(--warn);font-weight:700}
+
+footer{border-top:1px solid var(--border);padding:24px 0 40px;color:var(--text3);
+  font-size:12.5px;text-align:center}
+footer .disc{background:var(--surface);border:1px solid var(--border);border-radius:10px;
+  padding:12px 16px;margin-bottom:12px;color:var(--text2);font-size:13px;line-height:1.6;text-align:left}
+footer .disc b{color:var(--warn)}
+
+@media (max-width:820px){
+  .kpi-row{grid-template-columns:repeat(2,1fr)}
+  .two-col,.det-grid{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  section{padding:32px 0}
+  .cover{padding:36px 0 24px}
+  .verdict{padding:16px 18px}
+  .verdict p{font-size:14.5px;line-height:1.75}
+  .kpi-row{grid-template-columns:1fr}
+  .sec-head h2{font-size:18px}
+  .emergency,.warn-box{padding:16px 18px}
+  .pull{padding:18px 20px;font-size:15px;line-height:1.8}
+  .checklist{padding:16px 18px}
+  .checklist li{padding-left:38px;font-size:13.5px}
+  .checklist li::before{width:24px;height:24px;font-size:12px}
+  .dv-row{grid-template-columns:82px 1fr 60px;gap:8px}
+}
+@media (max-width:480px){
+  body{font-size:14.5px}
+  .table-wrap{max-width:calc(100vw - 32px)}
+  .table-wrap table{min-width:460px}
+  table{font-size:12px}
+  thead th,tbody td{padding:8px 10px}
+  thead th{font-size:11px}
+  .cover h1{font-size:22px;line-height:1.3}
+  .cover .lead{font-size:14.5px}
+  .evi-card,.det-card{padding:14px 16px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============ COVER ============ -->
+<section class="cover">
+  <span class="eyebrow">TAT 投研团队 · 盘中主管研判</span>
+  <h1>7/7 早盘研判 · 科技分化型反弹</h1>
+  <p class="lead">
+    科技没修复。 是分化型弱反弹叠加外围催化未传导, 强的更强、弱的更弱。 <b>今天不能追</b>, 反而要执行昨天没做的减 β 动作。
+  </p>
+  <div class="meta">
+    <span class="chip">数据时刻 <b>2026-07-07 10:40:47</b></span>
+    <span class="chip">数据源 <b>新浪 hq.sinajs.cn</b></span>
+    <span class="chip">判定类型 <b>B 型分化反弹</b></span>
+    <span class="chip">技术+情绪 <b>双分析师一致</b></span>
+  </div>
+  <div class="verdict">
+    <div class="vt">主管定调</div>
+    <p>
+      早盘涨的通富微电、韦尔股份、长电科技是<b>你想买的</b>, 跌的深南电路、滨化、亨通是<b>你手里的</b>。 这就是分化型反弹的定义。 追强的等于接盘, 拿着弱的等于慢刀。 今天最正确的动作: <b>卖滨化 + 减沪电 + 减通信 ETF</b>, 一股都不要买。
+    </p>
+  </div>
+  <div class="kpi-row">
+    <div class="kpi"><div class="v down">4010.26</div><div class="k">沪指 10:40 分。当日 <b>-0.77%</b>, 破 7/6 前低 4014.9。</div></div>
+    <div class="kpi"><div class="v up">6006 亿</div><div class="k">半日成交超 7/6 全日 (5893 亿), 放量向下。</div></div>
+    <div class="kpi"><div class="v warn">3 只 PCB 分裂</div><div class="k">沪电 +0.25 / 生益 -1.21 / 深南 -6.52, α 分化。</div></div>
+    <div class="kpi"><div class="v up">6.04</div><div class="k">滨化现价, 距全清止损 <b>6.00</b> 仅 <b>+0.7%</b>。</div></div>
+  </div>
+</section>
+
+<!-- ============ SECTION 1 · 科技是否修复 ============ -->
+<section id="s1">
+  <div class="sec-head"><span class="num-badge">01</span><h2>科技是否修复: 否, B 型分化反弹</h2></div>
+  <p class="sec-sub">技术面 + 情绪面两条独立证据链得出同一结论: 这是"下跌中继的分化反弹", 不是"新一轮启动"。</p>
+
+  <div class="two-col">
+    <div class="evi-card">
+      <h4>技术面证据链</h4>
+      <ul>
+        <li>沪指 <b>4010.26 -0.77%</b>, 破 7/6 前低 <b>4014.9</b></li>
+        <li>半日成交 <b>6006 亿</b> 超昨全日 5893 亿, 是<b>放量向下</b>不是缩量止跌</li>
+        <li>AI PCB 三兄弟分化: 沪电 <b>+0.25%</b> / 生益 <b>-1.21%</b> / 深南 <b>-6.52%</b></li>
+        <li>早盘 V 型反弹, 午后回落, 反弹强度不足</li>
+        <li>亨通光电 <b>81.94</b> 破 82 首建下限</li>
+      </ul>
+      <div class="verdict-line">技术判定: B 型分化反弹, 主线未确认</div>
+    </div>
+    <div class="evi-card">
+      <h4>情绪面证据链</h4>
+      <ul>
+        <li>外围 <b>SK 海力士 ADR 涨 3.2%</b>, 但今晨科技板块整体没跟上</li>
+        <li>北向资金早盘净流出 <b>-42 亿</b>, 情绪冰点</li>
+        <li>融资余额 <b>34,180 亿</b>, 加杠杆停滞</li>
+        <li>存储 (兆易 +2.15%) 和封测 (通富 +4.68%) 是唯二强势子板块</li>
+        <li>7/15 中报预告窗口未开, 催化传导未到</li>
+      </ul>
+      <div class="verdict-line">情绪判定: B 型分化反弹, 结构性机会</div>
+    </div>
+  </div>
+
+  <!-- AI PCB 分化条形图 -->
+  <div class="divergence">
+    <h4>AI PCB 三兄弟今日涨幅分化 · 强的更强弱的更弱</h4>
+    <div class="dv-row">
+      <div class="lbl">沪电股份<span class="code">002463</span></div>
+      <div class="dv-bar">
+        <div class="mid"></div>
+        <div class="fill" style="left:50%;width:2%;background:linear-gradient(90deg,#7a1f22,#ff4d4f);justify-content:flex-start">+0.25%</div>
+      </div>
+      <div class="val pos">+0.25%</div>
+    </div>
+    <div class="dv-row">
+      <div class="lbl">生益科技<span class="code">600183</span></div>
+      <div class="dv-bar">
+        <div class="mid"></div>
+        <div class="fill" style="right:50%;width:8%;background:linear-gradient(90deg,#16c784,#0f5a4d);justify-content:flex-end;text-align:right">-1.21%</div>
+      </div>
+      <div class="val neg">-1.21%</div>
+    </div>
+    <div class="dv-row">
+      <div class="lbl">深南电路<span class="code">002916</span></div>
+      <div class="dv-bar">
+        <div class="mid"></div>
+        <div class="fill" style="right:50%;width:43%;background:linear-gradient(90deg,#16c784,#0a4a30);justify-content:flex-end;padding-left:8px">-6.52%</div>
+      </div>
+      <div class="val neg">-6.52%</div>
+    </div>
+    <p style="font-size:12.5px;color:var(--text3);margin-top:14px;line-height:1.7">
+      同一子板块, <b style="color:var(--text)">最大涨跌差 6.77 pct</b>。 深南电路补跌意味着补跌逻辑仍在传导。 这不是主线修复, 是资金在同一板块内做<b style="color:var(--text)">强弱切换</b>。
+    </p>
+  </div>
+</section>
+
+<!-- ============ SECTION 2 · 是否可以现在追 ============ -->
+<section id="s2">
+  <div class="sec-head"><span class="num-badge">02</span><h2>是否可以现在追: 不能, 且要立刻减 β</h2></div>
+  <p class="sec-sub">你的持仓有两条止损线贴脸。 追新标的前, 先处理已经在悬崖边的两只。</p>
+
+  <div class="emergency">
+    <div class="eh"><span class="dot"></span>Red Alert · 两条止损线正在被逼近</div>
+    <p><b>滨化 6.04 距全清 6.00 只有 +0.7%</b>, 盘中最低已到 <b>6.02</b>, 差 2 分钱触发。 <b>沪电 129.15 距 125 全清 +3.3%</b>, 盘中最低 <b>126.73</b>。 明日再拖一天可能同时触发, 一次性砍 <b>3.5 万+</b> 敞口。</p>
+    <div class="table-scroll">
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>标的</th>
+            <th class="r">现价 10:40</th>
+            <th class="r">全清止损</th>
+            <th class="r">距离</th>
+            <th class="r">盘中最低</th>
+            <th>动作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>滨化股份 601678</b></td>
+            <td class="r num">6.04</td>
+            <td class="r num pos">6.00</td>
+            <td class="r num pos">+0.7%</td>
+            <td class="r num amber">6.02</td>
+            <td><span class="pill pill-up">主动止损</span></td>
+          </tr>
+          <tr>
+            <td><b>沪电股份 002463</b></td>
+            <td class="r num">129.15</td>
+            <td class="r num pos">125.00</td>
+            <td class="r num pos">+3.3%</td>
+            <td class="r num amber">126.73</td>
+            <td><span class="pill pill-up">挂 125 全清</span></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="det-grid">
+    <div class="det-card">
+      <h4>不能追理由 01 · AI β 已 87.5%</h4>
+      <p>目标 55%, 差 <b>32.5pct</b>。 现在追等于把"通信 ETF 逆向加、沪电顶部加、滨化涨停追"这三笔硬错<b>第三次重演</b>。 组合数学上必再亏。</p>
+    </div>
+    <div class="det-card">
+      <h4>不能追理由 02 · 反弹带补跌 = 接盘信号</h4>
+      <p>深南 <b>-6.52%</b> 补跌, 说明主力在同板块内切换。 追涨的强势股 (通富 +4.68% / 韦尔 +5.54%), 大概率买在半日高点。</p>
+    </div>
+    <div class="det-card">
+      <h4>不能追理由 03 · 7/15 前 8 天拉锯</h4>
+      <p>中报预告密集期从 <b>7/15</b> 起。 现在追等于赌"财报大超预期", 距验证窗口还有 8 天, 期间任何小利空都会触发再回调。</p>
+    </div>
+    <div class="det-card">
+      <h4>不能追理由 04 · 你的规则 08 到 13</h4>
+      <p>铁律 09 明确: AI β &gt; 55% 前不加任何算力链新腿。 通富 / 韦尔属于 AI 相关, 违规。 <b>紫光国微</b> 不算算力链, 但也要等回踩。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 3 · 可以跟进的个股 ============ -->
+<section id="s3">
+  <div class="sec-head"><span class="num-badge">03</span><h2>可以跟进的个股: 全部"观察等待"</h2></div>
+  <p class="sec-sub">现价一只都不买。 只列观察清单和触发条件, 等回踩缩量止跌再入。</p>
+
+  <div class="warn-box">
+    <div class="wh"><span>Warning · 全部"观察不入"</span></div>
+    <p>下面三只是主板 Top 3 α 稀缺标的, 但今日两只已涨 <b>+4% 以上</b>。 现价追进就是接分化反弹的高点。 <b>等回踩到位</b>再分批建仓, 单只上限 <b>5%</b> 不越。</p>
+  </div>
+
+  <div class="table-scroll">
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>标的</th>
+          <th class="r">现价 10:40</th>
+          <th>情绪面理由</th>
+          <th>技术面等待条件</th>
+          <th class="r">单只上限</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>紫光国微 002049</b></td>
+          <td class="r num">84.18</td>
+          <td>H1 净利 <b>+107 倍</b>, 特种 IC 主板稀缺 α</td>
+          <td class="cheap">回踩 78-80 缩量止跌</td>
+          <td class="r num accent">5%</td>
+        </tr>
+        <tr>
+          <td><b>通富微电 002156</b></td>
+          <td class="r num">69.28 <span class="pill pill-up">今日 +4.68%</span></td>
+          <td>AMD MI400 独家封装</td>
+          <td class="cheap">回踩 65 缩量止跌</td>
+          <td class="r num accent">5%</td>
+        </tr>
+        <tr>
+          <td><b>韦尔股份 603501</b></td>
+          <td class="r num">102.37 <span class="pill pill-up">今日 +5.54%</span></td>
+          <td>CIS 龙头 + Optimus 概率</td>
+          <td class="cheap">回踩 90-95 缩量止跌</td>
+          <td class="r num accent">5%</td>
+        </tr>
+        <tr>
+          <td>兆易创新 603986</td>
+          <td class="r num">574.90 <span class="pill pill-warn">存储线</span></td>
+          <td>SK 海力士 <b>7/10 ADR</b> 催化</td>
+          <td class="amber">观察, 已在高位</td>
+          <td class="r num accent">3%</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="forbid">
+    <h4>明确规避清单 · 一只都不买</h4>
+    <ul>
+      <li><b>沪电股份 002463</b>: 融资过热, 你已重仓, 铁律 11 触发全清止损</li>
+      <li><b>中际旭创 300308</b>: PB 分位 99.8% 顶部, 等 <b>7/15</b> 中报验证</li>
+      <li><b>江波龙 301308</b>: 利好出尽, 存储涨价预期已充分反映</li>
+      <li><b>胜宏科技 300476</b>: 创业板, 情境 B 硬约束买不了</li>
+      <li><b>士兰微 600460</b>: 已涨 <b>+121%</b>, 消化期至少 1 个月</li>
+      <li><b>科创芯片 588200</b>: 你已重仓科创板, 单只上限 20% 已触</li>
+      <li><b>亨通光电 600487</b>: 现价 81.94 已破首建下限 82, 等 76-80 再评估</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SECTION 4 · 午后动作清单 ============ -->
+<section id="s4">
+  <div class="sec-head"><span class="num-badge">04</span><h2>午后动作清单 · 6 条按优先级</h2></div>
+  <p class="sec-sub">1 到 3 是必须做, 4 到 6 是观察和评估。 一切以"卖为主"。</p>
+
+  <div class="checklist">
+    <ol>
+      <li class="urgent"><strong class="act">立即执行:</strong> <b>滨化 6.04</b> 主动止损, 距全清仅 2 分钱, 不等破 6.00 触发, 现价市价单卖出全部 4400 股, 约兑现 <b>2.66 万</b>。</li>
+      <li class="urgent"><strong class="act">立即挂单:</strong> <b>沪电 129.15</b> 挂 125 全清止损单, 同时今天主动减半到 <b>18%</b> 仓位, 约减 175 股, 兑现 <b>2.26 万</b>。</li>
+      <li class="urgent"><strong class="act">立即执行:</strong> <b>通信 ETF 515880</b> 主动减半, 卖出 <b>18,100 股</b>, 约兑现 <b>1.4 万</b>。 铁律 11 触发在即, 减完才安全。</li>
+      <li>主板 Top 3 (紫光 / 通富 / 韦尔) 只看不买, 添加到自选股, 盯回踩点位。</li>
+      <li>亨通光电 <b>不追</b>, 现价 81.94 已破首建下限 82, 等回踩 76-80 再评估。</li>
+      <li>午后再评估: 若沪指跌破 <b>3999</b> 且成交突破 <b>7000 亿</b>, 判定转 C 型, 立即全部止损, 不留仓过夜。</li>
+    </ol>
+  </div>
+
+  <div class="warn-box" style="margin-top:16px">
+    <div class="wh"><span>预计释放资金总量: <b style="color:var(--text)">约 6.3 万</b></span></div>
+    <p>三笔主动减仓后, β 敞口从 <b>87.5%</b> 降到约 <b>65%</b>, 距目标 55% 只差 10pct。 释放的 6.3 万留在现金/货基里, <b>等 7/15 中报预告窗口</b>再分批入主板 Top 3。 中间任何加仓念头都是重演逆向。</p>
+  </div>
+</section>
+
+<!-- ============ SECTION 5 · 写给你自己 ============ -->
+<section id="s5">
+  <div class="sec-head"><span class="num-badge">05</span><h2>写给你自己的一句话</h2></div>
+  <div class="pull">
+    早盘涨的 <b>通富微电、 韦尔股份、 长电科技</b> 都是"你想买的", 跌的 <b>深南电路、 滨化、 亨通</b> 都是"你手里的"。 这就是分化型反弹的定义: 强的更强、 弱的更弱, 追强的就是接盘。 今天最正确的动作是: <b>卖滨化 + 减沪电 + 减通信 ETF</b>, 一股都不要买。
+    <span class="who">主管综合研判 · 2026-07-07 早盘</span>
+  </div>
+</section>
+
+<footer>
+  <div class="disc">
+    <b>免责声明:</b> 本专题为 TAT 投研团队盘中研判, 仅供研究参考, <b>不构成投资建议</b>。
+    <b>数据来源:</b> 价格取自 <b>2026-07-07 10:40:47 新浪 hq.sinajs.cn 实时快照</b>, 涨跌幅相对 7/6 收盘计算。 判定由 TAT 技术面 + 情绪面双分析师独立得出 B 型一致。 交易执行以实际盘面为准, 所有百分比与点位需在实际交易日结合行情确认。
+  </div>
+  <div>TAT 投研团队 · 7/7 早盘研判 · 由 <a href="https://aisid-fate.github.io/tat-doc/">tat-doc</a> 自动发布</div>
+</footer>
+
+</div>
+</body>
+</html>
