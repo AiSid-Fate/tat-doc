@@ -113,7 +113,7 @@ df = fetch_stock_daily("600487", start="20240101", end="20260703")
 
 **每源最多重试2次（可配置）**，避免死循环，符合 circuit breaker 原则。
 
-### 3.1 实时快照（spot） — 用 `fetch_realtime_spot()`
+### 3.1 实时快照（spot），用 `fetch_realtime_spot()`
 
 **起因**：2026-07-07 早盘扫描时,akshare 的东财 spot 接口 (`stock_zh_a_spot_em` / `stock_zh_index_spot_em`) 全部 `RemoteDisconnected`,只有直连新浪 `hq.sinajs.cn` 接口可用。已把该兜底方案固化到 `tat_data.fetch_realtime_spot()`。
 
