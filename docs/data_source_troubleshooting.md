@@ -113,6 +113,47 @@ df = fetch_stock_daily("600487", start="20240101", end="20260703")
 
 **每源最多重试2次（可配置）**，避免死循环，符合 circuit breaker 原则。
 
+### 3.1 实时快照（spot） — 用 `fetch_realtime_spot()`
+
+**起因**：2026-07-07 早盘扫描时,akshare 的东财 spot 接口 (`stock_zh_a_spot_em` / `stock_zh_index_spot_em`) 全部 `RemoteDisconnected`,只有直连新浪 `hq.sinajs.cn` 接口可用。已把该兜底方案固化到 `tat_data.fetch_realtime_spot()`。
+
+**用法**（支持股票 / 指数 / ETF 混合传入）：
+```python
+from scripts.tat_data import fetch_realtime_spot
+
+codes = [
+    "sh000001",  # 指数（带前缀）
+    "sh000300",
+    "002463",    # 股票（自动补 sz）
+    "601678",
+    "515880",    # ETF
+    "588200",
+]
+df = fetch_realtime_spot(codes)
+# 返回统一 schema:
+# code, name, open, pre_close, price, high, low, pct, volume, amount, timestamp
+```
+
+**接口规格**（新浪 `hq.sinajs.cn`）：
+- URL 格式：`https://hq.sinajs.cn/list=sh600000,sz000001,sh515880`
+- **必须带 `Referer: https://finance.sina.com.cn`**（否则返回 403）
+- GBK 编码：`response.content.decode('gbk')`
+- 单次可批量最多 50 个代码（超过自动分批）
+
+**返回字段**：
+| 字段 | 含义 |
+|------|------|
+| code | 不带前缀的纯数字代码 |
+| name | 标的名称 |
+| open / pre_close / price | 今开 / 昨收 / 现价 |
+| high / low | 日内高 / 低 |
+| pct | 涨跌幅% |
+| volume | 成交量（股票=股, 指数=手, ETF=份） |
+| amount | 成交额（元） |
+| timestamp | 数据时间戳（交易时段实时, 收盘后为最后一 tick） |
+
+**空数据处理**：新浪对停牌/无效代码返回空字符串,单个代码取数失败不影响其他代码,返回中缺失该行。
+
 ---
 
 ## 四、Kronos-forecast 特殊说明
@@ -128,6 +169,13 @@ Kronos 脚本 `kronos_forecast.py` 内部通过 akshare 取数，本身没有多
 ## 五、故障 log 归档
 
 每次遇到数据源故障，请在此文档尾部追加：
+
+### 2026-07-07 东财 spot 接口全部失败（早盘扫描）
+- **标的**：`stock_zh_a_spot_em`（A股实时快照）+ `stock_zh_index_spot_em`（指数实时快照）
+- **错误**：`ConnectionError: RemoteDisconnected`
+- **诊断**：与 07-06 东财 hist 接口同样问题；直连新浪 `hq.sinajs.cn` 200 OK
+- **修复**：在 `tat_data.py` 新增 `fetch_realtime_spot()` 函数,直连新浪 `hq.sinajs.cn`（带 `Referer: https://finance.sina.com.cn` 头 + GBK 解码），股票/指数/ETF 通用
+- **恢复情况**：新浪 spot 接口稳定可用,已作为兜底源固化
 
 ### 2026-07-06 东财API 对 akshare 客户端持续拒绝
 - **标的**：600487、002463（多标的均受影响）

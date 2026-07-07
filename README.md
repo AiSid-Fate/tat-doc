@@ -73,13 +73,16 @@ CI 会重建 `index.html`，几分钟后线上生效。
 
 **问题**：单一 akshare 数据源（东财 / 新浪 / 腾讯）任何一个临时故障就会让整份技术面分析或 Kronos 预测报废。
 
-**解决**：`scripts/tat_data.py` 提供 `fetch_stock_daily()` 和 `fetch_etf_daily()`，自动依次尝试东财 → 新浪 → 腾讯，任一源成功即返回，三源全败才抛错。**所有取数代码都请走这个工具，禁止直接调用单一 akshare 源。**
+**解决**：`scripts/tat_data.py` 提供 `fetch_stock_daily()` / `fetch_etf_daily()` / `fetch_realtime_spot()`，自动依次尝试东财 → 新浪 → 腾讯，任一源成功即返回，全败才抛错。**所有取数代码都请走这个工具，禁止直接调用单一 akshare 源。**
 
 ```python
-from scripts.tat_data import fetch_stock_daily
-# 或复制到分析脚本同目录后 `from tat_data import ...`
+from scripts.tat_data import fetch_stock_daily, fetch_etf_daily, fetch_realtime_spot
+
+# 历史日线（多源兜底）
 df = fetch_stock_daily("600487", start="20240101", end="20260703")
-# 统一 schema: date, open, close, high, low, volume, pct
+
+# 实时快照（股票/指数/ETF混合传入,新浪 hq.sinajs.cn 直连）
+spot = fetch_realtime_spot(["sh000001", "002463", "515880"])
 ```
 
 遇到数据源故障时的排查流程（10 分钟内定位）：见 **[docs/data_source_troubleshooting.md](docs/data_source_troubleshooting.md)**。
