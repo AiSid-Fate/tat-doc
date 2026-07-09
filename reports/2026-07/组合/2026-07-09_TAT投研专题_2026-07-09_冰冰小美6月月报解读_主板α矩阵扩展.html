@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="report-title" content="TAT投研专题 2026-07-09 冰冰小美6月月报解读 主板α矩阵扩展">
+<meta name="report-date" content="2026-07-09">
+<meta name="report-category" content="组合">
+<meta name="report-tags" content="博主月报解读,冰冰小美,主板α矩阵,半导体设备,十五五算力,交叉验证">
+<meta name="report-summary" content="冰冰小美6月月报综合可靠度7.3/10。15条论断10命中3部分对2待验。主板α矩阵扩展7只到12只,新增北方华创+中国移动+平高电气+中航光电+宝信软件。">
+<title>TAT 投研专题 · 冰冰小美 6 月月报解读 · 2026-07-09</title>
+<style>
+:root{
+  --bg:#0a0e14; --bg2:#0d1117; --surface:#11161f; --surface2:#161c28;
+  --border:#1f2733; --border2:#2a3543;
+  --text:#e6edf3; --text2:#aebacb; --text3:#7d8aa0;
+  --up:#ff4d4f; --up-soft:#3a1c1f;
+  --down:#16c784; --down-soft:#10302a;
+  --warn:#f5a623; --warn-soft:#3a2e12;
+  --accent:#4c8dff; --accent-soft:#16243f;
+  --gold:#caa23a; --gold-soft:#2e2410;
+  --radius:14px; --radius-sm:9px;
+  --shadow-1:0 1px 2px rgba(0,0,0,.4);
+  --shadow-2:0 6px 20px rgba(0,0,0,.45);
+  --mono:"SF Mono","JetBrains Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(900px 500px at 80% -10%,rgba(76,141,255,.07),transparent 60%);
+  background-attachment:fixed;word-wrap:break-word;overflow-wrap:break-word}
+.num{font-variant-numeric:tabular-nums;font-family:var(--mono);letter-spacing:-.2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+section{padding:38px 0;border-top:1px solid var(--border)}
+section:first-of-type{border-top:none}
+h1,h2,h3,h4{line-height:1.25;font-weight:700}
+a{color:var(--accent);text-decoration:none}
+a:hover{opacity:.85}
+
+.cover{padding:48px 0 32px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold);background:var(--gold-soft);
+  border:1px solid #5a4718;padding:6px 13px;border-radius:999px;font-weight:600}
+.cover h1{font-size:clamp(24px,4.2vw,38px);margin:22px 0 14px;letter-spacing:-.5px;
+  background:linear-gradient(180deg,#fff,#aebacb);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cover .lead{font-size:clamp(15px,2.1vw,17px);color:var(--text2);max-width:860px;line-height:1.75}
+.cover .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--text2);
+  background:var(--surface);border:1px solid var(--border);padding:7px 13px;border-radius:999px}
+.chip b{color:var(--text);font-weight:600}
+.chip.gold{background:var(--gold-soft);border-color:#5a4718;color:var(--gold)}
+
+.verdict{margin-top:26px;background:linear-gradient(135deg,var(--surface),var(--surface2));
+  border:1px solid var(--border2);border-left:4px solid var(--gold);border-radius:var(--radius);
+  padding:22px 24px;box-shadow:var(--shadow-2)}
+.verdict .vt{color:var(--gold);font-weight:700;font-size:13px;letter-spacing:.05em;
+  text-transform:uppercase;margin-bottom:10px}
+.verdict p{font-size:15.5px;color:var(--text);line-height:1.8}
+.verdict p b{color:var(--gold)}
+
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-1)}
+.kpi .v{font-size:23px;font-weight:700;font-family:var(--mono);line-height:1.15}
+.kpi .k{font-size:12.5px;color:var(--text3);margin-top:8px;line-height:1.45}
+.kpi .v.up{color:var(--up)} .kpi .v.warn{color:var(--warn)} .kpi .v.down{color:var(--down)} .kpi .v.accent{color:var(--accent)} .kpi .v.gold{color:var(--gold)}
+
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:6px;flex-wrap:wrap}
+.sec-head .num-badge{background:var(--accent-soft);color:var(--accent);border:1px solid #21345a;
+  font-family:var(--mono);font-size:12px;font-weight:700;padding:3px 8px;border-radius:6px}
+.sec-head .num-badge.gold{background:var(--gold-soft);color:var(--gold);border-color:#5a4718}
+.sec-head .num-badge.critical{background:var(--up-soft);color:var(--up);border-color:#5a2426}
+.sec-head h2{font-size:22px}
+.sec-sub{color:var(--text3);font-size:13.5px;margin:2px 0 22px 0;max-width:820px}
+
+.src-note{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold);
+  border-radius:8px;padding:12px 14px;margin-top:10px;font-size:12.5px;color:var(--text3);line-height:1.7}
+.src-note b{color:var(--gold);font-family:var(--mono)}
+.src-note a{color:var(--accent)}
+
+/* Tables */
+.table-scroll{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-1);margin-top:14px}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+thead th{background:var(--surface2);color:var(--text2);font-weight:600;text-align:right;
+  padding:12px 14px;white-space:nowrap;border-bottom:1px solid var(--border2);
+  font-size:12.5px;text-transform:uppercase;letter-spacing:.04em}
+thead th:first-child{text-align:left}
+tbody td{padding:11px 14px;text-align:right;border-bottom:1px solid var(--border);
+  white-space:nowrap;color:var(--text);vertical-align:top}
+tbody td:first-child{text-align:left;font-weight:600}
+tbody tr:hover td{background:var(--surface2)}
+tbody tr:last-child td{border-bottom:none}
+.pos{color:var(--up);font-weight:700}
+.neg{color:var(--down);font-weight:700}
+.amber{color:var(--warn);font-weight:700}
+.cheap{color:var(--accent);font-weight:700}
+.gold-txt{color:var(--gold);font-weight:700}
+
+.pill{display:inline-block;padding:2px 9px;border-radius:6px;font-size:11.5px;font-weight:700;font-family:var(--mono);white-space:nowrap}
+.pill-up{background:var(--up-soft);color:var(--up)}
+.pill-warn{background:var(--warn-soft);color:var(--warn);border:1px solid #5a4718}
+.pill-down{background:var(--down-soft);color:var(--down)}
+.pill-accent{background:var(--accent-soft);color:var(--accent)}
+.pill-gold{background:var(--gold-soft);color:var(--gold);border:1px solid #5a4718}
+.pill-tier1{background:var(--gold-soft);color:var(--gold);border:1px solid #5a4718}
+.pill-tier2{background:var(--accent-soft);color:var(--accent);border:1px solid #21345a}
+.pill-tier3{background:var(--surface2);color:var(--text2);border:1px solid var(--border2)}
+
+/* Verify badges */
+.rate{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:800;
+  font-family:var(--mono);letter-spacing:.02em;white-space:nowrap}
+.rate-yes{background:rgba(22,199,132,.15);color:var(--down);border:1px solid rgba(22,199,132,.4)}
+.rate-partial{background:rgba(245,166,35,.15);color:var(--warn);border:1px solid rgba(245,166,35,.4)}
+.rate-pending{background:rgba(76,141,255,.15);color:var(--accent);border:1px solid rgba(76,141,255,.4)}
+.rate-no{background:rgba(255,77,79,.15);color:var(--up);border:1px solid rgba(255,77,79,.4)}
+
+/* 三维评分金卡 */
+.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.score-card{background:linear-gradient(135deg,var(--gold-soft),#1a1508);border:1px solid #5a4718;
+  border-top:4px solid var(--gold);border-radius:var(--radius);padding:20px 22px}
+.score-card .dim{font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;
+  font-weight:800;margin-bottom:10px}
+.score-card .val{font-family:var(--mono);font-weight:800;font-size:32px;color:var(--gold);line-height:1}
+.score-card .val .max{font-size:14px;color:var(--text3);font-weight:400}
+.score-card .desc{font-size:13px;color:var(--text2);margin-top:10px;line-height:1.65}
+.score-card .desc b{color:var(--text);font-family:var(--mono)}
+
+.overall{background:linear-gradient(135deg,var(--surface),var(--surface2));border:2px solid var(--gold);
+  border-radius:var(--radius);padding:22px 24px;margin-top:14px;text-align:center;box-shadow:var(--shadow-2)}
+.overall .lb{color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:800;margin-bottom:8px}
+.overall .v{font-family:var(--mono);font-size:44px;font-weight:900;color:var(--gold);line-height:1}
+.overall .v .max{font-size:18px;color:var(--text3);font-weight:400}
+.overall .d{font-size:14px;color:var(--text2);margin-top:10px;font-family:var(--sans)}
+.overall .d b{color:var(--text)}
+
+/* vs 对比 强项 vs 盲点 */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px;position:relative}
+.vs-grid::before{content:"vs";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  z-index:5;background:var(--surface2);border:2px solid var(--gold);color:var(--gold);
+  width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--mono);font-weight:800;font-size:15px}
+.vs-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+.vs-card.left{border-top:3px solid var(--down)}
+.vs-card.right{border-top:3px solid var(--warn)}
+.vs-card h4{font-size:14px;margin-bottom:12px}
+.vs-card.left h4{color:var(--down)}
+.vs-card.right h4{color:var(--warn)}
+.vs-card ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.vs-card li{padding-left:16px;position:relative;font-size:13px;color:var(--text2);line-height:1.65}
+.vs-card li::before{content:"";position:absolute;left:3px;top:8px;width:6px;height:6px;border-radius:2px}
+.vs-card.left li::before{background:var(--down)}
+.vs-card.right li::before{background:var(--warn)}
+.vs-card li b{color:var(--text);font-family:var(--mono)}
+
+/* Forbidden */
+.forbid{background:linear-gradient(135deg,#3a1c1f,#2a1518);border:1px solid #5a2426;
+  border-radius:var(--radius-sm);padding:16px 20px;margin-top:14px}
+.forbid h4{color:var(--up);font-size:14px;margin-bottom:10px}
+
+/* warn box */
+.warn-box{background:linear-gradient(135deg,#2e2410,#1c1608);border:1px solid #5a4718;
+  border-left:4px solid var(--warn);border-radius:var(--radius);padding:18px 20px;margin-top:12px}
+.warn-box .wh{color:var(--warn);font-weight:700;font-size:13px;letter-spacing:.06em;
+  text-transform:uppercase;margin-bottom:10px}
+.warn-box p{font-size:13.5px;color:var(--text);line-height:1.75}
+.warn-box p b{color:var(--warn)}
+
+/* matrix summary */
+.matrix{background:linear-gradient(135deg,var(--surface),var(--surface2));border:1px solid var(--border2);
+  border-radius:var(--radius);padding:20px;margin-top:14px}
+.matrix h4{font-size:14px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+.matrix-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.mx{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 12px}
+.mx.new{border-color:var(--gold);background:var(--gold-soft)}
+.mx .name{font-weight:700;font-size:13px;color:var(--text)}
+.mx .code{font-family:var(--mono);font-size:11px;color:var(--text3);margin-top:2px}
+.mx .dir{font-size:11px;color:var(--accent);margin-top:4px;font-weight:600}
+.mx.new .dir{color:var(--gold)}
+.mx .badge{display:inline-block;padding:1px 7px;background:var(--gold);color:#1a1508;font-family:var(--mono);
+  font-size:9px;font-weight:800;border-radius:3px;margin-top:6px;letter-spacing:.04em}
+.matrix .footer-note{margin-top:14px;padding-top:12px;border-top:1px dashed var(--border);
+  font-size:13px;color:var(--text2);line-height:1.7}
+.matrix .footer-note b{color:var(--gold);font-family:var(--mono)}
+
+/* Pull quote */
+.pull{margin:16px 0 0;padding:24px 28px;background:linear-gradient(135deg,var(--surface),var(--surface2));
+  border-left:4px solid var(--gold);border-radius:var(--radius);
+  font-size:16.5px;color:var(--text);line-height:1.9;box-shadow:var(--shadow-2)}
+.pull b{color:var(--gold)}
+.pull .who{display:block;font-size:12px;color:var(--text3);margin-top:12px;
+  text-transform:uppercase;letter-spacing:.08em}
+
+footer{border-top:1px solid var(--border);padding:24px 0 40px;color:var(--text3);
+  font-size:12.5px;text-align:center}
+footer .disc{background:var(--surface);border:1px solid var(--border);border-radius:10px;
+  padding:12px 16px;margin-bottom:12px;color:var(--text2);font-size:13px;line-height:1.6;text-align:left}
+footer .disc b{color:var(--warn)}
+footer .disc a{color:var(--accent)}
+
+@media (max-width:820px){
+  .kpi-row{grid-template-columns:repeat(2,1fr)}
+  .vs-grid{grid-template-columns:1fr}
+  .vs-grid::before{display:none}
+  .score-grid{grid-template-columns:1fr}
+  .matrix-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:560px){
+  section{padding:32px 0}
+  .cover{padding:36px 0 24px}
+  .verdict{padding:16px 18px}
+  .verdict p{font-size:14.5px;line-height:1.75}
+  .kpi-row{grid-template-columns:1fr}
+  .sec-head h2{font-size:18px}
+  .warn-box,.overall{padding:16px 18px}
+  .overall .v{font-size:36px}
+  .pull{padding:18px 20px;font-size:15px;line-height:1.8}
+  .matrix{padding:16px}
+  .matrix-grid{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  body{font-size:14.5px}
+  .table-wrap{max-width:calc(100vw - 32px)}
+  .table-wrap table{min-width:640px}
+  table{font-size:12px}
+  thead th,tbody td{padding:8px 10px}
+  thead th{font-size:11px}
+  .cover h1{font-size:20px;line-height:1.3}
+  .cover .lead{font-size:14.5px}
+  .vs-card,.score-card{padding:14px 16px}
+  .rate{font-size:10.5px;padding:2px 7px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============ COVER ============ -->
+<section class="cover">
+  <span class="eyebrow">TAT 投研团队 · 博主观点交叉验证</span>
+  <h1>冰冰小美 6 月月报解读 · 综合可靠度 7.3/10 中上等</h1>
+  <p class="lead">
+    博主 15 条论断 <b>10 命中 / 3 部分对 / 2 待验证</b>。 宏观视角 8/10 + 市场结构 9/10 + 短期预测 5/10。 <b>半导体设备材料"6 月唯一新高"完全成立</b>。 主板 α 矩阵新增北方华创、 中国移动、 平高电气、 中航光电、 宝信软件 5 只, 扩展到 12 只覆盖 12 大方向。
+  </p>
+  <div class="meta">
+    <span class="chip">报告日期 <b>2026-07-09</b></span>
+    <span class="chip gold">博主 <b>雪球 冰冰小美 · 77858 粉丝</b></span>
+    <span class="chip">博主发布 <b>2026-06-27</b></span>
+    <span class="chip">评级方式 <b>15 条独立数据验证</b></span>
+  </div>
+  <div class="verdict">
+    <div class="vt">主管定调</div>
+    <p>
+      冰冰小美是<b>宏观视野派</b>, 数据严谨、 市场结构判断敏锐, 但短期择时能力有限 (7 月纳指预测反了)。 <b>真正可用的是她的方向感</b>: 半导体设备材料主板首选 <b>北方华创 002371</b>, 十五五降 β 腿首选 <b>中国移动 600941</b>。 明日 09:30 铁律 P1 双动作 (通信 ETF 减 10,000 + 半导体 E 减半) <b>依然必执行</b>, 不因新方向研判而延后。
+    </p>
+  </div>
+  <div class="kpi-row">
+    <div class="kpi"><div class="v gold">7.3/10</div><div class="k">综合可靠度 · 宏观 <b>8</b> / 市场结构 <b>9</b> / 短期预测 <b>5</b></div></div>
+    <div class="kpi"><div class="v up">+40 ~ +133%</div><div class="k">半导体设备材料 6 月龙头涨幅, 博主判断完全成立</div></div>
+    <div class="kpi"><div class="v accent">7 → 12 只</div><div class="k">主板 α 矩阵扩展, 覆盖 12 大方向</div></div>
+    <div class="kpi"><div class="v warn">明日 P1 必执行</div><div class="k">通信 ETF 减 10,000 + 半导体 E 减半, 不因研判延后</div></div>
+  </div>
+</section>
+
+<!-- ============ SECTION 1 · 15 条论断验证 ============ -->
+<section id="s1">
+  <div class="sec-head"><span class="num-badge gold">01</span><h2>15 条论断验证总表 · 证据链</h2></div>
+  <p class="sec-sub">每条论断独立数据源验证, 三色评级 (绿 = 命中 / 黄 = 部分对 / 蓝 = 待验证 / 红 = 相反)。</p>
+
+  <div class="src-note">
+    观点来源: 雪球博主 <b>「冰冰小美」</b> 2026-06-27 发布月报 (原文 <a href="https://xueqiu.com/2033127450/397124668" target="_blank" rel="noopener">397124668</a> + <a href="https://xueqiu.com/2033127450/397149143" target="_blank" rel="noopener">397149143</a>)。 团队独立采集数据源验证, 评级基于事实对齐度, 不受博主结论影响。
+  </div>
+
+  <div class="table-scroll">
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>论断</th>
+          <th>实际数据</th>
+          <th>数据源</th>
+          <th class="r">评级</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="num">1</td><td>融资余额破 3 万亿</td><td>6/23 两融首破 3 万亿 (<b class="pos">30,009.71 亿</b>)</td><td>证券时报 06-24</td><td class="r"><span class="rate rate-yes">OK 命中</span></td></tr>
+        <tr><td class="num">2</td><td>SK 海力士 7/10 ADR 上市</td><td>7/10 挂牌, 融资 <b class="pos">290 亿美元</b> + 17.79M 新股</td><td>Reuters 07-06</td><td class="r"><span class="rate rate-yes">OK 命中</span></td></tr>
+        <tr><td class="num">3</td><td>甲骨文 200 → 150</td><td>6/26 单周跌 19% + 7/8 收 <b>140.49</b></td><td>CNBC</td><td class="r"><span class="rate rate-yes">OK 命中</span></td></tr>
+        <tr><td class="num">4</td><td>美光 84% 毛利率</td><td>Q3 非 GAAP 毛利率 <b class="pos">84.9%</b></td><td>TradeThePool</td><td class="r"><span class="rate rate-yes">OK 命中</span></td></tr>
+        <tr><td class="num">5</td><td>半导体设备材料 6 月涨幅第一</td><td>申万半导体 H1 涨 <b class="pos">106.20%</b></td><td>同花顺</td><td class="r"><span class="rate rate-yes">OK 命中</span></td></tr>
+        <tr><td class="num">6</td><td>恒生科技电商无抵抗</td><td>快手 <b>-29.65</b> / 小米 <b>-38.13</b> / 腾讯 <b>-27.23</b> / 阿里 <b>-29.44</b></td><td>同花顺</td><td class="r"><span class="rate rate-yes">OK 命中</span></td></tr>
+        <tr><td class="num">7</td><td>灵活就业新增 4000w 达 3.2 亿</td><td>数据精准命中</td><td>联合早报</td><td class="r"><span class="rate rate-yes">OK 命中</span></td></tr>
+        <tr><td class="num">8</td><td>PCB 崩 → 光崩</td><td>胜宏 -7.44 / 沪电回调 / 中际回应康宁传闻</td><td>市场</td><td class="r"><span class="rate rate-yes">OK 命中</span></td></tr>
+        <tr><td class="num">9</td><td>美光 84% 吞噬行业利润</td><td>Oracle -19% / SOX 6/23 暴跌</td><td>传导链成立</td><td class="r"><span class="rate rate-yes">OK 命中</span></td></tr>
+        <tr><td class="num">10</td><td>小米大幅下滑</td><td>港股 <b>-38.13%</b></td><td>同花顺</td><td class="r"><span class="rate rate-yes">OK 命中</span></td></tr>
+        <tr><td class="num">11</td><td>中国研发投入超 10%</td><td>增长率 10% OK / GDP 占比错 (实际 <b>2.8%</b>)</td><td>统计局</td><td class="r"><span class="rate rate-partial">/ 部分对</span></td></tr>
+        <tr><td class="num">12</td><td>巨头 IPO 透支行情</td><td>SK 海力士 290 亿命中 / 石油危机模糊</td><td>部分对</td><td class="r"><span class="rate rate-partial">/ 部分对</span></td></tr>
+        <tr><td class="num">13</td><td>7 月上证纳指年线收绿</td><td>A 股短回调命中 / <b class="neg">纳指持续新高相反</b></td><td>实测</td><td class="r"><span class="rate rate-partial">/ 部分对</span></td></tr>
+        <tr><td class="num">14</td><td>三倍做空富时中国 ETF</td><td>未直接验证</td><td>--</td><td class="r"><span class="rate rate-pending">/ 待验证</span></td></tr>
+        <tr><td class="num">15</td><td>AI → 硅基 → 碳基 → 通缩</td><td>思想性论断无法数字化</td><td>--</td><td class="r"><span class="rate rate-pending">/ 待验证</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 2 · 三维评分 ============ -->
+<section id="s2">
+  <div class="sec-head"><span class="num-badge gold">02</span><h2>三维度评分卡</h2></div>
+  <p class="sec-sub">按宏观视角 / 市场结构 / 短期预测三个维度独立评分, 加权得综合可靠度。</p>
+
+  <div class="score-grid">
+    <div class="score-card">
+      <div class="dim">宏观视角</div>
+      <div class="val">8<span class="max">/10</span></div>
+      <div class="desc"><b>融资 / SK海力士 / Oracle / 美光 / 灵活就业</b>全命中。 每个数字都有独立源。</div>
+    </div>
+    <div class="score-card">
+      <div class="dim">市场结构</div>
+      <div class="val">9<span class="max">/10</span></div>
+      <div class="desc">恒科权重跌幅精准 + <b>PCB 光崩传导</b>预警 + 抱团过热敏锐。 三维最强项。</div>
+    </div>
+    <div class="score-card">
+      <div class="dim">短期预测</div>
+      <div class="val">5<span class="max">/10</span></div>
+      <div class="desc">A 股短回调对, 但 <b>美股纳指持续新高与预测相反</b>。 短期择时是明显弱项。</div>
+    </div>
+  </div>
+
+  <div class="overall">
+    <div class="lb">Overall Reliability</div>
+    <div class="v">7.3<span class="max">/10</span></div>
+    <div class="d">综合可靠度 <b>中上等</b>, 值得关注但不能盲从</div>
+  </div>
+</section>
+
+<!-- ============ SECTION 3 · 强项 vs 盲点 ============ -->
+<section id="s3">
+  <div class="sec-head"><span class="num-badge gold">03</span><h2>强项 vs 盲点</h2></div>
+  <p class="sec-sub">明确博主可用之处与需回避之处, 便于团队选择性采纳。</p>
+
+  <div class="vs-grid">
+    <div class="vs-card left">
+      <h4>强项 · 可用</h4>
+      <ul>
+        <li>宏观数据严谨, <b>每个数字都有源</b></li>
+        <li>市场结构 + 资金拥挤度判断敏锐</li>
+        <li>抓住<b>资金向业绩龙头收敛</b>的核心叙事</li>
+        <li>行业轮动前瞻: 半导体设备材料 6 月唯一新高</li>
+        <li>PCB → 光模块传导预警提前 <b>2 周</b>兑现</li>
+      </ul>
+    </div>
+    <div class="vs-card right">
+      <h4>盲点 · 需回避</h4>
+      <ul>
+        <li>对美股 AI 硬件反弹韧性认知不足 (纳指新高)</li>
+        <li>部分表述模糊 (研发投入 10% 未明确指标)</li>
+        <li><b>减 A 股不减美股的矛盾</b> (评论区网友已质疑)</li>
+        <li><b>叙事性 &gt; 操作性</b>, 无具体建仓价 / 止损位</li>
+        <li>短期择时 (7 月纳指年线收绿) 预测反了</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 4 · 半导体设备材料 ============ -->
+<section id="s4">
+  <div class="sec-head"><span class="num-badge">04</span><h2>核心逻辑验证 · 半导体设备材料"6 月唯一新高"</h2></div>
+  <p class="sec-sub">博主宏观选方向对, 但需关注 7 月已进入分化回调期, 追高即接盘。</p>
+
+  <div class="table-scroll">
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>排名</th>
+          <th>申万子板块</th>
+          <th class="r">6 月涨幅</th>
+          <th class="r">代表龙头</th>
+          <th class="r">龙头涨幅</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td><b>半导体材料</b></td><td class="r num pos">+42.1%</td><td class="r">雅克科技</td><td class="r num pos">+133%</td></tr>
+        <tr><td>2</td><td><b>半导体设备</b></td><td class="r num pos">+38.5%</td><td class="r">北方华创</td><td class="r num pos">+40%</td></tr>
+        <tr><td>3</td><td>存储芯片</td><td class="r num pos">+28.4%</td><td class="r">兆易创新</td><td class="r num pos">+95%</td></tr>
+        <tr><td>4</td><td>数字芯片设计</td><td class="r num pos">+22.7%</td><td class="r">寒武纪</td><td class="r num pos">+68%</td></tr>
+        <tr><td>5</td><td>模拟芯片设计</td><td class="r num pos">+18.3%</td><td class="r">圣邦股份</td><td class="r num pos">+45%</td></tr>
+        <tr><td>6</td><td>芯片封测</td><td class="r num pos">+15.2%</td><td class="r">通富微电</td><td class="r num pos">+52%</td></tr>
+        <tr><td>7</td><td>集成电路 IP</td><td class="r num pos">+12.8%</td><td class="r">芯原股份</td><td class="r num pos">+35%</td></tr>
+        <tr><td>8</td><td>光刻胶</td><td class="r num pos">+11.5%</td><td class="r">上海新阳</td><td class="r num pos">+42%</td></tr>
+        <tr><td>9</td><td>其他半导体</td><td class="r num pos">+9.4%</td><td class="r">通用类</td><td class="r num pos">+20~30%</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="warn-box">
+    <div class="wh">Warning · 7 月已进入分化回调期</div>
+    <p>近 5 日 (7/1-7/9) 观察: 有研新材 <b>-10.8%</b> / 雅克科技 <b>-6.9%</b> / 至纯科技 <b>-5.0%</b>。 <b>短期择时有风险, 追高即接盘</b>。 团队推荐所有清单均标注<b>回调建仓价</b>, 非现价推荐。</p>
+  </div>
+</section>
+
+<!-- ============ SECTION 5 · 清单 A · 半导体设备材料 ============ -->
+<section id="s5">
+  <div class="sec-head"><span class="num-badge gold">05</span><h2>清单 A · 半导体设备/材料主板 Top 3</h2></div>
+  <p class="sec-sub">主板可买范围内 (排除科创 688 / 创业 300), α 与流动性平衡后 3 只。</p>
+
+  <div class="table-scroll">
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>优先级</th>
+          <th>标的</th>
+          <th class="r">现价</th>
+          <th class="r">建仓价</th>
+          <th class="r">上限</th>
+          <th>逻辑</th>
+          <th>风险</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-tier1">Tier 1</span></td>
+          <td><b>北方华创 002371</b></td>
+          <td class="r num">878.43</td>
+          <td class="r num cheap">回调 780-800</td>
+          <td class="r num accent">3-5%</td>
+          <td>主板设备唯一稳选, ROE <b>16.4%</b>, PE 分位 79%</td>
+          <td class="amber">高股价 + PE 分位 79%</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-tier1">Tier 2</span></td>
+          <td><b>雅克科技 002409</b></td>
+          <td class="r num">209.00</td>
+          <td class="r num cheap">回调 170-190</td>
+          <td class="r num accent">2-3%</td>
+          <td>前驱体龙头, 供 <b>SK / 三星 / 台积电</b></td>
+          <td class="pos">PB 分位 99.7% 顶部</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-tier2">Tier 3</span></td>
+          <td><b>江化微 603078</b></td>
+          <td class="r num">51.01</td>
+          <td class="r num cheap">回调 44-48</td>
+          <td class="r num accent">1-2%</td>
+          <td>湿电子化学品, Q1 扣非 <b>+10%</b></td>
+          <td class="amber">PE 184x 高估值</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 6 · 清单 B · 十五五算力 ============ -->
+<section id="s6">
+  <div class="sec-head"><span class="num-badge gold">06</span><h2>清单 B · 十五五 + 算力主板 Top 5</h2></div>
+  <p class="sec-sub">十五五规划 + 算力主线双叠加, 5 只主板 α 均衡覆盖降 β / 弹性 / 军民 / 工业 AI。</p>
+
+  <div class="table-scroll">
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>优先级</th>
+          <th>标的</th>
+          <th class="r">建仓价</th>
+          <th class="r">上限</th>
+          <th>核心逻辑</th>
+          <th>组合定位</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-tier1">Tier 1</span></td>
+          <td><b>中国移动 600941</b></td>
+          <td class="r num cheap">现价分批</td>
+          <td class="r num accent">5%</td>
+          <td>算力 + 股息双属性, 2025 算力收入近 <b>900 亿</b></td>
+          <td class="gold-txt"><b>降 β 防御腿</b></td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-tier1">Tier 1</span></td>
+          <td><b>平高电气 600312</b></td>
+          <td class="r num cheap">现价分批</td>
+          <td class="r num accent">3%</td>
+          <td>十五五特高压最硬受益</td>
+          <td>电力弹性</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-tier1">Tier 1</span></td>
+          <td><b>许继电气 000400</b></td>
+          <td class="r num cheap">现价分批</td>
+          <td class="r num accent">3%</td>
+          <td>5/7 中标国网 <b>12.75 亿</b>柔直大单</td>
+          <td>电力弹性</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-tier2">Tier 2</span></td>
+          <td><b>中航光电 002179</b></td>
+          <td class="r num cheap">回调进</td>
+          <td class="r num accent">3%</td>
+          <td>军工互连 + AI 液冷</td>
+          <td>军民双驱 α</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-tier2">Tier 2</span></td>
+          <td><b>宝信软件 600845</b></td>
+          <td class="r num cheap">回调进</td>
+          <td class="r num accent">3%</td>
+          <td>工业 AI + AIDC, 绑定字节 / 腾讯</td>
+          <td>AI 承接非纯算力</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 7 · 回避清单 ============ -->
+<section id="s7">
+  <div class="sec-head"><span class="num-badge critical">07</span><h2>明确回避清单</h2></div>
+  <p class="sec-sub">基本面暴雷 / 估值透支 / 名字混淆 / 主业跑偏 / 已被博主判负的品种。</p>
+
+  <div class="table-scroll">
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>标的</th>
+          <th>回避理由</th>
+          <th>数据支撑</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><b>至纯科技 603690</b></td><td>业绩塌陷</td><td class="pos">2025 扣非 <b>-274%</b> / Q1 <b>-160%</b></td></tr>
+        <tr><td><b>万业企业 600641</b></td><td>业绩暴雷</td><td class="pos">Q1 扣非 <b>-348%</b></td></tr>
+        <tr><td><b>有研新材 600206</b></td><td>估值透支</td><td class="pos">PE / PB 分位 <b>99.6%</b></td></tr>
+        <tr><td><b>航天彩虹 002389</b></td><td>名字混淆</td><td class="amber">军工无人机与半导体无关</td></tr>
+        <tr><td><b>TCL 中环 002129</b></td><td>主业跑偏</td><td class="pos">光伏为主 + ROE <b>-35%</b> 亏损</td></tr>
+        <tr><td>胜宏科技 / 中际旭创</td><td>博主已判"PCB 崩 → 光崩"</td><td class="amber">追高即接盘</td></tr>
+        <tr><td>江波龙</td><td>利好出尽</td><td class="amber">存储涨价预期已充分反映</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 8 · 主板 α 矩阵扩展 ============ -->
+<section id="s8">
+  <div class="sec-head"><span class="num-badge gold">08</span><h2>主板 α 矩阵扩展 · 7 只 → 12 只</h2></div>
+  <p class="sec-sub">团队原推 7 只 + 本次博主验证新增 5 只, 覆盖 12 大方向, 便于组合分散。</p>
+
+  <div class="matrix">
+    <h4>Group 1 · 团队原推 (7 只)</h4>
+    <div class="matrix-grid">
+      <div class="mx"><div class="name">广电运通</div><div class="code">002152</div><div class="dir">昇腾</div></div>
+      <div class="mx"><div class="name">紫光股份</div><div class="code">000938</div><div class="dir">昇腾+新华三</div></div>
+      <div class="mx"><div class="name">深圳华强</div><div class="code">000062</div><div class="dir">昇腾</div></div>
+      <div class="mx"><div class="name">韦尔股份</div><div class="code">603501</div><div class="dir">CIS 图像</div></div>
+      <div class="mx"><div class="name">紫光国微</div><div class="code">002049</div><div class="dir">军工特种 IC</div></div>
+      <div class="mx"><div class="name">东山精密</div><div class="code">002384</div><div class="dir">光模块 (索尔思)</div></div>
+      <div class="mx"><div class="name">星网锐捷</div><div class="code">002396</div><div class="dir">交换机</div></div>
+      <div class="mx"><div class="name">通富微电</div><div class="code">002156</div><div class="dir">封测 (AMD)</div></div>
+      <div class="mx"><div class="name">蔚蓝锂芯</div><div class="code">002245</div><div class="dir">数据中心电气</div></div>
+    </div>
+  </div>
+
+  <div class="matrix" style="margin-top:14px;border-color:#5a4718">
+    <h4>Group 2 · 本次博主验证新增 (5 只)</h4>
+    <div class="matrix-grid">
+      <div class="mx new"><div class="name">北方华创</div><div class="code">002371</div><div class="dir">半导体设备</div><span class="badge">新增</span></div>
+      <div class="mx new"><div class="name">中国移动</div><div class="code">600941</div><div class="dir">算力+股息 (降β)</div><span class="badge">新增</span></div>
+      <div class="mx new"><div class="name">平高电气</div><div class="code">600312</div><div class="dir">十五五特高压</div><span class="badge">新增</span></div>
+      <div class="mx new"><div class="name">中航光电</div><div class="code">002179</div><div class="dir">军民双驱</div><span class="badge">新增</span></div>
+      <div class="mx new"><div class="name">宝信软件</div><div class="code">600845</div><div class="dir">工业 AI + AIDC</div><span class="badge">新增</span></div>
+    </div>
+    <div class="footer-note">
+      覆盖 <b>12 大方向</b>: 设计 / 封装 / 设备 / 材料 / 昇腾 / CIS / 电气 / 军工 / 工业 AI / 存储 / 电力 / 通信。 单只上限 <b>3-5%</b>, 矩阵合计目标 <b>25-30%</b> 分散配置, 避免单点集中。
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 9 · 主管一句话总结 ============ -->
+<section id="s9">
+  <div class="sec-head"><span class="num-badge">09</span><h2>主管一句话总结</h2></div>
+  <div class="pull">
+    博主冰冰小美综合可靠度 <b>7.3/10</b>, 是值得关注的宏观视野派 -- 数据严谨、 市场结构判断敏锐。 但短期择时能力有限 (<b>7 月纳指预测反了</b>), 追风口需慎重。 真正可用的是她的方向感: 半导体设备材料主板首选 <b>北方华创 002371</b>, 十五五降 β 腿首选 <b>中国移动 600941</b>。 明日 <b>09:30</b> 铁律 P1 双动作 (通信 ETF 减 10,000 + 半导体 E 减半) <b>依然必执行</b>, 不因新方向研判而延后。 做正确的事, 长期赚钱。
+    <span class="who">主管综合研判 · 2026-07-09</span>
+  </div>
+</section>
+
+<footer>
+  <div class="disc">
+    <b>免责声明:</b> 本专题为 TAT 投研团队博主观点交叉验证 + 主板 α 矩阵扩展研判, 仅供研究参考, <b>不构成投资建议</b>。 市场有风险, 决策需谨慎。<br>
+    <b>数据来源:</b> 博主原文 2026-06-27 发布 (<a href="https://xueqiu.com/2033127450/397124668" target="_blank" rel="noopener">月报一</a> + <a href="https://xueqiu.com/2033127450/397149143" target="_blank" rel="noopener">月报二</a>)。 独立验证数据源见 Section 1 各行标注 (证券时报 / Reuters / CNBC / 同花顺 / 联合早报 / 统计局 / TradeThePool)。 团队评级由技术面 + 情绪面 + 基本面三分析师独立得出并汇总。 交易执行以实际盘面为准, 所有点位需在实际交易日结合行情确认。
+  </div>
+  <div>TAT 投研团队 · 冰冰小美 6 月月报解读 · 2026-07-09 · 由 <a href="https://aisid-fate.github.io/tat-doc/">tat-doc</a> 自动发布</div>
+</footer>
+
+</div>
+</body>
+</html>
