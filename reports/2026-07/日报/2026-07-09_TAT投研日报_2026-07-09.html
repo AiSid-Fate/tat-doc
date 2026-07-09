@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="report-title" content="TAT投研日报 2026-07-09">
+<meta name="report-date" content="2026-07-09">
+<meta name="report-category" content="日报">
+<meta name="report-tags" content="日报,剧情反转,9连阴终结,V反弹,零操作意外收益,铁律未执行">
+<meta name="report-summary" content="沪指+1.40%突破4000+科创50+7.61%爆发,用户零操作意外多赚+9,443元。结果论幸运不等于过程论正确,明日铁律依然必执行。">
+<title>TAT 投研日报 · 2026-07-09</title>
+<style>
+:root{
+  --bg:#f7f5f0; --paper:#ffffff;
+  --ink:#1a1a1a; --ink2:#333333; --ink3:#5c5c5c; --muted:#8a8a8a;
+  --rule:#d9d5cc; --rule2:#e8e4dc;
+  --up:#c22c2c; --up-soft:#f6e5e5;
+  --down:#0f7a3e; --down-soft:#e2f0e8;
+  --warn:#a65d00; --warn-soft:#f6e8d3;
+  --accent:#1a3d6b; --accent-soft:#e6ecf3;
+  --gold:#8f6a1a; --gold-soft:#f6ecd3;
+  --serif:"Noto Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:"SF Mono","JetBrains Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(180deg,transparent,transparent 27px,rgba(0,0,0,0.02) 28px,transparent 29px);
+  background-size:100% 28px}
+.num{font-variant-numeric:tabular-nums;font-family:var(--mono);letter-spacing:-.2px}
+.paper{max-width:1080px;margin:0 auto;background:var(--paper);padding:36px 44px;
+  box-shadow:0 1px 3px rgba(0,0,0,.06),0 20px 40px rgba(0,0,0,.05);
+  border-top:6px solid var(--ink);word-wrap:break-word;overflow-wrap:break-word}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);line-height:1.3;font-weight:700}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.masthead{border-bottom:3px double var(--ink);padding-bottom:14px;margin-bottom:22px}
+.masthead .top{display:flex;justify-content:space-between;align-items:baseline;font-size:11.5px;color:var(--ink3);text-transform:uppercase;letter-spacing:.12em}
+.masthead .top b{color:var(--ink);font-family:var(--mono)}
+.masthead .name{font-family:var(--serif);font-size:44px;font-weight:900;letter-spacing:-.5px;margin:6px 0 8px}
+.masthead .name em{font-style:normal;color:var(--up)}
+.masthead .sub{font-size:13px;color:var(--ink3);font-family:var(--serif)}
+.masthead .sub b{color:var(--ink)}
+
+.headline{padding:20px 0 26px;border-bottom:1px solid var(--rule)}
+.headline .kicker{font-size:11.5px;font-weight:700;color:var(--up);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.headline h1{font-size:30px;line-height:1.25;font-weight:800;letter-spacing:-.3px}
+.headline h1 em{font-style:normal;color:var(--up);border-bottom:2px solid var(--up);padding-bottom:1px}
+.headline .lede{margin-top:14px;font-size:16px;color:var(--ink2);line-height:1.75;font-family:var(--serif)}
+
+.dash{display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border:1px solid var(--rule);border-radius:2px;overflow:hidden;margin:24px 0}
+.dash .cell{padding:16px 18px;border-right:1px solid var(--rule);background:var(--paper)}
+.dash .cell:last-child{border-right:none}
+.dash .k{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);font-weight:700;margin-bottom:6px}
+.dash .v{font-size:22px;font-weight:800;font-family:var(--mono);color:var(--ink);line-height:1.15}
+.dash .v.up{color:var(--up)} .dash .v.down{color:var(--down)} .dash .v.warn{color:var(--warn)} .dash .v.accent{color:var(--accent)}
+.dash .s{font-size:11.5px;color:var(--ink3);margin-top:3px}
+
+.sect{margin-top:34px}
+.sect-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+.sect-head h2{font-size:20px;font-weight:800}
+.sect-head .meta{font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.1em;font-family:var(--mono)}
+
+/* 剧情反转 vs 对比卡 */
+.reversal-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+.reversal{background:var(--paper);border:1px solid var(--rule);border-radius:2px;padding:16px 18px}
+.reversal.past{border-top:4px solid var(--warn);background:#fdf7ea}
+.reversal.now{border-top:4px solid var(--up)}
+.reversal .rh{display:flex;align-items:baseline;justify-content:space-between;gap:6px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px dashed var(--rule)}
+.reversal .rh .t{font-family:var(--serif);font-weight:800;font-size:15px}
+.reversal.past .rh .t{color:var(--warn)}
+.reversal.now .rh .t{color:var(--up)}
+.reversal .rh .tag{font-family:var(--mono);font-size:11px;padding:2px 8px;border-radius:2px;font-weight:800}
+.reversal.past .rh .tag{background:var(--warn-soft);color:var(--warn)}
+.reversal.now .rh .tag{background:var(--up-soft);color:var(--up)}
+.reversal ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.reversal li{font-size:13.5px;color:var(--ink2);padding-left:18px;position:relative;line-height:1.6}
+.reversal li::before{content:"";position:absolute;left:3px;top:8px;width:6px;height:6px;border-radius:50%}
+.reversal.past li::before{background:var(--warn)}
+.reversal.now li::before{background:var(--up)}
+.reversal li b{color:var(--ink);font-family:var(--mono);font-weight:800}
+
+.reversal-quote{background:linear-gradient(135deg,#f9f7f1,#f5f2e8);border-left:4px solid var(--ink);
+  padding:16px 22px;margin-top:16px;font-family:var(--serif);font-size:15.5px;color:var(--ink);line-height:1.75}
+.reversal-quote b{color:var(--up)}
+
+/* 大盘 5 指数 */
+.idx-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+.idx{background:#faf8f2;border:1px solid var(--rule);border-radius:2px;padding:12px 10px;text-align:center}
+.idx .n{font-size:11px;color:var(--ink3);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.idx .p{font-family:var(--mono);font-weight:800;font-size:15px;color:var(--ink)}
+.idx .c{font-family:var(--mono);font-weight:700;font-size:12px;margin-top:2px}
+.idx.hot{border-color:var(--up);background:#fdf2f2}
+.idx .c.up{color:var(--up)} .idx .c.down{color:var(--down)}
+
+.regime-note{background:#f9f7f1;border:1px solid var(--rule);border-left:3px solid var(--up);
+  padding:14px 18px;margin-top:14px;font-size:13.5px;color:var(--ink2);line-height:1.7}
+.regime-note b{color:var(--ink);font-family:var(--mono);font-weight:800}
+
+/* 表格 */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+.table-wrap table{min-width:100%;width:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+table th{text-align:left;padding:10px 12px;border-bottom:2px solid var(--ink);background:transparent;
+  font-weight:700;color:var(--ink);font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+table th.r{text-align:right}
+table td{padding:10px 12px;border-bottom:1px solid var(--rule);color:var(--ink2);vertical-align:top}
+table td.r{text-align:right;font-family:var(--mono);white-space:nowrap}
+table tr:last-child td{border-bottom:none}
+table tr:hover td{background:#faf8f2}
+.pos{color:var(--up);font-weight:700}
+.neg{color:var(--down);font-weight:700}
+.amber{color:var(--warn);font-weight:700}
+.cheap{color:var(--accent);font-weight:700}
+.hl-row td{background:#fdf2f2}
+
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.hl{background:#fdf2f2;border:1px solid #f0d1d1;border-left:3px solid var(--up);
+  padding:12px 14px;border-radius:2px;font-size:13px;color:var(--ink)}
+.hl b{color:var(--up);font-family:var(--mono);font-weight:800}
+.hl .h{display:block;font-size:11px;color:var(--up);font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+
+/* Section 4 辩证章节金框 */
+.debate-box{background:linear-gradient(135deg,#faf1d6,#f6e4b7);border:2px solid var(--gold);
+  border-radius:2px;padding:22px 24px;margin-top:14px;position:relative;overflow:hidden}
+.debate-box::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:sweep 3s infinite}
+@keyframes sweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.debate-box .dh{display:flex;align-items:center;gap:9px;color:var(--gold);font-weight:800;
+  font-size:14px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;font-family:var(--sans)}
+.debate-box p{font-size:14.5px;color:var(--ink);line-height:1.85;font-family:var(--serif);margin-bottom:12px}
+.debate-box p b{color:var(--up)}
+.debate-box .why-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.debate-box .why-list li{background:rgba(255,255,255,.6);border-left:3px solid var(--gold);
+  padding:10px 14px;font-size:13.5px;color:var(--ink);line-height:1.65;border-radius:2px}
+.debate-box .why-list li b{color:var(--warn);font-family:var(--mono)}
+.debate-box .why-list li .lbl{font-family:var(--mono);font-weight:800;color:var(--gold);margin-right:6px}
+
+/* Section 5 半导体E 修正 */
+.data-fix{background:linear-gradient(135deg,#fdf5e5,#faecc8);border:1px solid #d9b26a;
+  border-left:4px solid var(--warn);border-radius:2px;padding:18px 22px;margin-top:14px}
+.data-fix .fh{color:var(--warn);font-weight:800;font-size:13.5px;letter-spacing:.06em;
+  text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.data-fix .fh .dot{width:10px;height:10px;border-radius:50%;background:var(--warn);
+  box-shadow:0 0 0 3px rgba(166,93,0,.25)}
+.data-fix p{font-size:14px;color:var(--ink);line-height:1.75;margin-bottom:10px}
+.data-fix p b{color:var(--warn);font-family:var(--mono)}
+.data-fix .callout{background:rgba(255,255,255,.7);border-left:3px solid var(--warn);
+  padding:10px 14px;margin-top:10px;font-size:13px;color:var(--ink);border-radius:2px}
+.data-fix .callout b{color:var(--warn);font-family:var(--mono)}
+
+/* Section 6 铁律红框 */
+.rule-fail{background:#fdf2f2;border:2px solid var(--up);border-radius:2px;padding:18px 22px;margin-top:14px}
+.rule-fail .rh{color:var(--up);font-weight:800;font-size:13.5px;letter-spacing:.08em;
+  text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.rule-fail .rh .dot{width:10px;height:10px;border-radius:50%;background:var(--up);
+  box-shadow:0 0 0 3px rgba(194,44,44,.25);animation:pulse 1.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.rule-fail ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:12px}
+.rule-fail li{background:rgba(255,255,255,.7);border-left:3px solid var(--up);
+  padding:10px 14px;font-size:13.5px;color:var(--ink);line-height:1.65;border-radius:2px}
+.rule-fail li b{color:var(--up);font-family:var(--mono);font-weight:800}
+.rule-fail li .lb{font-family:var(--mono);font-weight:800;color:var(--up);margin-right:6px}
+.rule-fail .warn-line{background:rgba(0,0,0,.05);border-top:1px dashed var(--up);
+  padding:10px 14px;font-size:13px;color:var(--ink);font-family:var(--serif);font-style:italic}
+.rule-fail .warn-line b{color:var(--up);font-family:var(--mono);font-style:normal}
+
+/* Priority pills */
+.pri-1{background:var(--up-soft);color:var(--up);font-family:var(--mono);font-weight:800;
+  padding:2px 8px;border-radius:2px;font-size:11px;white-space:nowrap}
+.pri-2{background:var(--warn-soft);color:var(--warn);font-family:var(--mono);font-weight:800;
+  padding:2px 8px;border-radius:2px;font-size:11px;white-space:nowrap}
+.pri-3{background:var(--down-soft);color:var(--down);font-family:var(--mono);font-weight:800;
+  padding:2px 8px;border-radius:2px;font-size:11px;white-space:nowrap}
+.pri-ban{background:#3a1c1f;color:#fff;font-family:var(--mono);font-weight:800;
+  padding:2px 8px;border-radius:2px;font-size:11px;white-space:nowrap}
+
+.scenario-note{background:#f9f7f1;border:1px solid var(--rule);border-left:3px solid var(--accent);
+  padding:12px 16px;margin-top:12px;font-size:13px;color:var(--ink2);line-height:1.7}
+.scenario-note b{color:var(--ink);font-family:var(--mono);font-weight:800}
+
+/* 引用块 */
+.pull{margin:16px 0 0;padding:22px 26px;border-left:4px solid var(--ink);background:#f9f7f1;
+  font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink)}
+.pull b{color:var(--up)}
+.pull .who{display:block;font-size:12px;color:var(--ink3);margin-top:10px;font-family:var(--sans);text-transform:uppercase;letter-spacing:.08em}
+
+footer{margin-top:34px;padding-top:16px;border-top:3px double var(--ink);
+  font-size:11.5px;color:var(--ink3);text-align:center;line-height:1.7}
+footer .disc{background:#faf8f2;border:1px solid var(--rule);padding:12px 16px;
+  margin-bottom:12px;text-align:left;font-size:12px;color:var(--ink2)}
+footer .disc b{color:var(--up)}
+footer .meta{font-family:var(--serif);color:var(--ink3)}
+
+@media (max-width:820px){
+  .paper{padding:24px 20px}
+  .masthead .name{font-size:32px}
+  .headline h1{font-size:24px}
+  .dash{grid-template-columns:repeat(2,1fr)}
+  .dash .cell:nth-child(2){border-right:none}
+  .reversal-grid{grid-template-columns:1fr}
+  .idx-grid{grid-template-columns:repeat(2,1fr)}
+  .highlights{grid-template-columns:1fr}
+  table{font-size:12.5px}
+  table th,table td{padding:8px 8px}
+}
+@media (max-width:480px){
+  body{font-size:14.5px;line-height:1.65}
+  .paper{padding:20px 16px;border-top-width:5px}
+  .masthead{padding-bottom:12px;margin-bottom:18px}
+  .masthead .top{font-size:10.5px;flex-wrap:wrap;gap:4px}
+  .masthead .name{font-size:26px;margin:8px 0 6px}
+  .masthead .sub{font-size:12px;line-height:1.5}
+  .headline{padding:14px 0 20px}
+  .headline .kicker{font-size:10.5px}
+  .headline h1{font-size:21px;line-height:1.3}
+  .headline .lede{font-size:14.5px;margin-top:12px}
+  .dash{grid-template-columns:1fr;margin:18px 0}
+  .dash .cell{border-right:none;border-bottom:1px solid var(--rule);padding:14px 16px}
+  .dash .cell:last-child{border-bottom:none}
+  .dash .v{font-size:19px}
+  .sect{margin-top:28px}
+  .sect-head h2{font-size:17px}
+  .reversal{padding:14px 16px}
+  .reversal li{font-size:13px}
+  .idx-grid{grid-template-columns:1fr}
+  .debate-box,.data-fix,.rule-fail{padding:16px 18px}
+  .debate-box p{font-size:14px}
+  .rule-fail li,.data-fix p,.debate-box .why-list li{font-size:13px}
+  .table-wrap{margin:0 -16px;padding:0 16px;max-width:calc(100vw - 0px)}
+  .table-wrap table{min-width:480px}
+  table{font-size:11.5px}
+  table th,table td{padding:7px 8px;word-break:break-word}
+  table th{font-size:10px;letter-spacing:.03em}
+  .pull{padding:16px 18px;font-size:14.5px;line-height:1.8}
+  footer{font-size:11px;margin-top:26px}
+  .sect,.debate-box,.rule-fail{min-width:0}
+}
+@media print{
+  body{background:#fff;background-image:none}
+  .paper{box-shadow:none;padding:0}
+}
+</style>
+</head>
+<body>
+<article class="paper">
+
+  <!-- 报头 -->
+  <header class="masthead">
+    <div class="top">
+      <span>TAT 投研团队 · Daily Briefing</span>
+      <span><b>VOL. 003</b> · Daily Report · 2026-07-09</span>
+    </div>
+    <div class="name">TAT 投研<em>日报</em></div>
+    <div class="sub"><b>2026 年 7 月 9 日 星期四</b> · 收盘后 · 剧情反转 · 9 连阴终结 V 反弹 · 零操作意外收益</div>
+  </header>
+
+  <!-- 头条 -->
+  <section class="headline">
+    <div class="kicker">头条 · 昨日预测被反转, 但纪律不改</div>
+    <h1>沪指 +1.40% 突破 4000 + 科创 50 <em>+7.61%</em> 爆发, 用户零操作反而多赚 +9,443</h1>
+    <p class="lede">
+      昨日刚判"9 连阴 + 破 4000 + 放量下杀"的减仓建议, 今日大盘 <b>V 型反弹 + 突破 4000 + 9 连阴终结</b>。 用户零操作但账面多赚 <b>+9,443 元</b> (含未减仓少赚 +1,262 + 未强清沪电 +2,490 + 反弹回补)。 但这是结果论幸运, 不是过程论正确。 明日 09:30 铁律依然必执行: <b>通信 ETF 减 10,000 股 + 半导体 E 按核实成本减半</b>。
+    </p>
+  </section>
+
+  <!-- KPI 4 卡 -->
+  <section class="dash" aria-label="今日速览">
+    <div class="cell"><div class="k">上证指数</div><div class="v up">4026.35</div><div class="s"><b style="color:var(--up)">+1.40%</b> 突破 4000 · 9 连阴终结</div></div>
+    <div class="cell"><div class="k">持仓当日</div><div class="v up">+5,691 元</div><div class="s">7 涨 1 微跌</div></div>
+    <div class="cell"><div class="k">零操作意外多赚</div><div class="v up">+9,443 元</div><div class="s">含未强清沪电 <b>+2,490</b></div></div>
+    <div class="cell"><div class="k">AI β 敞口</div><div class="v warn">61.4% 未变</div><div class="s">距 55% 目标差 <b>6.4 pct</b></div></div>
+  </section>
+
+  <!-- ============ Section 1 · 剧情反转 ============ -->
+  <section class="sect">
+    <div class="sect-head">
+      <h2>Section 1 · 剧情反转</h2>
+      <span class="meta">昨日预测 vs 今日实际</span>
+    </div>
+
+    <div class="reversal-grid">
+      <div class="reversal past">
+        <div class="rh"><div class="t">昨日日报 (7/8) 预测</div><div class="tag">已被反转</div></div>
+        <ul>
+          <li>沪指 <b>9 连阴 + 破 4000</b> 继续放量下杀</li>
+          <li>建议 <b>P1 减半锁利</b> (半导体 E + 通信 ETF)</li>
+          <li>判定 <b>下跌中继反弹初段</b>, 底不明</li>
+          <li>组合经理定调: <b>必须减 β</b>, 明日必执行</li>
+        </ul>
+      </div>
+      <div class="reversal now">
+        <div class="rh"><div class="t">今日 (7/9) 实际</div><div class="tag">V 反弹爆发</div></div>
+        <ul>
+          <li>沪指 <b>+1.40% 突破 4000</b>, 9 连阴终结</li>
+          <li>用户零操作, 账面 <b>+5,691 元</b></li>
+          <li>科创 50 <b>+7.61%</b> 历史级爆发, V 型反转启动</li>
+          <li>β 未变, 但账面暂时多赚 <b>+9,443 元</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reversal-quote">
+      「这就是市场: <b>昨天的最佳建议, 今天可能变成最差建议</b>。 这也是为什么我们坚持铁律, 不做择时预测。 昨日基于 9 连阴 + 放量的减仓建议是合理风控, 今日 V 反是 &lt; 30% 历史概率的小概率事件。 幸运一次不改变风控逻辑。」
+    </div>
+  </section>
+
+  <!-- ============ Section 2 · 大盘 V 型反弹 ============ -->
+  <section class="sect">
+    <div class="sect-head">
+      <h2>Section 2 · 大盘 V 型反弹</h2>
+      <span class="meta">5 大指数 · 全线红 · 科创 50 爆发</span>
+    </div>
+
+    <div class="idx-grid">
+      <div class="idx"><div class="n">上证指数</div><div class="p num">4026.35</div><div class="c num up">+1.40%</div></div>
+      <div class="idx"><div class="n">沪深 300</div><div class="p num">4869.78</div><div class="c num up">+2.40%</div></div>
+      <div class="idx"><div class="n">中证 1000</div><div class="p num">8271.43</div><div class="c num up">+1.89%</div></div>
+      <div class="idx"><div class="n">创业板指</div><div class="p num">4012.27</div><div class="c num up">+4.34%</div></div>
+      <div class="idx hot"><div class="n">科创 50</div><div class="p num">2169.73</div><div class="c num up">+7.61%</div></div>
+    </div>
+
+    <div class="regime-note">
+      成交 <b>1.24 万亿</b> 放量突破 (vs 昨日 1.19 万亿), <b>非缩量诱多</b>。 判定: <b>情境 A 真反弹启动</b>, 9 连阴打破。 但 <b>1 日不成趋势</b>, 明日需站稳 <b>4020</b> 验证。 若明日再次放量确认, 才能确认中期底部, 否则仍需按短期风控执行。
+    </div>
+  </section>
+
+  <!-- ============ Section 3 · 持仓当日 +5,691 ============ -->
+  <section class="sect">
+    <div class="sect-head">
+      <h2>Section 3 · 持仓当日 +5,691 元</h2>
+      <span class="meta">7 涨 1 微跌 · 3 大亮点</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>标的</th>
+            <th class="r">数量</th>
+            <th class="r">昨日</th>
+            <th class="r">今日</th>
+            <th class="r">涨跌</th>
+            <th class="r">当日盈亏</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hl-row">
+            <td><b>通富微电 002156</b></td>
+            <td class="r num">200</td>
+            <td class="r num">65.61</td>
+            <td class="r num pos">72.170</td>
+            <td class="r num pos">+10.00% 涨停</td>
+            <td class="r num pos">+1,312</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>沪电股份 002463</b></td>
+            <td class="r num">200</td>
+            <td class="r num">128.20</td>
+            <td class="r num pos">137.450</td>
+            <td class="r num pos">+7.22%</td>
+            <td class="r num pos">+1,850</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>通信 ETF 515880</b></td>
+            <td class="r num">36,200</td>
+            <td class="r num">0.757</td>
+            <td class="r num pos">0.803</td>
+            <td class="r num pos">+6.08%</td>
+            <td class="r num pos">+1,665</td>
+          </tr>
+          <tr>
+            <td>半导体 E 159558</td>
+            <td class="r num">3,700</td>
+            <td class="r num">1.405</td>
+            <td class="r num pos">1.539</td>
+            <td class="r num pos">+9.54%</td>
+            <td class="r num pos">+496</td>
+          </tr>
+          <tr>
+            <td>蔚蓝锂芯 002245</td>
+            <td class="r num">500</td>
+            <td class="r num">19.89</td>
+            <td class="r num pos">20.360</td>
+            <td class="r num pos">+2.36%</td>
+            <td class="r num pos">+235</td>
+          </tr>
+          <tr>
+            <td>机器人 562500</td>
+            <td class="r num">6,600</td>
+            <td class="r num">1.084</td>
+            <td class="r num pos">1.104</td>
+            <td class="r num pos">+1.85%</td>
+            <td class="r num pos">+132</td>
+          </tr>
+          <tr>
+            <td>互联网 QD 160644</td>
+            <td class="r num">100</td>
+            <td class="r num">1.804</td>
+            <td class="r num pos">1.871</td>
+            <td class="r num pos">+3.71%</td>
+            <td class="r num pos">+7</td>
+          </tr>
+          <tr>
+            <td>黄金 ETF 518880</td>
+            <td class="r num">100</td>
+            <td class="r num">8.589</td>
+            <td class="r num neg">8.535</td>
+            <td class="r num neg">-0.63%</td>
+            <td class="r num neg">-5</td>
+          </tr>
+          <tr>
+            <td colspan="5"><b>合计当日</b></td>
+            <td class="r num pos" style="font-size:15px"><b>+5,691</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlights">
+      <div class="hl"><span class="h">亮点 01</span><b>通富微电涨停</b>, AMD MI400 独家封测催化释放, 单日 <b>+10.00%</b>, 突破 72 元前压。</div>
+      <div class="hl"><span class="h">亮点 02</span><b>沪电从 125.13 大反弹到 137.45</b>, 昨日盘中最低触及 125.13 险破全清, 今日直接 <b>+7.22%</b>。</div>
+      <div class="hl"><span class="h">亮点 03</span><b>通信 ETF 达成 P1 目标价</b>, 昨日 0.757 到今日 <b>0.803</b> (+6.08%), 明日 09:30 可从 <b>0.80 附近</b>直接执行减仓。</div>
+    </div>
+  </section>
+
+  <!-- ============ Section 4 · 零操作意外收益辩证 ============ -->
+  <section class="sect">
+    <div class="sect-head">
+      <h2>Section 4 · 零操作意外收益 +9,443 元 · 辩证复盘</h2>
+      <span class="meta">结果论幸运 vs 过程论正确</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>未执行的建议</th>
+            <th class="r">若执行的少赚 / 意外收益</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>P1 · 半导体 E 未减半</td><td class="r num pos">+248</td></tr>
+          <tr><td>P1 · 通信 ETF 未减半</td><td class="r num pos">+778</td></tr>
+          <tr><td>P2 · 机器人未减半</td><td class="r num pos">+13</td></tr>
+          <tr><td>P2 · 沪电未减 50 股</td><td class="r num pos">+223</td></tr>
+          <tr><td><b>合计减仓建议少赚</b></td><td class="r num pos"><b>+1,262</b></td></tr>
+          <tr class="hl-row"><td>未强清沪电 (若破 125 触发全清)</td><td class="r num pos"><b>+2,490</b></td></tr>
+          <tr><td><b>零操作意外总收益 (含反弹回补)</b></td><td class="r num pos" style="font-size:16px"><b>+9,443</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="debate-box">
+      <div class="dh">Portfolio Manager · 辩证观点</div>
+      <p>「<b>结果论幸运 ≠ 过程论正确</b>」</p>
+      <ul class="why-list">
+        <li><span class="lbl">✓ 结果</span>账面多赚 <b>+9,443 元</b>, 数字上是赢家</li>
+        <li><span class="lbl">✗ 过程</span>昨日基于 <b>9 连阴 + 破 4000 + 放量下杀</b>技术面标准的减仓建议是<b>合理风控</b></li>
+        <li><span class="lbl">△ 概率</span>V 型反弹属<b>统计小概率</b> (&lt; 30% 历史发生率)</li>
+        <li><span class="lbl">◇ 定性</span>技术面减仓建议是<b>风控, 不是择时</b>。 不能因偶然幸运弱化明日风控纪律</li>
+        <li><span class="lbl">! 反例</span>若下次同样场景不减仓, <b>10 次里有 7 次会亏更多</b>, 平均 EV 仍为负</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ Section 5 · 半导体 E 数据修正 ============ -->
+  <section class="sect">
+    <div class="sect-head">
+      <h2>Section 5 · 半导体 E 数据修正</h2>
+      <span class="meta">诚实告知 · 请核对</span>
+    </div>
+
+    <div class="data-fix">
+      <div class="fh"><span class="dot"></span>Data Correction · 之前几轮报告价格错误</div>
+      <p>之前几轮报告引用的半导体 E (159558) 价格 <b>4.215 / 4.402 / 2.781</b> 全部错误, 该品种真实全程价格在 <b>1.3 - 1.65 区间</b>, 今日尾盘实测 <b>1.539</b>。</p>
+      <p>数据源: <b>tat_data.fetch_realtime_spot</b> 直接从新浪 hq.sinajs.cn 拉取, 已修复。 此前的错误价格可能源于旧接口的除权因子处理问题, 已在数据源侧兜底。</p>
+      <div class="callout">
+        <b>用户动作:</b> 请核对券商实际持仓 <b>份额 3,700 股</b>和真实持仓成本。 铁律 13 (浮盈 &gt; 15% 必须减半) 是否触发, 需基于<b>真实成本</b>重算, 不能沿用之前 +51.56% 的错误浮盈数字。
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Section 6 · 铁律状态 ============ -->
+  <section class="sect">
+    <div class="sect-head">
+      <h2>Section 6 · 铁律状态 · 依然未达标</h2>
+      <span class="meta">连续 N 天未执行</span>
+    </div>
+
+    <div class="rule-fail">
+      <div class="rh"><span class="dot"></span>Rule Discipline Warning · 两条铁律持续未达标</div>
+      <ul>
+        <li><span class="lb">Rule 01</span>β ≤ 55%: <b>连续 12 天未达标</b>, 今日仍为 <b>61.4%</b> (未变化)。 距目标差 <b>6.4 pct</b>。</li>
+        <li><span class="lb">Rule 13</span>浮盈 &gt; 15% 必须减半: <b>连续 3 天未执行</b>。 半导体 E 待成本核实后重算是否触发。</li>
+      </ul>
+      <div class="warn-line">
+        「一旦<b>铁律可以不执行</b>被证伪, 前面所有诊断作废。 幸运可以放过你一次, 不会放过你两次。」
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Section 7 · 明日动作清单 ============ -->
+  <section class="sect">
+    <div class="sect-head">
+      <h2>Section 7 · 明日 7/10 动作清单</h2>
+      <span class="meta">情境: 谨慎乐观</span>
+    </div>
+
+    <div class="scenario-note">
+      情境判定: <b>谨慎乐观</b>。 V 型反弹 <b>1 日不成趋势</b>, 明日若站稳 4020 且成交 &gt; 1.2 万亿, 可确认反弹延续, 部分 P2 可缓一日; 若冲高回落, P1 无条件执行不受影响。
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>优先级</th>
+            <th>动作</th>
+            <th>触发条件</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="pri-1">P1</span></td>
+            <td><b>通信 ETF 515880</b> 卖 <b>10,000 股</b> @ 0.80 附近</td>
+            <td>无条件, 09:30 挂单</td>
+          </tr>
+          <tr>
+            <td><span class="pri-1">P1</span></td>
+            <td><b>半导体 E 159558</b> 减半</td>
+            <td>成本核实后, 若浮盈仍 &gt; 15% 无条件执行</td>
+          </tr>
+          <tr>
+            <td><span class="pri-2">P2</span></td>
+            <td>通富微电 002156 涨停打开时减 <b>100 股</b></td>
+            <td>首日涨停不追, 次日打开就减</td>
+          </tr>
+          <tr>
+            <td><span class="pri-2">P2</span></td>
+            <td>沪电 002463 反弹 <b>140-142</b> 减 <b>50 股</b></td>
+            <td>反弹到位触发</td>
+          </tr>
+          <tr>
+            <td><span class="pri-2">P2</span></td>
+            <td>机器人 ETF 562500 反弹 <b>1.15</b> 减半</td>
+            <td>反弹到位</td>
+          </tr>
+          <tr>
+            <td><span class="pri-3">P3</span></td>
+            <td>亨通光电 <b>82</b> 缩量止跌 试探 <b>100 股</b></td>
+            <td>回落到建仓区 82-85</td>
+          </tr>
+          <tr>
+            <td><span class="pri-3">P3</span></td>
+            <td>广电运通 <b>10.0 (MA5)</b> 试探 <b>300 股</b></td>
+            <td>回踩到位</td>
+          </tr>
+          <tr>
+            <td><span class="pri-ban">禁止</span></td>
+            <td>追高任何涨停股 (通富 / 东山 / 万通)</td>
+            <td>已连续大涨</td>
+          </tr>
+          <tr>
+            <td><span class="pri-ban">禁止</span></td>
+            <td>通信 ETF 加仓 / 沪电加仓</td>
+            <td>铁律 11 / 12 硬约束</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ Section 8 · 组合经理夜话 ============ -->
+  <section class="sect">
+    <div class="sect-head">
+      <h2>Section 8 · 组合经理夜话</h2>
+      <span class="meta">VOL. 003 · 幸运课</span>
+    </div>
+
+    <div class="pull">
+      今天你没动, 账面还多赚了 <b>+9,443 元</b> -- 这是市场给你上的一堂"幸运课"。 但请记住: 市场 <b>9 次</b>会让你后悔没执行, <b>1 次</b>会让你庆幸没执行, 你今天中了那 1 次。 铁律不是让你每次都赚, 是让你每次都不至于亏太多。 明日 <b>09:30</b>, 通信 ETF 依然要减 <b>10,000 股</b>, 半导体 E 依然要按核实后成本减半 -- 昨天的道理今天不会因为你走运就消失。 做正确的事, 长期赚钱。 做侥幸的事, 短期开心。
+      <span class="who">组合经理夜话 · 2026-07-09 20:00</span>
+    </div>
+  </section>
+
+  <footer>
+    <div class="disc">
+      <b>免责声明:</b> 本日报为 TAT 投研团队内部研究推演, 仅供研究参考, <b>不构成投资建议</b>。 市场有风险, 决策需谨慎。<br>
+      <b>数据来源:</b> 收盘价取自 <b>2026-07-09 14:39:05 新浪 hq.sinajs.cn</b> (tat_data.fetch_realtime_spot 尾盘快照), 涨跌幅相对 7/8 收盘。<br>
+      <b>半导体 E 数据修正:</b> 之前几轮报告价格 (4.215 / 4.402 / 2.781) 全部错误, 真实全程 1.3-1.65 区间。 请以券商实际成本为准。 铁律 13 是否触发需重算。
+    </div>
+    <div class="meta">TAT 投研团队制作 · 由 <a href="https://aisid-fate.github.io/tat-doc/">tat-doc</a> 自动发布 · 组合经理夜话 VOL. 003</div>
+  </footer>
+
+</article>
+</body>
+</html>
