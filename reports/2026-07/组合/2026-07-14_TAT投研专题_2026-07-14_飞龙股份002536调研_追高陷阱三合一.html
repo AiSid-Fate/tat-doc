@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>TAT 投研专题 · 飞龙股份 002536 · 追高陷阱三合一 · 2026-07-14</title>
+<meta name="report-title" content="飞龙股份002536 独立调研 追高陷阱三合一 主管反对建仓">
+<meta name="report-date" content="2026-07-14">
+<meta name="report-category" content="组合">
+<meta name="report-tags" content="专题,个股调研,飞龙股份002536,液冷,追高陷阱,主管反对建仓,vs英维克">
+<meta name="report-summary" content="飞龙股份7/14涨停54.07近3月+56.7%,但H1业绩预告-62%~-68%已确认,液冷仅<10%无法对冲汽车主业82.9%下滑,PE 200x+严重脱离基本面。团队4次一致反对建仓。核心结论:故事真+业绩崩+估值极端三合一追高陷阱。">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{overflow-x:hidden}
+  body{
+    background:#0a0e14;
+    color:#d8dee9;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC",system-ui,sans-serif;
+    font-feature-settings:"tnum";
+    font-variant-numeric:tabular-nums;
+    line-height:1.62;
+    font-size:14px;
+    padding:24px 14px 40px;
+  }
+  .paper{
+    max-width:820px;
+    margin:0 auto;
+    background:linear-gradient(180deg,#0f141c 0%,#0a0e14 100%);
+    border:1px solid #1f2733;
+    border-radius:6px;
+    padding:26px 22px 32px;
+    box-shadow:0 24px 64px rgba(0,0,0,.5);
+  }
+  .up{color:#ef5350}
+  .down{color:#26a69a}
+  .warn{color:#f5b342}
+  .dim{color:#7a8290}
+  .num{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+  b{color:#f0f4f8;font-weight:600}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px -4px;padding:0 4px}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:12.5px}
+  th,td{padding:8px 10px;border-bottom:1px solid #1c2330;text-align:left;vertical-align:middle}
+  th{color:#8a94a3;font-weight:600;background:#12171f;border-bottom:1px solid #2a3342;font-size:11.5px;letter-spacing:.06em}
+  .sum-row td{background:#141a24;font-weight:700;border-top:1px solid #2a3342}
+  .grand-row td{background:#1b2230;font-weight:800;font-size:13px;color:#ffd166}
+
+  /* masthead */
+  .masthead{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:2px solid #ef5350;padding-bottom:10px;margin-bottom:14px;
+    font-size:11px;letter-spacing:.14em;
+  }
+  .brand{color:#8a94a3;font-weight:600}
+  .vol{color:#ef5350;font-weight:700}
+
+  .mast-title{
+    font-family:"SF Pro Display",Georgia,"Times New Roman",serif;
+    font-size:30px;font-weight:800;letter-spacing:.02em;
+    color:#f0f4f8;line-height:1.15;margin:4px 0 8px;
+  }
+  .mast-title .accent{color:#ef5350}
+  .mast-meta{color:#7a8290;font-size:12px;border-top:1px solid #1c2330;border-bottom:1px solid #1c2330;padding:6px 0;margin-bottom:18px}
+
+  /* headline */
+  .headline{margin:8px 0 18px;padding:16px 18px;background:linear-gradient(180deg,#1a1218 0%,#141821 100%);border-left:3px solid #ef5350;border-radius:0 4px 4px 0}
+  .headline .kicker{color:#ef5350;font-size:11px;letter-spacing:.18em;font-weight:700;margin-bottom:8px}
+  .head-title{font-size:19px;color:#f0f4f8;font-weight:700;line-height:1.35;margin-bottom:10px}
+  .head-lede{color:#b8c0cc;font-size:13.5px;line-height:1.68}
+
+  /* KPI dash */
+  .dash{
+    display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0 22px;
+  }
+  .dcell{background:#12171f;border:1px solid #1f2733;border-radius:4px;padding:12px 12px 10px;min-width:0}
+  .dlabel{color:#7a8290;font-size:11px;letter-spacing:.08em;margin-bottom:4px}
+  .dnum{font-size:22px;font-weight:800;line-height:1.1;margin:2px 0 4px;letter-spacing:.01em}
+  .dnote{color:#8a94a3;font-size:11px;line-height:1.4}
+  .dcell.alert{border-color:#ef5350;background:linear-gradient(180deg,#2a1418 0%,#12171f 100%)}
+  .dcell.alert .dlabel{color:#ef5350;font-weight:700}
+
+  /* section */
+  .sect{margin:26px 0 20px;padding-top:6px}
+  .sect-num{display:inline-block;font-family:Georgia,serif;font-size:11px;color:#ef5350;border:1px solid #ef5350;padding:1px 7px;border-radius:2px;margin-bottom:6px;letter-spacing:.1em;font-weight:700}
+  .sect-title{font-size:18px;color:#f0f4f8;font-weight:700;margin:4px 0 8px;letter-spacing:.01em;border-bottom:1px solid #2a3342;padding-bottom:8px}
+  .sect-lede{color:#b8c0cc;font-size:13px;line-height:1.7;margin:8px 0 12px}
+
+  /* Section 0 emergency */
+  .emergency{
+    background:linear-gradient(180deg,#3a0f14 0%,#1a0a0e 100%);
+    border:2px solid #ef5350;border-radius:4px;
+    padding:16px 18px;margin:14px 0 20px;
+    position:relative;overflow:hidden;
+  }
+  .emergency::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:#ef5350;
+    animation:pulse-red 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse-red{0%,100%{opacity:1}50%{opacity:.35}}
+  .emergency .emg-tag{color:#ef5350;font-size:11px;letter-spacing:.2em;font-weight:800;margin-bottom:6px}
+  .emergency .emg-title{color:#ffd166;font-size:20px;font-weight:800;line-height:1.3;margin-bottom:10px}
+  .emergency .emg-body{color:#e5e9f0;font-size:13.5px;line-height:1.7}
+  .emergency .emg-body b{color:#fff}
+  .emergency .emg-action{margin-top:10px;padding:10px 12px;background:rgba(239,83,80,.14);border-left:3px solid #ef5350;border-radius:0 3px 3px 0;font-size:13px;color:#f5f7fa}
+
+  /* index grid */
+  .idx-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:12px 0}
+  .idx{background:#12171f;border:1px solid #1f2733;border-radius:4px;padding:10px 10px;min-width:0}
+  .idx-name{color:#8a94a3;font-size:11px;font-weight:600;letter-spacing:.06em}
+  .idx-price{color:#f0f4f8;font-size:15px;font-weight:800;margin:4px 0 2px}
+  .idx-chg{font-size:13px;font-weight:700}
+  .idx-vs{color:#8a94a3;font-size:11px;margin-top:3px}
+  .idx.hot{border-color:#ef5350;background:linear-gradient(180deg,#241014 0%,#12171f 100%)}
+
+  /* week trend line */
+  .trend-line{
+    display:flex;align-items:stretch;background:#12171f;border:1px solid #1f2733;border-radius:4px;padding:12px 6px;margin:14px 0;overflow-x:auto;
+  }
+  .trend-node{flex:1 1 0;min-width:78px;text-align:center;padding:0 4px;border-right:1px dashed #1f2733;position:relative}
+  .trend-node:last-child{border-right:none}
+  .trend-date{color:#7a8290;font-size:10.5px;letter-spacing:.06em}
+  .trend-val{color:#e5e9f0;font-size:14px;font-weight:700;margin:3px 0 2px}
+  .trend-chg{font-size:11px;font-weight:700}
+  .trend-tag{font-size:10px;color:#8a94a3;margin-top:2px;line-height:1.3}
+  .trend-node.peak{background:linear-gradient(180deg,rgba(38,166,154,.14) 0%,transparent 100%)}
+  .trend-node.low{background:linear-gradient(180deg,rgba(239,83,80,.18) 0%,transparent 100%)}
+  .trend-node.low .trend-val{color:#ef5350}
+
+  /* debate box */
+  .debate-box{
+    margin:16px 0;padding:16px 18px;
+    background:linear-gradient(180deg,#221b0f 0%,#141821 100%);
+    border:1px solid #d4a04a;border-radius:4px;position:relative;
+  }
+  .debate-box::before{
+    content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:2px;
+    background:linear-gradient(90deg,transparent,#ffd166,transparent);
+    animation:sweep 3.5s linear infinite;
+  }
+  @keyframes sweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+  .debate-title{color:#ffd166;font-size:14px;font-weight:800;letter-spacing:.06em;margin-bottom:10px}
+  .debate-quote{background:rgba(255,209,102,.08);border-left:3px solid #ffd166;padding:10px 12px;font-size:13px;color:#e5e9f0;line-height:1.7;margin:8px 0;border-radius:0 3px 3px 0;font-style:italic}
+  .debate-quote .qmeta{display:block;color:#d4a04a;font-size:11px;letter-spacing:.06em;margin-bottom:4px;font-style:normal;font-weight:700}
+  .verify-list{list-style:none;padding:0;margin:12px 0 6px}
+  .verify-list li{padding:8px 0 8px 22px;border-bottom:1px solid #2a2418;color:#d8dee9;font-size:13px;line-height:1.65;position:relative}
+  .verify-list li::before{content:"▸";position:absolute;left:6px;top:8px;color:#ffd166;font-weight:800}
+  .verify-list li:last-child{border-bottom:none}
+  .debate-conclude{margin-top:10px;padding:10px 12px;background:rgba(239,83,80,.14);border-left:3px solid #ef5350;color:#f5f7fa;font-size:13.5px;font-weight:700;border-radius:0 3px 3px 0}
+
+  /* rule fail */
+  .rule-fail{
+    margin:14px 0;padding:14px 16px;
+    background:linear-gradient(180deg,#2a0f14 0%,#141821 100%);
+    border:2px solid #ef5350;border-radius:4px;position:relative;
+  }
+  .rule-fail::before{
+    content:"";position:absolute;top:10px;right:12px;width:8px;height:8px;
+    background:#ef5350;border-radius:50%;
+    animation:pulse-red 1.4s ease-in-out infinite;
+  }
+  .rf-hd{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .rf-flag{color:#ef5350;font-size:10.5px;letter-spacing:.2em;font-weight:800;border:1px solid #ef5350;padding:2px 8px;border-radius:2px}
+  .rf-title{color:#ffd166;font-size:15px;font-weight:800}
+  .rule-fail .rt-wrap{margin-top:6px}
+  .rule-fail table{min-width:100%;font-size:12.5px}
+  .rule-fail th{background:#1a0e12;color:#f5b342}
+  .rule-fail td{border-bottom:1px solid #2a1418}
+  .rf-score{margin-top:12px;padding:10px 12px;background:rgba(0,0,0,.35);border-left:3px solid #ffd166;color:#e5e9f0;font-size:12.5px;border-radius:0 3px 3px 0}
+  .rf-score b{color:#ef5350}
+
+  /* scenarios 3-color */
+  .scenarios{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+  .scen{border-radius:4px;padding:12px 12px;min-width:0;border:1px solid;background:#12171f;display:flex;flex-direction:column}
+  .scen.A{border-color:#26a69a;background:linear-gradient(180deg,rgba(38,166,154,.12) 0%,#12171f 100%)}
+  .scen.B{border-color:#f5b342;background:linear-gradient(180deg,rgba(245,179,66,.12) 0%,#12171f 100%)}
+  .scen.C{border-color:#ef5350;background:linear-gradient(180deg,rgba(239,83,80,.14) 0%,#12171f 100%)}
+  .scen-hd{border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:8px;margin-bottom:8px}
+  .scen-tag{display:inline-block;font-size:10px;letter-spacing:.14em;font-weight:800;padding:1px 6px;border-radius:2px;margin-bottom:4px}
+  .scen.A .scen-tag{background:#26a69a;color:#0a0e14}
+  .scen.B .scen-tag{background:#f5b342;color:#0a0e14}
+  .scen.C .scen-tag{background:#ef5350;color:#0a0e14}
+  .scen-name{color:#f0f4f8;font-size:13px;font-weight:700;margin:3px 0 3px}
+  .scen-verdict{color:#8a94a3;font-size:11px}
+  .act-list{list-style:none;padding:0;margin:0 0 8px;flex:1}
+  .act-list li{padding:6px 0;border-bottom:1px dashed #1f2733;font-size:12px;color:#d8dee9;line-height:1.5;display:flex;gap:6px;align-items:baseline}
+  .act-list li:last-child{border-bottom:none}
+  .pri{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.06em;padding:1px 5px;border-radius:2px;flex-shrink:0}
+  .pri.p1{background:#ef5350;color:#0a0e14}
+  .pri.p2{background:#f5b342;color:#0a0e14}
+  .pri.p3{background:#26a69a;color:#0a0e14}
+  .scen-expect{margin-top:6px;padding-top:8px;border-top:1px solid rgba(255,255,255,.08);font-size:11.5px;color:#b8c0cc;display:grid;grid-template-columns:auto 1fr;gap:2px 8px}
+  .scen-expect span{color:#8a94a3}
+  .scen-expect b{color:#f0f4f8;font-weight:700}
+
+  /* forbid */
+  .forbid-box{
+    margin:12px 0;padding:14px 16px;
+    background:linear-gradient(180deg,#1a1418 0%,#141821 100%);
+    border:1px dashed #7a2a30;border-radius:4px;
+  }
+  .fb-hd{color:#ef5350;font-size:12px;letter-spacing:.14em;font-weight:800;margin-bottom:8px}
+  .fb-list{list-style:none;padding:0;margin:0}
+  .fb-list li{padding:5px 0 5px 22px;position:relative;color:#d8dee9;font-size:12.5px;line-height:1.55}
+  .fb-list li::before{content:"NO";position:absolute;left:0;top:5px;color:#ef5350;font-size:9.5px;font-weight:800;letter-spacing:.06em;border:1px solid #ef5350;padding:0 4px;border-radius:2px;line-height:1.4}
+
+  /* night talk */
+  .night-talk{
+    margin:14px 0;padding:16px 18px;
+    background:linear-gradient(180deg,#141a24 0%,#0f141c 100%);
+    border:1px solid #d4a04a;border-radius:4px;
+  }
+  .nt-lead{color:#ffd166;font-size:14px;font-weight:700;padding-bottom:10px;border-bottom:1px solid #2a2418;margin-bottom:12px;font-style:italic}
+  .nt-block{margin:10px 0;padding:12px 14px;background:rgba(255,209,102,.05);border-left:3px solid #d4a04a;border-radius:0 3px 3px 0}
+  .nt-num{color:#ffd166;font-size:10.5px;letter-spacing:.16em;font-weight:800;margin-bottom:2px}
+  .nt-h{color:#f0f4f8;font-size:14px;font-weight:700;margin-bottom:6px}
+  .nt-p{color:#d8dee9;font-size:13px;line-height:1.72}
+  .nt-p b{color:#ffd166}
+  .nt-sign{margin-top:14px;text-align:right;color:#8a94a3;font-size:11px;letter-spacing:.06em}
+
+  /* final line - bloomberg style */
+  .final-line{
+    margin:20px 0 8px;padding:16px 18px;
+    background:#0f141c;
+    border-top:2px solid #ef5350;border-bottom:1px solid #1f2733;
+  }
+  .final-tag{color:#ef5350;font-size:10.5px;letter-spacing:.2em;font-weight:800;margin-bottom:6px}
+  .final-quote{color:#f0f4f8;font-size:15px;font-weight:700;line-height:1.55;letter-spacing:.02em}
+  .final-quote b{color:#ffd166}
+  .final-sign{margin-top:8px;color:#8a94a3;font-size:11px;text-align:right;letter-spacing:.06em}
+
+  /* highlight rows */
+  .hl-row{background:rgba(239,83,80,.06)}
+  .hl-row td{border-bottom-color:#2a2028}
+  .win-row{background:rgba(38,166,154,.06)}
+
+  /* footer */
+  footer{margin-top:24px;padding-top:14px;border-top:1px solid #1f2733;color:#7a8290;font-size:11.5px;line-height:1.65}
+  .foot-row{display:flex;gap:10px;margin:4px 0;flex-wrap:wrap}
+  .foot-lb{color:#ef5350;font-weight:700;letter-spacing:.06em;min-width:60px}
+  .foot-sign{margin-top:12px;display:flex;justify-content:space-between;color:#5c6370;font-size:10.5px;flex-wrap:wrap;gap:6px}
+
+  /* mobile */
+  @media (max-width:820px){
+    .dash{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .idx-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .idx-grid .idx:nth-child(5){grid-column:span 2}
+    .scenarios{grid-template-columns:1fr}
+  }
+  @media (max-width:480px){
+    body{padding:14px 8px 30px;font-size:13.5px}
+    .paper{padding:18px 14px 24px;border-radius:4px}
+    .mast-title{font-size:24px}
+    .head-title{font-size:16.5px}
+    .headline{padding:14px 14px}
+    .dcell{padding:10px 10px}
+    .dnum{font-size:19px}
+    .emergency{padding:14px 14px}
+    .emergency .emg-title{font-size:17px}
+    .sect{margin:22px 0 16px}
+    .sect-title{font-size:16px}
+    .idx-price{font-size:14px}
+    .trend-node{min-width:70px;padding:0 3px}
+    .trend-val{font-size:12.5px}
+    .final-quote{font-size:13.5px}
+    .paper,.sect,.emergency,.debate-box,.rule-fail,.scen,.night-talk,.final-line,.forbid-box,.headline,.dash>*,.idx-grid>*,.scenarios>*,.table-wrap{min-width:0}
+    footer{font-size:11px}
+  }
+  @media print{body{background:#fff;color:#000}.paper{border:none;box-shadow:none;background:#fff}}
+</style>
+</head>
+<body>
+<article class="paper">
+
+  <header class="masthead">
+    <div class="brand">TAT 投研团队 · 个股专题</div>
+    <div class="vol">飞龙股份 002536 · 独立调研</div>
+  </header>
+
+  <h1 class="mast-title">飞龙股份 <span class="accent">002536</span> · 追高陷阱三合一</h1>
+  <div class="mast-meta">2026 年 7 月 14 日 · 收盘后专题 · 团队 4 次一致反对建仓 · 主管评级 反对</div>
+
+  <div class="headline">
+    <div class="kicker">头版 · 主管独立结论</div>
+    <h2 class="head-title">7/14 <span class="down">+10.00% 涨停</span> 54.07 vs H1 业绩预告 <span class="up">-62% ~ -68%</span><br>股价狂欢 vs 业绩塌方 · 一体两面</h2>
+    <p class="head-lede">近 3 月股价 <b class="down">+56.7%</b> · PE(H1 年化) <b class="up">200x+</b> · 液冷业务占比 <b class="warn">&lt; 10%</b> 无法对冲汽车主业 <b>82.9%</b> 下滑 = <b class="warn">故事真 + 业绩崩 + 估值极端三合一追高陷阱</b>。7/9 公司披露 2026H1 归母 <b class="up">-61.98% ~ -67.69%</b>，Q1 扣非 <b class="up">-54.2%</b> 已加速恶化。团队从 7/7 初判、7/9 冰冰月报解读、到 7/14 本次深度调研，4 次一致<b class="up">反对建仓</b>。主板有更好替代：AI 液冷买英维克 002837，汽车 + 机器人热管理买拓普集团 601689。</p>
+  </div>
+
+  <section class="dash">
+    <div class="dcell">
+      <div class="dlabel">7/14 收盘</div>
+      <div class="dnum down">54.07</div>
+      <div class="dnote"><b class="down">+10.00%</b> 涨停 · 近 3 月 +56.7%</div>
+    </div>
+    <div class="dcell alert">
+      <div class="dlabel">2026H1 业绩预告 · 7/9 披露</div>
+      <div class="dnum up">-62% ~ -68%</div>
+      <div class="dnote">Q1 扣非 <b class="up">-54.2%</b> 加速恶化确认</div>
+    </div>
+    <div class="dcell alert">
+      <div class="dlabel">PE(H1 年化) · 极端偏高</div>
+      <div class="dnum warn">200x+</div>
+      <div class="dnote">2025 PE 95x · 市值 302.85 亿</div>
+    </div>
+    <div class="dcell alert">
+      <div class="dlabel">主管评级</div>
+      <div class="dnum up">反对建仓</div>
+      <div class="dnote">团队 4 次一致 · 三合一陷阱</div>
+    </div>
+  </section>
+
+  <!-- ========== Section 1 · 主管评级 · 反对建仓 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 01</div>
+    <h3 class="sect-title">主管评级 · 反对建仓</h3>
+
+    <div class="debate-box">
+      <div class="debate-title">TAT 研究主管 · 一句话结论</div>
+      <div class="debate-quote">
+        <span class="qmeta">2026-07-14 收盘专题 · 独立调研结论</span>
+        <b>故事真 + 业绩崩 + 估值极端 = 三合一追高陷阱。</b>飞龙股份 002536 的液冷叙事是真实的（37KW 液冷泵、英伟达 / 谷歌 / 华为供应商身份），但业务权重 &lt; 10% 无法对冲汽车主业 82.9% 的塌方；H1 业绩预告 -62% ~ -68% 已由公司自己 7/9 官宣；PE 200x+ 是「未来 3-5 年利润全部提前透支」的天上估值。<b class="warn">这不是「买不买」的问题，是「根本不该在这个位置关注」的问题。</b>
+      </div>
+
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>日期</th>
+            <th>团队观点</th>
+            <th>信号</th>
+            <th class="num">立场一致性</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hl-row">
+            <td><b>7/7 初判</b></td>
+            <td>Q1 扣非 <b class="up">-54.2%</b> 建议回避</td>
+            <td>业绩已见恶化</td>
+            <td class="num down">✔ 一致</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>7/9 冰冰月报解读</b></td>
+            <td>建议放弃液冷方向（飞龙 / 高澜等）</td>
+            <td>液冷叙事拥挤</td>
+            <td class="num down">✔ 一致</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>7/14 本次深度调研</b></td>
+            <td>H1 预告 <b class="up">-62% ~ -68%</b> 证实</td>
+            <td>业绩塌方公司自证</td>
+            <td class="num down">✔ 一致</td>
+          </tr>
+          <tr class="grand-row">
+            <td colspan="3"><b>4 次独立观察 · 结论完全一致</b></td>
+            <td class="num"><b class="down">反对建仓</b></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="debate-conclude">
+        <b>研究主管最终结论：</b>飞龙 002536 是本轮 AI 液冷主题最典型的<b class="warn">「概念错配 + 业绩塌方 + 估值透支」</b>三合一样本。任何试图为「万一涨停延续」找理由的行为，本质都是「相信第三次幸运」（参照 7/9 + 7/14 用户已经中过两次的先例）。<b>本报告结论清晰：不建议建仓，不建议追高，不建议回踩加仓。</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 2 · 三个决定性事实 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 02</div>
+    <h3 class="sect-title">三个决定性事实 · 本报告灵魂章节</h3>
+    <p class="sect-lede">研究主管的反对结论不是「感觉」，是三条硬事实的自然推论。任何单条都足以否决建仓，三条同时成立则不再存在「择时上车」的可能性。</p>
+
+    <div class="rule-fail" style="margin-bottom:16px">
+      <div class="rf-hd">
+        <div class="rf-flag">FACT 01</div>
+        <div class="rf-title">业绩长期性恶化 · 从「下滑」到「暴跌」三段式确认</div>
+      </div>
+      <div class="rt-wrap table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>期间</th>
+            <th class="num">归母净利 YoY</th>
+            <th>业务归因</th>
+            <th>判定</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2025 全年</td>
+            <td class="num up">-3.85%</td>
+            <td>汽车零部件毛利率首次回落</td>
+            <td class="warn">已下滑</td>
+          </tr>
+          <tr class="hl-row">
+            <td>2026 Q1 扣非</td>
+            <td class="num up"><b>-54.2%</b></td>
+            <td>整车行业价格战传导 · 主业承压</td>
+            <td class="up">加速恶化</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>2026 H1 预告</b> · 7/9 披露</td>
+            <td class="num up"><b>-61.98% ~ -67.69%</b></td>
+            <td>公司公告原话：整车行业价格竞争激烈，零部件毛利率下降</td>
+            <td class="up"><b>暴跌确认</b></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="rf-score">
+        <b>关键：</b>主业 <b class="warn">82.9% 仍是汽车零部件</b>，H1 归因由公司自己写在业绩预告里 = 不是市场猜测，是公司自证。液冷业务占比 &lt; 10%，即使 100% 增长也无法弥补主业 60%+ 的净利下滑。
+      </div>
+    </div>
+
+    <div class="rule-fail" style="margin-bottom:16px">
+      <div class="rf-hd">
+        <div class="rf-flag">FACT 02</div>
+        <div class="rf-title">液冷业务定位 · 「零部件供应商」不是「终端方案」</div>
+      </div>
+      <ul class="verify-list">
+        <li><b class="down">✔ 事实成立</b>：飞龙确实有 37KW 液冷泵产品，是英伟达 Rubin / 谷歌 TPU / 华为昇腾平台的<b>零部件供应商</b>，这是市场追捧的原始故事</li>
+        <li><b class="warn">△ 关键差异</b>：飞龙是<b>英维克等液冷终端方案厂商的上游</b>，终端方案商拿的是 40%+ 液冷营收占比 + 80-90 亿在手订单，飞龙拿的是单件泵的零部件订单，商业价值和估值溢价完全不同层级</li>
+        <li><b class="up">✘ 权重不足</b>：液冷占比 <b class="up">&lt; 10%</b> · 汽车主业 <b>82.9%</b> · 即使液冷业务翻倍成长到 20%，仍无法对冲主业哪怕 -20% 的下滑</li>
+      </ul>
+      <div class="rf-score">
+        <b>类比：</b>飞龙的液冷 = 苹果供应链里的螺丝厂。市场按「苹果 iPhone 概念」给螺丝厂 200x PE，但螺丝厂本质仍是螺丝厂，业绩取决于螺丝行业周期而非 iPhone 销量。<b class="warn">「沾边 = 高估值」不是可持续的定价逻辑。</b>
+      </div>
+    </div>
+
+    <div class="rule-fail">
+      <div class="rf-hd">
+        <div class="rf-flag">FACT 03</div>
+        <div class="rf-title">估值极端脱离基本面 · 未来 3-5 年利润提前透支</div>
+      </div>
+      <div class="rt-wrap table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>指标</th>
+            <th class="num">数值</th>
+            <th>解读</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7/14 收盘价</td>
+            <td class="num down"><b>54.07</b></td>
+            <td class="down">涨停封板</td>
+          </tr>
+          <tr>
+            <td>市值</td>
+            <td class="num">302.85 亿</td>
+            <td class="warn">中盘股 · 流动性充分</td>
+          </tr>
+          <tr>
+            <td>2025 PE</td>
+            <td class="num warn">~ 95x</td>
+            <td class="warn">已属偏高</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>2026 H1 年化 PE</b></td>
+            <td class="num up"><b>~ 200x+</b></td>
+            <td class="up">业绩暴跌后估值反而更贵</td>
+          </tr>
+          <tr class="hl-row">
+            <td>近 3 月股价涨幅</td>
+            <td class="num down"><b>+56.7%</b></td>
+            <td class="down">纯资金 + 概念驱动，非业绩</td>
+          </tr>
+          <tr class="hl-row">
+            <td>主力 7/8 净流</td>
+            <td class="num up">-1.02 亿</td>
+            <td class="up">机构派发 · 融资盘 +4.4 亿接盘</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="rf-score">
+        <b>估值悖论：</b>PE = 股价 / EPS · 分母 EPS 因 H1 -62% ~ -68% 大幅收缩，分子股价却因涨停继续扩张 ， 结果是估值不降反升到 200x+。<b class="warn">这意味着未来 2-3 季度即使业绩零增长，也无法消化当前估值 · 更别说业绩仍在恶化通道</b>。「估值-业绩负剪刀差」是所有股价崩塌的前置条件。
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 3 · 技术面独立结论 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 03</div>
+    <h3 class="sect-title">技术面独立结论 · 极强势 = 极拥挤</h3>
+    <p class="sect-lede">技术面单独看是完美的多头结构，但完美的技术面 + 破碎的基本面 = 最危险的组合。这是「主力已经派发完、留下融资盘接最后一棒」的典型形态。</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>技术指标</th>
+          <th class="num">数值</th>
+          <th>状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="win-row">
+          <td>7/14 收盘</td>
+          <td class="num down"><b>54.07 · +10.00% 涨停</b></td>
+          <td class="down">封板到收盘</td>
+        </tr>
+        <tr>
+          <td>MA5</td>
+          <td class="num">51.71</td>
+          <td class="down">上方</td>
+        </tr>
+        <tr>
+          <td>MA10</td>
+          <td class="num">51.40</td>
+          <td class="down">上方</td>
+        </tr>
+        <tr>
+          <td>MA20</td>
+          <td class="num">48.93</td>
+          <td class="down">上方 +10.5%</td>
+        </tr>
+        <tr>
+          <td>MA60</td>
+          <td class="num">43.62</td>
+          <td class="down">上方 +23.9%</td>
+        </tr>
+        <tr>
+          <td>MA120</td>
+          <td class="num">37.30</td>
+          <td class="down">上方</td>
+        </tr>
+        <tr class="hl-row">
+          <td><b>MA120 乖离</b></td>
+          <td class="num warn"><b>+45%</b></td>
+          <td class="warn">极度强势 · 但也极度拥挤</td>
+        </tr>
+        <tr class="hl-row">
+          <td>今日换手率</td>
+          <td class="num warn"><b>7.80%</b></td>
+          <td class="warn">封板但筹码剧烈交换（非锁筹）</td>
+        </tr>
+        <tr class="hl-row">
+          <td>近 3 月涨停 / 跌停</td>
+          <td class="num warn"><b>13 次涨停 + 1 次跌停</b></td>
+          <td class="up">典型游资炒作特征</td>
+        </tr>
+        <tr class="hl-row">
+          <td>现价距本轮高 57.27</td>
+          <td class="num up"><b>-5.9%</b></td>
+          <td class="up">追高空间已极小</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p class="sect-lede"><b>技术面辩证：</b>均线全部多头 + MA120 乖离 +45% + 13 次涨停 = 教科书级强势结构。<b class="warn">但涨停封板叠加 7.80% 换手</b> = 主力和游资正在完成筹码接力，锁筹的股票换手率通常 &lt; 3%。VOL.005 日报里说过「涨停股 T+1 维持 10%+ 反抽历史概率 &lt; 30%」，观察池上周广电 / 星网 / 深圳华强 / 紫光股份 4/4 涨停后全部回调已经证明这一点。<b>技术强势不是买入理由，是「兑现窗口」的另一个名字。</b></p>
+  </section>
+
+  <!-- ========== Section 4 · vs 英维克 / 川润 三方对比 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 04</div>
+    <h3 class="sect-title">vs 英维克 002837 / 川润 002272 · 三方对比 · 本报告核心表</h3>
+    <p class="sect-lede">如果真要买 AI 液冷，正确答案是英维克 002837，不是飞龙。<b class="warn">飞龙股价 +56.7% vs 英维克 -11.2% = 市场资金错配</b>，概念叙事的赢家往往不是基本面的赢家。</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>维度</th>
+          <th>飞龙 002536</th>
+          <th>英维克 002837</th>
+          <th>川润 002272</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl-row">
+          <td><b>液冷定位</b></td>
+          <td class="up">零部件供应商（泵）</td>
+          <td class="down"><b>液冷方案龙头</b> · 直供英伟达 / 谷歌</td>
+          <td class="warn">概念股</td>
+        </tr>
+        <tr class="hl-row">
+          <td><b>液冷营收占比</b></td>
+          <td class="num up">&lt; 10%</td>
+          <td class="num down"><b>40%+</b></td>
+          <td class="num warn">小</td>
+        </tr>
+        <tr class="hl-row">
+          <td><b>在手订单</b></td>
+          <td class="warn">未披露</td>
+          <td class="down"><b>80-90 亿</b></td>
+          <td class="up">无</td>
+        </tr>
+        <tr>
+          <td>2026 Q1 扣非 YoY</td>
+          <td class="num up">-54.2%</td>
+          <td class="num up">-87.1%</td>
+          <td class="num up">-30.6%</td>
+        </tr>
+        <tr class="hl-row">
+          <td><b>2026 H1 业绩</b></td>
+          <td class="num up"><b>-62% ~ -68% 已确认</b></td>
+          <td class="num warn">承压待披露</td>
+          <td class="num warn">未详</td>
+        </tr>
+        <tr class="hl-row">
+          <td><b>近 3 月股价</b></td>
+          <td class="num down"><b>+56.7% 🥇</b></td>
+          <td class="num up">-11.2%</td>
+          <td class="num down">+6.3%</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="debate-box">
+      <div class="debate-title">关键矛盾 · 市场资金错配</div>
+      <div class="debate-quote">
+        <span class="qmeta">主管辩证 · 概念定价 vs 业务定价</span>
+        英维克 002837 才是真正的 AI 液冷方案龙头：液冷占比 <b class="down">40%+</b>、在手订单 <b class="down">80-90 亿</b>、直供英伟达 / 谷歌 ， 但近 3 月股价 <b class="up">-11.2%</b>；飞龙 002536 是零部件供应商（价值链最上游、议价能力最弱、毛利最薄），液冷占比 <b class="warn">&lt; 10%</b>，但近 3 月股价 <b class="down">+56.7%</b>。<b>这就是「叙事优于基本面」的典型市场错配</b>，短期可以持续，长期必然收敛。
+      </div>
+      <div class="debate-conclude">
+        <b>结论：</b>如果真要买 AI 液冷方向，应该买英维克 002837（当前是错配的价格洼地 + 真正的方案龙头），不是飞龙 002536（概念泡沫顶部 + 零部件供应商定位）。<b class="warn">买错标的比不买更糟。</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 5 · 3 条硬理由反对 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 05</div>
+    <h3 class="sect-title">3 条硬理由反对 · 每条都足以否决</h3>
+
+    <div class="night-talk">
+      <div class="nt-block">
+        <div class="nt-num">REASON 01</div>
+        <div class="nt-h">业绩暴跌确认长期恶化通道</div>
+        <p class="nt-p">2025 <b class="up">-3.85%</b> → 2026 Q1 扣非 <b class="up">-54.2%</b> → 2026 H1 预告 <b class="up">-62% ~ -68%</b>，三段式恶化路径清晰。液冷业务 <b class="warn">&lt; 10%</b> 权重<b>无法对冲汽车主业 82.9% 的塌方</b>。业绩预告是公司自己 7/9 官方披露，不是市场猜测。</p>
+      </div>
+
+      <div class="nt-block">
+        <div class="nt-num">REASON 02</div>
+        <div class="nt-h">PE 200x+ 严重脱离基本面</div>
+        <p class="nt-p">未来 2-3 季度大概率进入<b class="warn">「估值 - 业绩负剪刀差」</b>状态：分子股价已透支未来 3-5 年利润，分母 EPS 却在收缩。即使股价横盘不涨，一年后估值仍会因业绩下滑继续被动抬升。这种结构<b class="up">只有一种解决方式 ， 股价大幅回调</b>。</p>
+      </div>
+
+      <div class="nt-block">
+        <div class="nt-num">REASON 03</div>
+        <div class="nt-h">主板有更好替代 · 不必勉强飞龙</div>
+        <p class="nt-p">
+          <b>想买 AI 液冷 →</b> 英维克 002837（真正方案龙头 · 40%+ 占比 · 80-90 亿订单 · 近 3 月还处于 -11% 折价区）<br>
+          <b>想买汽车 + 机器人热管理 →</b> 拓普集团 601689（同板块龙头 · 业绩确定性远优于飞龙）<br>
+          <b>想买 AI 外围 α →</b> 团队 α 矩阵清单：蔚蓝锂芯 002245 · 紫光国微 002049 · 韦尔股份 603501 · 广电运通 002152（4 条均已完成基本面 + 技术面双验证）
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 6 · 三种情境都不建仓 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 06</div>
+    <h3 class="sect-title">三种情境都不建仓 · 无择时空间</h3>
+    <p class="sect-lede">很多用户会问「那等回调再买行不行」，本节说明为什么<b>任何价位都不建议</b>。这不是「择时」问题，是「根本不应该在此价位关注」问题。</p>
+
+    <div class="scenarios">
+      <div class="scen C">
+        <div class="scen-hd">
+          <div class="scen-tag">情境 A</div>
+          <div class="scen-name">现价追涨（54.07）</div>
+          <div class="scen-verdict">最不建议 · 主力派发中</div>
+        </div>
+        <ul class="act-list">
+          <li><span class="pri p1">拒</span>距本轮高 57.27 仅 -5.9% · 追高空间已耗尽</li>
+          <li><span class="pri p1">拒</span>主力 7/8 净卖 -1.02 亿 · 融资盘 +4.4 亿接盘</li>
+          <li><span class="pri p1">拒</span>换手 7.80% = 筹码剧烈交换 · 非锁筹结构</li>
+          <li><span class="pri p1">拒</span>PE 200x+ 顶部区间</li>
+        </ul>
+        <div class="scen-expect">
+          <span>风险等级</span><b class="up">极高</b>
+          <span>预期回撤</span><b class="up">-20% ~ -35%</b>
+        </div>
+      </div>
+
+      <div class="scen B">
+        <div class="scen-hd">
+          <div class="scen-tag">情境 B</div>
+          <div class="scen-name">等回踩 MA20（48.93）</div>
+          <div class="scen-verdict">看似安全 · 实则陷阱</div>
+        </div>
+        <ul class="act-list">
+          <li><span class="pri p1">拒</span>即使回踩 48.93，PE 仍 <b class="up">180x+</b></li>
+          <li><span class="pri p1">拒</span>业绩杀风险与技术支撑无关</li>
+          <li><span class="pri p1">拒</span>下修 30% 才回到「合理估值」</li>
+          <li><span class="pri p1">拒</span>回踩 MA20 是抄底信号 · 不是价值信号</li>
+        </ul>
+        <div class="scen-expect">
+          <span>风险等级</span><b class="warn">高</b>
+          <span>下修空间</span><b class="up">-30% 才到合理值</b>
+        </div>
+      </div>
+
+      <div class="scen A">
+        <div class="scen-hd">
+          <div class="scen-tag">情境 C</div>
+          <div class="scen-name">等深度回调 MA60（43.62）</div>
+          <div class="scen-verdict">纯技术支撑 · 业务面无支撑</div>
+        </div>
+        <ul class="act-list">
+          <li><span class="pri p2">拒</span>43.62 是均线技术支撑</li>
+          <li><span class="pri p2">拒</span>业务面无对应逻辑支撑此价位</li>
+          <li><span class="pri p2">拒</span>PE 仍 <b class="warn">160x+</b> · 仍偏高</li>
+          <li><span class="pri p2">拒</span>H1 业绩公告后有二次杀跌可能</li>
+        </ul>
+        <div class="scen-expect">
+          <span>风险等级</span><b class="warn">中偏高</b>
+          <span>业务面支撑</span><b class="up">无</b>
+        </div>
+      </div>
+    </div>
+
+    <div class="emergency" style="margin-top:14px">
+      <div class="emg-tag">NO ENTRY ZONE</div>
+      <div class="emg-title">这不是「择时」问题，是「根本不该在此价位关注」问题</div>
+      <div class="emg-body">
+        飞龙 002536 的问题不在于价格 54.07 太贵，回到 43.62 就便宜；<b class="warn">问题在于业务结构（汽车 82.9% + 液冷 &lt; 10%）根本承载不起 AI 液冷概念定价</b>。任何试图在此股上找「合理买入价」的努力，本质都是接受了错误的定价框架。<b>正确做法：直接从关注列表移除，把精力放在英维克 002837 / 拓普集团 601689 / 团队 α 矩阵。</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 7 · 与用户组合的匹配度 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 07</div>
+    <h3 class="sect-title">与用户组合的匹配度 · 反向操作警告</h3>
+    <p class="sect-lede">即使抛开飞龙本身，从用户组合适配角度看，加飞龙也是反向操作，因为它加重的正是用户当前最需要减轻的风险维度。</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>组合维度</th>
+          <th>用户当前状态</th>
+          <th>加飞龙的影响</th>
+          <th>判定</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl-row">
+          <td>AI β 敞口</td>
+          <td class="num up"><b>81.5%</b> 严重超配（目标 55%）</td>
+          <td>飞龙 = AI 液冷概念 = 与现有 AI β <b class="warn">高度相关</b></td>
+          <td class="up">加重 · 不构成分散</td>
+        </tr>
+        <tr class="hl-row">
+          <td>明日核心任务</td>
+          <td class="down"><b>降 β</b>：沪电全清 + 通信 ETF 减半</td>
+          <td>加飞龙 = <b class="up">反向操作</b> · 一边减一边加</td>
+          <td class="up">与团队方向冲突</td>
+        </tr>
+        <tr class="hl-row">
+          <td>历史教训</td>
+          <td class="warn">沪电从 149 追高 → 124 深套 = -25 元 / 股</td>
+          <td>飞龙 54.07 追高 → 若回调 -30% 到 37.85 = <b class="up">重演沪电剧本</b></td>
+          <td class="up">相同错误模式</td>
+        </tr>
+        <tr class="hl-row">
+          <td>现金池</td>
+          <td class="num up">&lt; 3% 严重不足</td>
+          <td>加仓飞龙 = 消耗仅剩现金池 · 失去应对突发能力</td>
+          <td class="up">进一步弱化组合</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="debate-conclude" style="margin-top:14px">
+      <b>组合视角结论：</b>即使飞龙本身没有业绩塌方问题，从组合管理角度也不该在此时加仓，用户当前需要的是<b class="down">「降低相关性 · 增加现金池 · 减少 AI β」</b>，飞龙提供的恰好是相反方向：<b class="up">「加重 AI 相关性 · 消耗现金池 · 提高 AI β」</b>。加飞龙 = 又一次重演沪电追高剧本。
+    </div>
+  </section>
+
+  <!-- ========== Section 8 · 主管一句话 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 08</div>
+    <h3 class="sect-title">研究主管一句话</h3>
+
+    <div class="final-line">
+      <div class="final-tag">FINAL WORD · TAT RESEARCH DIRECTOR</div>
+      <div class="final-quote">
+        「飞龙股份 <b>002536</b> 短期是<b>游资炒作 + 博主叙事</b>的产物，<br>
+        业绩暴跌 <b class="up">-62% ~ -68%</b> 已确认，PE <b class="warn">200x+</b> 是天上的估值。<br>
+        这不是<b>「买不买」</b>的问题，是<b>「根本不该在这个位置关注」</b>。<br>
+        你现在明天 9:30 最该做的还是那一件事：<b class="down">沪电减仓</b>，<br>
+        别被涨停的飞龙分散了注意力。」
+      </div>
+      <div class="final-sign">TAT 投研主管 · 2026-07-14 · 飞龙 002536 独立调研 · 亲笔</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-row">
+      <span class="foot-lb">数据源</span>
+      <span>公司公告 · 2025 年报 + 2026 H1 业绩预告（7/9 披露）· 腾讯 qt.gtimg.cn 7/14 收盘价 · web_search 机构研报 · 团队 4 次独立观察一致</span>
+    </div>
+    <div class="foot-row">
+      <span class="foot-lb">研判基础</span>
+      <span>基本面：主业 82.9% 汽车零部件 · 液冷 &lt; 10% · H1 -62% ~ -68% · Q1 扣非 -54.2% ｜ 估值：PE 200x+ · 市值 302.85 亿 ｜ 技术：涨停 54.07 · 近 3 月 +56.7% · MA120 乖离 +45% · 换手 7.80% · 主力 -1.02 亿 · 融资 +4.4 亿</span>
+    </div>
+    <div class="foot-row">
+      <span class="foot-lb">替代标的</span>
+      <span>AI 液冷：英维克 002837（40%+ 占比 · 80-90 亿订单）· 汽车 + 机器人热管理：拓普集团 601689 · AI 外围 α：蔚蓝锂芯 002245 · 紫光国微 002049 · 韦尔股份 603501 · 广电运通 002152</span>
+    </div>
+    <div class="foot-row">
+      <span class="foot-lb">团队评级历程</span>
+      <span>7/7 初判 Q1 扣非 -54.2% 建议回避 → 7/9 冰冰月报解读 建议放弃液冷方向 → 7/14 本次深度调研 H1 -62% ~ -68% 证实 · 4 次一致反对建仓</span>
+    </div>
+    <div class="foot-sign">
+      <span>TAT 投研团队 · 个股专题 · 飞龙股份 002536 独立调研 · 2026-07-14</span>
+      <span>本报告仅作团队内部研讨用 · 不构成任何投资建议</span>
+    </div>
+  </footer>
+</article>
+</body>
+</html>
