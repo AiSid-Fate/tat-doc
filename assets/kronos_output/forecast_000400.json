@@ -1,0 +1,14 @@
+{
+    "code": "000400",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 19.85,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 20.325536727905273,
+    "pred_last_day_mean": 25.868709564208984,
+    "direction": "UP",
+    "pred_30d_return_pct": 30.320954983420556,
+    "p10_interval_last_day": 24.995595932006836,
+    "p90_interval_last_day": 26.95577049255371,
+    "warnings": []
+}

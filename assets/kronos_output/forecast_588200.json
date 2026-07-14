@@ -1,0 +1,17 @@
+{
+    "code": "588200",
+    "type": "etf",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 4.332,
+    "latest_date": "2026-07-13",
+    "pred_first_day_mean": 3.476407289505005,
+    "pred_last_day_mean": 2.1544792652130127,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -50.26594493968115,
+    "p10_interval_last_day": 1.8951839208602905,
+    "p90_interval_last_day": 2.4641168117523193,
+    "warnings": [
+        "WARNING: Predicted first day jump of -19.75% relative to last close (4.3320 -> 3.4764).",
+        "WARNING: High volatility on predicted day 2: -18.86% change."
+    ]
+}

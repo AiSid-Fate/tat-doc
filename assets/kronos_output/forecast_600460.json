@@ -1,0 +1,16 @@
+{
+    "code": "600460",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 54.66,
+    "latest_date": "2026-06-30",
+    "pred_first_day_mean": 39.55644607543945,
+    "pred_last_day_mean": 28.811426162719727,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -47.289743573509455,
+    "p10_interval_last_day": 27.758651733398438,
+    "p90_interval_last_day": 29.855236053466797,
+    "warnings": [
+        "WARNING: Predicted first day jump of -27.63% relative to last close (54.6600 -> 39.5564)."
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "code": "002409",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 187.49,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 128.65953063964844,
+    "pred_last_day_mean": 70.74686431884766,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -62.266326567364835,
+    "p10_interval_last_day": 62.57637405395508,
+    "p90_interval_last_day": 77.92054748535156,
+    "warnings": [
+        "WARNING: Predicted first day jump of -31.38% relative to last close (187.4900 -> 128.6595)."
+    ]
+}

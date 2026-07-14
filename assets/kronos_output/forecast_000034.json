@@ -1,0 +1,14 @@
+{
+    "code": "000034",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 26.02,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 25.75714683532715,
+    "pred_last_day_mean": 28.547033309936523,
+    "direction": "UP",
+    "pred_30d_return_pct": 9.711888201139596,
+    "p10_interval_last_day": 26.770708084106445,
+    "p90_interval_last_day": 29.778512954711914,
+    "warnings": []
+}

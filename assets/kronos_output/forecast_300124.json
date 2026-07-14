@@ -1,0 +1,14 @@
+{
+    "code": "300124",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 66.33,
+    "latest_date": "2026-06-30",
+    "pred_first_day_mean": 68.09052276611328,
+    "pred_last_day_mean": 73.43846130371094,
+    "direction": "UP",
+    "pred_30d_return_pct": 10.716811855436358,
+    "p10_interval_last_day": 71.6228256225586,
+    "p90_interval_last_day": 75.55948638916016,
+    "warnings": []
+}

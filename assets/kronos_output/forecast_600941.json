@@ -1,0 +1,14 @@
+{
+    "code": "600941",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 91.8,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 92.75611877441406,
+    "pred_last_day_mean": 100.14542388916016,
+    "direction": "UP",
+    "pred_30d_return_pct": 9.090875696252887,
+    "p10_interval_last_day": 98.15201568603516,
+    "p90_interval_last_day": 101.87980651855469,
+    "warnings": []
+}

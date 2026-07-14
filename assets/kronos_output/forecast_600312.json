@@ -1,0 +1,14 @@
+{
+    "code": "600312",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 17.33,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 17.29633903503418,
+    "pred_last_day_mean": 19.42548942565918,
+    "direction": "UP",
+    "pred_30d_return_pct": 12.091687395609817,
+    "p10_interval_last_day": 18.210037231445312,
+    "p90_interval_last_day": 20.7237606048584,
+    "warnings": []
+}

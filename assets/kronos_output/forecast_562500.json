@@ -1,0 +1,14 @@
+{
+    "code": "562500",
+    "type": "etf",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 1.042,
+    "latest_date": "2026-07-13",
+    "pred_first_day_mean": 1.0280578136444092,
+    "pred_last_day_mean": 1.0215219259262085,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -1.9652662258917042,
+    "p10_interval_last_day": 0.9947747588157654,
+    "p90_interval_last_day": 1.0463696718215942,
+    "warnings": []
+}

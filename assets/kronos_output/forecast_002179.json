@@ -1,0 +1,14 @@
+{
+    "code": "002179",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 35.86,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 35.354671478271484,
+    "pred_last_day_mean": 37.28837966918945,
+    "direction": "UP",
+    "pred_30d_return_pct": 3.9832115705227267,
+    "p10_interval_last_day": 35.819087982177734,
+    "p90_interval_last_day": 39.35809326171875,
+    "warnings": []
+}

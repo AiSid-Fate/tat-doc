@@ -1,0 +1,14 @@
+{
+    "code": "600845",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 18.7,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 19.465425491333008,
+    "pred_last_day_mean": 22.00148582458496,
+    "direction": "UP",
+    "pred_30d_return_pct": 17.65500440954526,
+    "p10_interval_last_day": 21.129337310791016,
+    "p90_interval_last_day": 22.6270809173584,
+    "warnings": []
+}

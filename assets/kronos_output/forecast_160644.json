@@ -1,0 +1,14 @@
+{
+    "code": "160644",
+    "type": "etf",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 2.106,
+    "latest_date": "2026-06-30",
+    "pred_first_day_mean": 1.9306755065917969,
+    "pred_last_day_mean": 1.5334137678146362,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -27.188330113265135,
+    "p10_interval_last_day": 1.4417812824249268,
+    "p90_interval_last_day": 1.5925188064575195,
+    "warnings": []
+}

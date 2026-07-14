@@ -1,0 +1,16 @@
+{
+    "code": "603078",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 41.76,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 34.13909149169922,
+    "pred_last_day_mean": 18.36051368713379,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -56.033252664909504,
+    "p10_interval_last_day": 16.285444259643555,
+    "p90_interval_last_day": 20.08748435974121,
+    "warnings": [
+        "WARNING: Predicted first day jump of -18.25% relative to last close (41.7600 -> 34.1391)."
+    ]
+}

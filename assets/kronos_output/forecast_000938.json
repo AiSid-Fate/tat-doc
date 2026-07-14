@@ -1,0 +1,14 @@
+{
+    "code": "000938",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 36.98,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 33.69646453857422,
+    "pred_last_day_mean": 25.63917350769043,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -30.667459416737607,
+    "p10_interval_last_day": 24.149019241333008,
+    "p90_interval_last_day": 27.50745964050293,
+    "warnings": []
+}

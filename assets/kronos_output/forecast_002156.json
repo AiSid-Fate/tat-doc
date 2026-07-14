@@ -1,0 +1,16 @@
+{
+    "code": "002156",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 77.87,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 64.47708129882812,
+    "pred_last_day_mean": 36.736183166503906,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -52.823702110563886,
+    "p10_interval_last_day": 31.97598648071289,
+    "p90_interval_last_day": 41.83901596069336,
+    "warnings": [
+        "WARNING: Predicted first day jump of -17.20% relative to last close (77.8700 -> 64.4771)."
+    ]
+}

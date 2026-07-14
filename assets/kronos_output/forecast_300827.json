@@ -1,0 +1,14 @@
+{
+    "code": "300827",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 30.79,
+    "latest_date": "2026-06-30",
+    "pred_first_day_mean": 31.320249557495117,
+    "pred_last_day_mean": 34.321285247802734,
+    "direction": "UP",
+    "pred_30d_return_pct": 11.468935523880264,
+    "p10_interval_last_day": 31.976713180541992,
+    "p90_interval_last_day": 37.21104049682617,
+    "warnings": []
+}

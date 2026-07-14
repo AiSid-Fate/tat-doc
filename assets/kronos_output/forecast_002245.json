@@ -1,0 +1,16 @@
+{
+    "code": "002245",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 20.89,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 17.317777633666992,
+    "pred_last_day_mean": 12.30727481842041,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -41.08532877730775,
+    "p10_interval_last_day": 11.286442756652832,
+    "p90_interval_last_day": 13.478143692016602,
+    "warnings": [
+        "WARNING: Predicted first day jump of -17.10% relative to last close (20.8900 -> 17.3178)."
+    ]
+}

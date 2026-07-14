@@ -1,0 +1,14 @@
+{
+    "code": "600406",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 22.85,
+    "latest_date": "2026-06-30",
+    "pred_first_day_mean": 22.790761947631836,
+    "pred_last_day_mean": 23.684186935424805,
+    "direction": "UP",
+    "pred_30d_return_pct": 3.6507086889488116,
+    "p10_interval_last_day": 22.923057556152344,
+    "p90_interval_last_day": 24.453340530395508,
+    "warnings": []
+}

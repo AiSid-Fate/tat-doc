@@ -1,0 +1,14 @@
+{
+    "code": "159558",
+    "type": "etf",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 1.351,
+    "latest_date": "2026-07-13",
+    "pred_first_day_mean": 1.3958219289779663,
+    "pred_last_day_mean": 1.4703537225723267,
+    "direction": "UP",
+    "pred_30d_return_pct": 8.834472433184803,
+    "p10_interval_last_day": 1.3583626747131348,
+    "p90_interval_last_day": 1.5855271816253662,
+    "warnings": []
+}

@@ -1,0 +1,14 @@
+{
+    "code": "002396",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 28.62,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 25.89459228515625,
+    "pred_last_day_mean": 20.66908836364746,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -27.780963089980926,
+    "p10_interval_last_day": 19.70060920715332,
+    "p90_interval_last_day": 21.630992889404297,
+    "warnings": []
+}

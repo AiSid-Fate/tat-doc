@@ -1,0 +1,14 @@
+{
+    "code": "515880",
+    "type": "etf",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 0.738,
+    "latest_date": "2026-07-13",
+    "pred_first_day_mean": 0.8038293123245239,
+    "pred_last_day_mean": 1.572974443435669,
+    "direction": "UP",
+    "pred_30d_return_pct": 113.14016848721802,
+    "p10_interval_last_day": 1.3592768907546997,
+    "p90_interval_last_day": 1.837989330291748,
+    "warnings": []
+}

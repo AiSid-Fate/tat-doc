@@ -1,0 +1,16 @@
+{
+    "code": "600487",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 74.38,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 68.04930114746094,
+    "pred_last_day_mean": 20.6184024810791,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -72.2796417301975,
+    "p10_interval_last_day": 14.06163215637207,
+    "p90_interval_last_day": 27.25503158569336,
+    "warnings": [
+        "WARNING: High volatility on predicted day 2: -19.46% change."
+    ]
+}

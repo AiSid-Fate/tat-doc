@@ -1,0 +1,14 @@
+{
+    "code": "002049",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 78.22,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 77.5802993774414,
+    "pred_last_day_mean": 76.38520050048828,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -2.3456909991200647,
+    "p10_interval_last_day": 73.61488342285156,
+    "p90_interval_last_day": 78.69981384277344,
+    "warnings": []
+}
