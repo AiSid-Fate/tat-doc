@@ -1,0 +1,14 @@
+{
+    "code": "002273",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 31.26,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 29.627405166625977,
+    "pred_last_day_mean": 25.800207138061523,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -17.465748118805113,
+    "p10_interval_last_day": 23.920740127563477,
+    "p90_interval_last_day": 27.472166061401367,
+    "warnings": []
+}

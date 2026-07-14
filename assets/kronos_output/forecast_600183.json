@@ -1,0 +1,17 @@
+{
+    "code": "600183",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 147.9,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 123.69446563720703,
+    "pred_last_day_mean": 64.02884674072266,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -56.70801437408881,
+    "p10_interval_last_day": 53.98734664916992,
+    "p90_interval_last_day": 70.62921142578125,
+    "warnings": [
+        "WARNING: Predicted first day jump of -16.37% relative to last close (147.9000 -> 123.6945).",
+        "WARNING: High volatility on predicted day 2: -18.20% change."
+    ]
+}

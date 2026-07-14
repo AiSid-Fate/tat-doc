@@ -1,0 +1,17 @@
+{
+    "code": "002281",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 232.95,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 166.75462341308594,
+    "pred_last_day_mean": 64.91728973388672,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -72.1325221146655,
+    "p10_interval_last_day": 48.14344787597656,
+    "p90_interval_last_day": 80.99514770507812,
+    "warnings": [
+        "WARNING: Predicted first day jump of -28.42% relative to last close (232.9500 -> 166.7546).",
+        "WARNING: High volatility on predicted day 2: -23.46% change."
+    ]
+}

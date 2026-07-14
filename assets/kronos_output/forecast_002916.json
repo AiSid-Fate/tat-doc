@@ -1,0 +1,16 @@
+{
+    "code": "002916",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 408.99,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 350.4233703613281,
+    "pred_last_day_mean": 189.6417999267578,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -53.63167805404587,
+    "p10_interval_last_day": 158.2723388671875,
+    "p90_interval_last_day": 218.8199462890625,
+    "warnings": [
+        "WARNING: Predicted first day jump of -14.32% relative to last close (408.9900 -> 350.4234)."
+    ]
+}

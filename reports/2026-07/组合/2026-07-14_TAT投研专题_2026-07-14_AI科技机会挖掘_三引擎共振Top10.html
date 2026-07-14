@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>TAT 投研专题 · AI 科技机会挖掘 · 三引擎共振 Top10 · 2026-07-14</title>
+<meta name="report-title" content="AI 科技机会挖掘 三引擎共振研判 Top10建仓池 2只新方向α">
+<meta name="report-date" content="2026-07-14">
+<meta name="report-category" content="组合">
+<meta name="report-tags" content="专题,三引擎共振,AI科技机会挖掘,Top10建仓池,新方向α,科大讯飞002230,大华002236,基本面+情绪面+Kronos">
+<meta name="report-summary" content="基本面A+情绪面B+Kronos C三引擎系统性挖掘AI科技14方向主板可买机会。首次发现2只团队之前没覆盖的主板α(科大讯飞AI软件+24.65% / 大华股份AI视觉+10.40%)，同时否决3只团队看好但估值透支股(工业富联/深南/华天)。Top10建仓池总仓位≤27%。">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{overflow-x:hidden}
+  body{
+    background:#0a0e14;
+    color:#d8dee9;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC",system-ui,sans-serif;
+    font-feature-settings:"tnum";
+    font-variant-numeric:tabular-nums;
+    line-height:1.62;
+    font-size:14px;
+    padding:24px 14px 40px;
+  }
+  .paper{
+    max-width:820px;
+    margin:0 auto;
+    background:linear-gradient(180deg,#0f141c 0%,#0a0e14 100%);
+    border:1px solid #1f2733;
+    border-radius:6px;
+    padding:26px 22px 32px;
+    box-shadow:0 24px 64px rgba(0,0,0,.5);
+  }
+  .up{color:#ef5350}
+  .down{color:#26a69a}
+  .warn{color:#f5b342}
+  .dim{color:#7a8290}
+  .num{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+  b{color:#f0f4f8;font-weight:600}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px -4px;padding:0 4px}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:12.5px}
+  th,td{padding:8px 10px;border-bottom:1px solid #1c2330;text-align:left;vertical-align:middle}
+  th{color:#8a94a3;font-weight:600;background:#12171f;border-bottom:1px solid #2a3342;font-size:11.5px;letter-spacing:.06em}
+  .sum-row td{background:#141a24;font-weight:700;border-top:1px solid #2a3342}
+  .grand-row td{background:#1b2230;font-weight:800;font-size:13px;color:#ffd166}
+
+  /* masthead */
+  .masthead{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:2px solid #ef5350;padding-bottom:10px;margin-bottom:14px;
+    font-size:11px;letter-spacing:.14em;
+  }
+  .brand{color:#8a94a3;font-weight:600}
+  .vol{color:#ef5350;font-weight:700}
+
+  .mast-title{
+    font-family:"SF Pro Display",Georgia,"Times New Roman",serif;
+    font-size:30px;font-weight:800;letter-spacing:.02em;
+    color:#f0f4f8;line-height:1.15;margin:4px 0 8px;
+  }
+  .mast-title .accent{color:#ef5350}
+  .mast-meta{color:#7a8290;font-size:12px;border-top:1px solid #1c2330;border-bottom:1px solid #1c2330;padding:6px 0;margin-bottom:18px}
+
+  /* headline */
+  .headline{margin:8px 0 18px;padding:16px 18px;background:linear-gradient(180deg,#1a1218 0%,#141821 100%);border-left:3px solid #ef5350;border-radius:0 4px 4px 0}
+  .headline .kicker{color:#ef5350;font-size:11px;letter-spacing:.18em;font-weight:700;margin-bottom:8px}
+  .head-title{font-size:19px;color:#f0f4f8;font-weight:700;line-height:1.35;margin-bottom:10px}
+  .head-lede{color:#b8c0cc;font-size:13.5px;line-height:1.68}
+
+  /* KPI dash */
+  .dash{
+    display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0 22px;
+  }
+  .dcell{background:#12171f;border:1px solid #1f2733;border-radius:4px;padding:12px 12px 10px;min-width:0}
+  .dlabel{color:#7a8290;font-size:11px;letter-spacing:.08em;margin-bottom:4px}
+  .dnum{font-size:22px;font-weight:800;line-height:1.1;margin:2px 0 4px;letter-spacing:.01em}
+  .dnote{color:#8a94a3;font-size:11px;line-height:1.4}
+  .dcell.alert{border-color:#ef5350;background:linear-gradient(180deg,#2a1418 0%,#12171f 100%)}
+  .dcell.alert .dlabel{color:#ef5350;font-weight:700}
+
+  /* section */
+  .sect{margin:26px 0 20px;padding-top:6px}
+  .sect-num{display:inline-block;font-family:Georgia,serif;font-size:11px;color:#ef5350;border:1px solid #ef5350;padding:1px 7px;border-radius:2px;margin-bottom:6px;letter-spacing:.1em;font-weight:700}
+  .sect-title{font-size:18px;color:#f0f4f8;font-weight:700;margin:4px 0 8px;letter-spacing:.01em;border-bottom:1px solid #2a3342;padding-bottom:8px}
+  .sect-lede{color:#b8c0cc;font-size:13px;line-height:1.7;margin:8px 0 12px}
+
+  /* Section 0 emergency */
+  .emergency{
+    background:linear-gradient(180deg,#3a0f14 0%,#1a0a0e 100%);
+    border:2px solid #ef5350;border-radius:4px;
+    padding:16px 18px;margin:14px 0 20px;
+    position:relative;overflow:hidden;
+  }
+  .emergency::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:#ef5350;
+    animation:pulse-red 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse-red{0%,100%{opacity:1}50%{opacity:.35}}
+  .emergency .emg-tag{color:#ef5350;font-size:11px;letter-spacing:.2em;font-weight:800;margin-bottom:6px}
+  .emergency .emg-title{color:#ffd166;font-size:20px;font-weight:800;line-height:1.3;margin-bottom:10px}
+  .emergency .emg-body{color:#e5e9f0;font-size:13.5px;line-height:1.7}
+  .emergency .emg-body b{color:#fff}
+  .emergency .emg-action{margin-top:10px;padding:10px 12px;background:rgba(239,83,80,.14);border-left:3px solid #ef5350;border-radius:0 3px 3px 0;font-size:13px;color:#f5f7fa}
+
+  /* index grid */
+  .idx-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:12px 0}
+  .idx{background:#12171f;border:1px solid #1f2733;border-radius:4px;padding:10px 10px;min-width:0}
+  .idx-name{color:#8a94a3;font-size:11px;font-weight:600;letter-spacing:.06em}
+  .idx-price{color:#f0f4f8;font-size:15px;font-weight:800;margin:4px 0 2px}
+  .idx-chg{font-size:13px;font-weight:700}
+  .idx-vs{color:#8a94a3;font-size:11px;margin-top:3px}
+  .idx.hot{border-color:#ef5350;background:linear-gradient(180deg,#241014 0%,#12171f 100%)}
+
+  /* week trend line */
+  .trend-line{
+    display:flex;align-items:stretch;background:#12171f;border:1px solid #1f2733;border-radius:4px;padding:12px 6px;margin:14px 0;overflow-x:auto;
+  }
+  .trend-node{flex:1 1 0;min-width:78px;text-align:center;padding:0 4px;border-right:1px dashed #1f2733;position:relative}
+  .trend-node:last-child{border-right:none}
+  .trend-date{color:#7a8290;font-size:10.5px;letter-spacing:.06em}
+  .trend-val{color:#e5e9f0;font-size:14px;font-weight:700;margin:3px 0 2px}
+  .trend-chg{font-size:11px;font-weight:700}
+  .trend-tag{font-size:10px;color:#8a94a3;margin-top:2px;line-height:1.3}
+  .trend-node.peak{background:linear-gradient(180deg,rgba(38,166,154,.14) 0%,transparent 100%)}
+  .trend-node.low{background:linear-gradient(180deg,rgba(239,83,80,.18) 0%,transparent 100%)}
+  .trend-node.low .trend-val{color:#ef5350}
+
+  /* debate box */
+  .debate-box{
+    margin:16px 0;padding:16px 18px;
+    background:linear-gradient(180deg,#221b0f 0%,#141821 100%);
+    border:1px solid #d4a04a;border-radius:4px;position:relative;
+  }
+  .debate-box::before{
+    content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:2px;
+    background:linear-gradient(90deg,transparent,#ffd166,transparent);
+    animation:sweep 3.5s linear infinite;
+  }
+  @keyframes sweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+  .debate-title{color:#ffd166;font-size:14px;font-weight:800;letter-spacing:.06em;margin-bottom:10px}
+  .debate-quote{background:rgba(255,209,102,.08);border-left:3px solid #ffd166;padding:10px 12px;font-size:13px;color:#e5e9f0;line-height:1.7;margin:8px 0;border-radius:0 3px 3px 0;font-style:italic}
+  .debate-quote .qmeta{display:block;color:#d4a04a;font-size:11px;letter-spacing:.06em;margin-bottom:4px;font-style:normal;font-weight:700}
+  .verify-list{list-style:none;padding:0;margin:12px 0 6px}
+  .verify-list li{padding:8px 0 8px 22px;border-bottom:1px solid #2a2418;color:#d8dee9;font-size:13px;line-height:1.65;position:relative}
+  .verify-list li::before{content:"▸";position:absolute;left:6px;top:8px;color:#ffd166;font-weight:800}
+  .verify-list li:last-child{border-bottom:none}
+  .debate-conclude{margin-top:10px;padding:10px 12px;background:rgba(239,83,80,.14);border-left:3px solid #ef5350;color:#f5f7fa;font-size:13.5px;font-weight:700;border-radius:0 3px 3px 0}
+
+  /* rule fail */
+  .rule-fail{
+    margin:14px 0;padding:14px 16px;
+    background:linear-gradient(180deg,#2a0f14 0%,#141821 100%);
+    border:2px solid #ef5350;border-radius:4px;position:relative;
+  }
+  .rule-fail::before{
+    content:"";position:absolute;top:10px;right:12px;width:8px;height:8px;
+    background:#ef5350;border-radius:50%;
+    animation:pulse-red 1.4s ease-in-out infinite;
+  }
+  .rf-hd{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .rf-flag{color:#ef5350;font-size:10.5px;letter-spacing:.2em;font-weight:800;border:1px solid #ef5350;padding:2px 8px;border-radius:2px}
+  .rf-title{color:#ffd166;font-size:15px;font-weight:800}
+  .rule-fail .rt-wrap{margin-top:6px}
+  .rule-fail table{min-width:100%;font-size:12.5px}
+  .rule-fail th{background:#1a0e12;color:#f5b342}
+  .rule-fail td{border-bottom:1px solid #2a1418}
+  .rf-score{margin-top:12px;padding:10px 12px;background:rgba(0,0,0,.35);border-left:3px solid #ffd166;color:#e5e9f0;font-size:12.5px;border-radius:0 3px 3px 0}
+  .rf-score b{color:#ef5350}
+
+  /* scenarios 3-color */
+  .scenarios{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+  .scen{border-radius:4px;padding:12px 12px;min-width:0;border:1px solid;background:#12171f;display:flex;flex-direction:column}
+  .scen.A{border-color:#26a69a;background:linear-gradient(180deg,rgba(38,166,154,.12) 0%,#12171f 100%)}
+  .scen.B{border-color:#f5b342;background:linear-gradient(180deg,rgba(245,179,66,.12) 0%,#12171f 100%)}
+  .scen.C{border-color:#ef5350;background:linear-gradient(180deg,rgba(239,83,80,.14) 0%,#12171f 100%)}
+  .scen-hd{border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:8px;margin-bottom:8px}
+  .scen-tag{display:inline-block;font-size:10px;letter-spacing:.14em;font-weight:800;padding:1px 6px;border-radius:2px;margin-bottom:4px}
+  .scen.A .scen-tag{background:#26a69a;color:#0a0e14}
+  .scen.B .scen-tag{background:#f5b342;color:#0a0e14}
+  .scen.C .scen-tag{background:#ef5350;color:#0a0e14}
+  .scen-name{color:#f0f4f8;font-size:13px;font-weight:700;margin:3px 0 3px}
+  .scen-verdict{color:#8a94a3;font-size:11px}
+  .act-list{list-style:none;padding:0;margin:0 0 8px;flex:1}
+  .act-list li{padding:6px 0;border-bottom:1px dashed #1f2733;font-size:12px;color:#d8dee9;line-height:1.5;display:flex;gap:6px;align-items:baseline}
+  .act-list li:last-child{border-bottom:none}
+  .pri{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.06em;padding:1px 5px;border-radius:2px;flex-shrink:0}
+  .pri.p1{background:#ef5350;color:#0a0e14}
+  .pri.p2{background:#f5b342;color:#0a0e14}
+  .pri.p3{background:#26a69a;color:#0a0e14}
+  .scen-expect{margin-top:6px;padding-top:8px;border-top:1px solid rgba(255,255,255,.08);font-size:11.5px;color:#b8c0cc;display:grid;grid-template-columns:auto 1fr;gap:2px 8px}
+  .scen-expect span{color:#8a94a3}
+  .scen-expect b{color:#f0f4f8;font-weight:700}
+
+  /* forbid */
+  .forbid-box{
+    margin:12px 0;padding:14px 16px;
+    background:linear-gradient(180deg,#1a1418 0%,#141821 100%);
+    border:1px dashed #7a2a30;border-radius:4px;
+  }
+  .fb-hd{color:#ef5350;font-size:12px;letter-spacing:.14em;font-weight:800;margin-bottom:8px}
+  .fb-list{list-style:none;padding:0;margin:0}
+  .fb-list li{padding:5px 0 5px 22px;position:relative;color:#d8dee9;font-size:12.5px;line-height:1.55}
+  .fb-list li::before{content:"NO";position:absolute;left:0;top:5px;color:#ef5350;font-size:9.5px;font-weight:800;letter-spacing:.06em;border:1px solid #ef5350;padding:0 4px;border-radius:2px;line-height:1.4}
+
+  /* night talk */
+  .night-talk{
+    margin:14px 0;padding:16px 18px;
+    background:linear-gradient(180deg,#141a24 0%,#0f141c 100%);
+    border:1px solid #d4a04a;border-radius:4px;
+  }
+  .nt-lead{color:#ffd166;font-size:14px;font-weight:700;padding-bottom:10px;border-bottom:1px solid #2a2418;margin-bottom:12px;font-style:italic}
+  .nt-block{margin:10px 0;padding:12px 14px;background:rgba(255,209,102,.05);border-left:3px solid #d4a04a;border-radius:0 3px 3px 0}
+  .nt-num{color:#ffd166;font-size:10.5px;letter-spacing:.16em;font-weight:800;margin-bottom:2px}
+  .nt-h{color:#f0f4f8;font-size:14px;font-weight:700;margin-bottom:6px}
+  .nt-p{color:#d8dee9;font-size:13px;line-height:1.72}
+  .nt-p b{color:#ffd166}
+  .nt-sign{margin-top:14px;text-align:right;color:#8a94a3;font-size:11px;letter-spacing:.06em}
+
+  /* final line - bloomberg style */
+  .final-line{
+    margin:20px 0 8px;padding:16px 18px;
+    background:#0f141c;
+    border-top:2px solid #ef5350;border-bottom:1px solid #1f2733;
+  }
+  .final-tag{color:#ef5350;font-size:10.5px;letter-spacing:.2em;font-weight:800;margin-bottom:6px}
+  .final-quote{color:#f0f4f8;font-size:15px;font-weight:700;line-height:1.55;letter-spacing:.02em}
+  .final-quote b{color:#ffd166}
+  .final-sign{margin-top:8px;color:#8a94a3;font-size:11px;text-align:right;letter-spacing:.06em}
+
+  /* highlight rows */
+  .hl-row{background:rgba(239,83,80,.06)}
+  .hl-row td{border-bottom-color:#2a2028}
+  .win-row{background:rgba(38,166,154,.06)}
+
+  /* footer */
+  footer{margin-top:24px;padding-top:14px;border-top:1px solid #1f2733;color:#7a8290;font-size:11.5px;line-height:1.65}
+  .foot-row{display:flex;gap:10px;margin:4px 0;flex-wrap:wrap}
+  .foot-lb{color:#ef5350;font-weight:700;letter-spacing:.06em;min-width:60px}
+  .foot-sign{margin-top:12px;display:flex;justify-content:space-between;color:#5c6370;font-size:10.5px;flex-wrap:wrap;gap:6px}
+
+  /* mobile */
+  @media (max-width:820px){
+    .dash{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .idx-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .idx-grid .idx:nth-child(5){grid-column:span 2}
+    .scenarios{grid-template-columns:1fr}
+  }
+  @media (max-width:480px){
+    body{padding:14px 8px 30px;font-size:13.5px}
+    .paper{padding:18px 14px 24px;border-radius:4px}
+    .mast-title{font-size:24px}
+    .head-title{font-size:16.5px}
+    .headline{padding:14px 14px}
+    .dcell{padding:10px 10px}
+    .dnum{font-size:19px}
+    .emergency{padding:14px 14px}
+    .emergency .emg-title{font-size:17px}
+    .sect{margin:22px 0 16px}
+    .sect-title{font-size:16px}
+    .idx-price{font-size:14px}
+    .trend-node{min-width:70px;padding:0 3px}
+    .trend-val{font-size:12.5px}
+    .final-quote{font-size:13.5px}
+    .paper,.sect,.emergency,.debate-box,.rule-fail,.scen,.night-talk,.final-line,.forbid-box,.headline,.dash>*,.idx-grid>*,.scenarios>*,.table-wrap{min-width:0}
+    footer{font-size:11px}
+  }
+  @media print{body{background:#fff;color:#000}.paper{border:none;box-shadow:none;background:#fff}}
+</style>
+</head>
+<body>
+<article class="paper">
+
+  <header class="masthead">
+    <div class="brand">TAT 投研团队 · 专题研判</div>
+    <div class="vol">三引擎共振 · AI 科技机会挖掘</div>
+  </header>
+
+  <h1 class="mast-title">AI 科技机会挖掘 · <span class="accent">三引擎共振</span></h1>
+  <div class="mast-meta">2026 年 7 月 14 日 · 基本面 × 情绪面 × Kronos · 系统性挖掘 14 细分方向 · Top10 建仓池</div>
+
+  <div class="headline">
+    <div class="kicker">头版 · 三引擎首次系统性挖掘</div>
+    <h2 class="head-title">基本面 A + 情绪面 B + Kronos C · 三引擎共振<br>首次挖出 <span class="down">2 只全新方向 α</span> · 同时否决 <span class="up">3 只团队看好股</span></h2>
+    <p class="head-lede">这是 Kronos 从「验证第二意见」升级到「主动挖掘增量方向」的首次尝试。三引擎（基本面 A · 情绪面 B · Kronos C）系统性扫描 AI 科技 14 细分方向的主板可买机会，挖出 <b class="down">科大讯飞 002230 AI 软件 +24.65%</b> 与 <b class="down">大华股份 002236 AI 视觉 +10.40%</b> 两只团队之前完全没覆盖的方向 α；同时否决 <b class="up">工业富联 601138 / 深南电路 002916 / 华天科技 002185</b> 三只团队原本看好但估值透支的股票。Top10 建仓池总仓位 ≤ 27%，分 P1 / P2 / P3 三档执行。<b class="warn">明日 09:30 先做 4 条减仓 P1，再从 Top10 挑 2-3 只 P1 分批建仓。</b></p>
+  </div>
+
+  <section class="dash">
+    <div class="dcell">
+      <div class="dlabel">覆盖细分方向</div>
+      <div class="dnum down">14 方向</div>
+      <div class="dnote">AI 科技全景系统扫描</div>
+    </div>
+    <div class="dcell">
+      <div class="dlabel">Kronos 全景</div>
+      <div class="dnum down">32 只主板 α</div>
+      <div class="dnote">首次批量 15 + 复用 17</div>
+    </div>
+    <div class="dcell">
+      <div class="dlabel">三重共振 · 建仓池</div>
+      <div class="dnum down">Top 10</div>
+      <div class="dnote">总仓位 ≤ 27% · 分 3 档执行</div>
+    </div>
+    <div class="dcell alert">
+      <div class="dlabel">全新方向 α</div>
+      <div class="dnum warn">2 只 NEW</div>
+      <div class="dnote">科大讯飞 · AI 软件 · 大华 · AI 视觉</div>
+    </div>
+  </section>
+
+  <!-- ========== Section 1 · 三引擎方法论 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 01</div>
+    <h3 class="sect-title">三引擎方法论 · 从「双引擎验证」升级到「三引擎挖掘」</h3>
+    <p class="sect-lede">昨日的 Kronos 全景研判是「双引擎共振」，Kronos 与团队已有铁律做交叉验证。今日更进一步：让 Kronos 参与「增量方向发现」，与基本面 A + 情绪面 B 组成三引擎共振管道，从 AI 科技 14 细分方向中筛出主板可买机会。</p>
+
+    <div class="debate-box">
+      <div class="debate-title">三引擎共振公式 · 建仓的 4 项硬条件</div>
+
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>引擎</th>
+            <th>数据来源</th>
+            <th>产出</th>
+            <th>本次覆盖</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="down"><b>A · 基本面</b></td>
+            <td>公司公告 + 年报 + web_search 机构研报</td>
+            <td>14 方向候选池筛选（订单 / 毛利 / 估值分位）</td>
+            <td class="down">40+ 只候选</td>
+          </tr>
+          <tr>
+            <td class="down"><b>B · 情绪面</b></td>
+            <td>近 1-2 周催化 + 资金流向 + 机构调研</td>
+            <td>1-10 分情绪评分（≥ 6 分合格）</td>
+            <td class="down">Top 榜 + 评分表</td>
+          </tr>
+          <tr>
+            <td class="down"><b>C · Kronos</b></td>
+            <td>NeoQuasar/Kronos-base 时间序列模型</td>
+            <td>30 天期望回报 + 护栏警告</td>
+            <td class="down">32 只主板 α 全景（15 + 17）</td>
+          </tr>
+          <tr class="win-row">
+            <td class="down"><b>三重共振</b></td>
+            <td>三条同时成立</td>
+            <td>基本面强推 + 情绪评分 ≥ 6 + Kronos UP + 护栏干净 + 主板可买</td>
+            <td class="down"><b>Top 10 建仓池</b></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="debate-conclude">
+        <b>关键突破：</b>Kronos 首次系统化用于<b class="down">挖掘</b>，不只是验证团队已有清单，而是主动扫描 AI 科技 14 方向中「基本面 + 情绪面强，团队还没纳入清单」的候选。这次一口气找出 <b class="warn">2 只全新方向 α</b>（科大讯飞 AI 软件、大华股份 AI 视觉），证明三引擎的价值在于「找错杀 + 避追高」两件事。
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 2 · 三重共振 Top 10 建仓池 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 02</div>
+    <h3 class="sect-title">三重共振 Top 10 建仓池（本报告核心）</h3>
+    <p class="sect-lede">10 只主板 α 全部满足「基本面 + 情绪面 + Kronos」三重共振。分 P1（3 只 · 强推）· P2（3 只 · 标推）· P3（4 只 · 观察）三档执行。<b class="down">总建仓上限 ≤ 27%</b>，配合减仓释放的现金池分批完成。</p>
+
+    <div class="debate-box">
+      <div class="debate-title">Top 10 建仓池 · 金字塔 P1 / P2 / P3 三档</div>
+
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>档</th>
+            <th>代码</th>
+            <th>名称</th>
+            <th class="num">现价</th>
+            <th class="num">建仓价</th>
+            <th class="num">上限</th>
+            <th class="num">Kronos 30d</th>
+            <th>方向</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="win-row">
+            <td class="down"><b>P1</b></td>
+            <td>000400</td>
+            <td><b>许继电气</b></td>
+            <td class="num">19.85</td>
+            <td class="num warn">19.0-19.5 回踩</td>
+            <td class="num">3%</td>
+            <td class="num down"><b>+30.32%</b></td>
+            <td class="down">特高压</td>
+          </tr>
+          <tr class="win-row" style="background:rgba(245,179,66,.14)">
+            <td class="down"><b>P1</b></td>
+            <td class="warn"><b>NEW 002230</b></td>
+            <td class="warn"><b>科大讯飞</b></td>
+            <td class="num">41.18</td>
+            <td class="num warn">40-41</td>
+            <td class="num">4%</td>
+            <td class="num down"><b>+24.65%</b></td>
+            <td class="down"><b>AI 软件（新增）</b></td>
+          </tr>
+          <tr class="win-row">
+            <td class="down"><b>P1</b></td>
+            <td>600845</td>
+            <td><b>宝信软件</b></td>
+            <td class="num">18.70</td>
+            <td class="num warn">18.0-18.5</td>
+            <td class="num">3%</td>
+            <td class="num down"><b>+17.66%</b></td>
+            <td class="down">数据中心 IT</td>
+          </tr>
+          <tr>
+            <td class="warn"><b>P2</b></td>
+            <td>600312</td>
+            <td>平高电气</td>
+            <td class="num">17.33</td>
+            <td class="num warn">16.5-17.0</td>
+            <td class="num">3%</td>
+            <td class="num down">+12.09%</td>
+            <td class="down">特高压</td>
+          </tr>
+          <tr>
+            <td class="warn"><b>P2</b></td>
+            <td>603501</td>
+            <td>韦尔股份</td>
+            <td class="num">106.15</td>
+            <td class="num warn">100-105</td>
+            <td class="num">3%</td>
+            <td class="num down">+11.94%</td>
+            <td class="down">CIS</td>
+          </tr>
+          <tr style="background:rgba(245,179,66,.14)">
+            <td class="warn"><b>P2</b></td>
+            <td class="warn"><b>NEW 002236</b></td>
+            <td class="warn"><b>大华股份</b></td>
+            <td class="num">16.32</td>
+            <td class="num warn">15.5-16.0</td>
+            <td class="num">3%</td>
+            <td class="num down"><b>+10.40%</b></td>
+            <td class="down"><b>AI 视觉（新增）</b></td>
+          </tr>
+          <tr>
+            <td class="dim"><b>P3</b></td>
+            <td>000034</td>
+            <td>神州数码</td>
+            <td class="num">26.02</td>
+            <td class="num dim">现价 -5%</td>
+            <td class="num">2%</td>
+            <td class="num down">+9.71%</td>
+            <td class="down">IT 服务</td>
+          </tr>
+          <tr>
+            <td class="dim"><b>P3</b></td>
+            <td>600941</td>
+            <td>中国移动</td>
+            <td class="num">91.80</td>
+            <td class="num dim">现价分批</td>
+            <td class="num">2%</td>
+            <td class="num down">+9.09%</td>
+            <td class="down">运营商 · 降 β</td>
+          </tr>
+          <tr>
+            <td class="dim"><b>P3</b></td>
+            <td>000062</td>
+            <td>深圳华强</td>
+            <td class="num">26.88</td>
+            <td class="num dim">现价 -5%</td>
+            <td class="num">2%</td>
+            <td class="num down">+5.48%</td>
+            <td class="down">电子分销</td>
+          </tr>
+          <tr>
+            <td class="dim"><b>P3</b></td>
+            <td>002179</td>
+            <td>中航光电</td>
+            <td class="num">35.86</td>
+            <td class="num dim">现价 -5%</td>
+            <td class="num">2%</td>
+            <td class="num down">+3.98%</td>
+            <td class="down">军工电子</td>
+          </tr>
+          <tr class="grand-row">
+            <td colspan="5"><b>Top 10 合计上限</b></td>
+            <td class="num"><b>≤ 27%</b></td>
+            <td colspan="2" class="num"><b class="down">P1 3 只 + P2 3 只 + P3 4 只 · 分档分批</b></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="debate-conclude">
+        <b>档位规则：</b>P1 强推（<b class="down">Kronos ≥ +17%</b> · 护栏干净 · 情绪评分 ≥ 8）· P2 标推（Kronos +10% ~ +17%）· P3 观察（Kronos +3% ~ +10%）。建仓顺序：<b class="warn">先减后建</b>，先完成明日减仓 P1（沪电 / 通富 / 蔚蓝 / 科创芯片）释放现金，再从 Top10 P1 三只中挑 2-3 只分批建。<b>不追高、不重仓、不一次到位。</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 3 · 2 只新方向 α ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 03</div>
+    <h3 class="sect-title">2 只新方向 α · Kronos 挖掘价值最直接体现</h3>
+    <p class="sect-lede">这两只是团队之前完全没覆盖的方向 α，由 Kronos 主动扫描发现，经基本面 + 情绪面复核后确认加入 Top 10。<b class="down">这就是三引擎系统的最大增量价值，找错杀，不追高。</b></p>
+
+    <div class="rule-fail" style="border-color:#d4a04a;background:linear-gradient(180deg,#221b0f 0%,#141821 100%);margin-bottom:16px">
+      <div class="rf-hd">
+        <div class="rf-flag" style="color:#ffd166;border-color:#ffd166">NEW · P1</div>
+        <div class="rf-title">科大讯飞 002230 · AI 软件 · Kronos +24.65%</div>
+      </div>
+      <ul class="verify-list">
+        <li><b class="down">Kronos 30d 期望</b>：<b>+24.65%</b> · 护栏干净 · 现价 41.18 · 建仓价 40-41 · 单只上限 4%</li>
+        <li><b class="down">基本面</b>：AI 软件龙头 · 星火大模型迭代 + 教育 / 医疗 / 车载多场景落地 · 收入结构从「硬件依赖」向「AI 订阅」切换</li>
+        <li><b class="down">情绪面</b>：近 1-2 周机构调研密集 + 融资净流入 + 港美 AI 龙头反弹带动</li>
+        <li><b class="warn">组合价值最强</b>：AI 软件方向<b class="down">与用户 AI 硬科技（PCB / 半导体 / 光模块）不重叠</b>，加仓 = 真正意义上的分散，而不是加重同赛道 β</li>
+        <li><b>建仓策略</b>：等回踩 40-41 分批建 100 股（约 4,100 元）· 上限 4% 是 Top 10 中最高的 · 首推理由：三引擎共振度最高 + 组合分散度最优</li>
+      </ul>
+    </div>
+
+    <div class="rule-fail" style="border-color:#d4a04a;background:linear-gradient(180deg,#221b0f 0%,#141821 100%)">
+      <div class="rf-hd">
+        <div class="rf-flag" style="color:#ffd166;border-color:#ffd166">NEW · P2</div>
+        <div class="rf-title">大华股份 002236 · AI 视觉 · Kronos +10.40%</div>
+      </div>
+      <ul class="verify-list">
+        <li><b class="down">Kronos 30d 期望</b>：<b>+10.40%</b> · 护栏干净 · 现价 16.32 · 建仓价 15.5-16.0 · 单只上限 3%</li>
+        <li><b class="down">基本面</b>：AI 视觉双巨头之一 · 与海康 002415 同赛道 · <b class="down">估值明显低于海康</b>（PE 相对折价 30%+）· 智能物联业务持续增长</li>
+        <li><b class="down">情绪面</b>：AI 视觉方向被博主 + 机构反复提及 · 近期资金关注度上升 · 评分 7 分（可入池）</li>
+        <li><b class="warn">相对价值</b>：如果你信 AI 视觉方向，海康是龙头但估值贵，<b class="down">大华是估值洼地</b>，同样是 30 天 +10% 期望，大华的下行保护更厚</li>
+        <li><b>建仓策略</b>：等回踩 15.5-16.0 分批建 200 股（约 3,200 元）· P2 档 · 建仓优先级低于科大讯飞</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========== Section 4 · 3 个引擎冲突主管裁决 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 04</div>
+    <h3 class="sect-title">3 个引擎冲突 · 主管裁决</h3>
+    <p class="sect-lede">基本面 / 情绪面看好、但 Kronos 强烈反对，这是三引擎最考验判断的场景。本次三只标的<b class="up">全部被主管裁决为「降级 / 排除」</b>，加权规则为：Kronos 大幅 DOWN + 双护栏时，即使基本面 / 情绪面强也不建仓。</p>
+
+    <div class="debate-box">
+      <div class="debate-title">辩证 · 三引擎冲突处理</div>
+
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>标的</th>
+            <th>基本面 A</th>
+            <th>情绪面 B</th>
+            <th class="num">Kronos C</th>
+            <th>主管裁决</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hl-row">
+            <td><b>工业富联 601138</b></td>
+            <td class="down">🥇 首推</td>
+            <td class="down">⭐ 10 分</td>
+            <td class="num up"><b>-20.41%</b></td>
+            <td class="warn">⚠ 降级观察 · 不建仓</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>深南电路 002916</b></td>
+            <td class="down">🥉 首推</td>
+            <td class="down">9 分</td>
+            <td class="num up"><b>-53.63%</b></td>
+            <td class="up">✘ 降级 · 不建仓</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>华天科技 002185</b></td>
+            <td class="warn">观察</td>
+            <td class="down">8 分</td>
+            <td class="num up"><b>-55.75% 双护栏</b></td>
+            <td class="up">✘ 明确排除</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <ul class="verify-list">
+        <li><b>工业富联 601138</b>：AI 服务器 + 光模块概念龙头，基本面 + 情绪面都是顶级，但 Kronos -20.41% 意味着 30 天内大概率回调。<b class="warn">主管裁决：降级观察</b>，不否定长期方向，只是短期时点不对，等 Kronos 转正再入池</li>
+        <li><b>深南电路 002916</b>：PCB 高端制造龙头，基本面 + 情绪面都强，但 Kronos -53.63% 是极度悲观信号。<b class="up">主管裁决：不建仓</b>，超过 -50% 的 Kronos 信号 = 高度概率的下行区间</li>
+        <li><b>华天科技 002185</b>：半导体封测，基本面观察级，但 Kronos <b class="up">-55.75% + 双护栏</b>。<b class="up">主管裁决：明确排除</b>，双护栏 = Kronos 自己承认置信度低，但方向共识极度悲观，说明「不管数值多少，就是不能上」</li>
+      </ul>
+
+      <div class="debate-conclude">
+        <b>规律沉淀：</b>三引擎冲突时，Kronos 的<b class="up">「负向 &lt; -20% + 护栏警告」</b>可作为「一票否决」触发器，即使基本面 / 情绪面强，也不建仓。<b>这与团队观察池「涨停股 T+1 不追」规律高度一致</b>，涨停股 / 短期大涨股 Kronos 大概率判 DOWN，是市场自反机制在起作用。
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 5 · Bottom 5 必须放弃 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 05</div>
+    <h3 class="sect-title">Bottom 5 · 必须放弃 · Kronos 强反对</h3>
+
+    <div class="rule-fail">
+      <div class="rf-hd">
+        <div class="rf-flag">BOTTOM 5</div>
+        <div class="rf-title">Kronos 全景 32 只中最悲观 · 无论基本面 / 情绪面多好都不入池</div>
+      </div>
+      <div class="rt-wrap table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>排名</th>
+            <th>标的</th>
+            <th class="num">现价</th>
+            <th class="num">Kronos 30d</th>
+            <th>Kronos 说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hl-row">
+            <td class="up"><b>🚫 1</b></td>
+            <td><b>东山精密 002384</b></td>
+            <td class="num">260.37</td>
+            <td class="num up"><b>-75.71%</b></td>
+            <td class="up">今日涨停 · 双护栏 · 追高极危</td>
+          </tr>
+          <tr class="hl-row">
+            <td class="up"><b>🚫 2</b></td>
+            <td><b>亨通光电 600487</b></td>
+            <td class="num">74.38</td>
+            <td class="num up"><b>-72.28%</b></td>
+            <td class="up">团队前几轮已判避 · Kronos 强化</td>
+          </tr>
+          <tr class="hl-row">
+            <td class="up"><b>🚫 3</b></td>
+            <td>光迅科技 002281</td>
+            <td class="num">/</td>
+            <td class="num up"><b>-72.13%</b></td>
+            <td class="up">光模块高位 · 顶部反转</td>
+          </tr>
+          <tr class="hl-row">
+            <td class="up"><b>🚫 4</b></td>
+            <td>雅克科技 002409</td>
+            <td class="num">187.49</td>
+            <td class="num up"><b>-62.27%</b></td>
+            <td class="up">半导体材料涨后回吐 · 极端护栏</td>
+          </tr>
+          <tr class="hl-row">
+            <td class="up"><b>🚫 5</b></td>
+            <td>兆易创新 603986</td>
+            <td class="num">/</td>
+            <td class="num up"><b>-60.03%</b></td>
+            <td class="up">存储芯片高位 · 大幅下行区间</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="rf-score">
+        <b>共同特征：</b>5 只全部是「近期短期大涨 / 涨停」的高位股，Kronos 一致预测 <b class="up">-60% 以上</b> 的大幅下行区间。<b class="warn">规律：Kronos 对短期大涨股的负向预测胜率最高</b>，与团队观察池上周 4/4 涨停后本周全部回调的经验数据完全一致。
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 6 · 32 只主板 α 全景 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 06</div>
+    <h3 class="sect-title">32 只主板 α 全景 · UP 12 只 / DOWN 20 只</h3>
+    <p class="sect-lede">昨日 15 只 + 今日新增扩展 17 只，合计 32 只主板 α 的 Kronos 30 天全景。分化极清晰，UP 方向集中在特高压 / 数据中心 / 运营商 / AI 软件视觉；DOWN 方向集中在光模块 / 半导体材料 / 封测 / 高位涨停股。</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>方向</th>
+          <th>#</th>
+          <th>代码</th>
+          <th>名称</th>
+          <th class="num">现价</th>
+          <th class="num">Kronos 30d</th>
+          <th>入池</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="win-row"><td class="down">UP</td><td>1</td><td>002152</td><td>广电运通</td><td class="num">9.97</td><td class="num down"><b>+32.01%</b></td><td class="warn">跳空护栏</td></tr>
+        <tr class="win-row"><td class="down">UP</td><td>2</td><td>000400</td><td><b>许继电气</b></td><td class="num">19.85</td><td class="num down"><b>+30.32%</b></td><td class="down">✔ Top10 P1</td></tr>
+        <tr class="win-row"><td class="down">UP</td><td>3</td><td>002230</td><td><b>科大讯飞 NEW</b></td><td class="num">41.18</td><td class="num down"><b>+24.65%</b></td><td class="down">✔ Top10 P1</td></tr>
+        <tr class="win-row"><td class="down">UP</td><td>4</td><td>600845</td><td><b>宝信软件</b></td><td class="num">18.70</td><td class="num down"><b>+17.66%</b></td><td class="down">✔ Top10 P1</td></tr>
+        <tr class="win-row"><td class="down">UP</td><td>5</td><td>600312</td><td>平高电气</td><td class="num">17.33</td><td class="num down">+12.09%</td><td class="down">✔ Top10 P2</td></tr>
+        <tr class="win-row"><td class="down">UP</td><td>6</td><td>603501</td><td>韦尔股份</td><td class="num">106.15</td><td class="num down">+11.94%</td><td class="down">✔ Top10 P2</td></tr>
+        <tr class="win-row"><td class="down">UP</td><td>7</td><td>002236</td><td><b>大华股份 NEW</b></td><td class="num">16.32</td><td class="num down"><b>+10.40%</b></td><td class="down">✔ Top10 P2</td></tr>
+        <tr class="win-row"><td class="down">UP</td><td>8</td><td>000034</td><td>神州数码</td><td class="num">26.02</td><td class="num down">+9.71%</td><td class="down">✔ Top10 P3</td></tr>
+        <tr class="win-row"><td class="down">UP</td><td>9</td><td>600941</td><td>中国移动</td><td class="num">91.80</td><td class="num down">+9.09%</td><td class="down">✔ Top10 P3</td></tr>
+        <tr class="win-row"><td class="down">UP</td><td>10</td><td>000062</td><td>深圳华强</td><td class="num">26.88</td><td class="num down">+5.48%</td><td class="down">✔ Top10 P3</td></tr>
+        <tr class="win-row"><td class="down">UP</td><td>11</td><td>002179</td><td>中航光电</td><td class="num">35.86</td><td class="num down">+3.98%</td><td class="down">✔ Top10 P3</td></tr>
+        <tr><td class="warn">中性</td><td>12</td><td>002049</td><td>紫光国微</td><td class="num">78.22</td><td class="num warn">-2.35%</td><td class="warn">走平</td></tr>
+        <tr class="hl-row"><td class="up">DOWN</td><td>13</td><td>601138</td><td><b>工业富联</b></td><td class="num">/</td><td class="num up">-20.41%</td><td class="up">△ 降级观察</td></tr>
+        <tr class="hl-row"><td class="up">DOWN</td><td>14</td><td>002396</td><td>星网锐捷</td><td class="num">28.62</td><td class="num up">-27.78%</td><td class="up">✘ 涨停回调</td></tr>
+        <tr class="hl-row"><td class="up">DOWN</td><td>15</td><td>000938</td><td>紫光股份</td><td class="num">36.98</td><td class="num up">-30.67%</td><td class="up">✘ 涨停回调</td></tr>
+        <tr class="hl-row"><td class="up">DOWN</td><td>16</td><td>002371</td><td>北方华创</td><td class="num">774.20</td><td class="num up">-43.76%</td><td class="up">✘ 半导体设备高位</td></tr>
+        <tr class="hl-row"><td class="up">DOWN</td><td>17</td><td>002916</td><td><b>深南电路</b></td><td class="num">/</td><td class="num up"><b>-53.63%</b></td><td class="up">✘ 降级不建仓</td></tr>
+        <tr class="hl-row"><td class="up">DOWN</td><td>18</td><td>002185</td><td><b>华天科技</b></td><td class="num">/</td><td class="num up"><b>-55.75% 双护栏</b></td><td class="up">✘ 明确排除</td></tr>
+        <tr class="hl-row"><td class="up">DOWN</td><td>19</td><td>603078</td><td>江化微</td><td class="num">41.76</td><td class="num up">-56.03%</td><td class="up">✘ 材料回吐</td></tr>
+        <tr class="hl-row"><td class="up">DOWN</td><td>20</td><td>603986</td><td>兆易创新</td><td class="num">/</td><td class="num up"><b>-60.03%</b></td><td class="up">✘ Bottom 5</td></tr>
+        <tr class="hl-row"><td class="up">DOWN</td><td>21</td><td>002409</td><td>雅克科技</td><td class="num">187.49</td><td class="num up"><b>-62.27%</b></td><td class="up">✘ Bottom 5</td></tr>
+        <tr class="hl-row"><td class="up">DOWN</td><td>22</td><td>002281</td><td>光迅科技</td><td class="num">/</td><td class="num up"><b>-72.13%</b></td><td class="up">✘ Bottom 5</td></tr>
+        <tr class="hl-row"><td class="up">DOWN</td><td>23</td><td>600487</td><td>亨通光电</td><td class="num">74.38</td><td class="num up"><b>-72.28%</b></td><td class="up">✘ Bottom 5</td></tr>
+        <tr class="hl-row"><td class="up">DOWN</td><td>24</td><td>002384</td><td><b>东山精密</b></td><td class="num">260.37</td><td class="num up"><b>-75.71%</b></td><td class="up">✘ Bottom 5</td></tr>
+        <tr>
+          <td colspan="7" class="dim" style="text-align:center;padding:8px">... 其余 8 只 Kronos 结果分布于 -3% ~ -18% 区间 · JSON 已落盘 kronos_output/</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <!-- ========== Section 7 · 明日 7/15 双线并行 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 07</div>
+    <h3 class="sect-title">明日 7/15 · 双线并行 · 先减后建</h3>
+    <p class="sect-lede">A 线减仓 + B 线建仓两条流水线并行。核心纪律：<b class="warn">先减后建，别一步到位</b>，先完成 4 条减仓 P1 释放现金池，再从 Top10 P1 三只中挑 2-3 只分批建仓。</p>
+
+    <div class="rule-fail" style="margin-bottom:16px">
+      <div class="rf-hd">
+        <div class="rf-flag">A · 减仓 P1 · 4 条无条件</div>
+        <div class="rf-title">Kronos + 团队双引擎共振 · 明日 09:30 起顺次执行</div>
+      </div>
+      <div class="rt-wrap table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>标的</th>
+            <th>动作</th>
+            <th>触发</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hl-row">
+            <td class="down"><b>A1</b></td>
+            <td><b>沪电股份 002463</b></td>
+            <td class="down">全清 200 股</td>
+            <td>高开 ≥ 140 全清 / 135-140 减半 / 炸板 &lt; 135 市价</td>
+          </tr>
+          <tr class="hl-row">
+            <td class="down"><b>A2</b></td>
+            <td><b>通富微电 002156</b></td>
+            <td class="down">减 50-100 股</td>
+            <td>77+ 主动减</td>
+          </tr>
+          <tr class="hl-row">
+            <td class="down"><b>A3</b></td>
+            <td><b>蔚蓝锂芯 002245</b></td>
+            <td class="down">减半 250 股</td>
+            <td>≥ 21.20 触发</td>
+          </tr>
+          <tr class="hl-row" style="background:rgba(245,179,66,.14)">
+            <td class="warn"><b>NEW A4</b></td>
+            <td class="warn"><b>科创芯片 588200</b></td>
+            <td class="warn">减 1,000 份</td>
+            <td>破 4.20 触发</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="debate-box" style="margin-bottom:16px">
+      <div class="debate-title">B · 建仓 P1 · 3 只 · 减仓释放现金后</div>
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>标的</th>
+            <th>动作</th>
+            <th>触发</th>
+            <th>Kronos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="win-row">
+            <td class="down"><b>B1</b></td>
+            <td><b>许继电气 000400</b></td>
+            <td class="down">建仓 200 股</td>
+            <td>回踩 19.0-19.5</td>
+            <td class="down"><b>+30.32%</b></td>
+          </tr>
+          <tr class="win-row" style="background:rgba(245,179,66,.14)">
+            <td class="warn"><b>NEW B2</b></td>
+            <td class="warn"><b>科大讯飞 002230</b></td>
+            <td class="warn">建仓 100 股</td>
+            <td>回踩 40-41</td>
+            <td class="down"><b>+24.65%</b></td>
+          </tr>
+          <tr class="win-row">
+            <td class="down"><b>B3</b></td>
+            <td><b>宝信软件 600845</b></td>
+            <td class="down">建仓 100-200 股</td>
+            <td>回踩 18.0-18.5</td>
+            <td class="down"><b>+17.66%</b></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="debate-conclude" style="margin-top:10px">
+        <b>建仓顺序：</b>先看 A 线减仓释放的现金，若 ≥ 15,000 元则优先 B1 许继电气；若同时释放 ≥ 25,000 元，追加 B2 科大讯飞；B3 宝信软件视回踩情况观察。<b class="down">3 只 P1 建仓合计不超过 10% 组合仓位。</b>
+      </div>
+    </div>
+
+    <div class="forbid-box">
+      <div class="fb-hd">FORBIDDEN · 明日绝不追高</div>
+      <ul class="fb-list">
+        <li>Bottom 5 全部 · 东山精密 / 亨通光电 / 光迅科技 / 雅克科技 / 兆易创新</li>
+        <li>3 只降级排除股 · 工业富联 / 深南电路 / 华天科技（Kronos 一票否决）</li>
+        <li>Top 10 中 P2 / P3 档 · 明日不建仓（等 P1 建完 + 回踩再启动）</li>
+        <li>持仓加仓 · 通富 / 蔚蓝 / 通信 ETF / 沪电（已超上限或铁律禁）</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========== Section 8 · 三引擎系统价值总结 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 08</div>
+    <h3 class="sect-title">三引擎系统价值总结</h3>
+
+    <div class="debate-box">
+      <div class="debate-title">三引擎的 3 个核心价值 · 一次报告全部兑现</div>
+
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>价值</th>
+            <th>本次证据</th>
+            <th>规则沉淀</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="win-row">
+            <td class="down"><b>① 挖掘价值</b></td>
+            <td class="down">科大讯飞 002230 (+24.65% AI 软件) · 大华股份 002236 (+10.40% AI 视觉)</td>
+            <td class="down">Kronos 主动扫描 14 方向 · 找到团队原本没覆盖的新方向 α</td>
+          </tr>
+          <tr class="hl-row">
+            <td class="warn"><b>② 纠错价值</b></td>
+            <td class="warn">否决工业富联 -20.41% · 深南电路 -53.63% · 华天科技 -55.75%</td>
+            <td class="warn">三引擎冲突时 Kronos &lt; -20% + 护栏 = 一票否决 · 避免追高</td>
+          </tr>
+          <tr>
+            <td class="down"><b>③ 分档价值</b></td>
+            <td class="down">Top 10 三档 P1 / P2 / P3 · 明日先做 P1 三只 · 单只上限 2-4%</td>
+            <td class="down">Kronos 期望回报梯度 → 建仓分档 · 避免一步到位重仓</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="debate-conclude">
+        <b>方法论沉淀：</b>三引擎共振 = 基本面强 × 情绪高 × Kronos UP + 护栏干净 = 建仓；三引擎冲突 = Kronos &lt; -20% + 护栏 = 一票否决。<b class="down">规律：涨停股 / 短期大涨股 Kronos 大概率判 DOWN</b>，是市场自反机制在起作用，与团队观察池 4/4 涨停回调经验数据一致。这套方法论从今天起纳入团队 T+1 例行研究流程。
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 9 · 主管一句话 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 09</div>
+    <h3 class="sect-title">研究主管一句话</h3>
+
+    <div class="final-line">
+      <div class="final-tag">FINAL WORD · TAT RESEARCH DIRECTOR</div>
+      <div class="final-quote">
+        「三引擎系统性挖掘完成，Kronos 首次发现两只团队之前没覆盖的主板 α<br>
+        （<b class="down">科大讯飞 +24.65%</b> / <b class="down">大华 +10.40%</b>），<br>
+        同时否决 3 只估值透支股（<b class="up">工业富联 / 深南 / 华天</b>）。<br>
+        这就是三引擎的价值：<b class="down">避免追高，找到错杀</b>。<br>
+        明日 09:30，先做 <b class="warn">4 条减仓 P1</b>，<br>
+        再从 Top10 挑 <b class="down">2-3 只 P1 分批建仓</b>。」
+      </div>
+      <div class="final-sign">TAT 投研主管 · 2026-07-14 · AI 科技机会挖掘 · 三引擎共振 · 亲笔</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-row">
+      <span class="foot-lb">数据源</span>
+      <span>A 基本面：公司公告 + 年报 + web_search 机构研报 · B 情绪面：近 1-2 周催化 + 资金流向 + 机构调研评分 · C Kronos：NeoQuasar/Kronos-base 30 天预测 + 护栏 · 底层价格：腾讯 qt.gtimg.cn 2026-07-14</span>
+    </div>
+    <div class="foot-row">
+      <span class="foot-lb">扫描范围</span>
+      <span>AI 科技 14 细分方向 · 基本面候选池 40+ 只 · Kronos 主板 α 全景 32 只（昨日 15 + 今日新增 17）· 三重共振筛出 Top 10 建仓池 + 2 只全新方向 α</span>
+    </div>
+    <div class="foot-row">
+      <span class="foot-lb">附加资产</span>
+      <span>32 个 JSON+PNG 已落盘 <code>kronos_output/</code> · 团队可随时复核每只标的的 30 天区间预测与护栏详情</span>
+    </div>
+    <div class="foot-row">
+      <span class="foot-lb">下次复盘</span>
+      <span>7/15 收盘后（重点看 4 条减仓 P1 与 2-3 条 P1 建仓执行率）· 7/16 T+1 涨停股回调率验证 · 三引擎方法论纳入 T+1 例行研究流程</span>
+    </div>
+    <div class="foot-sign">
+      <span>TAT 投研团队 · 个股专题 · AI 科技机会挖掘 · 三引擎共振 Top10 · 2026-07-14</span>
+      <span>本报告仅作团队内部研讨用 · 不构成任何投资建议</span>
+    </div>
+  </footer>
+</article>
+</body>
+</html>

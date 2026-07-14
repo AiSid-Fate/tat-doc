@@ -1,0 +1,14 @@
+{
+    "code": "002230",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 41.18,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 44.323524475097656,
+    "pred_last_day_mean": 51.33110809326172,
+    "direction": "UP",
+    "pred_30d_return_pct": 24.650578176934722,
+    "p10_interval_last_day": 49.15803146362305,
+    "p90_interval_last_day": 52.82699203491211,
+    "warnings": []
+}

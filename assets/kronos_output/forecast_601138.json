@@ -1,0 +1,14 @@
+{
+    "code": "601138",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 65.6,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 62.92061233520508,
+    "pred_last_day_mean": 52.20857620239258,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -20.413755789035694,
+    "p10_interval_last_day": 47.25831985473633,
+    "p90_interval_last_day": 57.25325012207031,
+    "warnings": []
+}

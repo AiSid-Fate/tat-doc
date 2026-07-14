@@ -1,0 +1,14 @@
+{
+    "code": "002236",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 16.32,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 16.596128463745117,
+    "pred_last_day_mean": 18.017620086669922,
+    "direction": "UP",
+    "pred_30d_return_pct": 10.402083864399025,
+    "p10_interval_last_day": 17.526222229003906,
+    "p90_interval_last_day": 18.367568969726562,
+    "warnings": []
+}

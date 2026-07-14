@@ -1,0 +1,14 @@
+{
+    "code": "002415",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 33.58,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 32.410335540771484,
+    "pred_last_day_mean": 29.57224464416504,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -11.934947456328048,
+    "p10_interval_last_day": 28.916196823120117,
+    "p90_interval_last_day": 30.233081817626953,
+    "warnings": []
+}

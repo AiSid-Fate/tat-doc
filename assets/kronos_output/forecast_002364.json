@@ -1,0 +1,17 @@
+{
+    "code": "002364",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 53.6,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 46.603878021240234,
+    "pred_last_day_mean": 25.613292694091797,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -52.21400616773919,
+    "p10_interval_last_day": 21.021812438964844,
+    "p90_interval_last_day": 30.081546783447266,
+    "warnings": [
+        "WARNING: Predicted first day jump of -13.05% relative to last close (53.6000 -> 46.6039).",
+        "WARNING: High volatility on predicted day 2: -16.49% change."
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "code": "603986",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 583.99,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 465.54608154296875,
+    "pred_last_day_mean": 233.40643310546875,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -60.032460640512895,
+    "p10_interval_last_day": 187.07449340820312,
+    "p90_interval_last_day": 277.85028076171875,
+    "warnings": [
+        "WARNING: Predicted first day jump of -20.28% relative to last close (583.9900 -> 465.5461).",
+        "WARNING: High volatility on predicted day 2: -15.59% change."
+    ]
+}

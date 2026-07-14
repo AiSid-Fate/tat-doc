@@ -1,0 +1,17 @@
+{
+    "code": "002185",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 25.68,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 19.329683303833008,
+    "pred_last_day_mean": 11.362552642822266,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -55.75329967748339,
+    "p10_interval_last_day": 9.907022476196289,
+    "p90_interval_last_day": 12.254579544067383,
+    "warnings": [
+        "WARNING: Predicted first day jump of -24.73% relative to last close (25.6800 -> 19.3297).",
+        "WARNING: High volatility on predicted day 2: -15.77% change."
+    ]
+}

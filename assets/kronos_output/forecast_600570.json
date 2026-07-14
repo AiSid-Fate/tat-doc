@@ -1,0 +1,16 @@
+{
+    "code": "600570",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 20.51,
+    "latest_date": "2026-07-14",
+    "pred_first_day_mean": 23.471342086791992,
+    "pred_last_day_mean": 31.436616897583008,
+    "direction": "UP",
+    "pred_30d_return_pct": 53.274582630828895,
+    "p10_interval_last_day": 29.955738067626953,
+    "p90_interval_last_day": 32.630409240722656,
+    "warnings": [
+        "WARNING: Predicted first day jump of 14.44% relative to last close (20.5100 -> 23.4713)."
+    ]
+}
