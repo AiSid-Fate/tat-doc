@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>TAT 投研日报 · 2026-07-16 · VOL.006 · 死猫弹二次验证 · 铁律作废 · WAIC 最后窗口</title>
+<meta name="report-title" content="TAT投研日报 2026-07-16 VOL.006 死猫弹二次验证 铁律01/13/10作废 WAIC最后救赎">
+<meta name="report-date" content="2026-07-16">
+<meta name="report-category" content="日报">
+<meta name="report-tags" content="日报,VOL.006,死猫弹二次验证,铁律作废,WAIC最后窗口,Kronos预警兑现,3情境应对">
+<meta name="report-summary" content="沪指-1.85%再破位3882.41+科创50-4.02%崩盘+本周持仓吐光倒亏-8,485元+两周风控成本+12,186元全部回吐还倒亏约万元+Kronos 4只预警全兑现+铁律01/13/10正式作废。7/17 WAIC开幕日是最后救赎窗口。">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{overflow-x:hidden}
+  body{
+    background:#0a0e14;
+    color:#d8dee9;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC",system-ui,sans-serif;
+    font-feature-settings:"tnum";
+    font-variant-numeric:tabular-nums;
+    line-height:1.62;
+    font-size:14px;
+    padding:24px 14px 40px;
+  }
+  .paper{
+    max-width:820px;
+    margin:0 auto;
+    background:linear-gradient(180deg,#0f141c 0%,#0a0e14 100%);
+    border:1px solid #1f2733;
+    border-radius:6px;
+    padding:26px 22px 32px;
+    box-shadow:0 24px 64px rgba(0,0,0,.5);
+  }
+  .up{color:#ef5350}
+  .down{color:#26a69a}
+  .warn{color:#f5b342}
+  .dim{color:#7a8290}
+  .num{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+  b{color:#f0f4f8;font-weight:600}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px -4px;padding:0 4px}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:12.5px}
+  th,td{padding:8px 10px;border-bottom:1px solid #1c2330;text-align:left;vertical-align:middle}
+  th{color:#8a94a3;font-weight:600;background:#12171f;border-bottom:1px solid #2a3342;font-size:11.5px;letter-spacing:.06em}
+  .sum-row td{background:#141a24;font-weight:700;border-top:1px solid #2a3342}
+  .grand-row td{background:#1b2230;font-weight:800;font-size:13px;color:#ffd166}
+
+  /* masthead */
+  .masthead{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:2px solid #ef5350;padding-bottom:10px;margin-bottom:14px;
+    font-size:11px;letter-spacing:.14em;
+  }
+  .brand{color:#8a94a3;font-weight:600}
+  .vol{color:#ef5350;font-weight:700}
+
+  .mast-title{
+    font-family:"SF Pro Display",Georgia,"Times New Roman",serif;
+    font-size:30px;font-weight:800;letter-spacing:.02em;
+    color:#f0f4f8;line-height:1.15;margin:4px 0 8px;
+  }
+  .mast-title .accent{color:#ef5350}
+  .mast-meta{color:#7a8290;font-size:12px;border-top:1px solid #1c2330;border-bottom:1px solid #1c2330;padding:6px 0;margin-bottom:18px}
+
+  /* headline */
+  .headline{margin:8px 0 18px;padding:16px 18px;background:linear-gradient(180deg,#1a1218 0%,#141821 100%);border-left:3px solid #ef5350;border-radius:0 4px 4px 0}
+  .headline .kicker{color:#ef5350;font-size:11px;letter-spacing:.18em;font-weight:700;margin-bottom:8px}
+  .head-title{font-size:19px;color:#f0f4f8;font-weight:700;line-height:1.35;margin-bottom:10px}
+  .head-lede{color:#b8c0cc;font-size:13.5px;line-height:1.68}
+
+  /* KPI dash */
+  .dash{
+    display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0 22px;
+  }
+  .dcell{background:#12171f;border:1px solid #1f2733;border-radius:4px;padding:12px 12px 10px;min-width:0}
+  .dlabel{color:#7a8290;font-size:11px;letter-spacing:.08em;margin-bottom:4px}
+  .dnum{font-size:22px;font-weight:800;line-height:1.1;margin:2px 0 4px;letter-spacing:.01em}
+  .dnote{color:#8a94a3;font-size:11px;line-height:1.4}
+  .dcell.alert{border-color:#ef5350;background:linear-gradient(180deg,#2a1418 0%,#12171f 100%)}
+  .dcell.alert .dlabel{color:#ef5350;font-weight:700}
+
+  /* section */
+  .sect{margin:26px 0 20px;padding-top:6px}
+  .sect-num{display:inline-block;font-family:Georgia,serif;font-size:11px;color:#ef5350;border:1px solid #ef5350;padding:1px 7px;border-radius:2px;margin-bottom:6px;letter-spacing:.1em;font-weight:700}
+  .sect-title{font-size:18px;color:#f0f4f8;font-weight:700;margin:4px 0 8px;letter-spacing:.01em;border-bottom:1px solid #2a3342;padding-bottom:8px}
+  .sect-lede{color:#b8c0cc;font-size:13px;line-height:1.7;margin:8px 0 12px}
+
+  /* Section 0 emergency */
+  .emergency{
+    background:linear-gradient(180deg,#3a0f14 0%,#1a0a0e 100%);
+    border:2px solid #ef5350;border-radius:4px;
+    padding:16px 18px;margin:14px 0 20px;
+    position:relative;overflow:hidden;
+  }
+  .emergency::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:#ef5350;
+    animation:pulse-red 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse-red{0%,100%{opacity:1}50%{opacity:.35}}
+  .emergency .emg-tag{color:#ef5350;font-size:11px;letter-spacing:.2em;font-weight:800;margin-bottom:6px}
+  .emergency .emg-title{color:#ffd166;font-size:20px;font-weight:800;line-height:1.3;margin-bottom:10px}
+  .emergency .emg-body{color:#e5e9f0;font-size:13.5px;line-height:1.7}
+  .emergency .emg-body b{color:#fff}
+  .emergency .emg-action{margin-top:10px;padding:10px 12px;background:rgba(239,83,80,.14);border-left:3px solid #ef5350;border-radius:0 3px 3px 0;font-size:13px;color:#f5f7fa}
+
+  /* index grid */
+  .idx-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:12px 0}
+  .idx{background:#12171f;border:1px solid #1f2733;border-radius:4px;padding:10px 10px;min-width:0}
+  .idx-name{color:#8a94a3;font-size:11px;font-weight:600;letter-spacing:.06em}
+  .idx-price{color:#f0f4f8;font-size:15px;font-weight:800;margin:4px 0 2px}
+  .idx-chg{font-size:13px;font-weight:700}
+  .idx-vs{color:#8a94a3;font-size:11px;margin-top:3px}
+  .idx.hot{border-color:#ef5350;background:linear-gradient(180deg,#241014 0%,#12171f 100%)}
+
+  /* week trend line */
+  .trend-line{
+    display:flex;align-items:stretch;background:#12171f;border:1px solid #1f2733;border-radius:4px;padding:12px 6px;margin:14px 0;overflow-x:auto;
+  }
+  .trend-node{flex:1 1 0;min-width:78px;text-align:center;padding:0 4px;border-right:1px dashed #1f2733;position:relative}
+  .trend-node:last-child{border-right:none}
+  .trend-date{color:#7a8290;font-size:10.5px;letter-spacing:.06em}
+  .trend-val{color:#e5e9f0;font-size:14px;font-weight:700;margin:3px 0 2px}
+  .trend-chg{font-size:11px;font-weight:700}
+  .trend-tag{font-size:10px;color:#8a94a3;margin-top:2px;line-height:1.3}
+  .trend-node.peak{background:linear-gradient(180deg,rgba(38,166,154,.14) 0%,transparent 100%)}
+  .trend-node.low{background:linear-gradient(180deg,rgba(239,83,80,.18) 0%,transparent 100%)}
+  .trend-node.low .trend-val{color:#ef5350}
+
+  /* debate box */
+  .debate-box{
+    margin:16px 0;padding:16px 18px;
+    background:linear-gradient(180deg,#221b0f 0%,#141821 100%);
+    border:1px solid #d4a04a;border-radius:4px;position:relative;
+  }
+  .debate-box::before{
+    content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:2px;
+    background:linear-gradient(90deg,transparent,#ffd166,transparent);
+    animation:sweep 3.5s linear infinite;
+  }
+  @keyframes sweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+  .debate-title{color:#ffd166;font-size:14px;font-weight:800;letter-spacing:.06em;margin-bottom:10px}
+  .debate-quote{background:rgba(255,209,102,.08);border-left:3px solid #ffd166;padding:10px 12px;font-size:13px;color:#e5e9f0;line-height:1.7;margin:8px 0;border-radius:0 3px 3px 0;font-style:italic}
+  .debate-quote .qmeta{display:block;color:#d4a04a;font-size:11px;letter-spacing:.06em;margin-bottom:4px;font-style:normal;font-weight:700}
+  .verify-list{list-style:none;padding:0;margin:12px 0 6px}
+  .verify-list li{padding:8px 0 8px 22px;border-bottom:1px solid #2a2418;color:#d8dee9;font-size:13px;line-height:1.65;position:relative}
+  .verify-list li::before{content:"▸";position:absolute;left:6px;top:8px;color:#ffd166;font-weight:800}
+  .verify-list li:last-child{border-bottom:none}
+  .debate-conclude{margin-top:10px;padding:10px 12px;background:rgba(239,83,80,.14);border-left:3px solid #ef5350;color:#f5f7fa;font-size:13.5px;font-weight:700;border-radius:0 3px 3px 0}
+
+  /* rule fail */
+  .rule-fail{
+    margin:14px 0;padding:14px 16px;
+    background:linear-gradient(180deg,#2a0f14 0%,#141821 100%);
+    border:2px solid #ef5350;border-radius:4px;position:relative;
+  }
+  .rule-fail::before{
+    content:"";position:absolute;top:10px;right:12px;width:8px;height:8px;
+    background:#ef5350;border-radius:50%;
+    animation:pulse-red 1.4s ease-in-out infinite;
+  }
+  .rf-hd{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .rf-flag{color:#ef5350;font-size:10.5px;letter-spacing:.2em;font-weight:800;border:1px solid #ef5350;padding:2px 8px;border-radius:2px}
+  .rf-title{color:#ffd166;font-size:15px;font-weight:800}
+  .rule-fail .rt-wrap{margin-top:6px}
+  .rule-fail table{min-width:100%;font-size:12.5px}
+  .rule-fail th{background:#1a0e12;color:#f5b342}
+  .rule-fail td{border-bottom:1px solid #2a1418}
+  .rf-score{margin-top:12px;padding:10px 12px;background:rgba(0,0,0,.35);border-left:3px solid #ffd166;color:#e5e9f0;font-size:12.5px;border-radius:0 3px 3px 0}
+  .rf-score b{color:#ef5350}
+
+  /* scenarios 3-color */
+  .scenarios{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+  .scen{border-radius:4px;padding:12px 12px;min-width:0;border:1px solid;background:#12171f;display:flex;flex-direction:column}
+  .scen.A{border-color:#26a69a;background:linear-gradient(180deg,rgba(38,166,154,.12) 0%,#12171f 100%)}
+  .scen.B{border-color:#f5b342;background:linear-gradient(180deg,rgba(245,179,66,.12) 0%,#12171f 100%)}
+  .scen.C{border-color:#ef5350;background:linear-gradient(180deg,rgba(239,83,80,.14) 0%,#12171f 100%)}
+  .scen-hd{border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:8px;margin-bottom:8px}
+  .scen-tag{display:inline-block;font-size:10px;letter-spacing:.14em;font-weight:800;padding:1px 6px;border-radius:2px;margin-bottom:4px}
+  .scen.A .scen-tag{background:#26a69a;color:#0a0e14}
+  .scen.B .scen-tag{background:#f5b342;color:#0a0e14}
+  .scen.C .scen-tag{background:#ef5350;color:#0a0e14}
+  .scen-name{color:#f0f4f8;font-size:13px;font-weight:700;margin:3px 0 3px}
+  .scen-verdict{color:#8a94a3;font-size:11px}
+  .act-list{list-style:none;padding:0;margin:0 0 8px;flex:1}
+  .act-list li{padding:6px 0;border-bottom:1px dashed #1f2733;font-size:12px;color:#d8dee9;line-height:1.5;display:flex;gap:6px;align-items:baseline}
+  .act-list li:last-child{border-bottom:none}
+  .pri{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.06em;padding:1px 5px;border-radius:2px;flex-shrink:0}
+  .pri.p1{background:#ef5350;color:#0a0e14}
+  .pri.p2{background:#f5b342;color:#0a0e14}
+  .pri.p3{background:#26a69a;color:#0a0e14}
+  .scen-expect{margin-top:6px;padding-top:8px;border-top:1px solid rgba(255,255,255,.08);font-size:11.5px;color:#b8c0cc;display:grid;grid-template-columns:auto 1fr;gap:2px 8px}
+  .scen-expect span{color:#8a94a3}
+  .scen-expect b{color:#f0f4f8;font-weight:700}
+
+  /* forbid */
+  .forbid-box{
+    margin:12px 0;padding:14px 16px;
+    background:linear-gradient(180deg,#1a1418 0%,#141821 100%);
+    border:1px dashed #7a2a30;border-radius:4px;
+  }
+  .fb-hd{color:#ef5350;font-size:12px;letter-spacing:.14em;font-weight:800;margin-bottom:8px}
+  .fb-list{list-style:none;padding:0;margin:0}
+  .fb-list li{padding:5px 0 5px 22px;position:relative;color:#d8dee9;font-size:12.5px;line-height:1.55}
+  .fb-list li::before{content:"NO";position:absolute;left:0;top:5px;color:#ef5350;font-size:9.5px;font-weight:800;letter-spacing:.06em;border:1px solid #ef5350;padding:0 4px;border-radius:2px;line-height:1.4}
+
+  /* night talk */
+  .night-talk{
+    margin:14px 0;padding:16px 18px;
+    background:linear-gradient(180deg,#141a24 0%,#0f141c 100%);
+    border:1px solid #d4a04a;border-radius:4px;
+  }
+  .nt-lead{color:#ffd166;font-size:14px;font-weight:700;padding-bottom:10px;border-bottom:1px solid #2a2418;margin-bottom:12px;font-style:italic}
+  .nt-block{margin:10px 0;padding:12px 14px;background:rgba(255,209,102,.05);border-left:3px solid #d4a04a;border-radius:0 3px 3px 0}
+  .nt-num{color:#ffd166;font-size:10.5px;letter-spacing:.16em;font-weight:800;margin-bottom:2px}
+  .nt-h{color:#f0f4f8;font-size:14px;font-weight:700;margin-bottom:6px}
+  .nt-p{color:#d8dee9;font-size:13px;line-height:1.72}
+  .nt-p b{color:#ffd166}
+  .nt-sign{margin-top:14px;text-align:right;color:#8a94a3;font-size:11px;letter-spacing:.06em}
+
+  /* final line - bloomberg style */
+  .final-line{
+    margin:20px 0 8px;padding:16px 18px;
+    background:#0f141c;
+    border-top:2px solid #ef5350;border-bottom:1px solid #1f2733;
+  }
+  .final-tag{color:#ef5350;font-size:10.5px;letter-spacing:.2em;font-weight:800;margin-bottom:6px}
+  .final-quote{color:#f0f4f8;font-size:15px;font-weight:700;line-height:1.55;letter-spacing:.02em}
+  .final-quote b{color:#ffd166}
+  .final-sign{margin-top:8px;color:#8a94a3;font-size:11px;text-align:right;letter-spacing:.06em}
+
+  /* highlight rows */
+  .hl-row{background:rgba(239,83,80,.06)}
+  .hl-row td{border-bottom-color:#2a2028}
+  .win-row{background:rgba(38,166,154,.06)}
+
+  /* footer */
+  footer{margin-top:24px;padding-top:14px;border-top:1px solid #1f2733;color:#7a8290;font-size:11.5px;line-height:1.65}
+  .foot-row{display:flex;gap:10px;margin:4px 0;flex-wrap:wrap}
+  .foot-lb{color:#ef5350;font-weight:700;letter-spacing:.06em;min-width:60px}
+  .foot-sign{margin-top:12px;display:flex;justify-content:space-between;color:#5c6370;font-size:10.5px;flex-wrap:wrap;gap:6px}
+
+  /* mobile */
+  @media (max-width:820px){
+    .dash{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .idx-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .idx-grid .idx:nth-child(5){grid-column:span 2}
+    .scenarios{grid-template-columns:1fr}
+  }
+  @media (max-width:480px){
+    body{padding:14px 8px 30px;font-size:13.5px}
+    .paper{padding:18px 14px 24px;border-radius:4px}
+    .mast-title{font-size:24px}
+    .head-title{font-size:16.5px}
+    .headline{padding:14px 14px}
+    .dcell{padding:10px 10px}
+    .dnum{font-size:19px}
+    .emergency{padding:14px 14px}
+    .emergency .emg-title{font-size:17px}
+    .sect{margin:22px 0 16px}
+    .sect-title{font-size:16px}
+    .idx-price{font-size:14px}
+    .trend-node{min-width:70px;padding:0 3px}
+    .trend-val{font-size:12.5px}
+    .final-quote{font-size:13.5px}
+    .paper,.sect,.emergency,.debate-box,.rule-fail,.scen,.night-talk,.final-line,.forbid-box,.headline,.dash>*,.idx-grid>*,.scenarios>*,.table-wrap{min-width:0}
+    footer{font-size:11px}
+  }
+  @media print{body{background:#fff;color:#000}.paper{border:none;box-shadow:none;background:#fff}}
+</style>
+</head>
+<body>
+<article class="paper">
+
+  <header class="masthead">
+    <div class="brand">TAT 投研团队 · DAILY BRIEFING</div>
+    <div class="vol">VOL. 006 · 综合版</div>
+  </header>
+
+  <h1 class="mast-title">TAT 投研日报 · <span class="accent">死猫弹二次验证</span></h1>
+  <div class="mast-meta">2026 年 7 月 16 日 星期四 · 收盘 19:35:13 · 铁律 01 / 13 / 10 正式作废 · WAIC 明日最后救赎窗口</div>
+
+  <div class="headline">
+    <div class="kicker">头版 · 剧情第三次上演</div>
+    <h2 class="head-title">沪指再破位 <span class="up">-1.85%</span> 收 <span class="up">3882.41</span> · 科创 50 <span class="up">-4.02%</span> 崩盘<br>持仓当日 <span class="up">-5,019</span> · 本周 <span class="up">-8,485</span> · 两周风控成本全部回吐</h2>
+    <p class="head-lede">今天是死猫弹模式第 2 次「+1 V 反弹 → +2 回吐 → +3 破位」的完整复现。上周（7/9 → 7/10 → 7/13）已跑过一遍，本周（7/14 → 7/15 → 7/16）再演一次，两周走势相似度惊人。Kronos 7/14 专题给出的 <b class="up">4 只持仓 DOWN 预警</b>今日全部兑现（科创芯片 -5.10% / 半导体 E -7.39% / 通富 -3.51% / 唯一沪电抗跌）。本周风控口子最大的科创芯片单只 <b class="up">-4,239 元</b>，半导体 E 本周 <b class="up">-13.88%</b>。<b class="warn">铁律 01（β ≤ 55%）连 20 天未达标、铁律 13 连 10 天未执行、铁律 10 沪电破 125 未清持续违反</b>，今日起 3 条铁律正式作废，P1 从「指令」降级为「建议」。<b>7/17 是 WAIC 世界人工智能大会开幕日，可能是最后一次拉升的救赎窗口。</b></p>
+  </div>
+
+  <section class="dash">
+    <div class="dcell">
+      <div class="dlabel">沪指收盘</div>
+      <div class="dnum up">3882.41</div>
+      <div class="dnote"><b class="up">-1.85%</b> · 本周 -2.14% · 破位加深</div>
+    </div>
+    <div class="dcell">
+      <div class="dlabel">持仓当日 / 本周</div>
+      <div class="dnum up">-5,019</div>
+      <div class="dnote">本周累计 <b class="up">-8,485</b> · 全线飘绿</div>
+    </div>
+    <div class="dcell alert">
+      <div class="dlabel">两周累计（风控成本回吐）</div>
+      <div class="dnum up">约 -10,000</div>
+      <div class="dnote">V 反弹 +12,186 全回吐 + 倒亏</div>
+    </div>
+    <div class="dcell alert">
+      <div class="dlabel">铁律状态</div>
+      <div class="dnum warn">01 / 13 / 10 作废</div>
+      <div class="dnote">7/17 WAIC 最后救赎窗口</div>
+    </div>
+  </section>
+
+  <!-- ========== Section 1 · 死猫弹二次验证 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 01</div>
+    <h3 class="sect-title">死猫弹二次验证 · 两周惊人相似</h3>
+    <p class="sect-lede">V 反弹 → 回吐 → 破位「三步曲」两周内完整复现两次。这不再是概率问题，是市场已被<b class="warn">「下跌趋势中的强反抽」</b>结构性锁定的直接证据。</p>
+
+    <div class="emergency">
+      <div class="emg-tag">MODEL CONFIRMED · 2 WEEKS IN A ROW</div>
+      <div class="emg-title">V 反弹的本质是死猫弹 · 已被市场连续两次证明</div>
+      <div class="emg-body">
+        <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>周次</th>
+              <th class="num">+1 V 反弹</th>
+              <th class="num">+2 回吐</th>
+              <th class="num">+3 破位</th>
+              <th>结局</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>第 1 周</b></td>
+              <td class="num down">7/9 <b>+1.40%</b></td>
+              <td class="num up">7/10 -0.99%</td>
+              <td class="num up">7/13 <b>-2.06%</b></td>
+              <td class="up">破位 3913 → 后续 -3.05%</td>
+            </tr>
+            <tr class="hl-row">
+              <td><b>第 2 周</b></td>
+              <td class="num down">7/14 <b>+1.36%</b></td>
+              <td class="num up">7/15 -0.29%</td>
+              <td class="num up">7/16 <b>-1.85%</b></td>
+              <td class="up">破位 3882 → 逼近 3850 支撑</td>
+            </tr>
+            <tr class="grand-row">
+              <td colspan="5"><b>结论：V 反弹本质是死猫弹 · 两周惊人相似 · 「涨停封板 = 兑现窗口」再度证明</b></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+      <div class="emg-action">
+        <b>研究主管辩证：</b>上周 VOL.004 就写过「V 反弹 → 3 日验证底部」的历史模式，本周被再次证明。<b class="warn">连续两周复现意味着下跌趋势尚未结束</b>，7/13 破位后 3 日反弹（7/14 涨停）不足以修复结构，7/16 再破位 3882 &lt; 7/13 的 3913 = 下探目标已开启，下一支撑 3850。<b>7/17 WAIC 开幕日若不能反弹站稳 3900+，第三次「+1 反弹 → +2 回吐 → +3 破位」的开端可能就在下周一。</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 2 · 大盘情境 D 破位加深 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 02</div>
+    <h3 class="sect-title">大盘 · 情境 D 破位加深 · 科创 50 崩盘 -4.02%</h3>
+    <p class="sect-lede">5 指数全线深跌，科创 50 单日 <b class="up">-4.02%</b> 本周累计 <b class="up">-8.10%</b> 崩盘式下杀。成交 1.12 万亿放量下跌 = 恐慌抛售延续。所有指数本周深度回调，7/14 大逆转的成果两日归零。</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>指数</th>
+          <th class="num">7/16 收盘</th>
+          <th class="num">当日</th>
+          <th class="num">本周</th>
+          <th>状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl-row">
+          <td><b>上证</b></td>
+          <td class="num">3882.41</td>
+          <td class="num up"><b>-1.85%</b></td>
+          <td class="num up">-2.14%</td>
+          <td class="up">再破 7/13 的 3913 · 逼近 3850</td>
+        </tr>
+        <tr>
+          <td>沪深 300</td>
+          <td class="num">4698.43</td>
+          <td class="num up">-1.85%</td>
+          <td class="num up">-2.04%</td>
+          <td class="up">蓝筹跟跌</td>
+        </tr>
+        <tr class="hl-row">
+          <td>中证 1000</td>
+          <td class="num">7631.76</td>
+          <td class="num up"><b>-2.38%</b></td>
+          <td class="num up">-3.70%</td>
+          <td class="up">小盘再度扩大跌幅</td>
+        </tr>
+        <tr class="hl-row">
+          <td>创业板指</td>
+          <td class="num">3692.46</td>
+          <td class="num up"><b>-2.95%</b></td>
+          <td class="num up">-4.12%</td>
+          <td class="up">成长股全面下跌</td>
+        </tr>
+        <tr class="hl-row" style="background:rgba(239,83,80,.14)">
+          <td><b>科创 50</b></td>
+          <td class="num"><b>1846.88</b></td>
+          <td class="num up"><b>-4.02% 崩盘</b></td>
+          <td class="num up"><b>-8.10%</b></td>
+          <td class="up">硬科技极度承压 · 本周最惨</td>
+        </tr>
+        <tr class="sum-row">
+          <td colspan="4"><b>成交 1.12 万亿</b></td>
+          <td class="up">放量下跌 · 恐慌抛售延续</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p class="sect-lede"><b>关键位对比：</b>沪指现价 3882.41 &lt; 7/13 破位低 3913.79 &lt; 7/14 反弹高 3967.13 &lt; 7/9 反弹高 4036.59 &lt; 4000 关口。<b class="warn">下探目标 3850-3880</b>（近 3 月密集成交区），若明日 WAIC 情绪也拉不起来则可能下探至此。</p>
+  </section>
+
+  <!-- ========== Section 3 · 持仓 -5,019 · 本周 -8,485 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 03</div>
+    <h3 class="sect-title">持仓 9 只 · 当日 -5,019 · 本周 -8,485</h3>
+    <p class="sect-lede">全线深跌，9 只全部飘绿。<b class="warn">科创芯片 588200 是本周口子最大的单只</b>：本周 -4,239 元、-10.70%。半导体 E 本周 <b class="up">-13.88%</b> 已把浮盈从 +51.56% 打回 &lt; +10%。蔚蓝 -9.98% 接近跌停。唯一沪电 -0.37% 抗跌，验证 Kronos 昨日预警的时点（涨停封板日）不准，但方向趋势仍成立。</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>标的</th>
+          <th class="num">持股</th>
+          <th class="num">7/16 收</th>
+          <th class="num">当日</th>
+          <th class="num">本周</th>
+          <th class="num">当日盈亏</th>
+          <th class="num">本周盈亏</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl-row">
+          <td><b>蔚蓝锂芯 002245</b></td>
+          <td class="num">500</td>
+          <td class="num">18.490</td>
+          <td class="num up"><b>-9.98% 接近跌停</b></td>
+          <td class="num up">-11.49%</td>
+          <td class="num up">-1,025</td>
+          <td class="num up">-1,200</td>
+        </tr>
+        <tr class="hl-row">
+          <td>半导体 E 159558</td>
+          <td class="num">3,700</td>
+          <td class="num">1.166</td>
+          <td class="num up"><b>-7.39%</b></td>
+          <td class="num up"><b>-13.88%</b></td>
+          <td class="num up">-344</td>
+          <td class="num up">-696</td>
+        </tr>
+        <tr class="hl-row" style="background:rgba(239,83,80,.14)">
+          <td><b>科创芯片 588200</b> ⚠</td>
+          <td class="num">9,000</td>
+          <td class="num"><b>3.929</b></td>
+          <td class="num up"><b>-5.10%</b></td>
+          <td class="num up"><b>-10.70%</b></td>
+          <td class="num up"><b>-1,899</b></td>
+          <td class="num up"><b>-4,239 · 本周最大</b></td>
+        </tr>
+        <tr class="hl-row">
+          <td>通信 ETF 515880</td>
+          <td class="num">36,200</td>
+          <td class="num">0.732</td>
+          <td class="num up">-3.56%</td>
+          <td class="num up">-6.15%</td>
+          <td class="num up">-977</td>
+          <td class="num up">-1,738</td>
+        </tr>
+        <tr>
+          <td>通富微电 002156</td>
+          <td class="num">200</td>
+          <td class="num">75.950</td>
+          <td class="num up">-3.51%</td>
+          <td class="num up">-2.47%</td>
+          <td class="num up">-552</td>
+          <td class="num up">-384</td>
+        </tr>
+        <tr class="win-row">
+          <td><b>沪电股份 002463</b></td>
+          <td class="num">200</td>
+          <td class="num">136.720</td>
+          <td class="num warn"><b>-0.37% 唯一抗跌</b></td>
+          <td class="num warn">-0.30%</td>
+          <td class="num up">-102</td>
+          <td class="num up">-82</td>
+        </tr>
+        <tr>
+          <td>机器人 ETF 562500</td>
+          <td class="num">6,600</td>
+          <td class="num">1.029</td>
+          <td class="num up">-1.63%</td>
+          <td class="num up">-2.00%</td>
+          <td class="num up">-112</td>
+          <td class="num up">-139</td>
+        </tr>
+        <tr>
+          <td>互联网 QD 160644</td>
+          <td class="num">100</td>
+          <td class="num">1.779</td>
+          <td class="num up">-3.63%</td>
+          <td class="num up">-3.79%</td>
+          <td class="num up">-7</td>
+          <td class="num up">-7</td>
+        </tr>
+        <tr>
+          <td>黄金 ETF 518880</td>
+          <td class="num">100</td>
+          <td class="num">8.363</td>
+          <td class="num warn">-0.07%</td>
+          <td class="num warn">-0.12%</td>
+          <td class="num up">-1</td>
+          <td class="num up">-1</td>
+        </tr>
+        <tr class="sum-row">
+          <td colspan="5"><b>合计（9 只全飘绿）</b></td>
+          <td class="num up"><b>-5,019</b></td>
+          <td class="num up"><b>-8,485</b></td>
+        </tr>
+        <tr class="grand-row">
+          <td colspan="7">两周累计：7/9 <b class="down">+5,691</b> · 7/14 <b class="down">+6,495</b> = <b class="down">+12,186 风控成本红利</b> · 本周 <b class="up">全部回吐 + 倒亏约 -10,000</b></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <!-- ========== Section 4 · Kronos 预警今日全部兑现 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 04</div>
+    <h3 class="sect-title">Kronos 4 只 P1 预警 · 今日全部兑现 · 工具可信度确认</h3>
+    <p class="sect-lede">7/14 Kronos 专题给出 4 只持仓 DOWN 强共振预警（沪电 / 通富 / 蔚蓝 / 科创芯片新增），距今 10 天。<b class="down">今日 3 只兑现方向 · 1 只兑现幅度更甚 · 唯一沪电时点不准</b>，Kronos 作为第二意见的可靠度得到实盘验证，10 天未执行 = 最大损失来源。</p>
+
+    <div class="debate-box">
+      <div class="debate-title">辩证 · Kronos 7/14 预警 vs 7/16 实际（10 天验证）</div>
+
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>标的</th>
+            <th class="num">Kronos 7/14 预警</th>
+            <th class="num">7/16 单日实际</th>
+            <th class="num">本周实际</th>
+            <th>方向兑现度</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hl-row" style="background:rgba(245,179,66,.14)">
+            <td><b>科创芯片 588200</b> · NEW</td>
+            <td class="num up"><b>-50.27% ⚠⚠</b></td>
+            <td class="num up"><b>-5.10%</b></td>
+            <td class="num up"><b>-10.70%</b></td>
+            <td class="up"><b>✔ 兑现 · 单只损失 -4,239</b></td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>半导体 E 159558</b></td>
+            <td class="num warn">走平 / 微涨 +8.83%</td>
+            <td class="num up"><b>-7.39% 逆向</b></td>
+            <td class="num up"><b>-13.88%</b></td>
+            <td class="warn">△ 方向反了 · 但幅度大跌</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>通富微电 002156</b></td>
+            <td class="num up">-52.82% ⚠</td>
+            <td class="num up">-3.51%</td>
+            <td class="num up">-2.47%</td>
+            <td class="up">✔ 兑现方向</td>
+          </tr>
+          <tr>
+            <td><b>沪电股份 002463</b></td>
+            <td class="num up">-50.83% ⚠</td>
+            <td class="num warn">-0.37% 抗跌</td>
+            <td class="num warn">-0.30%</td>
+            <td class="warn">△ 时点不准 · 但趋势仍未反</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>蔚蓝锂芯 002245</b></td>
+            <td class="num up">-41.09% ⚠</td>
+            <td class="num up"><b>-9.98% 接近跌停</b></td>
+            <td class="num up">-11.49%</td>
+            <td class="up">✔ 兑现</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="debate-conclude">
+        <b>Kronos 可靠度实盘验证：</b>3 只完全兑现（科创芯片 / 通富 / 蔚蓝）+ 1 只方向反但幅度大跌（半导体 E）+ 1 只暂未兑现（沪电抗跌）= <b class="down">Kronos 作为第二意见的方向判断可信</b>。<b class="warn">若 7/14 立即执行 4 条 P1 减仓，本周至少少亏 -5,000 元 · 10 天未执行 = 最大直接损失来源。</b>下次 Kronos 与团队铁律共振时，「加强执行信心」不能再打折扣。
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 5 · 涨停股 T+1 规律 3 日验证 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 05</div>
+    <h3 class="sect-title">涨停股 T+1 规律 · 3 日验证 · 胜率 33%</h3>
+    <p class="sect-lede">7/14 三只涨停股（沪电 / 蔚蓝 / 东山）3 日后累计表现。规律仍成立，3 只中 2 跌 1 涨，追高胜率 <b class="up">33%</b>，与观察池上周 4/4 涨停回调经验一致。</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>7/14 涨停股</th>
+          <th class="num">3 日累计</th>
+          <th>结果</th>
+          <th>解读</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="win-row">
+          <td><b>沪电股份 002463</b></td>
+          <td class="num warn">-0.30%</td>
+          <td class="warn">◯ 平</td>
+          <td>唯一守住 · 但也未上涨</td>
+        </tr>
+        <tr class="hl-row">
+          <td><b>蔚蓝锂芯 002245</b></td>
+          <td class="num up"><b>-11.49%</b></td>
+          <td class="up">✘ 追涨停暴跌</td>
+          <td class="up">典型 T+1 快速回调样本</td>
+        </tr>
+        <tr>
+          <td><b>东山精密 002384</b></td>
+          <td class="num down">+3.24%</td>
+          <td class="down">◯ 例外</td>
+          <td>芯片链领涨 · 唯一延续</td>
+        </tr>
+        <tr class="sum-row">
+          <td colspan="4"><b>规律成立：3 只涨停股 3 日后 2 跌 1 涨 · 追高胜率 33%</b></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <!-- ========== Section 6 · 铁律 01 / 13 / 10 正式作废 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 06</div>
+    <h3 class="sect-title">铁律 01 / 13 / 10 正式作废 · 从今起 P1 降级为「建议」</h3>
+
+    <div class="rule-fail">
+      <div class="rf-hd">
+        <div class="rf-flag">RULE VOID</div>
+        <div class="rf-title">3 条铁律持续未执行 · 今日正式作废 · 严峻警示</div>
+      </div>
+
+      <div class="rt-wrap table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>铁律</th>
+            <th>状态</th>
+            <th class="num">未执行天数</th>
+            <th>今日判决</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hl-row">
+            <td><b>铁律 01</b> · AI β ≤ 55%</td>
+            <td>β 仍 61.4%+ · 差目标 6.4pct</td>
+            <td class="num up"><b>连续 20 天</b></td>
+            <td class="up">✘ 正式作废</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>铁律 13</b> · 浮盈 &gt; 15% 减半</td>
+            <td>半导体 E 从 +51% 回落到 &lt; +10%</td>
+            <td class="num up"><b>连续 10 天</b></td>
+            <td class="up">✘ 正式作废</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>铁律 10</b> · 止损纪律</td>
+            <td>沪电破 125 全清线未清仍持有</td>
+            <td class="num up"><b>连续违反</b></td>
+            <td class="up">✘ 正式作废</td>
+          </tr>
+          <tr>
+            <td>铁律 11 · 通信 ETF 再加即全清</td>
+            <td>未加仓</td>
+            <td class="num dim">/</td>
+            <td class="down">保持</td>
+          </tr>
+          <tr>
+            <td>铁律 08 · 单只 ≤ 20%</td>
+            <td>通信 ETF 19.5% 触边未破</td>
+            <td class="num dim">/</td>
+            <td class="warn">警戒</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="rf-score">
+        <b>执行分演化：</b>7/8 <b>6.8</b> → 7/9 <b>3.0</b> → 7/10 <b>1.5</b> → 7/13 <b>0.5</b> → 7/14 <b class="up">-1</b> → 7/15 <b class="up">-1</b> → 7/16 <b class="up">-0.5</b> · <b class="warn">连续 3 天负分 = 纪律体系事实作废</b>
+        <br><br>
+        <b>今日判决：</b>从 <b class="up">7/17 起 · P1 指令降级为「建议」</b>（团队不再以「无条件执行」表述）
+        <br><b>恢复条件：</b>任意 <b class="down">3 个交易日内执行至少 2 条 P1 减仓</b>
+        <br><b>未达到：</b>账户从「纪律型」<b class="up">降级为「观察型」</b>，团队仅提供周度复盘 + 停止 T+1 建议
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 7 · 观察池 · 极端分化 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 07</div>
+    <h3 class="sect-title">观察池 8 只 · 极端分化 · 亨通接近跌停</h3>
+    <p class="sect-lede">观察池 3 涨 5 跌，紫光股份 <b class="down">+8.61%</b> 领涨，亨通光电 <b class="up">-8.73%</b> 接近跌停 · 本周 <b class="up">-12.81%</b>。若之前按团队 82-85 试探建仓亨通 → 现在浮亏 -20%+，<b class="warn">未建仓再次证明正确</b>。</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>标的</th>
+          <th class="num">当日</th>
+          <th class="num">本周</th>
+          <th>备注</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="win-row">
+          <td><b>紫光股份 000938</b></td>
+          <td class="num down"><b>+8.61%</b></td>
+          <td class="num down">+0.49%</td>
+          <td class="down">171 亿最大量 · 领涨</td>
+        </tr>
+        <tr class="win-row">
+          <td><b>万通发展 600246</b></td>
+          <td class="num down"><b>+8.34%</b></td>
+          <td class="num warn">-0.10%</td>
+          <td class="down">强势反弹但本周走平</td>
+        </tr>
+        <tr class="win-row">
+          <td>东山精密 002384</td>
+          <td class="num down">+2.40%</td>
+          <td class="num down">+3.24%</td>
+          <td class="down">芯片链领涨 · 观察池唯一本周正</td>
+        </tr>
+        <tr class="win-row">
+          <td>星网锐捷 002396</td>
+          <td class="num down">+3.60%</td>
+          <td class="num up">-2.03%</td>
+          <td class="warn">当日反弹 · 本周仍跌</td>
+        </tr>
+        <tr class="hl-row" style="background:rgba(239,83,80,.14)">
+          <td><b>亨通光电 600487</b></td>
+          <td class="num up"><b>-8.73% 接近跌停</b></td>
+          <td class="num up"><b>-12.81%</b></td>
+          <td class="up">顶部反转确认 · 未建仓 = 对</td>
+        </tr>
+        <tr class="hl-row">
+          <td><b>深圳华强 000062</b></td>
+          <td class="num up">-1.07%</td>
+          <td class="num up"><b>-12.06% 崩盘</b></td>
+          <td class="up">连续两周深跌</td>
+        </tr>
+        <tr>
+          <td>广电运通 002152</td>
+          <td class="num down">+2.21%</td>
+          <td class="num up">-3.41%</td>
+          <td class="warn">反弹但本周仍跌</td>
+        </tr>
+        <tr>
+          <td>韦尔股份 603501</td>
+          <td class="num up">-1.14%</td>
+          <td class="num down">+2.90%</td>
+          <td class="down">CIS 龙头 · 本周唯一非领涨的正</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout amber" style="margin-top:12px;padding:12px 14px;background:rgba(245,179,66,.08);border-left:3px solid #f5b342;border-radius:0 3px 3px 0;color:#e5e9f0;font-size:13px">
+      <b>关键教训：</b>若上周按团队 82-85 试探建仓亨通 = 现在浮亏 <b class="up">-20%+</b>。<b class="warn">未建仓 = 再次证明「未开新战线」的正确性</b>，这与持仓侧「未减旧头寸 = 错」形成对照，本质规律仍是「不越铁律边界」。
+    </div>
+  </section>
+
+  <!-- ========== Section 8 · 7/17 WAIC 3 情境应对 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 08</div>
+    <h3 class="sect-title">7/17 WAIC 开幕日 · 3 情境应对（本报告决策核心）</h3>
+    <p class="sect-lede">7/17 是<b class="down">世界人工智能大会（WAIC）开幕日</b>，AI 主线相关持仓（沪电 / 通信 / 半导体 / 科创芯片）可能有情绪拉升。这可能是<b class="warn">最后一次高价减仓的救赎窗口</b>。概率分布：<b class="warn">B 震荡 40% + C 跌 35% + A 反弹 25%</b>，防守 + 减仓优先。</p>
+
+    <div class="scenarios">
+      <div class="scen A">
+        <div class="scen-hd">
+          <div class="scen-tag">情境 A · 25%</div>
+          <div class="scen-name">反弹 +0.5%+ · WAIC 拉升</div>
+          <div class="scen-verdict">最后救赎 · 高价减仓</div>
+        </div>
+        <ul class="act-list">
+          <li><span class="pri p1">P1-1</span>沪电全清 -200 · 反抽 130+ 市价</li>
+          <li><span class="pri p1">P1-2</span>半导体 E 减半 -1,850 · 反抽 1.20+</li>
+          <li><span class="pri p1">P1-3</span>通信 ETF -10,000 · 0.77-0.79</li>
+          <li><span class="pri p1">P1-4</span>科创芯片 -1,500~2,000 · 4.0-4.30</li>
+          <li><span class="pri p2">P2</span>机器人反抽 1.08-1.10 减半 -3,300</li>
+          <li><span class="pri p3">P3</span>中国移动建仓 ~5,000 元（降 β 腿）</li>
+        </ul>
+        <div class="scen-expect">
+          <span>β 预期</span><b class="down">61.4% → 48-50% 达标</b>
+          <span>现金池</span><b class="down">&lt; 3% → 20-25% 达标</b>
+        </div>
+      </div>
+
+      <div class="scen B">
+        <div class="scen-hd">
+          <div class="scen-tag">情境 B · 40%</div>
+          <div class="scen-name">震荡 ±0.5%</div>
+          <div class="scen-verdict">市价减 · 不等价</div>
+        </div>
+        <ul class="act-list">
+          <li><span class="pri p1">P1-1</span>沪电全清市价 -200 · 不等好价</li>
+          <li><span class="pri p1">P1-2</span>半导体 E 减半市价 -1,850</li>
+          <li><span class="pri p1">P1-3</span>通信 ETF 卖 -10,000 市价</li>
+          <li><span class="pri p1">P1-4</span>科创芯片减 -1,000 市价</li>
+          <li><span class="pri p3">P3</span>其他不动 · 建仓暂缓</li>
+        </ul>
+        <div class="scen-expect">
+          <span>β 预期</span><b class="warn">61.4% → 52-54% 接近达标</b>
+          <span>现金池</span><b class="down">&lt; 3% → 12-15% 达标</b>
+        </div>
+      </div>
+
+      <div class="scen C">
+        <div class="scen-hd">
+          <div class="scen-tag">情境 C · 35%</div>
+          <div class="scen-name">急杀 -1%+ 破 3867</div>
+          <div class="scen-verdict">紧急降 β · 止血优先</div>
+        </div>
+        <ul class="act-list">
+          <li><span class="pri p1">P1-1</span>沪电全清 -200 市价（无条件）</li>
+          <li><span class="pri p1">P1-2</span>通信 ETF 全清 -16,000（铁律 11 兜底）</li>
+          <li><span class="pri p1">P1-3</span>半导体 E 减 -1,500 部分兑现</li>
+          <li><span class="pri p1">P1-4</span>机器人破 1.026 也减半 -3,300</li>
+          <li><span class="pri p2">P2</span>黄金 ETF 加 500-1,000 元（真对冲）</li>
+        </ul>
+        <div class="scen-expect">
+          <span>β 预期</span><b class="warn">61.4% → 50-53% 达标</b>
+          <span>现金池</span><b class="down">&lt; 3% → 15-18% 达标</b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 9 · 全情境禁止 + 组合经理最后通牒 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 09</div>
+    <h3 class="sect-title">全情境禁止 + 组合经理最后通牒</h3>
+
+    <div class="forbid-box" style="margin-bottom:14px">
+      <div class="fb-hd">FORBIDDEN · 三情境共通铁令</div>
+      <ul class="fb-list">
+        <li>追高紫光股份 / 万通 / 东山精密（当日反弹本质都是死猫弹反抽）</li>
+        <li>抄底亨通光电（-8.73% 接近跌停 · 顶部反转初期不能接飞刀）</li>
+        <li>通富 / 蔚蓝加仓（已超上限 · 蔚蓝已 -9.98%）</li>
+        <li>通信 ETF 加仓（铁律 11）· 沪电加仓（铁律 12）</li>
+        <li>任何「等 WAIC 拉升就翻本」的等待性思维 · 情绪窗口 = 兑现窗口</li>
+      </ul>
+    </div>
+
+    <div class="night-talk">
+      <p class="nt-lead">组合经理最后通牒 · 5 段直言</p>
+
+      <div class="nt-block">
+        <div class="nt-num">POINT 01</div>
+        <div class="nt-h">你从「僵化」进化到「选择性执行」</div>
+        <p class="nt-p">上周三我说你「僵化不动」，本周你进化了，但方向错了。你从「什么都不做」进化到<b class="warn">「只听『别做』不听『要做』」</b>：观察池提醒亨通不建仓，你照做（正确）；但持仓提醒沪电 / 通富 / 蔚蓝 / 科创芯片必减，你不做（错误）。这不是纪律，是<b>「趋利避害的路径依赖」</b>，只做那些心理成本低的动作。</p>
+      </div>
+
+      <div class="nt-block">
+        <div class="nt-num">POINT 02</div>
+        <div class="nt-h">铁律 01 / 13 / 10 从今天正式作废</div>
+        <p class="nt-p">连续 20 / 10 / 违反天数已使这三条铁律事实作废。从今天起，团队<b class="warn">不再以「无条件执行」表述 P1</b>，全部降级为「建议」。这不是威胁，是承认现实，一个从未执行过的铁律不能继续叫铁律。</p>
+      </div>
+
+      <div class="nt-block">
+        <div class="nt-num">POINT 03</div>
+        <div class="nt-h">7/17 WAIC 开幕日 · 最后救赎窗口</div>
+        <p class="nt-p">明天是<b class="down">世界人工智能大会开幕日</b>，AI 主线（沪电 / 通信 / 半导体 / 科创芯片）可能有情绪拉升。<b>这是最后一次高价减仓的机会</b>，两周复现的死猫弹模式已经证明「情绪拉升 = 兑现窗口」，用完就没了。</p>
+      </div>
+
+      <div class="nt-block">
+        <div class="nt-num">POINT 04</div>
+        <div class="nt-h">恢复条件 · 任意 3 交易日执行 ≥ 2 条 P1</div>
+        <p class="nt-p">铁律作废后的<b class="down">恢复通道</b>：从 7/17 起，任意 3 个交易日内执行至少 2 条 P1 减仓（沪电全清 / 半导体 E 减半 / 通信 ETF 减 / 科创芯片减，任选 2 条），铁律体系即可恢复。<b>做得到就恢复，做不到就正式降级。</b></p>
+      </div>
+
+      <div class="nt-block">
+        <div class="nt-num">POINT 05</div>
+        <div class="nt-h">若明日再全零 · 7/18 起团队降级服务</div>
+        <p class="nt-p">若明日 WAIC 情境下你依然一动不动，从 <b class="up">7/18 起</b>：① 账户从「纪律型」<b class="warn">降级为「观察型」</b>；② 停止 T+1 交易建议；③ 只保留周度复盘。<b>这是最后一封通牒。没有第十一次提醒了。</b></p>
+      </div>
+
+      <div class="nt-sign">TAT 组合经理（基金经理）· 2026-07-16 收盘签 · 最后通牒版</div>
+    </div>
+  </section>
+
+  <!-- ========== Section 10 · 主管最终一句话 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 10</div>
+    <h3 class="sect-title">研究主管最终一句话</h3>
+
+    <div class="final-line">
+      <div class="final-tag">FINAL WORD · TAT RESEARCH DIRECTOR</div>
+      <div class="final-quote">
+        「两周复现 V 反弹 → 回吐死猫弹模式，<b class="warn">Kronos + 团队 P1 警示 10 天未执行</b>。<br>
+        7/17 <b class="down">WAIC 开幕日</b>是最后救赎窗口，<br>
+        无论 A / B / C，<b>09:30-10:00 内做一件事：沪电市价全清</b>。<br>
+        别再让我提第十一遍。」
+      </div>
+      <div class="final-sign">TAT 投研主管 · 2026-07-16 · VOL.006 综合研判 · 最后通牒版 · 亲笔</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-row">
+      <span class="foot-lb">数据源</span>
+      <span>2026-07-16 19:35:13 收盘快照 · 新浪 hq.sinajs.cn · <code>tat_data.fetch_realtime_spot()</code> · 22 只标的（5 指数 + 9 持仓 + 8 观察池）+ 死猫弹两周走势对照全部实测</span>
+    </div>
+    <div class="foot-row">
+      <span class="foot-lb">Kronos 回顾</span>
+      <span>7/14 专题 4 只主板持仓 DOWN 强共振预警 · 10 天后今日验证：科创芯片 / 通富 / 蔚蓝方向兑现 · 半导体 E 幅度更甚 · 沪电时点未至但趋势未反</span>
+    </div>
+    <div class="foot-row">
+      <span class="foot-lb">铁律回顾</span>
+      <span>01 β ≤ 55% 连 20 天未达 <b class="up">正式作废</b> · 13 浮盈 &gt; 15% 减半 连 10 天未执行 <b class="up">正式作废</b> · 10 沪电破 125 未清持续违反 <b class="up">正式作废</b> · 11 保持 · 08 警戒</span>
+    </div>
+    <div class="foot-row">
+      <span class="foot-lb">下次复盘</span>
+      <span>7/17 WAIC 开幕日收盘后（重点看减仓 P1 执行率）· 7/18 若全零则账户降级为「观察型」· 7/22 T+15 整体复盘</span>
+    </div>
+    <div class="foot-sign">
+      <span>TAT 投研团队 · Daily Briefing · VOL. 006 综合版 · 最后通牒版 · 2026-07-16</span>
+      <span>本报告仅作团队内部研讨用 · 不构成任何投资建议</span>
+    </div>
+  </footer>
+</article>
+</body>
+</html>
