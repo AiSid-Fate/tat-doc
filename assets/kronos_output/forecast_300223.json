@@ -1,0 +1,14 @@
+{
+    "code": "300223",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 153.82,
+    "latest_date": "2026-07-17",
+    "pred_first_day_mean": 145.78207397460938,
+    "pred_last_day_mean": 96.88054656982422,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -37.01693760900778,
+    "p10_interval_last_day": 82.34173583984375,
+    "p90_interval_last_day": 107.42031860351562,
+    "warnings": []
+}
