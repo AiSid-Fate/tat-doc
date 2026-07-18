@@ -1,0 +1,14 @@
+{
+    "code": "688981",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 139.88,
+    "latest_date": "2026-07-17",
+    "pred_first_day_mean": 132.57546997070312,
+    "pred_last_day_mean": 110.3464126586914,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -21.113516829645828,
+    "p10_interval_last_day": 99.75082397460938,
+    "p90_interval_last_day": 117.7442626953125,
+    "warnings": []
+}

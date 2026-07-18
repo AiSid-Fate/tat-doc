@@ -1,0 +1,14 @@
+{
+    "code": "588000",
+    "type": "etf",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 1.807,
+    "latest_date": "2026-07-17",
+    "pred_first_day_mean": 1.7051705121994019,
+    "pred_last_day_mean": 1.3363009691238403,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -26.048645870291065,
+    "p10_interval_last_day": 1.206886887550354,
+    "p90_interval_last_day": 1.4862470626831055,
+    "warnings": []
+}

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="report-title" content="A股科技板块个股清单 · Kronos 30 日预测">
+<meta name="report-date" content="2026-07-18">
+<meta name="report-category" content="赛道">
+<meta name="report-tags" content="A股科技,个股推荐,Kronos预测,K线预测,组合配置">
+<meta name="report-summary" content="接续抄底判断报告，列出 10 只科技核心标的并跑 Kronos 30 日预测。DOWN 集中在已涨透的 AI 硬件龙头，UP 集中在待补涨的应用/机器人/算力配套。">
+<title>TAT 投研专题 · 科技个股清单 · Kronos 预测 · 2026-07-18</title>
+<style>
+:root{
+  --bg:#f7f5f0; --paper:#ffffff;
+  --ink:#1a1a1a; --ink2:#333333; --ink3:#5c5c5c; --muted:#8a8a8a;
+  --rule:#d9d5cc; --rule2:#e8e4dc;
+  --up:#c22c2c; --up-soft:#f6e5e5;
+  --down:#0f7a3e; --down-soft:#e2f0e8;
+  --warn:#a65d00; --warn-soft:#f6e8d3;
+  --accent:#1a3d6b; --accent-soft:#e6ecf3;
+  --serif:"Noto Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:"SF Mono","JetBrains Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(180deg,transparent,transparent 27px,rgba(0,0,0,0.02) 28px,transparent 29px);
+  background-size:100% 28px;}
+.num{font-variant-numeric:tabular-nums;font-family:var(--mono);letter-spacing:-.2px}
+.paper{max-width:1080px;margin:0 auto;background:var(--paper);padding:36px 44px;
+  box-shadow:0 1px 3px rgba(0,0,0,.06),0 20px 40px rgba(0,0,0,.05);border-top:6px solid var(--ink)}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);line-height:1.3;font-weight:700}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+
+.masthead{border-bottom:3px double var(--ink);padding-bottom:14px;margin-bottom:22px}
+.masthead .top{display:flex;justify-content:space-between;align-items:baseline;font-size:11.5px;color:var(--ink3);text-transform:uppercase;letter-spacing:.12em}
+.masthead .top b{color:var(--ink);font-family:var(--mono)}
+.masthead .name{font-family:var(--serif);font-size:38px;font-weight:900;letter-spacing:-.5px;margin:6px 0 8px}
+.masthead .name em{font-style:normal;color:var(--up)}
+.masthead .sub{font-size:13px;color:var(--ink3);font-family:var(--serif)}
+.masthead .sub b{color:var(--ink)}
+
+.headline{padding:20px 0 26px;border-bottom:1px solid var(--rule)}
+.headline .kicker{font-size:11.5px;font-weight:700;color:var(--up);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.headline h1{font-size:28px;line-height:1.28;font-weight:800;letter-spacing:-.3px}
+.headline h1 em{font-style:normal;color:var(--up);border-bottom:2px solid var(--up);padding-bottom:1px}
+.headline .lede{margin-top:14px;font-size:15.5px;color:var(--ink2);line-height:1.75;font-family:var(--serif)}
+.headline .refbar{margin-top:14px;padding:10px 14px;background:var(--accent-soft);border-left:3px solid var(--accent);font-size:13px;color:var(--ink2);border-radius:2px}
+.headline .refbar b{color:var(--ink)} .headline .refbar a{color:var(--accent);font-weight:700}
+
+.dash{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--rule);border-radius:2px;overflow:hidden;margin:24px 0}
+.dash .cell{padding:16px 18px;border-right:1px solid var(--rule);background:var(--paper)}
+.dash .cell:last-child{border-right:none}
+.dash .k{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);font-weight:700;margin-bottom:6px}
+.dash .v{font-size:24px;font-weight:700;font-family:var(--mono);color:var(--ink);line-height:1.1}
+.dash .v.up{color:var(--up)} .dash .v.down{color:var(--down)} .dash .v.warn{color:var(--warn)} .dash .v.accent{color:var(--accent)}
+.dash .s{font-size:11.5px;color:var(--ink3);margin-top:3px}
+
+.sect{margin-top:34px}
+.sect-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:14px}
+.sect-head h2{font-size:20px;font-weight:800}
+.sect-head .meta{font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.1em;font-family:var(--mono)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px}
+.split .col{border:1px solid var(--rule);padding:16px 18px;border-radius:2px;background:var(--paper)}
+.split .col.down{border-top:3px solid var(--down)}
+.split .col.up{border-top:3px solid var(--up)}
+.split .col h3{font-size:15px;font-family:var(--sans);font-weight:800;margin-bottom:6px;display:flex;align-items:baseline;justify-content:space-between}
+.split .col .desc{font-size:12.5px;color:var(--ink3);margin-bottom:10px;line-height:1.6}
+.split .col ul{list-style:none;padding:0;margin:0}
+.split .col li{position:relative;padding:6px 0 6px 14px;font-size:13px;line-height:1.6;color:var(--ink2);border-bottom:1px dashed var(--rule2)}
+.split .col li:last-child{border-bottom:none}
+.split .col li::before{content:"";position:absolute;left:0;top:14px;width:6px;height:1px;background:var(--ink)}
+.split .col li b{color:var(--ink);font-family:var(--mono)}
+.split .col .cnt{font-family:var(--mono);font-size:12px;color:var(--ink3)}
+
+table{width:100%;border-collapse:collapse;font-size:13px}
+table th{text-align:left;padding:9px 10px;border-bottom:2px solid var(--ink);font-weight:700;color:var(--ink);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+table th.r{text-align:right}
+table td{padding:9px 10px;border-bottom:1px solid var(--rule);color:var(--ink2);vertical-align:top}
+table td.r{text-align:right;font-family:var(--mono);white-space:nowrap}
+table tr:last-child td{border-bottom:none}
+table tr:hover td{background:#faf8f2}
+.pos{color:var(--up);font-weight:700}
+.neg{color:var(--down);font-weight:700}
+.amber{color:var(--warn);font-weight:700}
+.blue{color:var(--accent);font-weight:700}
+.tag{display:inline-block;padding:2px 7px;font-size:10.5px;font-weight:700;border-radius:2px;font-family:var(--mono);letter-spacing:.02em;text-transform:uppercase}
+.tag-bad{background:var(--up-soft);color:var(--up)}
+.tag-warn{background:var(--warn-soft);color:var(--warn)}
+.tag-ok{background:var(--down-soft);color:var(--down)}
+.tag-blue{background:var(--accent-soft);color:var(--accent)}
+
+.flag{background:var(--up-soft);border-left:4px solid var(--up);padding:14px 18px;margin:10px 0;border-radius:1px}
+.flag.warn{background:var(--warn-soft);border-left-color:var(--warn)}
+.flag.ok{background:var(--down-soft);border-left-color:var(--down)}
+.flag.blue{background:var(--accent-soft);border-left-color:var(--accent)}
+.flag .fh{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px;color:var(--up)}
+.flag.warn .fh{color:var(--warn)} .flag.ok .fh{color:var(--down)} .flag.blue .fh{color:var(--accent)}
+.flag p{font-size:13.5px;color:var(--ink);line-height:1.7}
+.flag p b{color:var(--up)} .flag.warn p b{color:var(--warn)} .flag.ok p b{color:var(--down)} .flag.blue p b{color:var(--accent)}
+
+.chart-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:14px}
+.chart-card{border:1px solid var(--rule);padding:12px 14px;border-radius:2px;background:var(--paper)}
+.chart-card .ch{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--rule)}
+.chart-card .ch .n{font-weight:800;font-size:13.5px;font-family:var(--sans);color:var(--ink)}
+.chart-card .ch .c{font-family:var(--mono);font-size:11.5px;color:var(--ink3)}
+.chart-card img{width:100%;height:auto;display:block;border-radius:2px;background:#fff}
+.chart-card .stats{margin-top:8px;padding-top:8px;border-top:1px dashed var(--rule);font-size:12px;color:var(--ink2);font-family:var(--mono);line-height:1.6}
+.chart-card .stats .row{display:flex;justify-content:space-between}
+.chart-card .stats .row .l{color:var(--ink3)}
+.chart-card .stats .row .v{color:var(--ink);font-weight:600}
+.chart-card .stats .row .v.up{color:var(--up)} .chart-card .stats .row .v.down{color:var(--down)}
+
+.pull{margin:18px 0;padding:14px 22px;border-left:4px solid var(--ink);background:#f9f7f1;font-family:var(--serif);font-size:15px;line-height:1.75;color:var(--ink)}
+.pull b{color:var(--up)}
+
+footer{margin-top:34px;padding-top:16px;border-top:3px double var(--ink);font-size:11.5px;color:var(--ink3);text-align:center;line-height:1.7}
+footer .disc{background:#faf8f2;border:1px solid var(--rule);padding:11px 16px;margin-bottom:12px;text-align:left;font-size:12px;color:var(--ink2)}
+footer .disc b{color:var(--up)}
+footer .meta{font-family:var(--serif);color:var(--ink3)}
+
+@media (max-width:820px){
+  .paper{padding:24px 20px}
+  .masthead .name{font-size:28px}
+  .headline h1{font-size:22px}
+  .dash{grid-template-columns:repeat(2,1fr)}
+  .dash .cell:nth-child(2){border-right:none}
+  .split,.chart-grid{grid-template-columns:1fr}
+  table{font-size:12.5px} table th,table td{padding:8px 8px}
+}
+@media (max-width:480px){
+  body{font-size:14.5px;line-height:1.65}
+  .paper{padding:20px 16px;border-top-width:5px}
+  .masthead .name{font-size:23px}
+  .headline h1{font-size:19px}
+  .dash{grid-template-columns:1fr}
+  .dash .cell{border-right:none;border-bottom:1px solid var(--rule)}
+  .dash .cell:last-child{border-bottom:none}
+  .dash .v{font-size:22px}
+  .sect-head h2{font-size:16px}
+  .table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;display:block;max-width:calc(100vw - 32px)}
+  .table-wrap table{min-width:640px}
+  table{font-size:11.5px} table th,table td{padding:7px 7px}
+}
+@media print{body{background:#fff;background-image:none}.paper{box-shadow:none;padding:0}}
+</style>
+</head>
+<body>
+<article class="paper">
+
+  <header class="masthead">
+    <div class="top">
+      <span>TAT 投研团队 · Sector Follow-up</span>
+      <span><b>SPECIAL-2</b> · 个股清单 + Kronos</span>
+    </div>
+    <div class="name">科技板块个股清单 <em>Kronos 预测</em></div>
+    <div class="sub"><b>2026-07-18（周六）</b> · 赛道研判 · 10 只标的 · 4 主线覆盖 · K 线预测双引擎</div>
+  </header>
+
+  <section class="headline">
+    <div class="kicker">头条 · 抄底判断的具体标的落地</div>
+    <h1>Kronos 帮我们分出了两类科技股，<em>已涨透的 vs 待补涨的</em></h1>
+    <p class="lede">10 只标的跑完 Kronos 30 日 K 线预测，方向分化明显。DOWN 5 只全部集中在已经涨过一大波的 AI 硬件龙头（工业富联、澜起、中芯、寒武纪、科创 50ETF），UP 4 只集中在尚未主升的应用/机器人/算力配套（科大讯飞、许继电气、大华、韦尔）。这不是"全面看空"，而是"结构性看多"，继续印证 40% 仓位左侧分批的判断，且优先加仓补涨方向。</p>
+    <div class="refbar">
+      <b>接续报告：</b><a href="/tat-doc/reports/2026-07/赛道/2026-07-18_TAT投研专题_A股科技抄底判断.html">A股科技板块抄底判断 · 是·左侧分批</a>（组合仓位 40%、3:3:4 分批节奏、三档情景概率）
+    </div>
+  </section>
+
+  <section class="dash" aria-label="Kronos 预测速览">
+    <div class="cell"><div class="k">预测标的</div><div class="v num">10 只</div><div class="s">四主线 · 30 日 · 30 采样</div></div>
+    <div class="cell"><div class="k">DOWN 方向</div><div class="v num down">5</div><div class="s">已涨透 AI 硬件</div></div>
+    <div class="cell"><div class="k">UP 方向</div><div class="v num up">4</div><div class="s">待补涨应用/机器人</div></div>
+    <div class="cell"><div class="k">伪信号警告</div><div class="v num warn">2</div><div class="s">寒武纪 · 北方华创</div></div>
+  </section>
+
+  <section class="sect">
+    <div class="sect-head">
+      <h2>推荐清单 · 四主线覆盖</h2>
+      <span class="meta">Portfolio Universe · 10 stocks</span>
+    </div>
+    <div class="table-wrap">
+    <table aria-label="科技板块推荐清单">
+      <thead>
+        <tr>
+          <th>主线</th>
+          <th>代码</th>
+          <th>名称</th>
+          <th>推荐档位</th>
+          <th>核心逻辑</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2"><span class="tag tag-bad">AI 算力</span></td>
+          <td class="r">601138</td>
+          <td>工业富联</td>
+          <td><span class="tag tag-ok">首选</span></td>
+          <td>AI 服务器出货翻倍，Q1 净利 <b class="pos">+102.6%</b>，估值消化中</td>
+        </tr>
+        <tr>
+          <td class="r">688256</td>
+          <td>寒武纪</td>
+          <td><span class="tag tag-warn">观察</span></td>
+          <td>国产算力芯片龙头，Q1 营收 <b class="pos">+160%</b>，但估值极高 PE 分位 98%+</td>
+        </tr>
+        <tr>
+          <td rowspan="4"><span class="tag tag-blue">半导体</span></td>
+          <td class="r">002371</td>
+          <td>北方华创</td>
+          <td><span class="tag tag-ok">首选</span></td>
+          <td>设备国产化订单饱满，Q1 营收 <b class="pos">+25.8%</b>，稼动率满载</td>
+        </tr>
+        <tr>
+          <td class="r">688008</td>
+          <td>澜起科技</td>
+          <td><span class="tag tag-ok">首选</span></td>
+          <td>DDR5 + MRCD/MDB 接口芯片超预期，EPS <b class="pos">+58.7%</b></td>
+        </tr>
+        <tr>
+          <td class="r">688981</td>
+          <td>中芯国际</td>
+          <td><span class="tag tag-warn">次选</span></td>
+          <td>Q2 毛利率指引回升至 20~22%，代工产能供不应求</td>
+        </tr>
+        <tr>
+          <td class="r">603501</td>
+          <td>韦尔股份</td>
+          <td><span class="tag tag-warn">次选</span></td>
+          <td>高端 CIS 持续国产化，毛利率企稳回升至 30%+</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-blue">AI 应用</span></td>
+          <td class="r">002230</td>
+          <td>科大讯飞</td>
+          <td><span class="tag tag-warn">观察</span></td>
+          <td>大模型 + 教育硬件双轮驱动，前期涨幅小，待补涨</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-blue">机器人</span></td>
+          <td class="r">002236</td>
+          <td>大华股份</td>
+          <td><span class="tag tag-warn">观察</span></td>
+          <td>物理 AI + 机器人视觉，达沃斯 2026 主题受益</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-blue">电力设备</span></td>
+          <td class="r">000400</td>
+          <td>许继电气</td>
+          <td><span class="tag tag-warn">观察</span></td>
+          <td>算力中心配套电力设备，特高压 + 数据中心双景气</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ok">宽基 ETF</span></td>
+          <td class="r">588000</td>
+          <td>科创 50 ETF</td>
+          <td><span class="tag tag-ok">底仓</span></td>
+          <td>均衡覆盖硬科技，PEG 1.04，对冲细分赛道波动</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="flag warn">
+      <div class="fh">档位说明</div>
+      <p><b>首选</b>：基本面 + 估值 + 技术三重占优，首笔即可建仓 · <b>次选</b>：基本面强但估值或技术需二次确认 · <b>观察</b>：等待触发信号（业绩/技术）后再进场 · <b>底仓</b>：ETF 层面均衡工具</p>
+    </div>
+  </section>
+
+  <section class="sect">
+    <div class="sect-head">
+      <h2>Kronos 预测结果汇总</h2>
+      <span class="meta">30-Day Forecast · Kronos-base · MPS</span>
+    </div>
+    <div class="table-wrap">
+    <table aria-label="Kronos预测结果">
+      <thead>
+        <tr>
+          <th>代码</th>
+          <th>名称</th>
+          <th class="r">现价</th>
+          <th class="r">预测均值</th>
+          <th class="r">30 日 %</th>
+          <th class="r">P10 ~ P90 区间</th>
+          <th>方向</th>
+          <th>护栏</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="r">601138</td><td>工业富联</td>
+          <td class="r">57.59</td><td class="r">53.14</td>
+          <td class="r"><span class="neg">-7.74%</span></td>
+          <td class="r">47.24 ~ 59.82</td>
+          <td><span class="tag tag-ok">DOWN</span></td>
+          <td><span class="tag tag-ok">通过</span></td>
+        </tr>
+        <tr>
+          <td class="r">688256</td><td>寒武纪</td>
+          <td class="r">1190.58</td><td class="r">729.32</td>
+          <td class="r"><span class="neg">-38.74%</span></td>
+          <td class="r">632.73 ~ 818.26</td>
+          <td><span class="tag tag-ok">DOWN</span></td>
+          <td><span class="tag tag-bad">伪信号</span></td>
+        </tr>
+        <tr>
+          <td class="r">002371</td><td>北方华创</td>
+          <td class="r">774.20</td><td class="r">435.43</td>
+          <td class="r"><span class="neg">-43.76%</span></td>
+          <td class="r">410.76 ~ 457.34</td>
+          <td><span class="tag tag-ok">DOWN</span></td>
+          <td><span class="tag tag-bad">伪信号</span></td>
+        </tr>
+        <tr>
+          <td class="r">688008</td><td>澜起科技</td>
+          <td class="r">183.60</td><td class="r">132.18</td>
+          <td class="r"><span class="neg">-28.01%</span></td>
+          <td class="r">111.55 ~ 151.91</td>
+          <td><span class="tag tag-ok">DOWN</span></td>
+          <td><span class="tag tag-ok">通过</span></td>
+        </tr>
+        <tr>
+          <td class="r">688981</td><td>中芯国际</td>
+          <td class="r">139.88</td><td class="r">110.35</td>
+          <td class="r"><span class="neg">-21.11%</span></td>
+          <td class="r">99.75 ~ 117.74</td>
+          <td><span class="tag tag-ok">DOWN</span></td>
+          <td><span class="tag tag-ok">通过</span></td>
+        </tr>
+        <tr>
+          <td class="r">603501</td><td>韦尔股份</td>
+          <td class="r">106.15</td><td class="r">118.83</td>
+          <td class="r"><span class="pos">+11.94%</span></td>
+          <td class="r">111.56 ~ 123.55</td>
+          <td><span class="tag tag-bad">UP</span></td>
+          <td><span class="tag tag-ok">通过</span></td>
+        </tr>
+        <tr>
+          <td class="r">002230</td><td>科大讯飞</td>
+          <td class="r">41.12</td><td class="r">51.86</td>
+          <td class="r"><span class="pos">+26.12%</span></td>
+          <td class="r">49.94 ~ 54.13</td>
+          <td><span class="tag tag-bad">UP</span></td>
+          <td><span class="tag tag-ok">通过</span></td>
+        </tr>
+        <tr>
+          <td class="r">002236</td><td>大华股份</td>
+          <td class="r">16.02</td><td class="r">17.96</td>
+          <td class="r"><span class="pos">+12.10%</span></td>
+          <td class="r">17.59 ~ 18.41</td>
+          <td><span class="tag tag-bad">UP</span></td>
+          <td><span class="tag tag-ok">通过</span></td>
+        </tr>
+        <tr>
+          <td class="r">000400</td><td>许继电气</td>
+          <td class="r">20.82</td><td class="r">25.00</td>
+          <td class="r"><span class="pos">+20.09%</span></td>
+          <td class="r">24.33 ~ 25.88</td>
+          <td><span class="tag tag-bad">UP</span></td>
+          <td><span class="tag tag-ok">通过</span></td>
+        </tr>
+        <tr>
+          <td class="r">588000</td><td>科创 50 ETF</td>
+          <td class="r">1.81</td><td class="r">1.34</td>
+          <td class="r"><span class="neg">-26.05%</span></td>
+          <td class="r">1.21 ~ 1.49</td>
+          <td><span class="tag tag-ok">DOWN</span></td>
+          <td><span class="tag tag-ok">通过</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="flag">
+      <div class="fh">Kronos 免责与局限</div>
+      <p>Kronos-base 是零样本时间序列基础模型，对 A 股的涨跌停、事件性利好、机构定价机制 <b>没有先验知识</b>。护栏标记"伪信号"的预测（寒武纪首日跳空 -12.21%，北方华创首日跳空 -17.14%）为模型对高价股尺度掌握不准所致，<b>不可用于决策</b>，仅供技术面第二意见参考。</p>
+    </div>
+  </section>
+
+  <section class="sect">
+    <div class="sect-head">
+      <h2>信号分化 · 结构性看多的关键证据</h2>
+      <span class="meta">Kronos Divergence · Directional Split</span>
+    </div>
+    <div class="split">
+      <div class="col down">
+        <h3>DOWN 阵营 · <span class="cnt">已涨透的贵标的</span></h3>
+        <div class="desc">Kronos 判定为 DOWN 的 5 只，全部是 6-7 月已经完成主升的 AI 硬件龙头。工业富联从 55 涨到 81 再回到 57，模型认为在 47~60 区间震荡消化。这印证了"高位估值需要时间消化"的判断。</div>
+        <ul>
+          <li>601138 工业富联：<b>-7.74%</b> · 7 月高点 81 → 53 区间震荡</li>
+          <li>688008 澜起科技：<b>-28.01%</b> · 前期高估值消化</li>
+          <li>688981 中芯国际：<b>-21.11%</b> · Q2 毛利率虽指引改善但股价先跌</li>
+          <li>588000 科创 50 ETF：<b>-26.05%</b> · 宽基被龙头拖累</li>
+          <li>688256 寒武纪：<b>-38.74%（伪信号）</b> · 高价股尺度失真</li>
+        </ul>
+      </div>
+      <div class="col up">
+        <h3>UP 阵营 · <span class="cnt">待补涨的便宜标的</span></h3>
+        <div class="desc">Kronos 判定为 UP 的 4 只，共同特征是"前期主升行情缺席"。科大讯飞在 AI 应用端未跟上算力龙头涨幅，许继电气受益算力配套但被电力板块整体拖累。模型给出补涨预期。</div>
+        <ul>
+          <li>002230 科大讯飞：<b>+26.12%</b> · 41 → 52 区间，AI 应用补涨</li>
+          <li>000400 许继电气：<b>+20.09%</b> · 算力配套 + 特高压双景气</li>
+          <li>002236 大华股份：<b>+12.10%</b> · 机器人视觉主题启动</li>
+          <li>603501 韦尔股份：<b>+11.94%</b> · CIS 高端化超预期</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pull">
+      「本次抄底不是"AI 硬件龙头再买一遍"，而是<b>切换到未涨透的 AI 应用 / 机器人 / 算力配套</b>。用 Kronos 分化信号做择股，用组合层左侧分批做择时。」
+    </div>
+  </section>
+
+  <section class="sect">
+    <div class="sect-head">
+      <h2>基于 Kronos 的调整后操作路径</h2>
+      <span class="meta">Portfolio Rebalance · Post-Kronos</span>
+    </div>
+    <div class="flag ok">
+      <div class="fh">首笔 30% 建仓建议 · 优先补涨方向</div>
+      <p>科技板块 40% 目标仓位中，<b>首笔 30% 资金</b>建议如下配比：<b>科创 50 ETF (588000) 12%</b> · <b>科大讯飞 (002230) 5%</b> · <b>许继电气 (000400) 4%</b> · <b>工业富联 (601138) 4%</b> · <b>北方华创 (002371) 3%</b> · <b>澜起科技 (688008) 2%</b>。UP 方向占比 3%，DOWN 方向的首选龙头占比 9%，ETF 底仓 12%。</p>
+    </div>
+    <div class="flag warn">
+      <div class="fh">第二笔 30% 触发条件</div>
+      <p>科创 50 指数再跌 8% 或 <b>UP 阵营任一标的回撤触及 P10 区间下沿</b> 时补仓。补仓优先级：韦尔股份 &gt; 大华股份 &gt; 中芯国际 &gt; 恒生科技 ETF。</p>
+    </div>
+    <div class="flag">
+      <div class="fh">证伪与止损硬约束</div>
+      <p>UP 阵营任一标的 <b>跌破 P10 下沿</b>（如科大讯飞跌破 49.94、许继电气跌破 24.33），说明 Kronos 补涨逻辑失效，立即停止加仓该标的。DOWN 阵营中若中芯国际跌破 P10（99.75）说明代工景气度下修，触发整体减仓。</p>
+    </div>
+  </section>
+
+  <section class="sect">
+    <div class="sect-head">
+      <h2>Kronos K 线预测图 · 精选 6 张</h2>
+      <span class="meta">30-Day Forecast Bands</span>
+    </div>
+    <div class="chart-grid">
+
+      <div class="chart-card">
+        <div class="ch"><span class="n">工业富联 · AI 算力</span><span class="c">601138 · DOWN -7.74%</span></div>
+        <img src="../../../assets/kronos_output/forecast_601138.png" alt="工业富联 Kronos 预测">
+        <div class="stats">
+          <div class="row"><span class="l">现价 / 均值</span><span class="v">57.59 → <span class="down">53.14</span></span></div>
+          <div class="row"><span class="l">P10 ~ P90</span><span class="v">47.24 ~ 59.82</span></div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="ch"><span class="n">澜起科技 · 半导体</span><span class="c">688008 · DOWN -28%</span></div>
+        <img src="../../../assets/kronos_output/forecast_688008.png" alt="澜起科技 Kronos 预测">
+        <div class="stats">
+          <div class="row"><span class="l">现价 / 均值</span><span class="v">183.60 → <span class="down">132.18</span></span></div>
+          <div class="row"><span class="l">P10 ~ P90</span><span class="v">111.55 ~ 151.91</span></div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="ch"><span class="n">中芯国际 · 半导体</span><span class="c">688981 · DOWN -21%</span></div>
+        <img src="../../../assets/kronos_output/forecast_688981.png" alt="中芯国际 Kronos 预测">
+        <div class="stats">
+          <div class="row"><span class="l">现价 / 均值</span><span class="v">139.88 → <span class="down">110.35</span></span></div>
+          <div class="row"><span class="l">P10 ~ P90</span><span class="v">99.75 ~ 117.74</span></div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="ch"><span class="n">科大讯飞 · AI 应用</span><span class="c">002230 · UP +26%</span></div>
+        <img src="../../../assets/kronos_output/forecast_002230.png" alt="科大讯飞 Kronos 预测">
+        <div class="stats">
+          <div class="row"><span class="l">现价 / 均值</span><span class="v">41.12 → <span class="up">51.86</span></span></div>
+          <div class="row"><span class="l">P10 ~ P90</span><span class="v">49.94 ~ 54.13</span></div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="ch"><span class="n">许继电气 · 电力设备</span><span class="c">000400 · UP +20%</span></div>
+        <img src="../../../assets/kronos_output/forecast_000400.png" alt="许继电气 Kronos 预测">
+        <div class="stats">
+          <div class="row"><span class="l">现价 / 均值</span><span class="v">20.82 → <span class="up">25.00</span></span></div>
+          <div class="row"><span class="l">P10 ~ P90</span><span class="v">24.33 ~ 25.88</span></div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="ch"><span class="n">科创 50 ETF · 宽基</span><span class="c">588000 · DOWN -26%</span></div>
+        <img src="../../../assets/kronos_output/forecast_588000.png" alt="科创50ETF Kronos 预测">
+        <div class="stats">
+          <div class="row"><span class="l">现价 / 均值</span><span class="v">1.81 → <span class="down">1.34</span></span></div>
+          <div class="row"><span class="l">P10 ~ P90</span><span class="v">1.21 ~ 1.49</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="disc">
+      <b>免责声明：</b>本报告基于 Kronos-base 零样本时间序列基础模型，模型对 A 股涨跌停、事件性利好、机构定价机制无先验知识，预测结果 <b>不构成投资建议</b>。伪信号标记的标的预测不可用于决策。所有标的推荐档位需结合基本面研究、组合风险偏好及实时盘面综合判断。市场有风险，决策需谨慎。
+    </div>
+    <div class="meta">TAT 投研团队制作 · 由 <a href="https://aisid-fate.github.io/tat-doc/">tat-doc</a> 自动发布 · 2026-07-18 · Kronos-base on MPS</div>
+  </footer>
+
+</article>
+</body>
+</html>

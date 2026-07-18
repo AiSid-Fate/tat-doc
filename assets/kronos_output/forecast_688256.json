@@ -1,0 +1,16 @@
+{
+    "code": "688256",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 1190.58,
+    "latest_date": "2026-07-17",
+    "pred_first_day_mean": 1045.1959228515625,
+    "pred_last_day_mean": 729.3171997070312,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -38.74269686144305,
+    "p10_interval_last_day": 632.7330932617188,
+    "p90_interval_last_day": 818.255126953125,
+    "warnings": [
+        "WARNING: Predicted first day jump of -12.21% relative to last close (1190.5800 -> 1045.1959)."
+    ]
+}
