@@ -1,0 +1,14 @@
+{
+    "code": "600498",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 39.06,
+    "latest_date": "2026-07-21",
+    "pred_first_day_mean": 36.13524627685547,
+    "pred_last_day_mean": 32.87370300292969,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -15.837933940272187,
+    "p10_interval_last_day": 29.416603088378906,
+    "p90_interval_last_day": 36.30545425415039,
+    "warnings": []
+}

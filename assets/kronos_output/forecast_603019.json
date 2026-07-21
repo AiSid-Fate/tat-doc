@@ -1,0 +1,14 @@
+{
+    "code": "603019",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 97.88,
+    "latest_date": "2026-07-21",
+    "pred_first_day_mean": 94.23127746582031,
+    "pred_last_day_mean": 91.98246765136719,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -6.02526803088762,
+    "p10_interval_last_day": 86.31732177734375,
+    "p90_interval_last_day": 97.23294830322266,
+    "warnings": []
+}

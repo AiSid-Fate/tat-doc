@@ -1,0 +1,14 @@
+{
+    "code": "600756",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 14.78,
+    "latest_date": "2026-07-21",
+    "pred_first_day_mean": 15.371342658996582,
+    "pred_last_day_mean": 17.771455764770508,
+    "direction": "UP",
+    "pred_30d_return_pct": 20.239890154062977,
+    "p10_interval_last_day": 16.642988204956055,
+    "p90_interval_last_day": 19.075193405151367,
+    "warnings": []
+}

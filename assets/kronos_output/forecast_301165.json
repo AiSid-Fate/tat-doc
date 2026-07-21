@@ -1,0 +1,16 @@
+{
+    "code": "301165",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 110.86,
+    "latest_date": "2026-07-21",
+    "pred_first_day_mean": 89.38336944580078,
+    "pred_last_day_mean": 56.231632232666016,
+    "direction": "DOWN",
+    "pred_30d_return_pct": -49.276896777317326,
+    "p10_interval_last_day": 52.5346565246582,
+    "p90_interval_last_day": 60.032875061035156,
+    "warnings": [
+        "WARNING: Predicted first day jump of -19.37% relative to last close (110.8600 -> 89.3834)."
+    ]
+}

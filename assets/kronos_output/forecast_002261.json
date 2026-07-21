@@ -1,0 +1,14 @@
+{
+    "code": "002261",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 27.99,
+    "latest_date": "2026-07-21",
+    "pred_first_day_mean": 29.085193634033203,
+    "pred_last_day_mean": 34.7967529296875,
+    "direction": "UP",
+    "pred_30d_return_pct": 24.31851707641122,
+    "p10_interval_last_day": 32.95289611816406,
+    "p90_interval_last_day": 36.56427001953125,
+    "warnings": []
+}

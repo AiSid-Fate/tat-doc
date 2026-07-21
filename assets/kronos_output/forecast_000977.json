@@ -2,15 +2,15 @@
     "code": "000977",
     "type": "stock",
     "model": "NeoQuasar/Kronos-base",
-    "latest_close": 84.95,
-    "latest_date": "2026-07-14",
-    "pred_first_day_mean": 73.339111328125,
-    "pred_last_day_mean": 63.93868637084961,
+    "latest_close": 88.66,
+    "latest_date": "2026-07-21",
+    "pred_first_day_mean": 76.50955200195312,
+    "pred_last_day_mean": 63.701820373535156,
     "direction": "DOWN",
-    "pred_30d_return_pct": -24.733741764744433,
-    "p10_interval_last_day": 61.595542907714844,
-    "p90_interval_last_day": 66.63307189941406,
+    "pred_30d_return_pct": -28.15043946138601,
+    "p10_interval_last_day": 61.07373046875,
+    "p90_interval_last_day": 66.40312957763672,
     "warnings": [
-        "WARNING: Predicted first day jump of -13.67% relative to last close (84.9500 -> 73.3391)."
+        "WARNING: Predicted first day jump of -13.70% relative to last close (88.6600 -> 76.5096)."
     ]
 }

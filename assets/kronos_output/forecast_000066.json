@@ -1,0 +1,14 @@
+{
+    "code": "000066",
+    "type": "stock",
+    "model": "NeoQuasar/Kronos-base",
+    "latest_close": 14.99,
+    "latest_date": "2026-07-21",
+    "pred_first_day_mean": 15.180869102478027,
+    "pred_last_day_mean": 16.3040828704834,
+    "direction": "UP",
+    "pred_30d_return_pct": 8.766396734378912,
+    "p10_interval_last_day": 14.67689037322998,
+    "p90_interval_last_day": 17.119203567504883,
+    "warnings": []
+}
