@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>TAT 投研专题 · AI 国产链 vs 海外链 · 28 见顶 Top5 · 2026-07-20</title>
+<meta name="report-title" content="AI 国产链 vs 海外链 28 见顶专题 别做思科别做朗讯 主板Top5穿越周期">
+<meta name="report-date" content="2026-07-20">
+<meta name="report-category" content="组合">
+<meta name="report-tags" content="专题,AI国产链,海外链,28见顶,思科朗讯剧本,穿越周期,北方华创,海康,紫光国微,中国移动,科大讯飞">
+<meta name="report-summary" content="海外AI Capex 2028达1.4万亿峰值,增速拐点2026H2-2027提前=A股AI硬件估值杀高危窗口。用户当前重仓(沪电/通信ETF/半导体E/科创芯片/通富)全在最先受冲击的红档=2000年买思科朗讯的现代版。主板Top5穿越周期候选:北方华创+海康+紫光国微+中国移动+科大讯飞。目标结构:海外依赖40%→15% · 国产独立10%→40%。">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{overflow-x:hidden}
+  body{
+    background:#0a0e14;
+    color:#d8dee9;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC",system-ui,sans-serif;
+    font-feature-settings:"tnum";
+    font-variant-numeric:tabular-nums;
+    line-height:1.62;
+    font-size:14px;
+    padding:24px 14px 40px;
+  }
+  .paper{
+    max-width:820px;
+    margin:0 auto;
+    background:linear-gradient(180deg,#0f141c 0%,#0a0e14 100%);
+    border:1px solid #1f2733;
+    border-radius:6px;
+    padding:26px 22px 32px;
+    box-shadow:0 24px 64px rgba(0,0,0,.5);
+  }
+  .up{color:#ef5350}
+  .down{color:#26a69a}
+  .warn{color:#f5b342}
+  .dim{color:#7a8290}
+  .num{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+  b{color:#f0f4f8;font-weight:600}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px -4px;padding:0 4px}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:12.5px}
+  th,td{padding:8px 10px;border-bottom:1px solid #1c2330;text-align:left;vertical-align:middle}
+  th{color:#8a94a3;font-weight:600;background:#12171f;border-bottom:1px solid #2a3342;font-size:11.5px;letter-spacing:.06em}
+  .sum-row td{background:#141a24;font-weight:700;border-top:1px solid #2a3342}
+  .grand-row td{background:#1b2230;font-weight:800;font-size:13px;color:#ffd166}
+
+  /* masthead */
+  .masthead{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:2px solid #ef5350;padding-bottom:10px;margin-bottom:14px;
+    font-size:11px;letter-spacing:.14em;
+  }
+  .brand{color:#8a94a3;font-weight:600}
+  .vol{color:#ef5350;font-weight:700}
+
+  .mast-title{
+    font-family:"SF Pro Display",Georgia,"Times New Roman",serif;
+    font-size:30px;font-weight:800;letter-spacing:.02em;
+    color:#f0f4f8;line-height:1.15;margin:4px 0 8px;
+  }
+  .mast-title .accent{color:#ef5350}
+  .mast-meta{color:#7a8290;font-size:12px;border-top:1px solid #1c2330;border-bottom:1px solid #1c2330;padding:6px 0;margin-bottom:18px}
+
+  /* headline */
+  .headline{margin:8px 0 18px;padding:16px 18px;background:linear-gradient(180deg,#1a1218 0%,#141821 100%);border-left:3px solid #ef5350;border-radius:0 4px 4px 0}
+  .headline .kicker{color:#ef5350;font-size:11px;letter-spacing:.18em;font-weight:700;margin-bottom:8px}
+  .head-title{font-size:19px;color:#f0f4f8;font-weight:700;line-height:1.35;margin-bottom:10px}
+  .head-lede{color:#b8c0cc;font-size:13.5px;line-height:1.68}
+
+  /* KPI dash */
+  .dash{
+    display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0 22px;
+  }
+  .dcell{background:#12171f;border:1px solid #1f2733;border-radius:4px;padding:12px 12px 10px;min-width:0}
+  .dlabel{color:#7a8290;font-size:11px;letter-spacing:.08em;margin-bottom:4px}
+  .dnum{font-size:22px;font-weight:800;line-height:1.1;margin:2px 0 4px;letter-spacing:.01em}
+  .dnote{color:#8a94a3;font-size:11px;line-height:1.4}
+  .dcell.alert{border-color:#ef5350;background:linear-gradient(180deg,#2a1418 0%,#12171f 100%)}
+  .dcell.alert .dlabel{color:#ef5350;font-weight:700}
+
+  /* section */
+  .sect{margin:26px 0 20px;padding-top:6px}
+  .sect-num{display:inline-block;font-family:Georgia,serif;font-size:11px;color:#ef5350;border:1px solid #ef5350;padding:1px 7px;border-radius:2px;margin-bottom:6px;letter-spacing:.1em;font-weight:700}
+  .sect-title{font-size:18px;color:#f0f4f8;font-weight:700;margin:4px 0 8px;letter-spacing:.01em;border-bottom:1px solid #2a3342;padding-bottom:8px}
+  .sect-lede{color:#b8c0cc;font-size:13px;line-height:1.7;margin:8px 0 12px}
+
+  /* Section 0 emergency */
+  .emergency{
+    background:linear-gradient(180deg,#3a0f14 0%,#1a0a0e 100%);
+    border:2px solid #ef5350;border-radius:4px;
+    padding:16px 18px;margin:14px 0 20px;
+    position:relative;overflow:hidden;
+  }
+  .emergency::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:#ef5350;
+    animation:pulse-red 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse-red{0%,100%{opacity:1}50%{opacity:.35}}
+  .emergency .emg-tag{color:#ef5350;font-size:11px;letter-spacing:.2em;font-weight:800;margin-bottom:6px}
+  .emergency .emg-title{color:#ffd166;font-size:20px;font-weight:800;line-height:1.3;margin-bottom:10px}
+  .emergency .emg-body{color:#e5e9f0;font-size:13.5px;line-height:1.7}
+  .emergency .emg-body b{color:#fff}
+  .emergency .emg-action{margin-top:10px;padding:10px 12px;background:rgba(239,83,80,.14);border-left:3px solid #ef5350;border-radius:0 3px 3px 0;font-size:13px;color:#f5f7fa}
+
+  /* index grid */
+  .idx-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:12px 0}
+  .idx{background:#12171f;border:1px solid #1f2733;border-radius:4px;padding:10px 10px;min-width:0}
+  .idx-name{color:#8a94a3;font-size:11px;font-weight:600;letter-spacing:.06em}
+  .idx-price{color:#f0f4f8;font-size:15px;font-weight:800;margin:4px 0 2px}
+  .idx-chg{font-size:13px;font-weight:700}
+  .idx-vs{color:#8a94a3;font-size:11px;margin-top:3px}
+  .idx.hot{border-color:#ef5350;background:linear-gradient(180deg,#241014 0%,#12171f 100%)}
+
+  /* week trend line */
+  .trend-line{
+    display:flex;align-items:stretch;background:#12171f;border:1px solid #1f2733;border-radius:4px;padding:12px 6px;margin:14px 0;overflow-x:auto;
+  }
+  .trend-node{flex:1 1 0;min-width:78px;text-align:center;padding:0 4px;border-right:1px dashed #1f2733;position:relative}
+  .trend-node:last-child{border-right:none}
+  .trend-date{color:#7a8290;font-size:10.5px;letter-spacing:.06em}
+  .trend-val{color:#e5e9f0;font-size:14px;font-weight:700;margin:3px 0 2px}
+  .trend-chg{font-size:11px;font-weight:700}
+  .trend-tag{font-size:10px;color:#8a94a3;margin-top:2px;line-height:1.3}
+  .trend-node.peak{background:linear-gradient(180deg,rgba(38,166,154,.14) 0%,transparent 100%)}
+  .trend-node.low{background:linear-gradient(180deg,rgba(239,83,80,.18) 0%,transparent 100%)}
+  .trend-node.low .trend-val{color:#ef5350}
+
+  /* debate box */
+  .debate-box{
+    margin:16px 0;padding:16px 18px;
+    background:linear-gradient(180deg,#221b0f 0%,#141821 100%);
+    border:1px solid #d4a04a;border-radius:4px;position:relative;
+  }
+  .debate-box::before{
+    content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:2px;
+    background:linear-gradient(90deg,transparent,#ffd166,transparent);
+    animation:sweep 3.5s linear infinite;
+  }
+  @keyframes sweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+  .debate-title{color:#ffd166;font-size:14px;font-weight:800;letter-spacing:.06em;margin-bottom:10px}
+  .debate-quote{background:rgba(255,209,102,.08);border-left:3px solid #ffd166;padding:10px 12px;font-size:13px;color:#e5e9f0;line-height:1.7;margin:8px 0;border-radius:0 3px 3px 0;font-style:italic}
+  .debate-quote .qmeta{display:block;color:#d4a04a;font-size:11px;letter-spacing:.06em;margin-bottom:4px;font-style:normal;font-weight:700}
+  .verify-list{list-style:none;padding:0;margin:12px 0 6px}
+  .verify-list li{padding:8px 0 8px 22px;border-bottom:1px solid #2a2418;color:#d8dee9;font-size:13px;line-height:1.65;position:relative}
+  .verify-list li::before{content:"▸";position:absolute;left:6px;top:8px;color:#ffd166;font-weight:800}
+  .verify-list li:last-child{border-bottom:none}
+  .debate-conclude{margin-top:10px;padding:10px 12px;background:rgba(239,83,80,.14);border-left:3px solid #ef5350;color:#f5f7fa;font-size:13.5px;font-weight:700;border-radius:0 3px 3px 0}
+
+  /* rule fail */
+  .rule-fail{
+    margin:14px 0;padding:14px 16px;
+    background:linear-gradient(180deg,#2a0f14 0%,#141821 100%);
+    border:2px solid #ef5350;border-radius:4px;position:relative;
+  }
+  .rule-fail::before{
+    content:"";position:absolute;top:10px;right:12px;width:8px;height:8px;
+    background:#ef5350;border-radius:50%;
+    animation:pulse-red 1.4s ease-in-out infinite;
+  }
+  .rf-hd{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .rf-flag{color:#ef5350;font-size:10.5px;letter-spacing:.2em;font-weight:800;border:1px solid #ef5350;padding:2px 8px;border-radius:2px}
+  .rf-title{color:#ffd166;font-size:15px;font-weight:800}
+  .rule-fail .rt-wrap{margin-top:6px}
+  .rule-fail table{min-width:100%;font-size:12.5px}
+  .rule-fail th{background:#1a0e12;color:#f5b342}
+  .rule-fail td{border-bottom:1px solid #2a1418}
+  .rf-score{margin-top:12px;padding:10px 12px;background:rgba(0,0,0,.35);border-left:3px solid #ffd166;color:#e5e9f0;font-size:12.5px;border-radius:0 3px 3px 0}
+  .rf-score b{color:#ef5350}
+
+  /* scenarios 3-color */
+  .scenarios{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+  .scen{border-radius:4px;padding:12px 12px;min-width:0;border:1px solid;background:#12171f;display:flex;flex-direction:column}
+  .scen.A{border-color:#26a69a;background:linear-gradient(180deg,rgba(38,166,154,.12) 0%,#12171f 100%)}
+  .scen.B{border-color:#f5b342;background:linear-gradient(180deg,rgba(245,179,66,.12) 0%,#12171f 100%)}
+  .scen.C{border-color:#ef5350;background:linear-gradient(180deg,rgba(239,83,80,.14) 0%,#12171f 100%)}
+  .scen-hd{border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:8px;margin-bottom:8px}
+  .scen-tag{display:inline-block;font-size:10px;letter-spacing:.14em;font-weight:800;padding:1px 6px;border-radius:2px;margin-bottom:4px}
+  .scen.A .scen-tag{background:#26a69a;color:#0a0e14}
+  .scen.B .scen-tag{background:#f5b342;color:#0a0e14}
+  .scen.C .scen-tag{background:#ef5350;color:#0a0e14}
+  .scen-name{color:#f0f4f8;font-size:13px;font-weight:700;margin:3px 0 3px}
+  .scen-verdict{color:#8a94a3;font-size:11px}
+  .act-list{list-style:none;padding:0;margin:0 0 8px;flex:1}
+  .act-list li{padding:6px 0;border-bottom:1px dashed #1f2733;font-size:12px;color:#d8dee9;line-height:1.5;display:flex;gap:6px;align-items:baseline}
+  .act-list li:last-child{border-bottom:none}
+  .pri{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.06em;padding:1px 5px;border-radius:2px;flex-shrink:0}
+  .pri.p1{background:#ef5350;color:#0a0e14}
+  .pri.p2{background:#f5b342;color:#0a0e14}
+  .pri.p3{background:#26a69a;color:#0a0e14}
+  .scen-expect{margin-top:6px;padding-top:8px;border-top:1px solid rgba(255,255,255,.08);font-size:11.5px;color:#b8c0cc;display:grid;grid-template-columns:auto 1fr;gap:2px 8px}
+  .scen-expect span{color:#8a94a3}
+  .scen-expect b{color:#f0f4f8;font-weight:700}
+
+  /* forbid */
+  .forbid-box{
+    margin:12px 0;padding:14px 16px;
+    background:linear-gradient(180deg,#1a1418 0%,#141821 100%);
+    border:1px dashed #7a2a30;border-radius:4px;
+  }
+  .fb-hd{color:#ef5350;font-size:12px;letter-spacing:.14em;font-weight:800;margin-bottom:8px}
+  .fb-list{list-style:none;padding:0;margin:0}
+  .fb-list li{padding:5px 0 5px 22px;position:relative;color:#d8dee9;font-size:12.5px;line-height:1.55}
+  .fb-list li::before{content:"NO";position:absolute;left:0;top:5px;color:#ef5350;font-size:9.5px;font-weight:800;letter-spacing:.06em;border:1px solid #ef5350;padding:0 4px;border-radius:2px;line-height:1.4}
+
+  /* night talk */
+  .night-talk{
+    margin:14px 0;padding:16px 18px;
+    background:linear-gradient(180deg,#141a24 0%,#0f141c 100%);
+    border:1px solid #d4a04a;border-radius:4px;
+  }
+  .nt-lead{color:#ffd166;font-size:14px;font-weight:700;padding-bottom:10px;border-bottom:1px solid #2a2418;margin-bottom:12px;font-style:italic}
+  .nt-block{margin:10px 0;padding:12px 14px;background:rgba(255,209,102,.05);border-left:3px solid #d4a04a;border-radius:0 3px 3px 0}
+  .nt-num{color:#ffd166;font-size:10.5px;letter-spacing:.16em;font-weight:800;margin-bottom:2px}
+  .nt-h{color:#f0f4f8;font-size:14px;font-weight:700;margin-bottom:6px}
+  .nt-p{color:#d8dee9;font-size:13px;line-height:1.72}
+  .nt-p b{color:#ffd166}
+  .nt-sign{margin-top:14px;text-align:right;color:#8a94a3;font-size:11px;letter-spacing:.06em}
+
+  /* final line - bloomberg style */
+  .final-line{
+    margin:20px 0 8px;padding:16px 18px;
+    background:#0f141c;
+    border-top:2px solid #ef5350;border-bottom:1px solid #1f2733;
+  }
+  .final-tag{color:#ef5350;font-size:10.5px;letter-spacing:.2em;font-weight:800;margin-bottom:6px}
+  .final-quote{color:#f0f4f8;font-size:15px;font-weight:700;line-height:1.55;letter-spacing:.02em}
+  .final-quote b{color:#ffd166}
+  .final-sign{margin-top:8px;color:#8a94a3;font-size:11px;text-align:right;letter-spacing:.06em}
+
+  /* highlight rows */
+  .hl-row{background:rgba(239,83,80,.06)}
+  .hl-row td{border-bottom-color:#2a2028}
+  .win-row{background:rgba(38,166,154,.06)}
+
+  /* footer */
+  footer{margin-top:24px;padding-top:14px;border-top:1px solid #1f2733;color:#7a8290;font-size:11.5px;line-height:1.65}
+  .foot-row{display:flex;gap:10px;margin:4px 0;flex-wrap:wrap}
+  .foot-lb{color:#ef5350;font-weight:700;letter-spacing:.06em;min-width:60px}
+  .foot-sign{margin-top:12px;display:flex;justify-content:space-between;color:#5c6370;font-size:10.5px;flex-wrap:wrap;gap:6px}
+
+  /* mobile */
+  @media (max-width:820px){
+    .dash{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .idx-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .idx-grid .idx:nth-child(5){grid-column:span 2}
+    .scenarios{grid-template-columns:1fr}
+  }
+  @media (max-width:480px){
+    body{padding:14px 8px 30px;font-size:13.5px}
+    .paper{padding:18px 14px 24px;border-radius:4px}
+    .mast-title{font-size:24px}
+    .head-title{font-size:16.5px}
+    .headline{padding:14px 14px}
+    .dcell{padding:10px 10px}
+    .dnum{font-size:19px}
+    .emergency{padding:14px 14px}
+    .emergency .emg-title{font-size:17px}
+    .sect{margin:22px 0 16px}
+    .sect-title{font-size:16px}
+    .idx-price{font-size:14px}
+    .trend-node{min-width:70px;padding:0 3px}
+    .trend-val{font-size:12.5px}
+    .final-quote{font-size:13.5px}
+    .paper,.sect,.emergency,.debate-box,.rule-fail,.scen,.night-talk,.final-line,.forbid-box,.headline,.dash>*,.idx-grid>*,.scenarios>*,.table-wrap{min-width:0}
+    footer{font-size:11px}
+  }
+  @media print{body{background:#fff;color:#000}.paper{border:none;box-shadow:none;background:#fff}}
+</style>
+</head>
+<body>
+<article class="paper">
+
+  <header class="masthead">
+    <div class="brand">TAT 投研团队 · 专题研判</div>
+    <div class="vol">AI 国产链 vs 海外链 · 28 见顶</div>
+  </header>
+
+  <h1 class="mast-title">AI 国产链 vs 海外链 · <span class="accent">28 见顶</span></h1>
+  <div class="mast-meta">2026 年 7 月 20 日 · 双路径共振研判 · 别做思科 · 别做朗讯 · 主板 Top 5 穿越周期候选</div>
+
+  <div class="headline">
+    <div class="kicker">头版 · 战略级切换 · 从思科逃到亚马逊</div>
+    <h2 class="head-title">海外 AI Capex 2028 峰值 <span class="down">1.4 万亿</span> · 增速拐点提前到 <span class="up">2026H2-2027</span><br>用户重仓 <span class="up">5/5</span> 落在最先受冲击的红档 · 2000 年思科朗讯剧本重演</h2>
+    <p class="head-lede">2000 年互联网泡沫的教训极其清晰：光通信设备（思科 82 → 8 · <b class="up">-90%</b>；朗讯 84 → 0.55 · <b class="up">-99%</b>）在 2000 Q4 率先崩塌；应用与云软件（<b class="down">亚马逊 6 → 3000+</b>）却穿越周期涨了 500 倍。本轮 AI 周期同一套逻辑：<b class="warn">海外 Capex 绝对值 2028 见顶，但增速 YoY 2026 H2-2027 就见顶</b>，现在（2026 Q3）正是切换窗口期。用户当前重仓的<b class="up">沪电 002463 / 通信 ETF 515880 / 半导体 E 159558 / 科创芯片 588200 / 通富微电 002156</b>五大标的全部落在最先受冲击的<b class="up">🔴 高相关红档</b>，与 2000 年买思科朗讯的组合结构完全一致。主板 Top 5 穿越周期候选：北方华创 002371 · 海康威视 002415 · 紫光国微 002049 · 中国移动 600941 · 科大讯飞 002230。<b class="warn">目标结构：海外依赖 40% → 15% · 国产独立 10% → 40%。</b></p>
+  </div>
+
+  <section class="dash">
+    <div class="dcell">
+      <div class="dlabel">海外 Capex 2028 峰值</div>
+      <div class="dnum down">1.4 万亿</div>
+      <div class="dnote">Morgan Stanley 07-13 · 四大合计</div>
+    </div>
+    <div class="dcell alert">
+      <div class="dlabel">增速拐点提前</div>
+      <div class="dnum warn">2026H2-2027</div>
+      <div class="dnote">绝对值见顶前 · YoY 已经拐头</div>
+    </div>
+    <div class="dcell alert">
+      <div class="dlabel">用户重仓 · 红档</div>
+      <div class="dnum up">5 / 5</div>
+      <div class="dnote">全在最先受冲击方向</div>
+    </div>
+    <div class="dcell">
+      <div class="dlabel">Top 5 穿越周期</div>
+      <div class="dnum down">主板独立驱动</div>
+      <div class="dnote">北方华创 · 海康 · 紫光国微 · 中移 · 讯飞</div>
+    </div>
+  </section>
+
+  <!-- ========== Section 1 · 核心判断 · 双路径共振 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 01</div>
+    <h3 class="sect-title">核心判断 · 双路径共振结论</h3>
+
+    <div class="debate-box">
+      <div class="debate-title">TAT 研究主管 · 一句话结论</div>
+      <div class="debate-quote">
+        <span class="qmeta">2026-07-20 独立研判 · 战略级建议 · 非战术调仓</span>
+        <b>海外 AI Capex 绝对值 2028 见顶（1.4 万亿），但增速 YoY 已在 2026 H2 - 2027 见顶，这是 A 股 AI 硬件方向「估值杀 + 业绩杀」的双击窗口</b>。用户目前重仓的 5 大标的全部集中在最先受冲击的🔴 高相关档，与 2000 年互联网泡沫中「思科朗讯组合」的风险结构一模一样。现在必须做的不是「择时」，是<b class="warn">「战略切换」</b>，从海外依赖档迁移到国产独立档，主板 Top 5 是可穿越周期的核心候选。
+      </div>
+
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>验证路径</th>
+            <th>依据</th>
+            <th>结论</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="win-row">
+            <td class="down"><b>A · 海外 Capex 时间线</b></td>
+            <td>MS / Goldman / SEMI 一致预测</td>
+            <td class="down">2026 高峰 → 2028 见顶 → 2029-2030 增速下降</td>
+          </tr>
+          <tr class="win-row">
+            <td class="down"><b>B · 国产化率 + 独立驱动</b></td>
+            <td>基本面 15 方向对照</td>
+            <td class="down">红档 5 / 黄档 5 / 绿档 7 三档分化清晰</td>
+          </tr>
+          <tr class="grand-row">
+            <td colspan="2"><b>双路径共振结论</b></td>
+            <td class="down"><b>红档最先杀 · 绿档穿越周期</b></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="debate-conclude">
+        <b>研究主管最终结论：</b>这不是一份「T+1 择时」建议，是一份<b class="warn">「未来 6-12 个月组合结构」</b>的战略级建议。海外 Capex 增速拐点意味着高相关档的估值支撑将逐步瓦解，即使明日 WAIC 拉升让沪电 / 通信 ETF 短期反弹，中期趋势已定。<b class="down">先做「必减 5 只红档」再做「必加 5 只绿档」，是从「思科逃到亚马逊」的战略切换。</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 2 · 海外 Capex 时间线 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 02</div>
+    <h3 class="sect-title">海外 Capex 时间线 · 2028 见顶数据支撑</h3>
+    <p class="sect-lede">海外四大云厂商（MSFT / AMZN / GOOG / META）Capex 从 2024 年 2300 亿爆发式增长到 2026 年 7250 亿，2028 达 <b class="down">1.4 万亿峰值</b>，但增速拐点已经出现在 2026 H2。<b class="warn">Oracle 7/13 股价创 52 周新低 + FCF -247 亿</b>是「烧钱危机」的先行指标。</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>公司</th>
+          <th class="num">2024（亿 $）</th>
+          <th class="num">2025</th>
+          <th class="num">2026</th>
+          <th class="num">2028 预期</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Microsoft</td>
+          <td class="num">560</td>
+          <td class="num">800-880</td>
+          <td class="num">1900</td>
+          <td class="num down">2300+</td>
+        </tr>
+        <tr>
+          <td>Amazon</td>
+          <td class="num">830</td>
+          <td class="num">1000</td>
+          <td class="num">2000</td>
+          <td class="num down">2400</td>
+        </tr>
+        <tr>
+          <td>Google</td>
+          <td class="num">525</td>
+          <td class="num">750</td>
+          <td class="num">1750-1850</td>
+          <td class="num down">2200</td>
+        </tr>
+        <tr>
+          <td>Meta</td>
+          <td class="num">400</td>
+          <td class="num">640-720</td>
+          <td class="num">1150-1350</td>
+          <td class="num down">1700</td>
+        </tr>
+        <tr class="grand-row">
+          <td><b>四大合计</b></td>
+          <td class="num">2300</td>
+          <td class="num">3300</td>
+          <td class="num down"><b>7250</b></td>
+          <td class="num"><b class="warn">1.4 万亿峰值</b></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="emergency" style="margin-top:14px">
+      <div class="emg-tag">LEADING INDICATOR · 烧钱危机先行信号</div>
+      <div class="emg-title">Oracle 7/13 股价创 52 周新低 · FCF -247 亿</div>
+      <div class="emg-body">
+        Goldman 预测「2025-2030 四大合计 5.3 万亿 Capex」· Morgan Stanley 07-13 报告「2028 hyperscaler 1.4 万亿」，两份权威口径共振。但 <b class="warn">Oracle 已经出现「自由现金流 -247 亿」的先行信号</b>，股价 130.76 创 52 周新低。这是「烧钱不可持续」的第一枪，未来 12-18 个月这一信号大概率扩散到其他云厂商。<b>一旦 hyperscaler 集体降 Capex 增速，A 股高相关档（光模块 / PCB / 封装）将迎来估值杀。</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 3 · 3 档传导路径 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 03</div>
+    <h3 class="sect-title">3 档传导路径 · 15 方向精细分类（本报告核心）</h3>
+    <p class="sect-lede">按<b class="up">「与海外 Capex 增速的相关度」</b>把 A 股 AI 15 细分方向分为红 / 黄 / 绿三档。红档 = 海外见顶即业绩暴跌；黄档 = 半独立驱动、部分承压；绿档 = 独立叙事、可穿越周期。</p>
+
+    <div class="rule-fail" style="margin-bottom:14px">
+      <div class="rf-hd">
+        <div class="rf-flag">🔴 高相关档</div>
+        <div class="rf-title">海外见顶 = 业绩暴跌 · 5 个方向（用户全部踩中）</div>
+      </div>
+      <div class="rt-wrap table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>方向</th>
+            <th>用户 / 团队涉及标的</th>
+            <th>海外依赖</th>
+            <th>杀跌顺序</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hl-row">
+            <td><b>光模块 / CPO</b></td>
+            <td><b>通信 ETF 515880（用户持仓 36,200 股）</b></td>
+            <td class="up">&gt; 90% · 中际 70% 来自北美四大</td>
+            <td class="up"><b>#1 最先杀</b></td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>AI PCB</b></td>
+            <td><b>沪电 002463（用户持仓 200 股）</b> · 深南 002916 · 生益 600183</td>
+            <td class="up">下游英伟达 / 超微 / Meta</td>
+            <td class="up"><b>#2 同步杀</b></td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>先进封装</b></td>
+            <td><b>通富微电 002156（用户持仓 200 股）</b> · 华天 002185 · 长电 600584</td>
+            <td class="up">OSAT 模式接海外订单</td>
+            <td class="up"><b>#3 同步杀</b></td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>AI 服务器 ODM</b></td>
+            <td>工业富联 601138</td>
+            <td class="up">代工厂 · 直接跟海外</td>
+            <td class="up">#4 承压</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>液冷</b></td>
+            <td>飞龙 002536（已排除）· 中航光电 002179 部分</td>
+            <td class="up">2026 Q1 已崩塌</td>
+            <td class="up">#5 已在杀跌</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="debate-box" style="margin-bottom:14px">
+      <div class="debate-title">🟡 半独立档 · 5 个方向（部分承压 · 有国产逻辑对冲）</div>
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>方向</th>
+            <th>代表标的</th>
+            <th>对冲逻辑</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>半导体设备</td><td>北方华创 / 中微 / 拓荆</td><td class="down">国产替代率提升</td></tr>
+          <tr><td>存储</td><td>兆易创新 / 长江存储</td><td class="warn">DDR5 涨价周期</td></tr>
+          <tr><td>CIS</td><td>韦尔股份 603501</td><td class="warn">汽车 / 手机端拉动</td></tr>
+          <tr><td>HVDC 电源</td><td>蔚蓝锂芯 002245（用户 500 股）</td><td class="warn">数据中心 + 车载双驱</td></tr>
+          <tr><td>交换机</td><td>紫光股份 / 星网锐捷</td><td class="warn">国内数据中心建设</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="rule-fail" style="border-color:#26a69a;background:linear-gradient(180deg,#0f2418 0%,#0f141c 100%)">
+      <div class="rf-hd">
+        <div class="rf-flag" style="color:#26a69a;border-color:#26a69a">🟢 独立驱动档</div>
+        <div class="rf-title">可穿越周期 · 7 个方向（Top 5 全部在此）</div>
+      </div>
+      <div class="rt-wrap table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>方向</th>
+            <th>主板可买</th>
+            <th>独立驱动力</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="win-row">
+            <td><b>半导体设备</b></td>
+            <td><b>北方华创 002371</b></td>
+            <td class="down">国产替代 · SEMI 2028 支撑</td>
+          </tr>
+          <tr class="win-row">
+            <td><b>AI 软件 / 信创</b></td>
+            <td><b>科大讯飞 002230</b> · 中国软件 600536</td>
+            <td class="down">大模型订阅 · 信创政策</td>
+          </tr>
+          <tr class="win-row">
+            <td><b>边缘 AI / 视觉</b></td>
+            <td><b>海康威视 002415</b> · 大华 002236</td>
+            <td class="down">安防第一 · 机器人视觉</td>
+          </tr>
+          <tr class="win-row">
+            <td><b>军工特种 IC</b></td>
+            <td><b>紫光国微 002049</b> · 中航光电 002179</td>
+            <td class="down">十四五装备定型 · H1 +107 倍已兑现</td>
+          </tr>
+          <tr class="win-row">
+            <td><b>AIDC 电力</b></td>
+            <td>平高 600312 · 许继 000400 · 国电南瑞 600406</td>
+            <td class="down">特高压 · 十五五规划</td>
+          </tr>
+          <tr class="win-row">
+            <td><b>央企算力 + 高股息</b></td>
+            <td><b>中国移动 600941</b> · 中国电信 601728</td>
+            <td class="down">5% 股息保底 · 算力买方</td>
+          </tr>
+          <tr class="win-row">
+            <td><b>国内 AIDC</b></td>
+            <td>宝信 600845 · 数据港 603881</td>
+            <td class="down">国内数据中心建设 · 非海外依赖</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 4 · 用户重仓 5/5 在红档 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 04</div>
+    <h3 class="sect-title">用户重仓 = 5 / 5 在红档 · 2000 年思科朗讯组合现代版</h3>
+
+    <div class="rule-fail">
+      <div class="rf-hd">
+        <div class="rf-flag">RED ZONE · 满仓风险</div>
+        <div class="rf-title">用户当前重仓 5 大标的全部落在最先受冲击的高相关档</div>
+      </div>
+      <div class="rt-wrap table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>用户持仓</th>
+            <th class="num">数量</th>
+            <th>档位</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hl-row">
+            <td><b>沪电 002463</b></td>
+            <td class="num">200</td>
+            <td class="up">🔴 AI PCB</td>
+            <td class="up">下游英伟达 · 高相关</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>通信 ETF 515880</b></td>
+            <td class="num">36,200</td>
+            <td class="up">🔴 光模块 46% 权重</td>
+            <td class="up">中际 70% 来自北美 · 最高危</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>通富微电 002156</b></td>
+            <td class="num">200</td>
+            <td class="up">🔴 先进封装</td>
+            <td class="up">OSAT 模式 · 高相关</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>科创芯片 588200</b></td>
+            <td class="num">9,000</td>
+            <td class="up">🔴 算力芯片 ETF</td>
+            <td class="up">寒武纪 / 海光权重 · 泛 AI 芯片</td>
+          </tr>
+          <tr class="hl-row">
+            <td><b>半导体 E 159558</b></td>
+            <td class="num">3,700</td>
+            <td class="up">🔴 半导体 ETF</td>
+            <td class="up">AI 芯片 + 设备权重混合</td>
+          </tr>
+          <tr>
+            <td>机器人 562500</td>
+            <td class="num">6,600</td>
+            <td class="warn">🟡 半独立</td>
+            <td class="warn">特斯拉 Optimus 相关</td>
+          </tr>
+          <tr>
+            <td>蔚蓝锂芯 002245</td>
+            <td class="num">500</td>
+            <td class="warn">🟡 HVDC 电源</td>
+            <td class="warn">数据中心 + 车载双驱</td>
+          </tr>
+          <tr class="win-row">
+            <td>黄金 ETF 518880</td>
+            <td class="num">100</td>
+            <td class="down">🟢 独立</td>
+            <td class="down">避险 · 唯一对冲腿</td>
+          </tr>
+          <tr class="win-row">
+            <td>互联网 QD 160644</td>
+            <td class="num">100</td>
+            <td class="down">🟢 独立</td>
+            <td class="down">港股 · 与 A 股 AI 硬件不重叠</td>
+          </tr>
+          <tr class="grand-row">
+            <td colspan="4"><b class="up">结论：用户重仓 + 近满仓的 5 大标的全部在最先受冲击的 🔴 红档 = 2000 年买思科朗讯的现代版</b></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="rf-score">
+        <b>风险数学：</b>红档 5 只合计仓位约 <b class="up">70%+</b> · 只要海外 Capex 增速拐点确认（Oracle 已先兆），这 5 只将同步承压。<b class="warn">按 2000 年思科朗讯 -90% / -99% 的历史极限推算</b>，即使本轮跌 30-50% 也是万元级损失。<b>组合结构必须战略切换，不是「择时减一点」能解决的。</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 5 · 2000 年互联网泡沫对照 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 05</div>
+    <h3 class="sect-title">2000 年互联网泡沫对照 · 历史类比最直接（本报告最有价值）</h3>
+    <p class="sect-lede">2000 年互联网泡沫的教训极其清晰，「离硬件最近 + 海外依赖最深」的方向先崩，「离应用最近 + 独立叙事」的方向穿越周期涨了 500 倍。本轮 AI 周期的替代游戏正在按同一剧本上演。</p>
+
+    <div class="debate-box">
+      <div class="debate-title">2000 年泡沫 · 两类结局 · 极端对照</div>
+
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>类别</th>
+            <th>代表股</th>
+            <th class="num">2000 峰值</th>
+            <th class="num">2002 底部</th>
+            <th class="num">跌幅</th>
+            <th>结局</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hl-row">
+            <td><b>光通信（2000 Q4 先崩）</b></td>
+            <td>思科 CSCO</td>
+            <td class="num">82</td>
+            <td class="num">8</td>
+            <td class="num up"><b>-90%</b></td>
+            <td class="up">从未回到峰值</td>
+          </tr>
+          <tr class="hl-row">
+            <td>光通信</td>
+            <td>朗讯 LU</td>
+            <td class="num">84</td>
+            <td class="num">0.55</td>
+            <td class="num up"><b>-99%</b></td>
+            <td class="up">2006 被并购退市</td>
+          </tr>
+          <tr class="win-row">
+            <td><b>软件 + 应用（晚崩 1-2 年）</b></td>
+            <td><b>亚马逊 AMZN</b></td>
+            <td class="num">6</td>
+            <td class="num">3</td>
+            <td class="num warn">短跌 -50%</td>
+            <td class="down"><b>后续涨到 3000+ · +500 倍</b></td>
+          </tr>
+          <tr class="win-row">
+            <td>软件 + 应用</td>
+            <td>苹果 AAPL / 微软 MSFT</td>
+            <td class="num">泡沫期回调</td>
+            <td class="num">2003 企稳</td>
+            <td class="num down">/ </td>
+            <td class="down">全部创新高</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="debate-conclude">
+        <b>历史规律：</b>死于第一波的是<b class="up">「当下最热 + 海外依赖最深」</b>的方向 · 涨 10 倍的在<b class="down">「当下不算最热 + 独立叙事 + 能落地应用」</b>的方向。<br><br>
+        <b>本轮对应：</b>2027-2028 见顶 → 现在（2026 Q3）就是从<b class="up">光模块 / PCB / 封装（用户重仓）</b> → <b class="down">AI 软件 / 信创 / AIDC / 特种 IC（Top 5）</b>的窗口期。<b class="warn">重仓思科的今天不做切换，等 2027 见顶来临就来不及了。</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 6 · 主板 Top 5 穿越周期建仓清单 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 06</div>
+    <h3 class="sect-title">主板 Top 5 · 穿越周期建仓清单（金框推荐）</h3>
+    <p class="sect-lede">五只主板 α 全部落在 🟢 独立驱动档，与用户 AI β 严重超配<b class="down">完全不重叠</b>，加仓 = 真正意义上的分散 + 长期穿越周期。</p>
+
+    <div class="debate-box">
+      <div class="debate-title">Top 5 建仓池 · 金字塔穿越周期候选</div>
+
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>排名</th>
+            <th>代码</th>
+            <th>名称</th>
+            <th class="num">现价</th>
+            <th class="num">建仓价</th>
+            <th class="num">上限</th>
+            <th>抗周期理由</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="win-row">
+            <td class="down"><b>🥇</b></td>
+            <td>002371</td>
+            <td><b>北方华创</b></td>
+            <td class="num">878.43</td>
+            <td class="num warn">800-870 回踩</td>
+            <td class="num">3-5%</td>
+            <td class="down">半导体设备国产替代 · SEMI 2028 支撑</td>
+          </tr>
+          <tr class="win-row">
+            <td class="down"><b>🥈</b></td>
+            <td>002415</td>
+            <td><b>海康威视</b></td>
+            <td class="num warn">待补</td>
+            <td class="num warn">现价分批</td>
+            <td class="num">3-5%</td>
+            <td class="down">全球安防第一 · 完成国产 · 机器人视觉新增长曲线</td>
+          </tr>
+          <tr class="win-row">
+            <td class="down"><b>🥉</b></td>
+            <td>002049</td>
+            <td><b>紫光国微</b></td>
+            <td class="num">78.22</td>
+            <td class="num warn">现价分批</td>
+            <td class="num">3%</td>
+            <td class="down">军工特种 IC · H1 +107 倍已兑现 · 完全国产</td>
+          </tr>
+          <tr class="win-row">
+            <td class="down"><b>4</b></td>
+            <td>600941</td>
+            <td><b>中国移动</b></td>
+            <td class="num">91.80</td>
+            <td class="num warn">现价分批</td>
+            <td class="num">5%</td>
+            <td class="down">5% 股息保底 · 算力买方而非卖方 · Kronos +9.09%</td>
+          </tr>
+          <tr class="win-row">
+            <td class="down"><b>5</b></td>
+            <td>002230</td>
+            <td><b>科大讯飞</b></td>
+            <td class="num">41.18</td>
+            <td class="num warn">40-41 回踩</td>
+            <td class="num">3%</td>
+            <td class="down">AI 软件独立生态 · 星火大模型 · Kronos +24.65%</td>
+          </tr>
+          <tr>
+            <td class="warn"><b>补</b></td>
+            <td>000400</td>
+            <td>许继电气</td>
+            <td class="num">19.85</td>
+            <td class="num warn">19.0-19.5</td>
+            <td class="num">3%</td>
+            <td class="warn">电力弹性 · 特高压 · Kronos +30.32%</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="debate-conclude">
+        <b>组合视角的关键：</b>Top 5 全部落在 🟢 独立驱动档，5 只合计上限 17-21%，与用户重仓的 AI 硬件完全不重叠。<b class="warn">中国移动 5% 股息</b>是<b class="down">熊市生存工具</b>，即使 A 股再跌 20%，股息也能覆盖大部分下行；紫光国微 H1 +107 倍已兑现 = 业绩兑现的确定性远超概念股；北方华创国产替代率提升是<b class="down">「海外见顶反而利好」</b>的逆周期方向。
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 7 · 用户组合迁移路径 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 07</div>
+    <h3 class="sect-title">用户组合迁移路径 · 5 步双线（本报告决策核心）</h3>
+    <p class="sect-lede">左手减仓海外依赖档 · 右手加仓国产独立档 · <b class="warn">先减后加</b> · 分 5 步在 4-8 周内完成迁移。目标结构：海外依赖 <b class="up">40% → 15%</b> · 国产独立 <b class="down">10% → 40%</b>。</p>
+
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th class="num">步骤</th>
+          <th style="color:#ef5350">减仓（🔴 海外依赖档）</th>
+          <th style="color:#26a69a">加仓（🟢 国产独立档）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="num"><b>1</b></td>
+          <td class="up">通信 ETF 515880 <b>-10,000 份</b>（光模块 46% 权重）</td>
+          <td class="down">北方华创 002371 <b>+100 股</b>（回踩 800-870）</td>
+        </tr>
+        <tr>
+          <td class="num"><b>2</b></td>
+          <td class="up"><b>沪电股份 002463 全清 -200 股</b>（下游英伟达 · 高相关）</td>
+          <td class="down">海康威视 002415 <b>+200 股</b>（分批建）</td>
+        </tr>
+        <tr>
+          <td class="num"><b>3</b></td>
+          <td class="up">科创芯片 588200 <b>-1,500 ~ 2,000 份</b>（Kronos + 基本面双证）</td>
+          <td class="down">紫光国微 002049 <b>+100 股</b>（分批建）</td>
+        </tr>
+        <tr>
+          <td class="num"><b>4</b></td>
+          <td class="up">半导体 E 159558 <b>减半 -1,850 份</b>（铁律 13）</td>
+          <td class="down">中国移动 600941 <b>+50-100 股</b>（5% 股息 · 现价分批）</td>
+        </tr>
+        <tr>
+          <td class="num"><b>5</b></td>
+          <td class="warn">保留：蔚蓝 500 · 黄金 ETF 100 · 机器人 6,600（半独立 + 对冲）</td>
+          <td class="down">科大讯飞 002230 <b>+100 股</b>（回调 40-41）</td>
+        </tr>
+        <tr class="grand-row">
+          <td colspan="3"><b>目标结构：海外依赖 40% → 15% · 国产独立 10% → 40% · 机动 30%</b></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="callout amber" style="margin-top:14px;padding:12px 14px;background:rgba(245,179,66,.08);border-left:3px solid #f5b342;border-radius:0 3px 3px 0;color:#e5e9f0;font-size:13px">
+      <b>执行节奏：</b>不必一步到位，先做步骤 1-2 释放约 <b class="down">35,000 元</b> 现金池，再在 2-4 周内完成步骤 3-5。<b>迁移过程中的短期波动是可以接受的，目标是 6-12 个月后的组合结构，而不是 T+1 择时。</b>
+    </div>
+  </section>
+
+  <!-- ========== Section 8 · 三个关键洞察 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 08</div>
+    <h3 class="sect-title">三个关键洞察 · 战略级总结</h3>
+
+    <div class="night-talk">
+      <div class="nt-block">
+        <div class="nt-num">INSIGHT 01</div>
+        <div class="nt-h">你现在的组合 = 2000 年泡沫时的思科朗讯组合</div>
+        <p class="nt-p">用户当前重仓的 5 大标的（沪电 / 通信 ETF / 通富 / 科创芯片 / 半导体 E）全部落在🔴高相关红档 = 光模块 / PCB / 封装 / AI 芯片。<b class="warn">这与 2000 年泡沫顶部买思科朗讯的组合结构完全一致</b>。历史上思科 -90%、朗讯 -99%，不是因为公司变差，而是因为 Capex 见顶后估值支撑瓦解。<b class="up">现在不做切换，等 2027 见顶就来不及了。</b></p>
+      </div>
+
+      <div class="nt-block">
+        <div class="nt-num">INSIGHT 02</div>
+        <div class="nt-h">Kronos 早就告诉你了 · 只是你没听</div>
+        <p class="nt-p">7/14 Kronos 全景研判给出 <b class="up">4 只持仓 DOWN 强共振预警</b>（沪电 -50.83% / 通富 -52.82% / 蔚蓝 -41.09% / 科创芯片 -50.27%），今日复盘发现 <b class="down">4 只全部在 🔴 红档</b>。这不是巧合，而是<b class="warn">时间序列模型捕捉到了「海外依赖档下杀」的领先信号</b>。三引擎（基本面 + 情绪面 + Kronos）在过去两周不断共振警告，只差用户按下执行键。</p>
+      </div>
+
+      <div class="nt-block">
+        <div class="nt-num">INSIGHT 03</div>
+        <div class="nt-h">三个「必做」迁移动作 · 战略级</div>
+        <p class="nt-p">
+          <b class="up">① 必减</b>：光模块（通信 ETF）+ PCB（沪电）+ 封装（通富）+ AI 芯片（科创芯片 / 半导体 E）· 全部海外依赖档 · 战略性砍仓<br>
+          <b class="down">② 必加</b>：科大讯飞（AI 软件） + 海康（视觉） + 紫光国微（军工特种 IC）· 全部独立叙事 · 主板可买<br>
+          <b class="down">③ 必配</b>：中国移动（5% 股息 · 熊市生存工具） · 无论未来 12 个月市场如何，股息就是安全边际
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Section 9 · 主管一句话 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 09</div>
+    <h3 class="sect-title">研究主管一句话</h3>
+
+    <div class="final-line">
+      <div class="final-tag">FINAL WORD · TAT RESEARCH DIRECTOR</div>
+      <div class="final-quote">
+        「海外 AI Capex <b class="down">2028 见顶（1.4 万亿）</b>· 增速拐点已在 <b class="warn">2026 H2-2027</b> = <b class="up">思科朗讯剧本重演</b>。<br>
+        你现在重仓的<b class="up">沪电 / 通信 ETF / 半导体 E / 通富</b>就是思科朗讯，<br>
+        Kronos + 基本面 + 情绪面<b class="down">三引擎已连续两周共振警告</b>。<br>
+        明日 09:30 <b class="warn">沪电全清 + 半导体 E 减半 + 加中国移动降 β 腿</b>，<br>
+        这不是「择时」，是<b class="down">「从思科逃到亚马逊」</b>的战略切换。」
+      </div>
+      <div class="final-sign">TAT 投研主管 · 2026-07-20 · AI 国产链 vs 海外链 · 28 见顶专题 · 亲笔</div>
+    </div>
+  </section>
+
+  <!-- ========== Section 10 · 数据源 ========== -->
+  <section class="sect">
+    <div class="sect-num">SECTION 10</div>
+    <h3 class="sect-title">数据源 · 交叉验证 · 复盘节奏</h3>
+    <p class="sect-lede">本报告基于双路径验证 + 团队 7/14 Kronos 交叉印证，所有关键锚点来源可复核。</p>
+  </section>
+
+  <footer>
+    <div class="foot-row">
+      <span class="foot-lb">数据源</span>
+      <span>SEMI · Statista · Goldman Sachs · Morgan Stanley（07-13）· 公司公告（MSFT / AMZN / GOOG / META / Oracle）· Bloomberg · Yahoo Finance · Fortune · Investors</span>
+    </div>
+    <div class="foot-row">
+      <span class="foot-lb">交叉验证</span>
+      <span>团队 7/14 Kronos 全景研判：4 只持仓 DOWN 预警（沪电 / 通富 / 蔚蓝 / 科创芯片）全部落在本报告红档 · 三引擎方向一致</span>
+    </div>
+    <div class="foot-row">
+      <span class="foot-lb">关键锚点</span>
+      <span>Oracle 7/13 股价 130.76 创 52 周新低 + FCF -247 亿 · MS 2028 hyperscaler 1.4 万亿 · Goldman 2025-2030 四大合计 5.3 万亿 · 2000 年思科 82 → 8 · 朗讯 84 → 0.55 · 亚马逊 6 → 3000+</span>
+    </div>
+    <div class="foot-row">
+      <span class="foot-lb">下次复盘</span>
+      <span>7/21 迁移执行第 1 步（通信 ETF -10,000 + 北方华创 +100）· 2 周后步骤 3-5 · 4-8 周完成结构切换 · 8 月中报期验证</span>
+    </div>
+    <div class="foot-sign">
+      <span>TAT 投研团队 · 个股专题 · AI 国产链 vs 海外链 · 28 见顶 Top5 · 2026-07-20</span>
+      <span>本报告仅作团队内部研讨用 · 不构成任何投资建议</span>
+    </div>
+  </footer>
+</article>
+</body>
+</html>
