@@ -1,0 +1,452 @@
+<!--
+============================================================
+ TAT 投研日报 · 通用模板 (v1.0)
+============================================================
+
+ 使用步骤：
+ 1. 复制本文件到工作区，改名为 TAT投研日报_YYYY-MM-DD.html
+ 2. 把所有 占位符 占位符替换成当日实际内容
+    占位符清单见同目录下 daily_template_placeholders.md
+ 3. 自检：无 emoji 图标、无 em/en dash、tabular-nums 对齐、meta 齐全
+ 4. 发布：
+    cd /Users/sidfate/AccioWork/tat-doc-repo
+    ./scripts/publish_report.sh <日报绝对路径> 日报
+
+ 占位符里表格 / 清单 / 卡片类的多行 HTML，直接把整块替换即可。
+ 无需的整段 (如某日无 RED FLAG) 可整块删掉，不留占位符。
+
+ 视觉规范：白底 #f7f5f0 米白 + 深墨 #1a1a1a + 单色强调 (红涨 / 绿跌 / 琥珀警示)。
+ 严禁：em/en dash、emoji 图标、彩色渐变、SVG 装饰图标。
+============================================================
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="report-title" content="TAT投研日报 2026-08-17">
+<meta name="report-date" content="2026-08-17">
+<meta name="report-category" content="日报">
+<meta name="report-tags" content="持仓复盘,组合风控,Kronos,TradingAgents,日报">
+<meta name="report-summary" content="六项全涨，组合日增5523元；Kronos滞后一日，重点修复沪电与588200超限。">
+<title>TAT 投研日报 · 2026-08-17</title>
+<style>
+:root{
+  --bg:#f7f5f0;
+  --paper:#ffffff;
+  --ink:#1a1a1a;
+  --ink2:#333333;
+  --ink3:#5c5c5c;
+  --muted:#8a8a8a;
+  --rule:#d9d5cc;
+  --rule2:#e8e4dc;
+  --up:#c22c2c;
+  --up-soft:#f6e5e5;
+  --down:#0f7a3e;
+  --down-soft:#e2f0e8;
+  --warn:#a65d00;
+  --warn-soft:#f6e8d3;
+  --accent:#1a3d6b;
+  --accent-soft:#e6ecf3;
+  --serif:"Noto Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:"SF Mono","JetBrains Mono","Roboto Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  background-image:
+    linear-gradient(180deg, transparent, transparent 27px, rgba(0,0,0,0.02) 28px, transparent 29px);
+  background-size:100% 28px;
+}
+.num{font-variant-numeric:tabular-nums;font-family:var(--mono);letter-spacing:-.2px}
+.paper{max-width:1080px;margin:0 auto;background:var(--paper);padding:36px 44px;
+  box-shadow:0 1px 3px rgba(0,0,0,.06), 0 20px 40px rgba(0,0,0,.05);
+  border-top:6px solid var(--ink)}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);line-height:1.3;font-weight:700}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.masthead{border-bottom:3px double var(--ink);padding-bottom:14px;margin-bottom:22px}
+.masthead .top{display:flex;justify-content:space-between;align-items:baseline;font-size:11.5px;color:var(--ink3);text-transform:uppercase;letter-spacing:.12em}
+.masthead .top b{color:var(--ink);font-family:var(--mono)}
+.masthead .name{font-family:var(--serif);font-size:44px;font-weight:900;letter-spacing:-.5px;margin:6px 0 8px}
+.masthead .name em{font-style:normal;color:var(--up)}
+.masthead .sub{font-size:13px;color:var(--ink3);font-family:var(--serif)}
+.masthead .sub b{color:var(--ink)}
+
+.headline{padding:20px 0 26px;border-bottom:1px solid var(--rule)}
+.headline .kicker{font-size:11.5px;font-weight:700;color:var(--up);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.headline h1{font-size:32px;line-height:1.25;font-weight:800;letter-spacing:-.3px}
+.headline h1 em{font-style:normal;color:var(--up);border-bottom:2px solid var(--up);padding-bottom:1px}
+.headline .lede{margin-top:14px;font-size:16px;color:var(--ink2);line-height:1.75;font-family:var(--serif)}
+
+.dash{display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border:1px solid var(--rule);border-radius:2px;overflow:hidden;margin:24px 0}
+.dash .cell{padding:16px 18px;border-right:1px solid var(--rule);background:var(--paper)}
+.dash .cell:last-child{border-right:none}
+.dash .k{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);font-weight:700;margin-bottom:6px}
+.dash .v{font-size:24px;font-weight:700;font-family:var(--mono);color:var(--ink);line-height:1.1}
+.dash .v.up{color:var(--up)}
+.dash .v.down{color:var(--down)}
+.dash .v.warn{color:var(--warn)}
+.dash .s{font-size:11.5px;color:var(--ink3);margin-top:3px}
+
+.sect{margin-top:34px}
+.sect-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:14px}
+.sect-head h2{font-size:20px;font-weight:800}
+.sect-head .meta{font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.1em;font-family:var(--mono)}
+
+.cols{display:grid;grid-template-columns:2fr 1fr;gap:32px;margin-top:6px}
+.cols > *{min-width:0}   /* 允许 grid item 收缩到内容以下, 让内部 table-wrap 横滚生效 */
+.cols .side{border-left:1px solid var(--rule);padding-left:22px}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+table th{text-align:left;padding:10px 12px;border-bottom:2px solid var(--ink);background:transparent;
+  font-weight:700;color:var(--ink);font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+table th.r{text-align:right}
+table td{padding:10px 12px;border-bottom:1px solid var(--rule);color:var(--ink2);vertical-align:top}
+table td.r{text-align:right;font-family:var(--mono);white-space:nowrap}
+table tr:last-child td{border-bottom:none}
+table tr:hover td{background:#faf8f2}
+.pos{color:var(--up);font-weight:700}
+.neg{color:var(--down);font-weight:700}
+.amber{color:var(--warn);font-weight:700}
+.tag{display:inline-block;padding:2px 8px;font-size:11px;font-weight:700;border-radius:2px;font-family:var(--mono);letter-spacing:.02em;text-transform:uppercase}
+.tag-bad{background:var(--up-soft);color:var(--up)}
+.tag-warn{background:var(--warn-soft);color:var(--warn)}
+.tag-ok{background:var(--down-soft);color:var(--down)}
+.tag-neutral{background:var(--accent-soft);color:var(--accent)}
+
+.flag{background:var(--up-soft);border-left:4px solid var(--up);padding:14px 18px;margin:10px 0;border-radius:1px}
+.flag .fh{font-size:11px;font-weight:800;color:var(--up);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.flag p{font-size:13.5px;color:var(--ink);line-height:1.7}
+.flag p b{color:var(--up)}
+
+.checklist{background:#fbf9f4;border:1px solid var(--rule);padding:16px 18px;border-radius:2px;margin-top:8px}
+.checklist h4{font-size:14px;margin-bottom:10px;font-weight:800;font-family:var(--sans)}
+.checklist ol{padding-left:0;list-style:none;counter-reset:step}
+.checklist li{padding:10px 0 10px 34px;position:relative;border-bottom:1px dashed var(--rule2);font-size:13.5px;line-height:1.65;color:var(--ink2)}
+.checklist li:last-child{border-bottom:none}
+.checklist li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:10px;
+  width:24px;height:24px;background:var(--ink);color:var(--paper);border-radius:50%;
+  display:grid;place-items:center;font-family:var(--mono);font-size:12px;font-weight:700}
+.checklist li b{color:var(--ink);font-family:var(--mono)}
+
+.verify{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+.v-card{border:1px solid var(--rule);padding:14px 16px;border-radius:2px;background:var(--paper)}
+.v-card.a{border-top:3px solid var(--down)}
+.v-card.b{border-top:3px solid var(--warn)}
+.v-card.c{border-top:3px solid var(--up)}
+.v-card h4{font-size:13px;font-family:var(--sans);font-weight:800;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.v-card h4 .lb{font-family:var(--mono);width:22px;height:22px;border-radius:2px;display:grid;place-items:center;font-size:12px;color:#fff}
+.v-card.a h4 .lb{background:var(--down)}
+.v-card.b h4 .lb{background:var(--warn)}
+.v-card.c h4 .lb{background:var(--up)}
+.v-card p{font-size:12px;color:var(--ink3);line-height:1.6;margin-bottom:6px}
+.v-card p b{color:var(--ink);font-family:var(--mono)}
+.v-card .act{margin-top:8px;padding-top:8px;border-top:1px dashed var(--rule);font-size:12px;color:var(--ink)}
+.v-card .act b{font-family:var(--mono);font-weight:700}
+
+.side-card{margin-bottom:20px}
+.side-card h3{font-size:14px;font-family:var(--sans);font-weight:800;
+  text-transform:uppercase;letter-spacing:.08em;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:5px;margin-bottom:10px}
+.side-card p{font-size:13px;color:var(--ink2);line-height:1.65}
+.side-card p+p{margin-top:8px}
+.mini-tab{width:100%;font-size:12.5px;border-collapse:collapse}
+.mini-tab td{padding:6px 0;border-bottom:1px dotted var(--rule);color:var(--ink2)}
+.mini-tab td.r{text-align:right;font-family:var(--mono);color:var(--ink);font-weight:600}
+.mini-tab tr:last-child td{border-bottom:none}
+
+.pull{margin:18px 0;padding:14px 22px;border-left:4px solid var(--ink);background:#f9f7f1;
+  font-family:var(--serif);font-size:15px;line-height:1.75;color:var(--ink)}
+.pull b{color:var(--up)}
+
+footer{margin-top:34px;padding-top:16px;border-top:3px double var(--ink);
+  font-size:11.5px;color:var(--ink3);text-align:center;line-height:1.7}
+footer .disc{background:#faf8f2;border:1px solid var(--rule);padding:11px 16px;
+  margin-bottom:12px;text-align:left;font-size:12px;color:var(--ink2)}
+footer .disc b{color:var(--up)}
+footer .meta{font-family:var(--serif);color:var(--ink3)}
+
+/* 平板 & 中屏 */
+@media (max-width:820px){
+  .paper{padding:24px 20px}
+  .masthead .name{font-size:32px}
+  .headline h1{font-size:24px}
+  .dash{grid-template-columns:repeat(2,1fr)}
+  .dash .cell:nth-child(2){border-right:none}
+  .cols{grid-template-columns:1fr;gap:20px}
+  .cols .side{border-left:none;border-top:1px solid var(--rule);padding-left:0;padding-top:16px}
+  .verify{grid-template-columns:1fr}
+  table{font-size:12.5px}
+  table th,table td{padding:8px 8px}
+}
+
+/* 手机 (iPhone SE 375, iPhone 14 390, iPhone 14 Pro Max 428) */
+@media (max-width:480px){
+  body{font-size:14.5px;line-height:1.65}
+  .paper{padding:20px 16px;border-top-width:5px}
+
+  /* 报头缩小但保留三重线 */
+  .masthead{padding-bottom:12px;margin-bottom:18px}
+  .masthead .top{font-size:10.5px;letter-spacing:.08em;flex-wrap:wrap;gap:4px}
+  .masthead .name{font-size:26px;margin:8px 0 6px;letter-spacing:-.3px}
+  .masthead .sub{font-size:12px;line-height:1.5}
+
+  /* 头条 */
+  .headline{padding:14px 0 20px}
+  .headline .kicker{font-size:10.5px;letter-spacing:.08em}
+  .headline h1{font-size:21px;line-height:1.3;letter-spacing:-.2px}
+  .headline .lede{font-size:14.5px;line-height:1.7;margin-top:12px}
+
+  /* KPI 4 卡改单列堆叠 */
+  .dash{grid-template-columns:1fr;margin:18px 0}
+  .dash .cell{border-right:none;border-bottom:1px solid var(--rule);padding:14px 16px}
+  .dash .cell:last-child{border-bottom:none}
+  .dash .v{font-size:22px}
+  .dash .k{font-size:10.5px;letter-spacing:.08em}
+
+  /* 章节 */
+  .sect{margin-top:26px}
+  .sect-head h2{font-size:17px}
+  .sect-head .meta{font-size:10px;letter-spacing:.06em}
+
+  /* 分栏在手机上顺序: main 先, side 后 (grid 自然顺序) */
+  .cols{gap:18px}
+  .cols .side{padding-top:14px;margin-top:4px}
+
+  /* 表格手机: 强制表格能自适应, min-width:0 让 grid item 收缩, table-wrap 内部横滚 */
+  .cols,.cols > *,.main,.side,.sect{min-width:0}
+  .table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    display:block;max-width:calc(100vw - 32px)}
+  .table-wrap table{min-width:460px}    /* 保底 460, 375 屏内容确实放不下, 手指左右滑动读 */
+  table{font-size:11.5px}
+  table th,table td{padding:7px 8px;word-break:break-word}
+  table th{font-size:10px;letter-spacing:.03em}
+
+  /* Red Flag */
+  .flag{padding:12px 14px}
+  .flag .fh{font-size:10.5px;letter-spacing:.08em}
+  .flag p{font-size:13px;line-height:1.65}
+
+  /* 引用块 */
+  .pull{padding:12px 16px;font-size:14px;line-height:1.7;margin:14px 0}
+
+  /* 明日清单 */
+  .checklist{padding:14px 14px}
+  .checklist h4{font-size:13px}
+  .checklist li{padding:9px 0 9px 30px;font-size:13px;line-height:1.6}
+  .checklist li::before{width:20px;height:20px;font-size:11px;top:9px}
+
+  /* 侧栏卡 */
+  .side-card{margin-bottom:16px}
+  .side-card h3{font-size:12.5px;letter-spacing:.06em}
+  .mini-tab{font-size:12px}
+  .mini-tab td{padding:5px 0}
+
+  /* 验证卡 3 档也改单列 */
+  .verify{grid-template-columns:1fr;gap:10px}
+  .v-card{padding:12px 14px}
+  .v-card h4{font-size:12.5px}
+  .v-card p{font-size:11.5px}
+
+  /* 页脚 */
+  footer{font-size:11px;margin-top:26px;padding-top:14px}
+  footer .disc{padding:10px 12px;font-size:11.5px;line-height:1.65}
+}
+
+@media print{
+  body{background:#fff;background-image:none}
+  .paper{box-shadow:none;padding:0}
+}
+</style>
+</head>
+<body>
+<article class="paper">
+
+  <header class="masthead">
+    <div class="top">
+      <span>TAT 投研团队 · Daily Briefing</span>
+      <span><b>VOL. 008</b> · 收盘后发布</span>
+    </div>
+    <div class="name">TAT 投研<em>日报</em></div>
+    <div class="sub"><b>2026 年 8 月 17 日 星期一</b> · 收盘后 · 组合诊断 · 操作复盘 · 明日应对</div>
+  </header>
+
+  <section class="headline">
+    <div class="kicker">头条 · 科技普涨，但集中度没有消失</div>
+    <h1>六项全涨，组合日增 <em>5,523.50 元</em></h1>
+    <p class="lede">通富微电涨停，588200上涨5.20%，515880上涨4.20%。当天没有检出能分别解释六项上涨的新重大公告，更像芯片、PCB与光通信共同风险偏好回升。短线情绪转强，但现金、单股和单ETF护栏仍未满足，不把强势日直接外推为中期反转。</p>
+  </section>
+
+  <section class="dash" aria-label="今日速览">
+    <div class="cell"><div class="k">估算总资产</div><div class="v num ">13.43 万</div><div class="s">证券12.05万 + 现金1.38万</div></div>
+    <div class="cell"><div class="k">当日组合贡献</div><div class="v num up">+5,523.50</div><div class="s">六项全部收涨，证券资产约+4.80%</div></div>
+    <div class="cell"><div class="k">现金占比</div><div class="v num warn">10.27%</div><div class="s">低于15%研究下限</div></div>
+    <div class="cell"><div class="k">共同科技主题</div><div class="v num warn">82.49%</div><div class="s">半导体 + 通信相关暴露</div></div>
+  </section>
+
+  <div class="cols">
+
+    <div class="main">
+
+      <section class="sect">
+        <div class="sect-head">
+          <h2>今日操作复盘</h2>
+          <span class="meta">0 笔操作</span>
+        </div>
+        <div class="table-wrap">
+        <table aria-label="今日操作复盘">
+          <thead>
+            <tr>
+              <th>操作</th>
+              <th>方向</th>
+              <th class="r">规模</th>
+              <th>评价</th>
+              <th>问题点</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>无已确认成交</td><td><span class="tag tag-neutral">观察</span></td><td class="r">0</td><td class="amber">待核验</td><td>盘后账户由早盘截图重建，先确认券商结算单</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </section>
+
+      <section class="sect">
+        <div class="sect-head">
+          <h2>持仓状态</h2>
+          <span class="meta">6 只 · 合计 12.05 万</span>
+        </div>
+        <div class="table-wrap"><table aria-label="持仓状态">
+          <thead>
+            <tr>
+              <th>标的</th>
+              <th>类别</th>
+              <th class="r">市值</th>
+              <th class="r">占比</th>
+              <th class="r">浮盈率</th>
+              <th>风险提示</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><b>通富微电</b> 002156</td><td>股票</td><td class="r">13,852.00</td><td class="r">10.31%</td><td class="r pos">+8.69%</td><td>涨停确认短线强度，不追涨，等待盈利质量</td></tr>
+<tr><td><b>沪电股份</b> 002463</td><td>股票</td><td class="r">25,018.00</td><td class="r pos">18.62%</td><td class="r neg">-16.01%</td><td>公司逻辑偏强，但单股超过15%研究护栏</td></tr>
+<tr><td><b>蔚蓝锂芯</b> 002245</td><td>股票</td><td class="r">9,725.00</td><td class="r">7.24%</td><td class="r neg">-2.51%</td><td>盈利质量较干净，正式半年报前暂停新增</td></tr>
+<tr><td><b>亨通光电</b> 600487</td><td>股票</td><td class="r">6,506.00</td><td class="r">4.84%</td><td class="r neg">-18.89%</td><td>等待经营现金流、项目回款和分拆条款</td></tr>
+<tr><td><b>科创芯片ETF</b> 588200</td><td>ETF</td><td class="r">39,397.50</td><td class="r pos">29.33%</td><td class="r pos">+0.16%</td><td>单ETF超过25%护栏，主题高Beta</td></tr>
+<tr><td><b>通信ETF国泰</b> 515880</td><td>ETF</td><td class="r">26,027.80</td><td class="r">19.38%</td><td class="r neg">-19.21%</td><td>与沪电、亨通共享通信及AI资本开支因子</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section class="sect">
+        <div class="sect-head">
+          <h2>关键提示</h2>
+          <span class="meta">Red Flag · 4 项</span>
+        </div>
+
+        <div class="flag"><div class="fh">RED FLAG 01 · 集中度未修复</div><p>现金仅 <b>10.27%</b>，沪电股份占 <b>18.62%</b>，588200占 <b>29.33%</b>。8月17日上涨没有改变三项结构性偏离。</p></div>
+<div class="flag"><div class="fh">RED FLAG 02 · 共同科技因子</div><p>半导体与通信相关主题合计约 <b>82.49%</b>。六项同步上涨提高当日收益，也意味着风险偏好反转时可能同步回撤。</p></div>
+<div class="flag"><div class="fh">RED FLAG 03 · Kronos起点滞后</div><p>Kronos已真实运行20条路径，但行情输入止于8月14日，六项质量均为PARTIAL。8月17日收盘已改变模型起点，禁止用于次日方向和目标价。</p></div>
+<div class="flag"><div class="fh">RED FLAG 04 · 验证数据未闭合</div><p>四家公司正式半年报、统一估值，以及两只ETF的最新穿透、申赎、IOPV和折溢价仍缺失。账户也是根据10:59截图和盘后行情重建。</p></div>
+
+        <div class="pull">
+          「今天的上涨修复了收益，没有修复组合结构。标的看多与仓位合规必须分开。」
+        </div>
+      </section>
+
+    </div>
+
+    <aside class="side">
+
+      <div class="side-card">
+        <h3>明日 T+1 应对清单</h3>
+        <div class="checklist" aria-label="明日操作清单">
+          <ol>
+            <li><b>先核对账户</b>，确认截图后没有成交、费用或资金变化，并以券商盘后结算单重建股数、现金和总资产。</li>
+<li><b>不追涨、不新增</b>，通富涨停和两只ETF大涨只作为战术性正面证据，等待至少一个完整交易日验证承接。</li>
+<li><b>观察同步回吐</b>，若多数标的快速吞没8月17日涨幅，尤其两只ETF同时转弱，本次广度改善失效。</li>
+<li><b>刷新模型</b>，只有历史源包含8月17日且Kronos重新通过质量闸门，才恢复概率方向参考。</li>
+<li><b>任何仓位研究分阶段</b>，先核验费用、价差、盘口、ETF IOPV和折溢价，再用最新数据重跑组合引擎。</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="side-card">
+        <h3>明日盯盘点位</h3>
+        <table class="mini-tab">
+          <tbody>
+            <tr><td>通富涨停后</td><td class="r">承接 / 快速回吐</td></tr>
+<tr><td>两只ETF</td><td class="r">是否继续同向</td></tr>
+<tr><td>六项广度</td><td class="r">多数保持 / 多数吞没</td></tr>
+<tr><td>Kronos</td><td class="r">等待纳入8月17日</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="side-card">
+        <h3>组合目标偏离</h3>
+        <table class="mini-tab">
+          <tbody>
+            <tr><td>现金</td><td class="r amber">10.27% / 下限15%</td></tr>
+<tr><td>沪电股份</td><td class="r pos">18.62% / 上限15%</td></tr>
+<tr><td>588200</td><td class="r pos">29.33% / 上限25%</td></tr>
+<tr><td>共同科技</td><td class="r pos">82.49%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="side-card">
+        <h3>本周关键日期</h3>
+        <table class="mini-tab">
+          <tbody>
+            <tr><td>下一交易日</td><td class="r">盘后账户核验</td></tr>
+<tr><td>未来1至3日</td><td class="r">价格连续性观察</td></tr>
+<tr><td>8月下旬</td><td class="r">正式半年报窗口</td></tr>
+<tr><td>数据源更新后</td><td class="r">Kronos重跑</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </aside>
+  </div>
+
+  <section class="sect">
+    <div class="sect-head">
+      <h2>未来1至60日三情景验证</h2>
+      <span class="meta">硬约束 · 灰色地带按 C 档</span>
+    </div>
+    <div class="verify">
+      <div class="v-card a">
+        <h4><span class="lb">A</span>强势延续</h4>
+        <p>价格：<b>强势扩散且少数ETF不再独占涨幅</b></p><p>基本面：<b>半年报验证扣非、毛利率与现金流</b></p><div class="act">动作：<b>不追涨，保留观察仓并重新评估</b></div>
+      </div>
+      <div class="v-card b">
+        <h4><span class="lb">B</span>高波动分化</h4>
+        <p>价格：<b>个股与ETF轮动，未普遍吞没8月17日涨幅</b></p><p>数据：<b>正式半年报与ETF申赎仍未闭合</b></p><div class="act">动作：<b>暂停新增，等待证据和引擎复算</b></div>
+      </div>
+      <div class="v-card c">
+        <h4><span class="lb">C</span>同步反转</h4>
+        <p>价格：<b>多数标的回吐，两只ETF同步转弱</b></p><p>基本面：<b>业绩或现金流低于预告隐含水平</b></p><div class="act">动作：<b>冻结新增，启动更低风险候选研究</b></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="disc">
+      <b>免责声明：</b>本日报为 TAT 投研团队内部研究推演，仅供研究参考，<b>不构成投资建议</b>。市场有风险，决策需谨慎。数据取自 2026-08-17 收盘后，明日盘中执行以实际盘面为准。所有百分比与点位需在实际交易日结合行情确认。
+    </div>
+    <div class="meta">TAT 投研团队制作 · 由 <a href="https://aisid-fate.github.io/tat-doc/">tat-doc</a> 自动发布 · 每日收盘后更新</div>
+  </footer>
+
+</article>
+</body>
+</html>
