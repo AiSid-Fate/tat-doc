@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="report-title" content="A股价值洼地研判：医药、AI硬件与猪周期">
+<meta name="report-date" content="2026-08-17">
+<meta name="report-category" content="赛道">
+<meta name="report-tags" content="A股,医药,AI硬件,猪周期,价值洼地,组合分散">
+<meta name="report-summary" content="医药适合分批配置，猪周期仍处左侧，AI硬件应转向低重叠基础设施并先降组合集中度。">
+<title>A股价值洼地研判 · 医药、AI硬件与猪周期 · 2026-08-17</title>
+<style>
+:root{
+  --bg:#070a0f;--panel:#0e141d;--panel2:#121b26;--ink:#edf2f7;--ink2:#b8c3d1;
+  --muted:#7f8da0;--line:#253244;--red:#ef5b62;--red-soft:#321b23;--green:#35b779;
+  --green-soft:#123326;--amber:#e9a23b;--amber-soft:#382b16;--blue:#5ca8ff;--blue-soft:#152b45;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  --serif:"Noto Serif SC","Songti SC","STSong",serif;--mono:"SF Mono","JetBrains Mono",Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.72;-webkit-font-smoothing:antialiased}
+a{color:#85bdff;text-decoration:none;border-bottom:1px solid rgba(133,189,255,.35)}
+a:hover{color:#b4d7ff;border-color:#b4d7ff}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.page{max-width:1160px;margin:0 auto;padding:34px 28px 58px}
+.mast{padding:24px 0 28px;border-top:4px solid var(--red);border-bottom:1px solid var(--line)}
+.mast-top{display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:11px;letter-spacing:.13em;text-transform:uppercase}
+.brand{font-family:var(--serif);font-size:18px;font-weight:800;color:var(--ink)}
+.brand em{font-style:normal;color:var(--red)}
+h1{font-family:var(--serif);font-size:40px;line-height:1.22;margin-top:28px;max-width:900px;letter-spacing:-.02em}
+.deck{font-family:var(--serif);font-size:17px;color:var(--ink2);max-width:940px;margin-top:15px}
+.status{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.pill{border:1px solid var(--line);background:var(--panel);padding:5px 10px;border-radius:999px;color:var(--ink2);font-size:11px}
+.pill strong{color:var(--ink)}
+.hero{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:24px 0 10px}
+.metric{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:12px;padding:18px;min-height:126px}
+.metric .label{color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.metric .value{font-family:var(--mono);font-size:25px;font-weight:750;margin-top:10px;line-height:1.15}
+.metric .note{color:var(--ink2);font-size:12px;margin-top:8px}
+.red{color:var(--red)}.green{color:var(--green)}.amber{color:var(--amber)}.blue{color:var(--blue)}
+.section{margin-top:42px}
+.section-head{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:18px}
+.section-head svg{width:24px;height:24px;flex:none}
+h2{font-family:var(--serif);font-size:23px;line-height:1.3}
+.section-kicker{margin-left:auto;color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.lead{font-size:16px;color:var(--ink2);max-width:980px}
+.lead strong{color:var(--ink)}
+.callout{margin:18px 0;padding:17px 19px;border:1px solid var(--line);border-left:4px solid var(--amber);background:var(--amber-soft);border-radius:8px;color:#f3ddba}
+.callout strong{color:#ffd58f}
+.callout.redline{border-left-color:var(--red);background:var(--red-soft);color:#efc3c7}
+.callout.redline strong{color:#ff9aa0}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}
+.card h3{font-size:16px;margin-bottom:8px}
+.card p{font-size:13px;color:var(--ink2)}
+.card .rank{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:8px}
+.card.good{border-top:3px solid var(--green)}.card.watch{border-top:3px solid var(--amber)}.card.risk{border-top:3px solid var(--red)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:700;border-radius:4px;padding:3px 7px;margin-top:10px}
+.tag.good{background:var(--green-soft);color:#6fe0a6}.tag.watch{background:var(--amber-soft);color:#ffc468}.tag.risk{background:var(--red-soft);color:#ff8d94}
+.table-shell{margin-top:18px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{color:var(--muted);font-size:11px;letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:12px 14px;background:#0b1119;border-bottom:1px solid var(--line)}
+td{padding:13px 14px;border-bottom:1px solid var(--line);color:var(--ink2);vertical-align:top}
+tr:last-child td{border-bottom:0}td strong{color:var(--ink)}
+.right{text-align:right}.nowrap{white-space:nowrap}
+.split{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.75fr);gap:18px;margin-top:18px}
+.steps{list-style:none;counter-reset:step;display:grid;gap:10px}
+.steps li{position:relative;padding:13px 14px 13px 52px;background:var(--panel);border:1px solid var(--line);border-radius:9px;color:var(--ink2);font-size:13px;min-height:48px}
+.steps li:before{counter-increment:step;content:counter(step);position:absolute;left:14px;top:13px;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue);font-family:var(--mono);font-weight:800}
+.steps strong{color:var(--ink)}
+.side-note{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:18px}
+.side-note h3{font-size:14px;margin-bottom:10px}.side-note ul{padding-left:18px;color:var(--ink2);font-size:13px}.side-note li+li{margin-top:7px}
+.tier{display:grid;grid-template-columns:86px minmax(0,1fr) 150px;gap:14px;align-items:start;padding:16px 0;border-bottom:1px solid var(--line)}
+.tier:last-child{border-bottom:0}.tier-label{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.tier h3{font-size:15px;margin-bottom:5px}.tier p{color:var(--ink2);font-size:13px}.tier-action{font-size:12px;text-align:right;color:var(--amber)}
+.evidence{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+.evidence a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:12px;line-height:1.5}
+.foot{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
+.foot strong{color:var(--ink2)}
+.disclaimer{background:#0b1119;border:1px solid var(--line);border-radius:9px;padding:14px 16px;margin-bottom:13px;line-height:1.6}
+@media(max-width:820px){
+  .hero{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:1fr}.split{grid-template-columns:1fr}.tier{grid-template-columns:74px minmax(0,1fr)}.tier-action{grid-column:2;text-align:left}.evidence{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  .page{padding:18px 15px 40px}.mast-top{display:block}.mast-top span{display:block;margin-top:5px}h1{font-size:29px}.deck{font-size:15px}.hero{grid-template-columns:1fr}.metric{min-height:auto}.section{margin-top:34px}.section-kicker{display:none}.section-head{align-items:flex-start}
+  .table-shell{border:0;background:transparent;overflow:visible}table,thead,tbody,tr,th,td{display:block}thead{display:none}tr{background:var(--panel);border:1px solid var(--line);border-radius:9px;margin-bottom:10px;padding:8px 12px}td{border:0;padding:5px 0 5px 42%;position:relative;min-height:29px;text-align:left!important;white-space:normal!important}td:before{content:attr(data-label);position:absolute;left:0;width:38%;color:var(--muted);font-size:11px}.tier{grid-template-columns:1fr;gap:5px}.tier-action{grid-column:1;text-align:left}.evidence a{word-break:break-word}
+}
+@media print{body{background:#fff;color:#111}.page{max-width:none}.card,.metric,.table-shell,.steps li,.side-note{break-inside:avoid}}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="mast">
+    <div class="mast-top"><div class="brand">TAT 投研<em>专题</em></div><span>SECTOR RESEARCH · 2026-08-17 · POST CLOSE</span></div>
+    <h1>A股价值洼地研判：医药、AI硬件与猪周期</h1>
+    <p class="deck">当前市场是短周期风险偏好回升，中期趋势尚未全面确认。医药具备配置价值但不宜追涨，猪周期处于产能出清的左侧阶段，AI硬件应从热门链条转向低预期基础设施，并优先解决现有组合的科技集中问题。</p>
+    <div class="status">
+      <span class="pill"><strong>数据截止</strong> 2026-08-17 收盘后</span>
+      <span class="pill"><strong>研究模式</strong> 历史TAT框架 + 最新行情 + 官方政策</span>
+      <span class="pill"><strong>执行状态</strong> 研究用途，未连接券商</span>
+      <span class="pill"><strong>Kronos</strong> 新赛道输入未通过冻结验证，不参与方向投票</span>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="结论速览">
+    <div class="metric"><div class="label">市场状态</div><div class="value amber">反弹未反转</div><div class="note">20日风险偏好改善，60日趋势仍未全面修复</div></div>
+    <div class="metric"><div class="label">配置优先</div><div class="value green">医药</div><div class="note">适合分批建立低相关性仓位</div></div>
+    <div class="metric"><div class="label">左侧机会</div><div class="value blue">猪周期</div><div class="note">供给出清进行中，尚未确认盈利反转</div></div>
+    <div class="metric"><div class="label">暂缓新增</div><div class="value red">热门AI硬件</div><div class="note">现有科技主题约82.49%，继续加仓会放大同因子风险</div></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 18h18M5 15l4-5 4 3 6-8" stroke="#5ca8ff" stroke-width="1.8"/><circle cx="19" cy="5" r="2" fill="#5ca8ff"/></svg>
+      <h2>一、市场处于高弹性修复阶段</h2><span class="section-kicker">Market Regime</span>
+    </div>
+    <p class="lead">近20个交易日，中证500和创业板反弹幅度领先，但主要指数的60日收益仍多为负值。这个组合更符合风格修复和行业轮动，而不是已经确认的全面牛市。接下来应优先选择业绩与现金流能够验证的方向。</p>
+    <div class="table-shell"><table aria-label="主要指数趋势">
+      <thead><tr><th>指数</th><th class="right">近20日</th><th class="right">近60日</th><th>研判</th></tr></thead>
+      <tbody>
+        <tr><td data-label="指数"><strong>上证综指</strong></td><td data-label="近20日" class="right num red">+4.91%</td><td data-label="近60日" class="right num green">-3.17%</td><td data-label="研判">反弹，尚未脱离中期震荡</td></tr>
+        <tr><td data-label="指数"><strong>沪深300</strong></td><td data-label="近20日" class="right num red">+3.11%</td><td data-label="近60日" class="right num green">-2.15%</td><td data-label="研判">权重修复偏慢</td></tr>
+        <tr><td data-label="指数"><strong>中证500</strong></td><td data-label="近20日" class="right num red">+10.43%</td><td data-label="近60日" class="right num green">-4.57%</td><td data-label="研判">中小盘风险偏好显著回升</td></tr>
+        <tr><td data-label="指数"><strong>创业板指</strong></td><td data-label="近20日" class="right num red">+8.63%</td><td data-label="近60日" class="right num green">-5.04%</td><td data-label="研判">高弹性反弹，波动同步放大</td></tr>
+        <tr><td data-label="指数"><strong>科创50</strong></td><td data-label="近20日" class="right num red">+4.08%</td><td data-label="近60日" class="right num green">-0.11%</td><td data-label="研判">中期相对更强，但不是低位</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout redline"><strong>组合约束：</strong>最新持仓重建显示，半导体与通信相关主题约占82.49%，现金约10.27%。因此“行业值得关注”和“当前账户适合增加”必须分开判断。详见 <a href="../日报/2026-08-17_TAT投研日报_VOL008.html">8月17日TAT投研日报</a>。</div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v18M3 12h18" stroke="#35b779" stroke-width="2"/><circle cx="12" cy="12" r="9" stroke="#35b779" stroke-width="1.4"/></svg>
+      <h2>二、医药：趋势可以延续，但买点不再便宜</h2><span class="section-kicker">Healthcare</span>
+    </div>
+    <p class="lead">医药的中期趋势已经成立。代表性ETF近60日上涨约10%至19%，明显强于同期主要指数。但价格已经高于60日均线约11%至14%，短期更适合等待回踩和业绩验证，而不是一次性追入。</p>
+    <div class="table-shell"><table aria-label="医药ETF趋势">
+      <thead><tr><th>代表方向</th><th class="right">近20日</th><th class="right">近60日</th><th class="right">相对60日均线</th><th>判断</th></tr></thead>
+      <tbody>
+        <tr><td data-label="代表方向"><strong>创新药ETF 159992</strong></td><td data-label="近20日" class="right num red">+6.55%</td><td data-label="近60日" class="right num red">+18.69%</td><td data-label="相对60日均线" class="right num red">+13.59%</td><td data-label="判断">产业证据最强，事件波动也最大</td></tr>
+        <tr><td data-label="代表方向"><strong>医药ETF 512010</strong></td><td data-label="近20日" class="right num red">+6.65%</td><td data-label="近60日" class="right num red">+16.23%</td><td data-label="相对60日均线" class="right num red">+12.19%</td><td data-label="判断">更适合作为分散核心仓</td></tr>
+        <tr><td data-label="代表方向"><strong>医疗ETF 512170</strong></td><td data-label="近20日" class="right num red">+8.28%</td><td data-label="近60日" class="right num red">+9.97%</td><td data-label="相对60日均线" class="right num red">+11.40%</td><td data-label="判断">器械与服务修复，仍需现金流筛选</td></tr>
+      </tbody>
+    </table></div>
+    <div class="grid3">
+      <article class="card good"><div class="rank">01 · 核心方向</div><h3>宽基医药与医疗</h3><p>与现有科技组合重叠较低，适合承担分散功能。优先选择盈利和现金流覆盖更完整的宽基工具。</p><span class="tag good">可分批建立</span></article>
+      <article class="card watch"><div class="rank">02 · 卫星方向</div><h3>创新药商业化</h3><p>政策、海外授权和新品获批均有支撑，但合同总额不等于当期收入，需验证首付款、销售与临床进展。</p><span class="tag watch">等待回踩</span></article>
+      <article class="card risk"><div class="rank">03 · 谨慎方向</div><h3>纯管线小市值公司</h3><p>临床失败、融资和商业化不及预期会造成估值重定价。不因赛道上涨而放松单公司证据要求。</p><span class="tag risk">不作核心仓</span></article>
+    </div>
+    <div class="split">
+      <ol class="steps">
+        <li><strong>第一段约25%</strong>：只建立医药计划资金的观察仓，不用账户总资产直接套用该比例。</li>
+        <li><strong>第二段约35%</strong>：等待回踩20日均线附近企稳，或半年报验证收入、利润和现金流。</li>
+        <li><strong>第三段约40%</strong>：商业化收入、授权首付款或器械放量继续兑现后再完成配置。</li>
+      </ol>
+      <aside class="side-note"><h3>医药失效条件</h3><ul><li>放量跌破中期平台，反弹结构破坏。</li><li>授权金额未转化为现金或利润。</li><li>医保谈判与降价显著压低商业化回报。</li><li>半年报盈利质量低于市场预期。</li></ul></aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" stroke="#e9a23b" stroke-width="1.7"/><path d="M8 1v4M12 1v4M16 1v4M8 19v4M12 19v4M16 19v4M1 8h4M1 12h4M1 16h4M19 8h4M19 12h4M19 16h4" stroke="#e9a23b" stroke-width="1.4"/></svg>
+      <h2>三、AI硬件：价值在低预期基础设施</h2><span class="section-kicker">AI Infrastructure</span>
+    </div>
+    <p class="lead">历史TAT研究把国产算力分成情绪定价、成长兑现和真价值三层，并提出“旗舰加基础设施”的框架。这个方法仍可用，但历史估值不能直接当作当前结论。对现有账户而言，第一任务是减少PCB、芯片和通信ETF的共同暴露。</p>
+    <div class="card" style="margin-top:18px;padding-top:6px;padding-bottom:6px">
+      <div class="tier"><div class="tier-label">TIER 1</div><div><h3>边缘AI、视觉与运营商基础设施</h3><p>观察名单：海康威视、中国移动、中兴通讯。海康一季度利润增速较快，但经营现金流仍需验证；中国移动偏现金流与分红；中兴具备全栈能力，但运营商资本开支和毛利率承压。</p></div><div class="tier-action">低重叠，优先观察</div></div>
+      <div class="tier"><div class="tier-label">TIER 2</div><div><h3>服务器与国产算力整机</h3><p>观察名单：浪潮信息、紫光股份。浪潮信息半年利润预告高增长，但市场已明显交易该预期。下一步看毛利率、存货、应收和经营现金流。</p></div><div class="tier-action">业绩兑现，估值不低</div></div>
+      <div class="tier"><div class="tier-label">TIER 3</div><div><h3>半导体设备</h3><p>北方华创、中微公司和拓荆科技仍具备国产替代逻辑，但当前估值并非明显洼地。好赛道不等于任意价格都可接受。</p></div><div class="tier-action">等待估值消化</div></div>
+      <div class="tier"><div class="tier-label">AVOID</div><div><h3>光模块、热门PCB、液冷、宽基芯片ETF</h3><p>产业逻辑没有消失，但与当前沪电股份、通富微电、通信ETF和科创芯片高度重叠，新增仓位会继续放大同一风险因子。</p></div><div class="tier-action red">当前账户暂缓新增</div></div>
+    </div>
+    <div class="callout"><strong>历史记录的正确用法：</strong>保留“分层估值”和“基础设施比叙事更重要”的方法，不复用旧目标价和旧Kronos方向。参见 <a href="../../2026-07/赛道/2026-07-18_TAT投研专题_国产算力赛道深度调研.html">国产算力深度调研</a> 与 <a href="../../2026-07/组合/2026-07-20_TAT投研专题_2026-07-20_AI国产vs海外链_28见顶Top5.html">AI国产链与海外链专题</a>。</div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 15c0-5 3-9 8-9 4 0 7 2 7 6 0 4-3 7-8 7H7l-2 2v-6Z" stroke="#5ca8ff" stroke-width="1.7"/><circle cx="15.5" cy="11" r="1" fill="#5ca8ff"/><path d="M6 11 3 9" stroke="#5ca8ff" stroke-width="1.7"/></svg>
+      <h2>四、猪周期：有左侧机会，尚未确认右侧</h2><span class="section-kicker">Hog Cycle</span>
+    </div>
+    <p class="lead">养殖ETF近20日基本横盘，近60日仍下跌约4%，近120日下跌约13%。价格层面尚未形成趋势行情，机会主要来自产能调控、行业亏损和未来供给收缩，而不是当前盈利已经反转。</p>
+    <div class="table-shell"><table aria-label="养殖ETF趋势">
+      <thead><tr><th>代表方向</th><th class="right">近20日</th><th class="right">近60日</th><th class="right">近120日</th><th>阶段</th></tr></thead>
+      <tbody>
+        <tr><td data-label="代表方向"><strong>养殖ETF 159865</strong></td><td data-label="近20日" class="right num red">+0.19%</td><td data-label="近60日" class="right num green">-4.63%</td><td data-label="近120日" class="right num green">-13.13%</td><td data-label="阶段">左侧筑底</td></tr>
+        <tr><td data-label="代表方向"><strong>畜牧养殖ETF 516670</strong></td><td data-label="近20日" class="right num red">+0.50%</td><td data-label="近60日" class="right num green">-3.83%</td><td data-label="近120日" class="right num green">-12.61%</td><td data-label="阶段">左侧筑底</td></tr>
+      </tbody>
+    </table></div>
+    <div class="grid3">
+      <article class="card watch"><div class="rank">阶段一 · 跟踪仓</div><h3>计划资金20%至25%</h3><p>优先使用ETF分散疫病、成本和公司杠杆风险。该比例只针对预先设定的猪周期资金。</p><span class="tag watch">左侧试错</span></article>
+      <article class="card watch"><div class="rank">阶段二 · 供给确认</div><h3>追加30%至35%</h3><p>能繁母猪、仔猪价格和出栏体重三项中至少两项确认出清，再提高暴露。</p><span class="tag watch">等待两项确认</span></article>
+      <article class="card good"><div class="rank">阶段三 · 盈利确认</div><h3>完成剩余配置</h3><p>猪价上涨与上市公司经营现金流同步转正后，再筛选完全成本低、没有逆周期扩张冲动的龙头。</p><span class="tag good">右侧验证</span></article>
+    </div>
+    <div class="callout redline"><strong>不能只看母猪数量：</strong>生产效率提升会削弱存栏下降的效果。若二次育肥和出栏体重重新上升，或猪价反弹但企业现金流仍为负，则周期确认失败。</div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7" stroke="#ef5b62" stroke-width="1.8"/><circle cx="18" cy="12" r="2.5" stroke="#ef5b62" stroke-width="1.5"/></svg>
+      <h2>五、对当前组合的执行优先级</h2><span class="section-kicker">Portfolio Fit</span>
+    </div>
+    <ol class="steps">
+      <li><strong>先处理科技集中度。</strong>医药和猪周期的资金优先来自科技重叠仓位再平衡，不在低现金状态下继续叠加风险资产。</li>
+      <li><strong>医药先于猪周期。</strong>医药已具备中期趋势和产业证据，适合小仓分批；猪周期只建立跟踪仓。</li>
+      <li><strong>AI硬件暂不新增热门链条。</strong>等共同科技暴露显著下降、半年报验证现金流后，再研究海康、运营商和传统ICT基础设施。</li>
+      <li><strong>所有比例仅作用于赛道计划资金。</strong>未经过最新账户、成交费用和组合引擎复算，不直接转换为账户目标权重或订单。</li>
+    </ol>
+    <div class="pull" style="margin-top:18px;background:var(--blue-soft);border:1px solid #294d75;border-radius:10px;padding:17px 19px;color:#c9e3ff;font-family:var(--serif)">结论排序：医药宽基与医疗器械，创新药回调配置，猪周期ETF左侧观察，低预期AI基础设施等待半年报，热门AI硬件当前不新增。</div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 3h9l3 3v15H6V3Z" stroke="#7f8da0" stroke-width="1.6"/><path d="M9 10h6M9 14h6M9 18h4" stroke="#7f8da0" stroke-width="1.4"/></svg>
+      <h2>证据来源与数据边界</h2><span class="section-kicker">Evidence</span>
+    </div>
+    <div class="evidence">
+      <a href="https://www.nhsa.gov.cn/art/2026/7/14/art_14_21423.html">国家医保局：2026年上半年创新药对外授权交易额及创新药、器械获批数据</a>
+      <a href="https://www.nhsa.gov.cn/art/2026/5/31/art_109_20816.html">国家医保局：2026年医保药品目录及商保创新药目录调整方案</a>
+      <a href="https://www.nhsa.gov.cn/art/2026/7/24/art_14_21550.html">国家医保局：商保创新药目录在青岛支付端落地</a>
+      <a href="https://static.cninfo.com.cn/finalpage/2026-04-18/1225123071.PDF">海康威视：2026年第一季度报告</a>
+      <a href="https://static.cninfo.com.cn/finalpage/2026-07-08/1225414299.PDF">浪潮信息：2026年半年度业绩预告</a>
+      <a href="https://static.cninfo.com.cn/finalpage/2026-03-31/1225065148.PDF">中兴通讯：2025年度业绩说明会记录</a>
+      <a href="https://nynct.hlj.gov.cn/nynct/c115383/202605/c00_31940386.shtml">农业农村部：生猪产能综合调控实施方案，2026年修订</a>
+      <a href="https://xmsyj.moa.gov.cn/gzdt/202606/t20260622_6485180.htm">农业农村部、国家发改委：强化生猪产能综合调控座谈会</a>
+    </div>
+    <p style="margin-top:14px;color:var(--muted);font-size:12px">指数和ETF涨跌幅来自截至2026-08-17收盘的本地行情计算。不同数据源的复权、基金拆分和盘后修订可能造成细微差异。北方华创、中微公司等发生过高位或公司行为影响，本报告不复用未经当前复权校验的历史Kronos路径。</p>
+  </section>
+
+  <footer class="foot">
+    <div class="disclaimer"><strong>免责声明：</strong>本报告为TAT投研团队的研究推演，仅供研究参考，不构成投资建议、收益承诺或交易指令。报告未连接券商、未下单，所有实际决策均需用户人工批准，并在执行前用最新行情、账户现金、费用和组合约束重新验证。</div>
+    <div>TAT投研团队 · TradingAgents风格证据链 · 2026-08-17盘后</div>
+  </footer>
+</main>
+</body>
+</html>
